@@ -2,7 +2,7 @@
 
 This repository is for the developement of cross-application editor configurations for RO-Crate Profiles.
 
-[RO-Crate] (Research-Object Crate) is linked-data based specification, based on JSON-LD syntax with an extensibke Schema.org based vocabulary schema, for packaging data with metadata. RO-Crates are useful in avariety of contexts, including for describing research datasets for re-use and archiving and for describing contextual information such as the relationships between people, organizations and events.
+[RO-Crate] (Research-Object Crate) is linked-data based specification, based on JSON-LD syntax with an extensible Schema.org based vocabulary schema and @context, for packaging data with metadata. RO-Crates are useful in avariety of contexts, including for describing research datasets for re-use and archiving and for describing contextual information such as the relationships between people, organizations and events.
 
 [RO-Crate Profiles] are a 
 
