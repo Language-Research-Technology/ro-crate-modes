@@ -4,14 +4,14 @@ This repository is for the developement of cross-application editor configuratio
 
 [RO-Crate] (Research-Object Crate) is linked-data based specification, based on JSON-LD syntax with an extensible Schema.org based vocabulary schema and @context, for packaging data with metadata. RO-Crates are useful in avariety of contexts, including for describing research datasets for re-use and archiving and for describing contextual information such as the relationships between people, organizations and events.
 
-[RO-Crate Profiles] are a 
+[RO-Crate Profiles] specify how to specialise the RO-Crate approach for a particular purpose or domain. They consist of (at least) a document, and optionally validation services. An RO-Crate Editor Profile supplements an RO-Crate Profile with specific intstructions. 
 
 The configuration files contained in this repository, which we are calling "RO-Crate Editor Profiles" are intended to form the basis of a new standard for describing RO-Crate editor behaviour and are based on the [Describo Profiles] (which vary between versions of Describo] used to configure the [Describo] family of RO-Crate editing tools - maintainted by Marco La Rosa.
 
 
 # Initial differences from Describo profiles
 
-The starting point for this project was when the [LDaCA] team needed to extend the Describo-profiles we had been working with in our RO-Crate editor tool Crate-O.
+The starting point for this project was when the [LDaCA] team needed to extend the Describo-profiles we had been working with in our RO-Crate editor tool Crate-O. This required us to make breaking changes. Once our initial development is complete and tested we will make the Describo maintainers aware of our initial implementation and we can discuss whether we can harmonize our approaches - with a jointly maintained standard, or cross-walk code.
 
 - Added a new parameter to the "lookup" configuration to indicate the type of lookup required (TODO - examples)
 
