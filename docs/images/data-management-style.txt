@@ -1,0 +1,114 @@
+@startuml
+
+skinparam defaultFontName Chalkduster
+skinparam handwritten true
+skinparam FontSize 24
+skinparam InterfaceFontSize 24
+skinparam titleFontSize 42
+skinparam arrowFontSize 24
+skinparam arrowColor DarkRed
+skinparam arrowThickness 4
+skinparam arrowAlignment left
+skinparam FontSize 24
+skinparam BackgroundColor<< workspace >>  mistyrose
+
+
+skinparam activityFontSize 24
+skinparam activityFontName Chalkduster
+skinparam activityDiamondFontSize 24
+skinparam activityArrowFontSize 24
+
+
+
+
+skinparam note  {
+    BackgroundColor<< workspace >>  mistyrose
+    BackgroundColor<< authorization >>  honeydew
+    BackgroundColor<< repository >>  palegreen
+    BackgroundColor<< support >>  lightyellow
+    BackgroundColor lightyellow
+    BorderThickness 4
+    FontSize 24
+
+}
+
+skinparam actor  {
+    BackgroundColor<< workspace >>  mistyrose
+    BackgroundColor<< authorization >>  honeydew
+
+    BorderColor DarkRed
+
+    BackgroundColor<< repository >>  palegreen
+
+
+    BackgroundColor<< support >>  lightyellow
+    FontColor<< support >>  mistyrose
+
+
+    BorderThickness 4
+    BackgroundColor transparent
+    FontSize 24
+
+
+}
+
+skinparam rectangle  {
+    BackgroundColor<< workspace >>  mistyrose
+    BackgroundColor<< authorization >>  honeydew
+
+    BackgroundColor<< standards >>  lavender
+    BackgroundColor<< repository >>  palegreen
+    BackgroundColor<< support >>  lightyellow
+
+
+    BorderThickness 4
+    BackgroundColor transparent
+    FontSize 24
+
+
+}
+
+skinparam package  {
+    BackgroundColor<< workspace >>  mistyrose
+    BackgroundColor<< authorization >>  honeydew
+
+    BackgroundColor<< standards >>  lavender
+
+    BackgroundColor<< repository >>  palegreen
+
+
+    BackgroundColor<< support >>  lightyellow
+
+
+    BorderThickness 4
+    BackgroundColor transparent
+    FontSize 24
+
+
+}
+
+skinparam cloud  {
+    BackgroundColor<< workspace >>  mistyrose
+    BackgroundColor<< authorization >>  honeydew
+
+    BackgroundColor<< repository >>  palegreen
+    BackgroundColor<< support >>  lightyellow
+    BorderThickness 4
+    BackgroundColor transparent
+
+    FontSize 24
+
+}
+
+skinparam database  {
+    BackgroundColor<< workspace >>  mistyrose
+    BackgroundColor<< authorization >>  honeydew
+
+    BackgroundColor<< repository >>  palegreen
+    BackgroundColor<< support >>  lightlightyellow
+    BorderThickness 4
+    BackgroundColor transparent
+
+    FontSize 24
+}
+@enduml

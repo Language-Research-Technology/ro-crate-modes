@@ -1,0 +1,9 @@
+@startuml
+!include_many /data-management-style.txt
+
+rectangle "Schema.org Schema" as sos
+
+
+
+
+@enduml

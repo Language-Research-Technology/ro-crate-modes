@@ -1,4 +1,4 @@
-# RO-Crate Editor Profiles
+# Crate-O RO-Crate Editor Profiles
 
 This repository is for the developement of cross-application editor configurations for RO-Crate Profiles.
 
@@ -11,9 +11,13 @@ The configuration files contained in this repository, which we are calling "RO-C
 
 # Initial differences from Describo profiles
 
-The starting point for this project was when the [LDaCA] team needed to extend the Describo-profiles we had been working with in our RO-Crate editor tool Crate-O. This required us to make breaking changes. Once our initial development is complete and tested we will make the Describo maintainers aware of our initial implementation and we can discuss whether we can harmonize our approaches - with a jointly maintained standard, or cross-walk code.
+The starting point for this project was when the [LDaCA] team needed to extend the Describo-profiles we had been working with in our RO-Crate editor tool Crate-O. This required us to make breaking changes - see this page [about the differences](docs/describo-diffs.md).
 
-- Added a new parameter to the "lookup" configuration to indicate the type of lookup required (TODO - examples)
+# About Schema.org Style Schemas
+
+Schema.org uses a very simple approach to defining its own schema (see
+[Schema.org style Schemas and RO-Crate Editor Profiles explained](./docs/soss-pofiles.md)
+for more on this), which is in the process of being adopted/adapted for RO-Crate, at the Language Data Commons of Australia we have created some tooling that
 
 # Future Roadmap
 
@@ -21,7 +25,7 @@ We will be discussing:
 
 - How to better handle entities with compound/multiple @types
 - How to improve the editing experience such as schema:CreateAction which link to multiple other entities, making them more complicated than simply linking to a schema:creator
-- Generating schemas from sample data and from SHACL shapes or other schema languages such as OWL.
+- Generating schemas SHACL shapes or other schema languages such as OWL.
 - Linking to RO-Crate Profile validation
 - Let us know by raising an issue.
 
