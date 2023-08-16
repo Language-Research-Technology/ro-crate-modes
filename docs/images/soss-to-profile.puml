@@ -1,9 +1,16 @@
 @startuml
 !include_many ./data-management-style.txt
 
+rectangle "RO-Crate Schema Tools" as tools {
 rectangle "Schema.org Schema" as sos
+rectangle "RO-Crate Schema additions" as roc
+rectangle "Tool: rocsoss script" as rocsoss
+}
 
+rectangle "RO-Crate Base Profile" as rop
 
+sos -down-> rocsoss : input 
+roc -down-> rocsoss : input
 
-
+rocsoss -down-> rop : Generate
 @enduml
