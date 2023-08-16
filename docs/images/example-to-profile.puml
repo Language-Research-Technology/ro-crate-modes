@@ -1,0 +1,21 @@
+@startuml
+!include_many ./data-management-style.txt
+
+rectangle "Example RO-Crate Metadata Document(s) from a domain" as docs
+
+
+rectangle "RO-Crate Schema Tools" as tools {
+rectangle "Schema.org Schema" as sos
+rectangle "RO-Crate Schema additions" as roc
+rectangle "Tool: rocsoss script" as rocsoss
+}
+
+rectangle "Domain-Specific Profile" as rop
+
+sos -down-> rocsoss : input 
+roc -down-> rocsoss : input
+docs --down--> rocsoss
+
+rocsoss -down-> rop : Generate profile 
+note bottom of rop : Contains Classes and Properties that represent the intersection of\nthings used in the example(s) and schema.org/RO-Crate entities
+@enduml
