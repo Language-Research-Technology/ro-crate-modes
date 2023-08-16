@@ -18,9 +18,10 @@ properties from the underlying schema.
 
 
 The Crate-O approach to profiles does not continue Describo's two layered
-approach. Each profile is a self-contained specification of all the classes and
-properties allowed for that profile. For example, the base profile for Crate-O
-is compiled from the Schema.org profile, with the few extra classes and
+approach of having a built in compiled profile-like schema with separate user-loadable profiles. Instead, each profile is a self-contained specification of all the Classes and Properties needed for a particular RO-Crate profile.
+
+For example, the base profile for Crate-O
+is [compiled from the Schema.org profile](./docs/soss-pofiles.md), with the few extra classes and
 properties that RO-Crate adds and is entirely self-contained. As with Describo,
 users can switch profiles to add `foreign` classes and properties to the their
 crates, depending on how the tool has been deployed.
@@ -72,7 +73,7 @@ interface; a given property will always show up in the same place under the same
 heading or tab (depending on how groups/layouts are implemented). There is also
 a default set of input-groups with the most commonly used schema.org and RO-Crate properties
 grouped by function (are the structure related? spatiotemporal? etc). This will
-help ensure consistency across profiles -- and in most cases profile designers
+help ensure consistency across profiles and in most cases profile designers
 will only need to specify input-groups for Properties that are specific to their
 profile.
 

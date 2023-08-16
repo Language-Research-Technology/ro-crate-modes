@@ -11,11 +11,19 @@ rectangle "Tool: rocsoss script" as rocsoss
 }
 
 rectangle "Domain-Specific Profile" as rop
-
+rectangle "Domain Specic SOSS" as dssoss
 sos -down-> rocsoss : input 
 roc -down-> rocsoss : input
+dssoss ..> rocsoss : (Optional input)
+
 docs --down--> rocsoss
 
 rocsoss -down-> rop : Generate profile 
-note bottom of rop : Contains Classes and Properties that represent the intersection of\nthings used in the example(s) and schema.org/RO-Crate entities
+
+
+
+rocsoss -down-> rop : Generate profile
+rocsoss -down-> dssoss : Generate (or update) 
+note bottom of rop : Contains Classes and Properties representing\nthe intersection of the example(s) and\nschema.org/RO-Crate entities
+note bottom of dssoss : Domain specific\nSchema.org Style Schema
 @enduml
