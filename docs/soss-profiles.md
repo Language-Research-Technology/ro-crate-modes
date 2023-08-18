@@ -1,4 +1,4 @@
-# Schema.org Style Schemms (SoSSs) and their relationship to profiles
+# Schema.org Style Schemas (SoSSs) and their relationship to profiles
 
 Schema.org, which is the basic vocabulary for [RO-Crate] has
 a light-touch approach to describing what it refers to as its *schema* (with a
