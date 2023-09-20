@@ -1,0 +1,18 @@
+{
+  "name": "ro-crate-editor-profiles",
+  "version": "1.0.0",
+  "description": "Repository for RO-Crate editor profiles, for Crate-O and potentially other RO-Crate editors. The initial profiles are simple JSON files which are typically compiled from a Schema.org style schema definition, from example RO-Crate or by hand. Future profiles may include different formats that have features such as built-in validation of crates",
+  "main": "index.js",
+  "directories": {
+    "doc": "docs"
+  },
+  "scripts": {
+    "test": "npx mocha"
+  },
+  "author": "",
+  "license": "GPL-3.0",
+  "dependencies": {
+    "ajv": "^8.12.0",
+    "mocha": "^10.2.0"
+  }
+}
