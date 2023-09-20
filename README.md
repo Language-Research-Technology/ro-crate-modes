@@ -22,7 +22,6 @@ Schema.org uses a very simple approach to defining its own schema, which is expl
 
 We will be discussing:
 
-- How to better handle entities with compound/multiple @types
 - How to improve the editing experience such as schema:CreateAction which link to multiple other entities, making them more complicated than simply linking to a schema:creator
 - Generating schemas SHACL shapes or other schema languages such as OWL, in addition to the existing tooling for generating profiles from [example documents and Schema.org style ontologies](./docs/soss-pofiles.md). 
 - Linking to RO-Crate Profile validation
