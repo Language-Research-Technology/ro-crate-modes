@@ -77,6 +77,14 @@ help ensure consistency across profiles and in most cases profile designers
 will only need to specify input-groups for Properties that are specific to their
 profile.
 
+# Class inheritance works differently
+
+In Crate-O each class has a property `hasSubClass` which lists ALL the
+classes which descend from the class in question, and these are used when adding
+or linking this can be pre-compiled in to the profile, either using automated
+tooling or by hand to give fine-grained control over what classes properties can
+take as values. Describo has a `subClassOf` property, apparently for the same purpose.
+
 # Lookup configuration has been extended to name modules
 
 Descibo profiles have a section for specifying lookup services, for example

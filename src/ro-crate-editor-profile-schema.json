@@ -1,0 +1,97 @@
+{
+    "title": "Validate Profile",
+    "description": "Validates RO-Crate Editor profiles",
+    "type": "object",
+    "properties": {
+        "metadata": {
+            "description": "Profile Metadata",
+            "type": "object",
+            "properties": {
+                "name": { "type": "string" },
+                "description": { "type": "string" },
+                "version": { "type": "number" }
+            },
+            "required": ["name", "description", "version"],
+            "additionalProperties": true
+        },
+        "context": {
+            "anyOf": [{ "type": "array" }, { "type": "string" }, { "type": "object" }]
+        },
+        "inputGroups": {
+            "description": "Layout definitions for property groups",
+            "type": "array",
+            "items": {
+                "type": "object"
+            }
+        },
+        "resolve": {
+            "description": "Configuration to resolve property associations",
+            "type": "array",
+            "items": {
+                "type": "object",
+                "properties": {
+                    "types": { "type": "array" },
+                    "properties": { "type": "array" }
+                }
+            }
+        },
+        "classes": {
+            "description": "Class definitions",
+            "type": "object",
+            "patternProperties": {
+                "^[A-Z,a-z]*": {
+                    "type": "object",
+                    "properties": {
+                        "hasSubclass": { "type": "array", "items": { "type": "string" } },
+                        "inputs": {
+                            "type": "array",
+                            "items": {
+                                "type": "object",
+                                "properties": {
+                                    "id": { "type": "string" },
+                                    "name": { "type": "string" },
+                                    "label": { "type": "string" },
+                                    "multiple": { "type": "boolean" },
+                                    "required": { "type": "boolean" },
+                                    "hide": { "type": "boolean" },
+                                    "readonly": { "type": "boolean" },
+                                    "group": { "type": "string" },
+                                    "type": {
+                                        "anyOf": [
+                                            { "type": "array", "items": { "type": "string" } },
+                                            {
+                                                "type": "string",
+                                                "enum": ["Select", "MultiSelect", "Value"]
+                                            }
+                                        ]
+                                    }
+                                },
+                                "required": ["id", "name", "help"],
+                                "additionalProperties": true
+                            }
+                        }
+                    },
+                    "required": ["inputs"],
+                    "additionalProperties": false
+                }
+            }
+        },
+        "lookup": {
+            "description": "Lookup definitions",
+            "type": "object",
+            "patternProperties": {
+                "^[A-Z,a-z]*": {
+                    "type": "object",
+                    "properties": {
+                        "fields": { "type": "array" },
+                        "datapacks": { "type": "array", "items": { "type": "string" } }
+                    },
+                    "required": ["fields", "datapacks"],
+                    "additionalProperties": false
+                }
+            }
+        }
+    },
+    "required": ["metadata", "classes"],
+    "additionalProperties": true
+}
