@@ -290,8 +290,8 @@
           "multiple": false
         },
         {
-          "id": "range",
-          "name": "http://schema.org/rangeIncludes",
+          "id": "http://schema.org/rangeIncludes",
+          "name": "rangeIncludes",
           "help": "What clasess are expected values for this range",
           "type": [
             "Class",
