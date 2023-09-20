@@ -54,8 +54,7 @@ obvious fix is to *sort* the types before casting the
 array to a string).
 
 In Crate-O our current thinking on multiple types is: we will allow the `inputs`
-for a property to create an item with multiple types (this is not implemented
-yet, but is planned). At the moment items with multiple types simply get all the
+for a property to create an item with multiple types in an Array. At the moment items with multiple types simply get all the
 input options for each type in the current profile -- there are no plans as yet
 to make special provision for a special set of inputs for a particular compound
 type unless there is demand from profile designers who need this feature.
@@ -83,7 +82,7 @@ In Crate-O each class has a property `hasSubClass` which lists ALL the
 classes which descend from the class in question, and these are used when adding
 or linking this can be pre-compiled in to the profile, either using automated
 tooling or by hand to give fine-grained control over what classes properties can
-take as values. Describo has a `subClassOf` property, apparently for the same purpose.
+take as values. Describo has a `subClassOf` property, as in Schema.org.
 
 # Lookup configuration has been extended to name modules
 
