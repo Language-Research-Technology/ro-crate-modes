@@ -18,7 +18,7 @@
             "anyOf": [{ "type": "array" }, { "type": "string" }, { "type": "object" }]
         },
         "inputGroups": {
-            "description": "Layout definitions for property groups",
+            "description": "Definitons for the top-level groups of inputs (properties)",
             "type": "array",
             "items": {
                 "type": "object"
@@ -42,13 +42,15 @@
                 "^[A-Z,a-z]*": {
                     "type": "object",
                     "properties": {
+                        "id": { "type": "string",  "pattern": "^(https?|http?)://" },
                         "hasSubclass": { "type": "array", "items": { "type": "string" } },
+                        "subClassOf": { "type": "array", "items": { "type": "string" } },
                         "inputs": {
                             "type": "array",
                             "items": {
                                 "type": "object",
                                 "properties": {
-                                    "id": { "type": "string" },
+                                    "id": { "type": "string",  "pattern": "^(https?|http?)://" },
                                     "name": { "type": "string" },
                                     "label": { "type": "string" },
                                     "multiple": { "type": "boolean" },
@@ -84,9 +86,10 @@
                     "type": "object",
                     "properties": {
                         "fields": { "type": "array" },
+                        "module": { "type": "string"},
                         "datapacks": { "type": "array", "items": { "type": "string" } }
                     },
-                    "required": ["fields", "datapacks"],
+                    
                     "additionalProperties": false
                 }
             }

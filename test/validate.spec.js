@@ -14,6 +14,9 @@ GNU General Public License for more details.
 You should have received a copy of the GNU General Public License
 along with this program.  If not, see <http://www.gnu.org/licenses/>.
 */
+
+const assert = require("assert");
+
 const fs = require("fs");
 const Ajv = require("ajv/dist/2019")
 ajv = new Ajv()
