@@ -11,7 +11,7 @@
   },
   "author": "",
   "license": "GPL-3.0",
-  "dependencies": {
+  "devDependencies": {
     "ajv": "^8.12.0",
     "mocha": "^10.2.0"
   }
