@@ -114,15 +114,7 @@
             "File"
           ]
         },
-        {
-          "id": "http://schema.org/storageRequirements",
-          "name": "storageRequirements",
-          "help": "Storage requirements (free space required).",
-          "multiple": true,
-          "type": [
-            "Text"
-          ]
-        },
+      
         {
           "id": "http://schema.org/softwareVersion",
           "name": "softwareVersion",
@@ -222,15 +214,7 @@
             "Text"
           ]
         },
-        {
-          "id": "http://schema.org/device",
-          "name": "device",
-          "help": "Device required to run the application. Used in cases where a specific make/model is required to run the application.",
-          "multiple": true,
-          "type": [
-            "File"
-          ]
-        },
+       
         {
           "id": "http://schema.org/availableOnDevice",
           "name": "availableOnDevice",
@@ -577,15 +561,7 @@
             "File"
           ]
         },
-        {
-          "id": "http://schema.org/storageRequirements",
-          "name": "storageRequirements",
-          "help": "Storage requirements (free space required).",
-          "multiple": true,
-          "type": [
-            "Text"
-          ]
-        },
+       
         {
           "id": "http://schema.org/softwareVersion",
           "name": "softwareVersion",
@@ -677,15 +653,7 @@
             "Text"
           ]
         },
-        {
-          "id": "http://schema.org/device",
-          "name": "device",
-          "help": "Device required to run the application. Used in cases where a specific make/model is required to run the application.",
-          "multiple": true,
-          "type": [
-            "File"
-          ]
-        },
+       
         {
           "id": "http://schema.org/availableOnDevice",
           "name": "availableOnDevice",
@@ -911,15 +879,7 @@
             "File"
           ]
         },
-        {
-          "id": "http://schema.org/storageRequirements",
-          "name": "storageRequirements",
-          "help": "Storage requirements (free space required).",
-          "multiple": true,
-          "type": [
-            "Text"
-          ]
-        },
+       
         {
           "id": "http://schema.org/softwareVersion",
           "name": "softwareVersion",
@@ -1011,15 +971,7 @@
             "Text"
           ]
         },
-        {
-          "id": "http://schema.org/device",
-          "name": "device",
-          "help": "Device required to run the application. Used in cases where a specific make/model is required to run the application.",
-          "multiple": true,
-          "type": [
-            "File"
-          ]
-        },
+    
         {
           "id": "http://schema.org/availableOnDevice",
           "name": "availableOnDevice",
