@@ -1095,7 +1095,7 @@
     },
     "File": {
       "hasSubclass": [
-        "ImageObject"
+        
       ],
       "inputs": [
         {
@@ -1292,148 +1292,7 @@
         }
       ]
     },
-    "ImageObject": {
-      "hasSubclass": [],
-      "inputs": [
-        {
-          "id": "http://schema.org/name",
-          "name": "name",
-          "help": "The name of the item.",
-          "multiple": true,
-          "type": [
-            "Text"
-          ]
-        },
-        {
-          "id": "http://schema.org/name",
-          "name": "name",
-          "help": "The name of the item.",
-          "multiple": true,
-          "type": [
-            "Text"
-          ]
-        },
-        {
-          "id": "http://schema.org/description",
-          "name": "description",
-          "help": "A description of the item.",
-          "multiple": true,
-          "type": [
-            "Text"
-          ]
-        },
-        {
-          "id": "http://schema.org/datePublished",
-          "name": "datePublished",
-          "help": "Date of first broadcast/publication.",
-          "multiple": true,
-          "type": [
-            "Text"
-          ]
-        },
-        {
-          "id": "http://schema.org/license",
-          "name": "license",
-          "help": "A license document that applies to this content, typically indicated by URL.",
-          "multiple": true,
-          "type": [
-            "CreativeWork"
-          ]
-        },
-        {
-          "id": "http://schema.org/mainEntity",
-          "name": "mainEntity",
-          "help": "Indicates the primary entity described in some page or other CreativeWork.",
-          "multiple": true,
-          "type": [
-            "File"
-          ]
-        },
-        {
-          "id": "http://schema.org/creator",
-          "name": "creator",
-          "help": "The creator/author of this CreativeWork. This is the same as the Author property for CreativeWork.",
-          "multiple": true,
-          "type": [
-            "Person"
-          ]
-        },
-        {
-          "id": "http://schema.org/publisher",
-          "name": "publisher",
-          "help": "The publisher of the creative work.",
-          "multiple": true,
-          "type": [
-            "Organization"
-          ]
-        },
-        {
-          "id": "http://schema.org/funder",
-          "name": "funder",
-          "help": "A person or organization that supports (sponsors) something through some kind of financial contribution.",
-          "multiple": true,
-          "type": [
-            "Organization"
-          ]
-        },
-        {
-          "id": "http://schema.org/citation",
-          "name": "citation",
-          "help": "A citation or reference to another creative work, such as another publication, web page, scholarly article, etc.",
-          "multiple": true,
-          "type": [
-            "CreativeWork"
-          ]
-        },
-        {
-          "id": "http://schema.org/usageInfo",
-          "name": "usageInfo",
-          "help": "The schema.org [[usageInfo]] property indicates further information about a [[CreativeWork]]. This property is applicable both to works that are freely available and to those that require payment or other transactions. It can reference additional information, e.g. community expectations on preferred linking and citation conventions, as well as purchasing details. For something that can be commercially licensed, usageInfo can provide detailed, resource-specific information about licensing options.\n\nThis property can be used alongside the license property which indicates license(s) applicable to some piece of content. The usageInfo property can provide information about other licensing options, e.g. acquiring commercial usage rights for an image that is also available under non-commercial creative commons licenses.",
-          "multiple": true,
-          "type": [
-            "Text"
-          ]
-        },
-        {
-          "id": "http://schema.org/hasPart",
-          "name": "hasPart",
-          "help": "Indicates an item or CreativeWork that is part of this item, or CreativeWork (in some sense).",
-          "multiple": true,
-          "type": [
-            "File"
-          ]
-        },
-        {
-          "id": "http://schema.org/name",
-          "name": "name",
-          "help": "The name of the item.",
-          "multiple": true,
-          "type": [
-            "Text"
-          ]
-        },
-        {
-          "id": "http://schema.org/identifier",
-          "name": "identifier",
-          "help": "The identifier property represents any kind of identifier for any kind of [[Thing]], such as ISBNs, GTIN codes, UUIDs etc. Schema.org provides dedicated properties for representing many of these, either as textual strings or as URL (URI) links. See [background notes](/docs/datamodel.html#identifierBg) for more details.\n        ",
-          "multiple": true,
-          "type": [
-            "Text"
-          ]
-        },
-        {
-          "id": "http://schema.org/about",
-          "name": "about",
-          "help": "The subject matter of the content.",
-          "multiple": true,
-          "type": [
-            "Dataset",
-            "SoftwareApplication",
-            "SoftwareSourceCode"
-          ]
-        }
-      ]
-    },
+    
     "ComputerLanguage": {
       "hasSubclass": [],
       "inputs": [
