@@ -61,7 +61,7 @@
           "id": "http://schema.org/name",
           "name": "name",
           "label": "Name",
-          "help": "The name of this dataset",
+          "help": "The name of this dataset.",
           "required": true,
           "multiple": false,
           "type": [
