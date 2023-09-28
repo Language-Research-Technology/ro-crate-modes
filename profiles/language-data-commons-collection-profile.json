@@ -283,17 +283,6 @@
             "Date"
           ],
           "multiple": false
-        },
-        {
-          "id": "http://schema.org/language",
-          "name": "language",
-          "label": "Language",
-          "help": "Attach a language",
-          "type": [
-            "Language"
-          ],
-          "required": true,
-          "multiple": true
         }
       ]
     },
