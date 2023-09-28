@@ -71,7 +71,7 @@
         {
           "id": "http://schema.org/author",
           "name": "author",
-          "help": "The person or organization responsible for creating this collection of data",
+          "help": "The person or organisation responsible for creating this collection of data.",
           "type": [
             "Person",
             "Organization"
@@ -81,7 +81,7 @@
         {
           "id": "http://schema.org/publisher",
           "name": "publisher",
-          "help": "The organization responsible for releasing this dataset",
+          "help": "The organisation responsible for releasing this dataset.",
           "type": [
             "Organization"
           ],
@@ -90,7 +90,7 @@
         {
           "id": "http://schema.org/funder",
           "name": "funder",
-          "help": "Organization(s) responsible for funding the creation or collection of this dataset",
+          "help": "The organisation(s) responsible for funding the creation or collection of this dataset.",
           "type": [
             "Organization"
           ],
@@ -99,7 +99,7 @@
         {
           "id": "http://schema.org/citation",
           "name": "citation",
-          "help": "Associated Publications",
+          "help": "Associated publications.",
           "type": [
             "CreativeWork"
           ],
@@ -108,7 +108,7 @@
         {
           "id": "http://schema.org/description",
           "name": "description",
-          "help": "An abstract of the collection. Include as much detail as possible about the motivation and use of the dataset, including things that we do not yet have properties for",
+          "help": "An abstract of the collection. Include as much detail as possible about the motivation and use of the dataset, including things that we do not yet have properties for.",
           "type": [
             "TextArea"
           ],
@@ -127,7 +127,7 @@
         {
           "id": "http://schema.org/spatialCoverage",
           "name": "spatialCoverage",
-          "help": "The spatialCoverage of a CreativeWork indicates the place(s) which are the focus of the content. It is a subproperty of contentLocation intended primarily for more technical and detailed materials. For example with a Dataset, it indicates areas that the dataset describes: a dataset Cape York languages would have spatialCoverage which was the place: the outline of the Cape. ",
+          "help": "The place(s) that are the focus of the content. It is a sub-property of contentLocation intended primarily for more technical and detailed materials. For example with a dataset, it indicates areas that the dataset describes: a dataset Cape York languages would have spatialCoverage which was the place: the outline of the Cape.",
           "type": [
             "Place"
           ],
@@ -136,7 +136,7 @@
         {
           "id": "http://schema.org/hasCollectionProtocol",
           "name": "hasCollectionProtocol",
-          "help": "Link to a CollectionProtocol object with (at least) a summary of how resources were selected or elicited for this collection / sub-collection",
+          "help": "A link to a CollectionProtocol object with (at least) a summary of how resources were selected or elicited for this collection/sub-collection.",
           "type": [
             "CollectionProtocol"
           ],
@@ -154,7 +154,7 @@
         {
           "id": "http://pcdm.org/models#hasMember",
           "name": "hasMember",
-          "help": "If this collection has sub-collections add them here.",
+          "help": "The sub-collections, if any, associated with this collection.",
           "type": [
             "RepositoryCollection"
           ],
@@ -163,7 +163,7 @@
         {
           "id": "http://schema.org/hasPart",
           "name": "hasPart",
-          "help": "Indicates an item or CreativeWork that is part of this item, or CreativeWork (in some sense).",
+          "help": "An item or CreativeWork that is part of this item, or CreativeWork (in some sense).",
           "type": [
             "File"
           ],
@@ -177,7 +177,7 @@
         {
           "id": "http://purl.org/dc/terms/conformsTo",
           "name": "conformsTo",
-          "help": "A link to the Text Commons RO-Crate profile for collections",
+          "help": "A link to the Text Commons RO-Crate profile for collections.",
           "type": [
             "Select"
           ],
@@ -192,7 +192,7 @@
           "id": "http://schema.org/language",
           "name": "language",
           "label": "Language",
-          "help": "The language(s) of the content in this Collection",
+          "help": "The language(s) of the content in this collection.",
           "type": [
             "Language"
           ],
@@ -203,7 +203,7 @@
           "id": "http://schema.org/name",
           "name": "name",
           "label": "Name",
-          "help": "The name of this collection",
+          "help": "The name of this collection.",
           "required": true,
           "multiple": false,
           "type": [
@@ -213,7 +213,7 @@
         {
           "id": "http://schema.org/author",
           "name": "author",
-          "help": "The person or organization responsible for creating this collection of data. Authors should be identified using URIs such as ORCiD or ROR",
+          "help": "The person or organisation responsible for creating this collection of data. Authors should be identified using URIs such as ORCiD or ROR.",
           "type": [
             "Person",
             "Organization"
@@ -223,7 +223,7 @@
         {
           "id": "http://schema.org/funder",
           "name": "funder",
-          "help": "Organization(s) responsible for funding the creation or collection of this data",
+          "help": "The organisation(s) responsible for funding the creation or collection of this data.",
           "type": [
             "Organization"
           ],
@@ -232,7 +232,7 @@
         {
           "id": "http://schema.org/citation",
           "name": "citation",
-          "help": "Associated Publications",
+          "help": "Associated publications.",
           "type": [
             "CreativeWork"
           ],
@@ -241,7 +241,7 @@
         {
           "id": "http://schema.org/description",
           "name": "description",
-          "help": "A description of the collection",
+          "help": "A description of the collection.",
           "type": [
             "TextArea"
           ],
@@ -260,7 +260,7 @@
         {
           "id": "http://schema.org/hasCollectionProtocol",
           "name": "hasCollectionProtocol",
-          "help": "Link to a CollectionProtocol object with (at least) a summary of how resources were selected or elicited for this collection / sub-collection",
+          "help": "A link to a CollectionProtocol object with (at least) a summary of how resources were selected or elicited for this collection/sub-collection.",
           "type": [
             "CollectionProtocol"
           ],
@@ -269,7 +269,7 @@
         {
           "id": "http://pcdm.org/models#hasMember",
           "name": "hasMember",
-          "help": "Sub Collection",
+          "help": "The sub-collection.",
           "type": [
             "RepositoryCollection"
           ],
@@ -278,7 +278,7 @@
         {
           "id": "http://schema.org/dateCreated",
           "name": "dateCreated",
-          "help": "The (earliest) date the data in this dataset were created",
+          "help": "The (earliest) date the data in this dataset were created.",
           "type": [
             "Date"
           ],
@@ -297,7 +297,7 @@
           "id": "http://schema.org/name",
           "name": "name",
           "label": "Name",
-          "help": "The name of this work",
+          "help": "The name of this work.",
           "required": true,
           "multiple": false,
           "type": [
@@ -316,7 +316,7 @@
         {
           "id": "http://schema.org/author",
           "name": "author",
-          "help": "The person or organization responsible for creating this work",
+          "help": "The person or organisation responsible for creating this work.",
           "type": [
             "Text",
             "Person",
@@ -327,7 +327,7 @@
         {
           "id": "http://schema.org/datePublished",
           "name": "datePublished",
-          "help": "The (earliest) date this work were created",
+          "help": "The (earliest) date this work was created.",
           "type": [
             "Date"
           ],
@@ -336,7 +336,7 @@
         {
           "id": "http://schema.org/publisher",
           "name": "publisher",
-          "help": "The Organization that published this work (use ROR IDs for institutions",
+          "help": "The organisation that published this work (use ROR IDs for institutions).",
           "type": [
             "Text",
             "Organization"
@@ -346,7 +346,7 @@
         {
           "id": "http://schema.org/isbn",
           "name": "isbn",
-          "help": "The ISBN for this work, if applicable",
+          "help": "The ISBN for this work, if applicable.",
           "type": [
             "Text"
           ],
@@ -355,7 +355,7 @@
         {
           "id": "http://schema.org/issn",
           "name": "issn",
-          "help": "The ISSN for this publication",
+          "help": "The ISSN for this publication.",
           "type": [
             "Text"
           ],
@@ -370,7 +370,7 @@
           "id": "http://schema.org/name",
           "name": "name",
           "label": "Name",
-          "help": "The name of this protocol",
+          "help": "The name of this protocol.",
           "required": true,
           "multiple": false,
           "type": [
@@ -380,7 +380,7 @@
         {
           "id": "http://schema.org/description",
           "name": "description",
-          "help": "An abstract of the article, include details of how to cite it. ",
+          "help": "An abstract of the article including details of how to cite it.",
           "type": [
             "TextArea"
           ],
@@ -389,7 +389,7 @@
         {
           "id": "http://schema.org/author",
           "name": "author",
-          "help": "The person or organization responsible for creating this collection of data",
+          "help": "The person or organisation responsible for creating this collection of data.",
           "type": [
             "Person",
             "Organization"
@@ -399,7 +399,7 @@
         {
           "id": "http://schema.org/description",
           "name": "description",
-          "help": "A summary of the collection protocol used for this collection or subcollection - eg how texts were selected, or what prompts were given to participants",
+          "help": "A summary of the collection protocol used for this collection or sub-collection, e.g. how texts were selected, or what prompts were given to participants.",
           "type": [
             "TextArea"
           ],
@@ -408,7 +408,7 @@
         {
           "id": "http://purl.archive.org/language-data-commons/terms#CollectionProtocolType",
           "name": "collectionProtocolType",
-          "help": "What kind of collection protocol is this",
+          "help": "The kind of collection protocol this is.",
           "type": [
             "SelectObject"
           ],
@@ -437,7 +437,7 @@
         {
           "id": "http://schema.org/datePublished",
           "name": "datePublished",
-          "help": "The (earliest) date the data in this dataset were created",
+          "help": "The (earliest) date the data in this dataset were created.",
           "type": [
             "Date"
           ],
@@ -451,7 +451,7 @@
         {
           "id": "http://schema.org/name",
           "name": "name",
-          "help": "The name the place",
+          "help": "The name of the place.",
           "required": true,
           "multiple": false,
           "type": [
@@ -461,7 +461,7 @@
         {
           "id": "http://schema.org/description",
           "name": "description",
-          "help": "The description the place",
+          "help": "The description of the place.",
           "multiple": false,
           "type": [
             "TextArea"
@@ -470,7 +470,7 @@
         {
           "id": "http://schema.org/address",
           "name": "address",
-          "help": "Physical address of the place",
+          "help": "The physical address of the place.",
           "required": false,
           "multiple": true,
           "type": [
@@ -480,7 +480,7 @@
         {
           "id": "http://schema.org/geo",
           "name": "geo",
-          "help": "The geo coordinates of the place",
+          "help": "The geo-coordinates of the place.",
           "required": false,
           "multiple": true,
           "type": [
@@ -497,7 +497,7 @@
         {
           "id": "http://www.opengis.net/ont/geosparql#asWKT",
           "name": "asWKT",
-          "help": "The WKT serialization of the geometry",
+          "help": "The WKT serialisation of the geometry.",
           "required": true,
           "multiple": true,
           "type": [
@@ -514,7 +514,7 @@
           "id": "http://schema.org/name",
           "name": "name",
           "label": "name",
-          "help": "The name the person",
+          "help": "The name of the person.",
           "required": true,
           "multiple": false,
           "type": [
@@ -524,7 +524,7 @@
         {
           "id": "http://schema.org/description",
           "name": "description",
-          "help": "Add any additional info not covered by other properties here.",
+          "help": "Add any additional information not covered by other properties here.",
           "type": [
             "TextArea"
           ],
@@ -534,7 +534,7 @@
           "id": "http://schema.org/affiliation",
           "name": "affiliation",
           "label": "affiliation",
-          "help": "The name the person",
+          "help": "The name of the person.",
           "required": false,
           "multiple": true,
           "type": [
@@ -550,7 +550,7 @@
           "id": "http://schema.org/name",
           "name": "name",
           "label": "name",
-          "help": "The name of the organization",
+          "help": "The name of the organisation.",
           "required": true,
           "multiple": false,
           "type": [
@@ -560,7 +560,7 @@
         {
           "id": "http://schema.org/description",
           "name": "description",
-          "help": "An abstract of the collection. Include as much detail as possible about the motivation and use of the collection, including things that we do not yet have properties for",
+          "help": "An abstract of the collection. Include as much detail as possible about the motivation and use of the collection, including things that we do not yet have properties for.",
           "type": [
             "TextArea"
           ],
@@ -569,7 +569,7 @@
         {
           "id": "http://schema.org/location",
           "name": "location",
-          "help": "A location for the organization (eg a city for a publisher)",
+          "help": "A location for the organisation (e.g. a city for a publisher).",
           "type": [
             "Text"
           ],
@@ -583,7 +583,7 @@
         {
           "id": "http://schema.org/encodingFormat",
           "name": "encodingFormat",
-          "help": "Media type typically expressed using a MIME format",
+          "help": "The media type typically expressed using a MIME format.",
           "type": [
             "Text"
           ]
@@ -591,7 +591,7 @@
         {
           "id": "https://purl.archive.org/language-data-commons/terms#size",
           "name": "size",
-          "help": "Size in Bytes",
+          "help": "The size in bytes.",
           "type": [
             "Text"
           ]
