@@ -4,6 +4,9 @@
     "description": "A draft profile for describing research software soure code / notebooks / workflows",
     "version": 0
   },
+  "conformsToUri": [
+    "https://purl.archive.org/language-data-commons/profile#Software"
+  ],
   "rootDatasets": {
     "Schema": {
       "type": "Dataset"
