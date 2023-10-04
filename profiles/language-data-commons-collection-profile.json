@@ -50,7 +50,7 @@
         {
           "id": "http://schema.org/isAccessibleForFree",
           "name": "isAccessibleForFree",
-          "help": "This is available under an Open Access license",
+          "help": "This is available under an Open Access license.",
           "required": false,
           "multiple": false,
           "type": [
@@ -117,7 +117,7 @@
         {
           "id": "http://schema.org/temporalCoverage",
           "name": "temporalCoverage",
-          "help": "The range of years of creation for items in this dataset eg 1900-1945. If there are sub collections with different coverages put this on the sub-collections not the top-level. ",
+          "help": "The range of years of creation for items in this dataset e.g. 1900-1945. If there are sub-collections with different coverages put this on the sub-collections not the top-level.",
           "type": [
             "DateTime",
             "Text"
@@ -250,7 +250,7 @@
         {
           "id": "http://schema.org/temporalCoverage",
           "name": "temporalCoverage",
-          "help": "The range of years of creation for items in this collection eg 1900-1945. If there are sub collections with different coverages put this on the sub-collections not the top-level. ",
+          "help": "The range of years of creation for items in this collection e.g. 1900-1945. If there are sub-collections with different coverages put this on the sub-collections not the top-level.",
           "type": [
             "DateTime",
             "Text"
@@ -416,7 +416,7 @@
             {
               "@id": "txc:ElicitationTask",
               "@type": "DefinedTerm",
-              "description": "The collection protocol includes a task-based prompt to participants",
+              "description": "The collection protocol includes a task-based prompt to participants.",
               "inDefinedTermSet": {
                 "@id": "txc:CollectionProtocolTypeTerms"
               },
@@ -425,7 +425,7 @@
             {
               "@id": "txc:TextSelectionCriteria",
               "@type": "DefinedTerm",
-              "description": "A description of the criteria used to select texts in a collection",
+              "description": "A description of the criteria used to select texts in a collection.",
               "inDefinedTermSet": {
                 "@id": "txc:CollectionProtocolTypeTerms"
               },
@@ -599,7 +599,7 @@
         {
           "id": "https://purl.archive.org/language-data-commons/terms#modality",
           "name": "modality",
-          "help": "The mode (spoken, written, signed etc) of this resource. There may be more than one value for this property.",
+          "help": "The mode (spoken, written, signed etc.) of this resource. There may be more than one value for this property.",
           "type": [
             "Text"
           ]
