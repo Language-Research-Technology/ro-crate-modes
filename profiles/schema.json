@@ -58,6 +58,27 @@
           ]
         },
         {
+          "id": "http://schema.org/holdingArchive",
+          "name": "holdingArchive",
+          "label": "HoldingArchive",
+          "help": "Organization where the original of this work or collection is housed",
+          "multiple": false,
+          "type": [
+            "Organization",
+            "Text"
+          ]
+        },
+        {
+          "id": "http://schema.org/isBasedOn",
+          "name": "isBasedOn",
+          "label": "isBasedOn",
+          "help": "Link to a version of this data in an online archival repository",
+          "multiple": false,
+          "type": [
+            "URL"
+          ]
+        },
+        {
           "id": "http://schema.org/author",
           "name": "author",
           "help": "The person or organization responsible for creating this collection of data",
@@ -104,7 +125,7 @@
         },
         {
           "id": "http://www.w3.org/2000/01/rdf-schema#label",
-          "name": "label",
+          "name": "rdfs:label",
           "label": "Label",
           "help": "The label for this class",
           "required": true,
@@ -115,7 +136,8 @@
         },
         {
           "id": "http://www.w3.org/2000/01/rdf-schema#comment",
-          "name": "Comment",
+          "name": "rdfs:comment",
+          "label": "Comment",
           "help": "A description of the Class",
           "type": [
             "TextArea"
