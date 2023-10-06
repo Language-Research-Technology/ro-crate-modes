@@ -4,6 +4,9 @@
     "description": "Describo profile for creating Schema.org style vocabularies",
     "version": 0.1
   },
+  "conformsToUri": [
+    "https://w3id.org/ro/profiles/schema/1.0"
+  ],
   "rootDatasets": {
     "Schema": {
       "type": "Dataset"
