@@ -106,6 +106,7 @@
           "id": "http://schema.org/author",
           "name": "author",
           "help": "The person or organisation responsible for creating this collection of data.",
+          "required": true,
           "type": [
             "Person",
             "Organization"
@@ -116,6 +117,7 @@
           "id": "http://schema.org/publisher",
           "name": "publisher",
           "help": "The organisation responsible for releasing this dataset.",
+          "required": true,
           "type": [
             "Organization"
           ],
@@ -143,6 +145,7 @@
           "id": "http://schema.org/description",
           "name": "description",
           "help": "An abstract of the collection. Include as much detail as possible about the motivation and use of the dataset, including things that we do not yet have properties for.",
+          "required": true,
           "type": [
             "TextArea"
           ],
@@ -424,6 +427,7 @@
           "id": "http://schema.org/author",
           "name": "author",
           "help": "The person or organisation responsible for creating this collection of data.",
+          "required": true,
           "type": [
             "Person",
             "Organization"
