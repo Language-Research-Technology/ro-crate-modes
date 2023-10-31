@@ -2,7 +2,9 @@
   "metadata": {
     "name": "Schema profile ",
     "description": "Describo profile for creating Schema.org style vocabularies",
-    "version": 0.1
+    "version": 0.1,
+    "author": "University of Queensland",
+    "license": "GPL-3.0"
   },
   "conformsToUri": [
     "https://w3id.org/ro/profiles/schema/1.0"
@@ -12,6 +14,57 @@
       "type": "Dataset"
     }
   },
+  "inputGroups" : 
+  [
+    {
+      "name": "About",
+      "help": "The core metadata for this RO-Crate and its subject matter.",
+      "inputs": [
+        "@id",
+        "@type",
+        "http://purl.org/dc/terms/conformsTo",
+        "http://schema.org/name",
+        "http://www.w3.org/2000/01/rdf-schema#comment",
+        "http://www.w3.org/2000/01/rdf-schema#label",
+        "http://schema.org/description",
+        "http://schema.org/conformsTo",
+        "http://schema.org/datePublished",
+        "http://schema.org/license",
+        "http://schema.org/usageInfo",
+        "http://schema.org/about",
+        "http://schema.org/mentions",
+        "http://schema.org/mainEntity",
+        "http://schema.org/sameAs",
+        "http://schema.org/language"
+      ]
+    },
+    {
+      "name": "Related People, Orgs & Works",
+      "help": "The context for the creation of this RO-Crate; who made it, funded it etc.",
+      "inputs": [
+        "http://schema.org/author",
+        "http://schema.org/creator",
+        "http://schema.org/publisher",
+        "http://schema.org/funder",
+        "http://schema.org/affiliation",
+        "http://schema.org/citation"
+  
+      ]
+    },
+    {
+      "name": "Structure",
+      "help": "For groups of elements, such as DefinedTerms",
+      "inputs": [
+        "http://schema.org/inDefinedTermSet",
+        "http://schema.org/hasDefinedTerm",
+        "http://www.w3.org/2000/01/rdf-schema#subClassOf",
+        "http://www.w3.org/2000/01/rdf-schema#subPropertyOf",
+        "http://schema.org/domainIncludes",
+        "http://schema.org/drangeIncludes"
+      ]
+    }
+  ],
+  
   "lookup": {
     "Language": {
       "module": "datapack",
@@ -50,34 +103,14 @@
           "id": "http://schema.org/name",
           "name": "name",
           "label": "Name",
-          "help": "The name of this ontology",
+          "help": "The name of this Schema",
           "required": true,
           "multiple": false,
           "type": [
             "Text"
           ]
         },
-        {
-          "id": "http://schema.org/holdingArchive",
-          "name": "holdingArchive",
-          "label": "HoldingArchive",
-          "help": "Organization where the original of this work or collection is housed",
-          "multiple": false,
-          "type": [
-            "Organization",
-            "Text"
-          ]
-        },
-        {
-          "id": "http://schema.org/isBasedOn",
-          "name": "isBasedOn",
-          "label": "isBasedOn",
-          "help": "Link to a version of this data in an online archival repository",
-          "multiple": false,
-          "type": [
-            "URL"
-          ]
-        },
+       
         {
           "id": "http://schema.org/author",
           "name": "author",

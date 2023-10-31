@@ -2,7 +2,9 @@
   "metadata": {
     "name": "Language Data Commons top level Collection (corpus)",
     "description": "RO-Crate Editor Profile that implements the language data commons RO-Crate Metadata Profile for top level collection described here: https://purl.archive.org/language-data-commons/profile#Collection",
-    "version": 0.3
+    "version": 0.3,
+    "author": "University of Queensland",
+    "license": "GPL-3.0"
   },
  "conformsToUri": [
    "https://purl.archive.org/language-data-commons/profile#Collection"
@@ -320,6 +322,27 @@
             "Date"
           ],
           "multiple": false
+        }, 
+        {
+          "id": "http://schema.org/holdingArchive",
+          "name": "holdingArchive",
+          "label": "HoldingArchive",
+          "help": "Organization where the original of this work or collection is housed",
+          "multiple": false,
+          "type": [
+            "Organization",
+            "Text"
+          ]
+        },
+        {
+          "id": "http://schema.org/isBasedOn",
+          "name": "isBasedOn",
+          "label": "isBasedOn",
+          "help": "Link to a version of this data in an online archival repository",
+          "multiple": false,
+          "type": [
+            "URL"
+          ]
         }
       ]
     },
@@ -413,15 +436,6 @@
           "type": [
             "Text"
           ]
-        },
-        {
-          "id": "http://schema.org/description",
-          "name": "description",
-          "help": "An abstract of the article including details of how to cite it.",
-          "type": [
-            "TextArea"
-          ],
-          "multiple": false
         },
         {
           "id": "http://schema.org/author",

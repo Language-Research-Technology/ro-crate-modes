@@ -2,7 +2,9 @@
   "metadata": {
     "name": "DEMO ONLY: Research Software Description Profile",
     "description": "A draft profile for describing research software soure code / notebooks / workflows",
-    "version": 0
+    "version": 0,
+    "author": "University of Queensland",
+    "license": "GPL-3.0"
   },
   "conformsToUri": [
     "https://purl.archive.org/language-data-commons/profile#Software"

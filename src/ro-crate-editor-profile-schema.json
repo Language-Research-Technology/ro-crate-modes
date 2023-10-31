@@ -11,7 +11,7 @@
                 "description": { "type": "string" },
                 "version": { "type": "number" }
             },
-            "required": ["name", "description", "version"],
+            "required": ["name", "description", "version", "author", "license"],
             "additionalProperties": true
         },
         "context": {
