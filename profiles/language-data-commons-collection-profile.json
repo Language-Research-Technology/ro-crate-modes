@@ -95,6 +95,18 @@
           ]
         },
         {
+          "id": "http://schema.org/isBasedOn",
+          "name": "isBasedOn",
+          "label": "isBasedOn",
+          "help": "Link to or description of the an original resource at an institution that holds it. ",
+          "required": false,
+          "multiple": true,
+          "type": [
+            "Text",
+            "URL"
+          ]
+        },
+        {
           "id": "http://schema.org/usageInfo",
           "name": "usageInfo",
           "label": "usageInfo",
@@ -108,6 +120,17 @@
           "id": "http://schema.org/author",
           "name": "author",
           "help": "The person or organisation responsible for creating this collection of data.",
+          "required": true,
+          "type": [
+            "Person",
+            "Organization"
+          ],
+          "multiple": true
+        },
+        {
+          "id": "http://schema.org/accountablePerson",
+          "name": "accountablePerson",
+          "help": "The person or organisation who is the data steward for this resource.",
           "required": true,
           "type": [
             "Person",
@@ -228,10 +251,21 @@
           "multiple": false
         },
         {
-          "id": "http://schema.org/language",
-          "name": "language",
-          "label": "Language",
-          "help": "The language(s) of the content in this collection.",
+          "id": "http://schema.org/inLanguage",
+          "name": "inLanguage",
+          "label": "inLanguage",
+          "help": "The language(s) of the materials (including PromaryMaterials, DerivedMaterials and Annotations) in this collection.",
+          "type": [
+            "Language"
+          ],
+          "required": true,
+          "multiple": true
+        },
+        {
+          "id": "http://schema.org/subjectLanguage",
+          "name": "subjectLanguage",
+          "label": "subjectLanguage",
+          "help": "The languages that the materials in the collection are about (not the language that it is in). This is particularly used on Annotations that may talk about PrimaryMaterials or Derived ",
           "type": [
             "Language"
           ],
@@ -260,6 +294,17 @@
           "multiple": true
         },
         {
+          "id": "http://schema.org/accountablePerson",
+          "name": "accountablePerson",
+          "help": "The person or organisation who is the data steward for this resource.",
+          "required": true,
+          "type": [
+            "Person",
+            "Organization"
+          ],
+          "multiple": true
+        },
+        {
           "id": "http://schema.org/funder",
           "name": "funder",
           "help": "The organisation(s) responsible for funding the creation or collection of this data.",
@@ -276,6 +321,18 @@
             "CreativeWork"
           ],
           "multiple": true
+        },
+        {
+          "id": "http://schema.org/isBasedOn",
+          "name": "isBasedOn",
+          "label": "isBasedOn",
+          "help": "Link to or description of the an original resource at an institution that holds it.",
+          "required": false,
+          "multiple": true,
+          "type": [
+            "Text",
+            "URL"
+          ]
         },
         {
           "id": "http://schema.org/description",
@@ -320,6 +377,15 @@
           "help": "The (earliest) date the data in this dataset were created.",
           "type": [
             "Date"
+          ],
+          "multiple": false
+        }, 
+        {
+          "id": "http://purl.archive.org/language-data-commons/terms#dateFreeText",
+          "name": "dateFreeText",
+          "help": "Date information which cannot be put in one of that standard date formats, eg "mid 1970s" or it is not clear, for example if it is a creation or publication date.",
+          "type": [
+            "Text"
           ],
           "multiple": false
         }, 
@@ -649,8 +715,8 @@
           ]
         },
         {
-          "id": "https://purl.archive.org/language-data-commons/terms#modality",
-          "name": "modality",
+          "id": "https://purl.archive.org/language-data-commons/terms#communicationMode",
+          "name": "communicationMode",
           "help": "The mode (spoken, written, signed etc.) of this resource. There may be more than one value for this property.",
           "type": [
             "Text"
@@ -659,7 +725,7 @@
       ]
     },
     "Language": {
-      "id": "http://schema.org/Language",
+      "id": "http://schema.org/inLanguage",
       "inputs": []
 
     }
