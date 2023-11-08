@@ -383,7 +383,7 @@
         {
           "id": "http://purl.archive.org/language-data-commons/terms#dateFreeText",
           "name": "dateFreeText",
-          "help": "Date information which cannot be put in one of that standard date formats, eg "mid 1970s" or it is not clear, for example if it is a creation or publication date.",
+          "help": "Date information which cannot be put in one of that standard date formats, eg 'mid 1970s' or it is not clear for example if it is a creation or publication date.",
           "type": [
             "Text"
           ],

@@ -9,10 +9,9 @@
   "conformsToUri": [
     "https://purl.archive.org/language-data-commons/profile#Software"
   ],
-  "rootDatasets": {
-    "Schema": {
-      "type": "Dataset"
-    }
+  "rootDataset": {
+      "type": ["Dataset", "SoftwareSourceCode", "SoftwareApplication"]
+  
   },
   "classes": {
     "Dataset": {
@@ -21,8 +20,9 @@
         {
           "id": "http://schema.org/name",
           "name": "name",
-          "help": "The name of the item.",
+          "help": "The name of the Software",
           "multiple": true,
+          "required": true,
           "type": [
             "Text"
           ]
@@ -32,6 +32,8 @@
           "name": "description",
           "help": "A description of the item.",
           "multiple": true,
+          "required": true,
+
           "type": [
             "Text"
           ]
@@ -41,6 +43,8 @@
           "name": "datePublished",
           "help": "Date of first broadcast/publication.",
           "multiple": true,
+          "required": true,
+
           "type": [
             "Text"
           ]
@@ -48,8 +52,10 @@
         {
           "id": "http://schema.org/license",
           "name": "license",
-          "help": "A license document that applies to this content, typically indicated by URL.",
+          "help": "A license document that applies to this content this should be included in the RO-Crate as a CreativeWork",
           "multiple": true,
+          "required": true,
+
           "type": [
             "CreativeWork"
           ]
@@ -57,8 +63,10 @@
         {
           "id": "http://schema.org/mainEntity",
           "name": "mainEntity",
-          "help": "Indicates the primary entity described in some page or other CreativeWork.",
+          "help": "Indicates the primary entry",
           "multiple": true,
+          "required": true,
+
           "type": [
             "File"
           ]
