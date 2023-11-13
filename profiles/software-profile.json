@@ -30,7 +30,7 @@
         {
           "id": "http://schema.org/description",
           "name": "description",
-          "help": "A description of the item.",
+          "help": "A description of the software.",
           "multiple": true,
           "required": true,
 
