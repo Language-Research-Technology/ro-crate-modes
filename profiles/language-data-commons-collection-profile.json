@@ -110,7 +110,7 @@
           "id": "http://schema.org/usageInfo",
           "name": "usageInfo",
           "label": "usageInfo",
-          "help": "A text-based citation for this record eg 'Cite this as Musgrave (2023) My Dataset' and/or notes about further options for licensing this collection",
+          "help": "This field should contain either a free text bibliographic citation for this material, e.g. 'Cite as: Musgrave (2023). Title of work. DOI' or provide additional information on licensing options for using the data, e.g. 'Contact the Data Steward to discuss license terms'. If both are needed, use two fields.",
           "multiple": true,
           "type": [
             "Text"
@@ -169,7 +169,7 @@
         {
           "id": "http://schema.org/description",
           "name": "description",
-          "help": "An abstract of the collection. Include as much detail as possible about the motivation and use of the dataset, including things that we do not yet have properties for.",
+          "help": "An abstract of the collection. Include as much detail as possible about the motivation and use of the dataset, including things that we do not yet have properties for. Max limit 200 words.",
           "required": true,
           "type": [
             "TextArea"
@@ -179,7 +179,7 @@
         {
           "id": "http://schema.org/temporalCoverage",
           "name": "temporalCoverage",
-          "help": "The range of years of creation for items in this dataset e.g. 1900-1945. If there are sub-collections with different coverages put this on the sub-collections not the top-level.",
+          "help": "The range of years of creation for items in this dataset using a slash, e.g. 1900/1945. If there are sub-collections with different coverages put this on the sub-collections not the top-level.",
           "type": [
             "DateTime",
             "Text"
@@ -346,7 +346,7 @@
         {
           "id": "http://schema.org/temporalCoverage",
           "name": "temporalCoverage",
-          "help": "The range of years of creation for items in this collection e.g. 1900-1945. If there are sub-collections with different coverages put this on the sub-collections not the top-level.",
+          "help": "The range of years of creation for items in this collection using a slash, e.g. 1900/1945. If there are sub-collections with different coverages put this on the sub-collections not the top-level.",
           "type": [
             "DateTime",
             "Text"
@@ -433,7 +433,7 @@
         {
           "id": "http://schema.org/description",
           "name": "description",
-          "help": "An abstract of the work. Include citation details.",
+          "help": "An abstract of the work.",
           "type": [
             "TextArea"
           ],
@@ -462,7 +462,7 @@
         {
           "id": "http://schema.org/publisher",
           "name": "publisher",
-          "help": "The organisation that published this work (use ROR IDs for institutions).",
+          "help": "The organisation that published this work.",
           "type": [
             "Text",
             "Organization"
@@ -555,7 +555,7 @@
         {
           "id": "http://schema.org/datePublished",
           "name": "datePublished",
-          "help": "The (earliest) date the data in this dataset were created.",
+          "help": "The (earliest) date the collection protocol was published.",
           "type": [
             "Date"
           ],
@@ -579,7 +579,7 @@
         {
           "id": "http://schema.org/description",
           "name": "description",
-          "help": "The description of the place.",
+          "help": "A description of the place.",
           "multiple": false,
           "type": [
             "TextArea"
@@ -652,7 +652,7 @@
           "id": "http://schema.org/affiliation",
           "name": "affiliation",
           "label": "affiliation",
-          "help": "The name of the person.",
+          "help": "The organisation that this person is affiliated with. For example, a university or school.",
           "required": false,
           "multiple": true,
           "type": [
@@ -678,7 +678,7 @@
         {
           "id": "http://schema.org/description",
           "name": "description",
-          "help": "An abstract of the collection. Include as much detail as possible about the motivation and use of the collection, including things that we do not yet have properties for.",
+          "help": "A description of the organisation.",
           "type": [
             "TextArea"
           ],
@@ -687,7 +687,7 @@
         {
           "id": "http://schema.org/location",
           "name": "location",
-          "help": "A location for the organisation (e.g. a city for a publisher).",
+          "help": "A location for the organisation, e.g. a city for a publisher.",
           "type": [
             "Text"
           ],
@@ -717,7 +717,7 @@
         {
           "id": "https://purl.archive.org/language-data-commons/terms#communicationMode",
           "name": "communicationMode",
-          "help": "The mode (spoken, written, signed etc.) of this resource. There may be more than one value for this property.",
+          "help": "The mode(s) (spoken, written, signed, etc.) used in the interaction represented by this resource.",
           "type": [
             "Text"
           ]
