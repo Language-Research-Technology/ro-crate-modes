@@ -10,8 +10,11 @@
     "https://purl.archive.org/language-data-commons/profile#Software"
   ],
   "rootDataset": {
-      "type": ["Dataset", "SoftwareSourceCode", "SoftwareApplication"]
-  
+    "type": [
+      "Dataset",
+      "SoftwareSourceCode",
+      "SoftwareApplication"
+    ]
   },
   "classes": {
     "Dataset": {
@@ -33,7 +36,6 @@
           "help": "A description of the software.",
           "multiple": true,
           "required": true,
-
           "type": [
             "Text"
           ]
@@ -44,7 +46,6 @@
           "help": "Date of first broadcast/publication.",
           "multiple": true,
           "required": true,
-
           "type": [
             "Text"
           ]
@@ -55,7 +56,6 @@
           "help": "A license document that applies to this content this should be included in the RO-Crate as a CreativeWork",
           "multiple": true,
           "required": true,
-
           "type": [
             "CreativeWork"
           ]
@@ -66,7 +66,6 @@
           "help": "Indicates the primary entry",
           "multiple": true,
           "required": true,
-
           "type": [
             "File"
           ]
@@ -107,7 +106,6 @@
             "Text"
           ]
         },
-        
         {
           "id": "http://schema.org/releaseNotes",
           "name": "releaseNotes",
@@ -127,7 +125,6 @@
             "File"
           ]
         },
-      
         {
           "id": "http://schema.org/softwareVersion",
           "name": "softwareVersion",
@@ -227,7 +224,6 @@
             "Text"
           ]
         },
-       
         {
           "id": "http://schema.org/availableOnDevice",
           "name": "availableOnDevice",
@@ -235,96 +231,6 @@
           "multiple": true,
           "type": [
             "File"
-          ]
-        },
-        {
-          "id": "http://schema.org/datePublished",
-          "name": "datePublished",
-          "help": "Date of first broadcast/publication.",
-          "multiple": true,
-          "type": [
-            "Text"
-          ]
-        },
-        {
-          "id": "http://schema.org/license",
-          "name": "license",
-          "help": "A license document that applies to this content, typically indicated by URL.",
-          "multiple": true,
-          "type": [
-            "CreativeWork"
-          ]
-        },
-        {
-          "id": "http://schema.org/mainEntity",
-          "name": "mainEntity",
-          "help": "Indicates the primary entity described in some page or other CreativeWork.",
-          "multiple": true,
-          "type": [
-            "File"
-          ]
-        },
-        {
-          "id": "http://schema.org/creator",
-          "name": "creator",
-          "help": "The creator/author of this CreativeWork. This is the same as the Author property for CreativeWork.",
-          "multiple": true,
-          "type": [
-            "Person"
-          ]
-        },
-        {
-          "id": "http://schema.org/publisher",
-          "name": "publisher",
-          "help": "The publisher of the creative work.",
-          "multiple": true,
-          "type": [
-            "Organization"
-          ]
-        },
-        {
-          "id": "http://schema.org/funder",
-          "name": "funder",
-          "help": "A person or organization that supports (sponsors) something through some kind of financial contribution.",
-          "multiple": true,
-          "type": [
-            "Organization"
-          ]
-        },
-        {
-          "id": "http://schema.org/citation",
-          "name": "citation",
-          "help": "A citation or reference to another creative work, such as another publication, web page, scholarly article, etc.",
-          "multiple": true,
-          "type": [
-            "CreativeWork"
-          ]
-        },
-        {
-          "id": "http://schema.org/usageInfo",
-          "name": "usageInfo",
-          "help": "The schema.org [[usageInfo]] property indicates further information about a [[CreativeWork]]. This property is applicable both to works that are freely available and to those that require payment or other transactions. It can reference additional information, e.g. community expectations on preferred linking and citation conventions, as well as purchasing details. For something that can be commercially licensed, usageInfo can provide detailed, resource-specific information about licensing options.\n\nThis property can be used alongside the license property which indicates license(s) applicable to some piece of content. The usageInfo property can provide information about other licensing options, e.g. acquiring commercial usage rights for an image that is also available under non-commercial creative commons licenses.",
-          "multiple": true,
-          "type": [
-            "Text"
-          ]
-        },
-        {
-          "id": "http://schema.org/hasPart",
-          "name": "hasPart",
-          "help": "Indicates an item or CreativeWork that is part of this item, or CreativeWork (in some sense).",
-          "multiple": true,
-          "type": [
-            "File"
-          ]
-        },
-        {
-          "id": "http://schema.org/name",
-          "name": "name",
-          "help": "The name of the item.",
-          "multiple": true,
-          "type": [
-            "Text"
           ]
         },
         {
@@ -554,7 +460,6 @@
             "Text"
           ]
         },
-        
         {
           "id": "http://schema.org/releaseNotes",
           "name": "releaseNotes",
@@ -574,7 +479,6 @@
             "File"
           ]
         },
-       
         {
           "id": "http://schema.org/softwareVersion",
           "name": "softwareVersion",
@@ -593,7 +497,6 @@
             "File"
           ]
         },
-        
         {
           "id": "http://schema.org/programmingLanguage",
           "name": "programmingLanguage",
@@ -666,7 +569,6 @@
             "Text"
           ]
         },
-       
         {
           "id": "http://schema.org/availableOnDevice",
           "name": "availableOnDevice",
@@ -674,96 +576,6 @@
           "multiple": true,
           "type": [
             "File"
-          ]
-        },
-        {
-          "id": "http://schema.org/datePublished",
-          "name": "datePublished",
-          "help": "Date of first broadcast/publication.",
-          "multiple": true,
-          "type": [
-            "Text"
-          ]
-        },
-        {
-          "id": "http://schema.org/license",
-          "name": "license",
-          "help": "A license document that applies to this content, typically indicated by URL.",
-          "multiple": true,
-          "type": [
-            "CreativeWork"
-          ]
-        },
-        {
-          "id": "http://schema.org/mainEntity",
-          "name": "mainEntity",
-          "help": "Indicates the primary entity described in some page or other CreativeWork.",
-          "multiple": true,
-          "type": [
-            "File"
-          ]
-        },
-        {
-          "id": "http://schema.org/creator",
-          "name": "creator",
-          "help": "The creator/author of this CreativeWork. This is the same as the Author property for CreativeWork.",
-          "multiple": true,
-          "type": [
-            "Person"
-          ]
-        },
-        {
-          "id": "http://schema.org/publisher",
-          "name": "publisher",
-          "help": "The publisher of the creative work.",
-          "multiple": true,
-          "type": [
-            "Organization"
-          ]
-        },
-        {
-          "id": "http://schema.org/funder",
-          "name": "funder",
-          "help": "A person or organization that supports (sponsors) something through some kind of financial contribution.",
-          "multiple": true,
-          "type": [
-            "Organization"
-          ]
-        },
-        {
-          "id": "http://schema.org/citation",
-          "name": "citation",
-          "help": "A citation or reference to another creative work, such as another publication, web page, scholarly article, etc.",
-          "multiple": true,
-          "type": [
-            "CreativeWork"
-          ]
-        },
-        {
-          "id": "http://schema.org/usageInfo",
-          "name": "usageInfo",
-          "help": "The schema.org [[usageInfo]] property indicates further information about a [[CreativeWork]]. This property is applicable both to works that are freely available and to those that require payment or other transactions. It can reference additional information, e.g. community expectations on preferred linking and citation conventions, as well as purchasing details. For something that can be commercially licensed, usageInfo can provide detailed, resource-specific information about licensing options.\n\nThis property can be used alongside the license property which indicates license(s) applicable to some piece of content. The usageInfo property can provide information about other licensing options, e.g. acquiring commercial usage rights for an image that is also available under non-commercial creative commons licenses.",
-          "multiple": true,
-          "type": [
-            "Text"
-          ]
-        },
-        {
-          "id": "http://schema.org/hasPart",
-          "name": "hasPart",
-          "help": "Indicates an item or CreativeWork that is part of this item, or CreativeWork (in some sense).",
-          "multiple": true,
-          "type": [
-            "File"
-          ]
-        },
-        {
-          "id": "http://schema.org/name",
-          "name": "name",
-          "help": "The name of the item.",
-          "multiple": true,
-          "type": [
-            "Text"
           ]
         },
         {
@@ -872,7 +684,6 @@
             "Text"
           ]
         },
-       
         {
           "id": "http://schema.org/releaseNotes",
           "name": "releaseNotes",
@@ -892,7 +703,6 @@
             "File"
           ]
         },
-       
         {
           "id": "http://schema.org/softwareVersion",
           "name": "softwareVersion",
@@ -911,7 +721,6 @@
             "File"
           ]
         },
-       
         {
           "id": "http://schema.org/programmingLanguage",
           "name": "programmingLanguage",
@@ -984,7 +793,6 @@
             "Text"
           ]
         },
-    
         {
           "id": "http://schema.org/availableOnDevice",
           "name": "availableOnDevice",
@@ -992,96 +800,6 @@
           "multiple": true,
           "type": [
             "File"
-          ]
-        },
-        {
-          "id": "http://schema.org/datePublished",
-          "name": "datePublished",
-          "help": "Date of first broadcast/publication.",
-          "multiple": true,
-          "type": [
-            "Text"
-          ]
-        },
-        {
-          "id": "http://schema.org/license",
-          "name": "license",
-          "help": "A license document that applies to this content, typically indicated by URL.",
-          "multiple": true,
-          "type": [
-            "CreativeWork"
-          ]
-        },
-        {
-          "id": "http://schema.org/mainEntity",
-          "name": "mainEntity",
-          "help": "Indicates the primary entity described in some page or other CreativeWork.",
-          "multiple": true,
-          "type": [
-            "File"
-          ]
-        },
-        {
-          "id": "http://schema.org/creator",
-          "name": "creator",
-          "help": "The creator/author of this CreativeWork. This is the same as the Author property for CreativeWork.",
-          "multiple": true,
-          "type": [
-            "Person"
-          ]
-        },
-        {
-          "id": "http://schema.org/publisher",
-          "name": "publisher",
-          "help": "The publisher of the creative work.",
-          "multiple": true,
-          "type": [
-            "Organization"
-          ]
-        },
-        {
-          "id": "http://schema.org/funder",
-          "name": "funder",
-          "help": "A person or organization that supports (sponsors) something through some kind of financial contribution.",
-          "multiple": true,
-          "type": [
-            "Organization"
-          ]
-        },
-        {
-          "id": "http://schema.org/citation",
-          "name": "citation",
-          "help": "A citation or reference to another creative work, such as another publication, web page, scholarly article, etc.",
-          "multiple": true,
-          "type": [
-            "CreativeWork"
-          ]
-        },
-        {
-          "id": "http://schema.org/usageInfo",
-          "name": "usageInfo",
-          "help": "The schema.org [[usageInfo]] property indicates further information about a [[CreativeWork]]. This property is applicable both to works that are freely available and to those that require payment or other transactions. It can reference additional information, e.g. community expectations on preferred linking and citation conventions, as well as purchasing details. For something that can be commercially licensed, usageInfo can provide detailed, resource-specific information about licensing options.\n\nThis property can be used alongside the license property which indicates license(s) applicable to some piece of content. The usageInfo property can provide information about other licensing options, e.g. acquiring commercial usage rights for an image that is also available under non-commercial creative commons licenses.",
-          "multiple": true,
-          "type": [
-            "Text"
-          ]
-        },
-        {
-          "id": "http://schema.org/hasPart",
-          "name": "hasPart",
-          "help": "Indicates an item or CreativeWork that is part of this item, or CreativeWork (in some sense).",
-          "multiple": true,
-          "type": [
-            "File"
-          ]
-        },
-        {
-          "id": "http://schema.org/name",
-          "name": "name",
-          "help": "The name of the item.",
-          "multiple": true,
-          "type": [
-            "Text"
           ]
         },
         {
@@ -1107,9 +825,7 @@
       ]
     },
     "File": {
-      "hasSubclass": [
-        
-      ],
+      "hasSubclass": [],
       "inputs": [
         {
           "id": "http://schema.org/name",
@@ -1208,15 +924,6 @@
           "multiple": true,
           "type": [
             "File"
-          ]
-        },
-        {
-          "id": "http://schema.org/name",
-          "name": "name",
-          "help": "The name of the item.",
-          "multiple": true,
-          "type": [
-            "Text"
           ]
         },
         {
@@ -1305,7 +1012,6 @@
         }
       ]
     },
-    
     "ComputerLanguage": {
       "hasSubclass": [],
       "inputs": [
