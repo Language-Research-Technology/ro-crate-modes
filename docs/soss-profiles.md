@@ -53,7 +53,7 @@ To make an RO-Crate Editor profile we follow the approach pioneered by the Descr
 
 ![Image showing how the script `rocsoss` from RO-Crate Schema Tools is used to compile a base editor profile from the schema.org schema, with RO-Crate additions ](images/soss-to-profile.svg)
 
-We (the tech-team members Language Data Commons of Australia, (LDaCA)) used this process to create the basic [RO-Crate Editor Profile](../profiles/base-profile.json) in this repository.
+We (the tech-team members Language Data Commons of Australia, (LDaCA)) used this process to create the basic [RO-Crate Editor Profile](../modes/base.json) in this repository.
 
 It is also possible to build a profile from a set of example RO-Crate documents
 

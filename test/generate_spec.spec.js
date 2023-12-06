@@ -6,7 +6,7 @@ const fs = require("fs")
 describe("generateSpec", function () {
 
     it("Generates a sensible spec", function () {
-      const profile = require("../profiles/software-profile.json");
+      const profile = require("../modes/software.json");
 
       const result = Profile.generateSpec(profile, "test_data/software-source-code/text/profile.md", "test_data/software-source-code/examples/");
         // NOTE regexes below have . in place of [ ]
@@ -21,7 +21,7 @@ describe("generateSpec", function () {
 
 
     it("Can Deal with <select> in a mode file", function () {
-      const profile = require("../profiles/language-data-commons-collection-profile.json");
+      const profile = require("../modes/language-data-commons.json");
       // Not worrying about examples in this one
       const result = Profile.generateSpec(profile, "test_data/ldac-profile/profile/text/profile.md", "test_data/software-source-code/examples/");
         // NOTE regexes below have . in place of [ ]
