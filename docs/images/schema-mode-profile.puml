@@ -1,0 +1,22 @@
+@startuml
+!include_many ./data-management-style.txt
+
+title: The three main components for RO-Crate editing with Crate-O
+
+
+rectangle "Schema.org Style Schema for Domain" <<standards>> as soss
+
+
+rectangle "Schema.org Schema + RO-Crate terms" <<standards>> as so
+
+soss -down-> so : Extends
+note top of soss: Eg Language Data Commons terms\nsuch as communicationMode, SpokenLanguage
+
+rectangle "Domain-specific Mode" <<workspace>> as md
+note top of md: Eg Language Data Commons\nmode file
+note bottom of md: - Specifies behaviour of Crate-O\n- Validate RO-Crate structure
+
+rectangle "RO-Crate Profile Document" <<standards>> as pf 
+
+note top of pf: Eg Language Data Commons RO-Crate\nProfile Document
+@enduml

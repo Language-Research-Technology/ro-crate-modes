@@ -6,6 +6,12 @@
 
 <img src="example-to-profile.svg">
 
+## [docs/images/schema-mode-profile.svg](./schema-mode-profile.svg)
+
+
+
+<img src="schema-mode-profile.svg">
+
 ## [docs/images/soss-to-profile.svg](./soss-to-profile.svg)
 
 

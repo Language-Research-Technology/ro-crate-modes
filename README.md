@@ -1,17 +1,15 @@
-# Crate-O RO-Crate Editor Profiles
+# Crate-O RO-Crate Editor Mode FIle
 
-This repository is for the developement of cross-application editor configurations for RO-Crate Profiles.
+This repository is for the developement of cross-application editor configurations, known as "Modes" that implement RO-Crate Profiles.
 
-[RO-Crate] (Research-Object Crate) is linked-data based specification, based on JSON-LD syntax with an extensible Schema.org based vocabulary schema and @context, for packaging data with metadata. RO-Crates are useful in avariety of contexts, including for describing research datasets for re-use and archiving and for describing contextual information such as the relationships between people, organizations and events.
+[RO-Crate] (Research-Object Crate) is linked-data based specification, based on JSON-LD syntax with an extensible Schema.org based vocabulary schema and @context, for packaging data with metadata. RO-Crates are useful in av ariety of contexts, including for describing research datasets for re-use and archiving and for describing contextual information such as the relationships between people, organizations and events.
 
-[RO-Crate Profiles] specify how to specialise the RO-Crate approach for a particular purpose or domain. They consist of (at least) a human-readable document, and optionally validation services. An RO-Crate Editor Profile supplements an RO-Crate Profile with specific instructions. 
+[RO-Crate Profiles] specify how to specialise the RO-Crate approach for a particular purpose or domain. They consist of (at least) a human-readable document, and optionally validation services. An RO-Crate Editor Mode File supplements an RO-Crate Profile with specific machine readable instructions. 
 
-The configuration files contained in this repository, which we are calling "RO-Crate Editor Profiles" are intended to form the basis of a new standard for describing RO-Crate editor behaviour and are based on the [Describo Profiles] (which vary between versions of Describo) used to configure the [Describo] family of RO-Crate editing tools - maintained by Marco La Rosa.
+The configuration files contained in this repository, which we are calling "RO-Crate Editor Modes" are intended to form the basis of a new standard for describing RO-Crate editor behaviour.
 
+Initial versions of this work were based on the [Describo Profiles] (which vary between versions of Describo) used to configure the [Describo] family of RO-Crate editing tools - maintained by Marco La Rosa.
 
-# Initial differences from Describo profiles
-
-The starting point for this project was when the [LDaCA] team needed to extend the Describo-profiles we had been working with in our RO-Crate editor tool Crate-O. This required us to make breaking changes - see this page [about the differences](docs/describo-diffs.md).
 
 # About Schema.org Style Schemas
 
