@@ -14,9 +14,12 @@ note top of soss: Eg Language Data Commons terms\nsuch as communicationMode, Spo
 
 rectangle "Domain-specific Mode" <<workspace>> as md
 note top of md: Eg Language Data Commons\nmode file
-note bottom of md: - Specifies behaviour of Crate-O\n- Validate RO-Crate structure
+note bottom of md: - Specify behaviour of editor, eg Crate-O\n- Validate RO-Crate structure
 
 rectangle "RO-Crate Profile Document" <<standards>> as pf 
+
+pf -left-> md : Show rules\nfrom
+soss <-right- md : Based on
 
 note top of pf: Eg Language Data Commons RO-Crate\nProfile Document
 @enduml

@@ -6,6 +6,7 @@ This diagram shows the relationship between the three main components used by Cr
 ![Image showing the relationship between Schemas, modes and profiles](./images/schema-mode-profile.svg)
 
 
+
 # Schema.org Style Schemas (SoSSs) and their relationship to profiles and modes
 
 Schema.org, which is the basic vocabulary for [RO-Crate] has
