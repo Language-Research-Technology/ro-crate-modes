@@ -56,14 +56,17 @@ The Class definition does not have any information about the occurrence of prope
     }
 ```
 
-A Schema.org Style Schema, which we are calling a 'SoSS' is a Flattened JSON-LD graph, just like an RO-Crate. Some members RO-Crate community are beginning to define its basic schema and profiles using the same approach.
+A Schema.org Style Schema, which we are calling a 'SoSS' is a Flattened JSON-LD graph, just like an RO-Crate. Some members of the RO-Crate community are beginning to define its basic schema and profiles using the same approach.
 
-To make an RO-Crate Editor Mode we transform the flat graph of a schema into something optimized for driving an editor -- it creates a list of Classes, and what properties each may have. 
+To make an RO-Crate Mode File we transform the flat graph of a schema into something optimized for driving an editor or a validator -- it creates a list of Classes, and what properties each may have. 
 
 ![Image showing how the script `rocsoss` from RO-Crate Schema Tools is used to compile a base editor profile from the schema.org schema, with RO-Crate additions ](images/soss-to-profile.svg)
 
 We (the tech-team members Language Data Commons of Australia, (LDaCA)) used this process to create the basic [RO-Crate Editor Profile](../profiles/base-profile.json) in this repository.
 
-It is also possible to build a profile from a set of example RO-Crate documents
+It is also possible to build a profile from a set of example RO-Crate documents using the rocsoss script -- this looks for the relationships between Classes and Properties in a set of examples and generated a Schema.org Style Schema (SoSS) that captures this, then generates a Mode File from that. The rules in the Mode File can be included in an RO-Crate profile using another script - automating the process of creating profile documentation.
 
 ![Image showing how the script `rocsoss` from RO-Crate Schema Tools is used to compile a domain specific profile ](images/example-to-profile.svg)
+
+
+[RO-Crate]: https://www.researchobject.org/ro-crate/
