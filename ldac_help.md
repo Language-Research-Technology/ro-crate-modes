@@ -13,6 +13,8 @@ While the current version of Crate-O is designed for editing self-contained RO-C
 
 Crate-O is currently developed by the [Language Data Commons of Australia (LDaCA)](https://www.ldaca.edu.au/), under the guidance of Peter Sefton as technical lead. If the tool is adopted in other contexts (we are in talks with a few groups about this) then we aim to establish a steering committee/reference group to help guide development.
 
+<br>
+
 # Crate-O Use Cases
 
 Crate-O can be used to:
@@ -20,6 +22,8 @@ Crate-O can be used to:
 - Add and edit the metadata fields of a data collection
 - Submit a collection to the LDaCA Portal
 - Edit a schema
+
+<br>
 
 ## Main Start Page Options
 
@@ -33,6 +37,8 @@ Bulk Add | Select a spreadsheet from a different directory to assist you with me
 Save | Save the state of this page into your RO-Crate. This will create an _ro-crate-metadata.json_ file or append data into an existing _ro-crate-metadata.json_.
 Close | Closes without saving.
 Mode | Select a predefined mode or load one from your computer.
+
+<br>
 
 ## RO-Crate Collection Hierarchy
 
@@ -50,6 +56,8 @@ DefinedTerm | A 'word, name, acronym, phrase, etc. with a formal definition' and
 
 For more details on these entities and their related metadata, see [Metadata for Language Data](https://ldaca.gitbook.io/metadata-for-language-data/).
 
+<br>
+
 ## Creating a New RO-Crate for Language Data Commons
 
 New RO-Crates can be created in several ways, including:
@@ -57,9 +65,13 @@ New RO-Crates can be created in several ways, including:
 - Spreadsheet upload to Crate-O
 - Manual form
 
+<br>
+
 ### RO-Crate Creation in Crate-O
 
 [TODO: add details]
+
+<br>
 
 ### RO-Crate Creation through Spreadsheet Upload
 
@@ -77,7 +89,7 @@ Objects | Contains metadata about the entities within the collection that could 
 
 Each of these tabs have columns that require data to be input, as well as columns that are pre-populated with formulas that reference the sections you complete.
 
-At a minimum, it’s best practice to include __@id__ and __@type__ columns in each of your spreadsheet tabs, as these appear in Crate-O for each of the entities. Items in the __@id__ columns should always be prefixed with #, for example, an __@id__ under People could be ‘#Anna’. __@type__ is an umbrella term that encompasses Classes, Properties, DefinedTerms and DefinedTermSets. For more detailed lists of these, see [Metadata for Language Data](https://ldaca.gitbook.io/metadata-for-language-data/).
+At a minimum, it’s best practice to include __@id__ and __@type__ columns in each of your spreadsheet tabs, as these appear in Crate-O for each of the entities. Items in the __@id__ columns should always be prefixed with #, for example, an __@id__ under People could be '#Anna'. __@type__ is an umbrella term that encompasses Classes, Properties, DefinedTerms and DefinedTermSets. For more detailed lists of these, see [Metadata for Language Data](https://ldaca.gitbook.io/metadata-for-language-data/).
 
 To load your collection metadata into Crate-O for viewing and further editing:
 - Navigate to [Crate-O](https://language-research-technology.github.io/crate-o/#/) in either [Google Chrome](https://google.com/chrome) or [Microsoft Edge](https://microsoft.com/edge).
@@ -86,9 +98,13 @@ To load your collection metadata into Crate-O for viewing and further editing:
 - Under __Mode__, ensure that you have _Language Data Commons top level Collection (corpus)_ selected.
 - A pop-up will show the metadata that has been added, as well as any warnings associated with it.
 
+<br>
+
 ### RO-Crate Creation through Manual Form
 
 [TODO: add details]
+
+<br>
 
 ## Load an Existing RO-Crate for Language Data Commons
 
@@ -99,6 +115,8 @@ If you already have an associated RO-Crate for your collection, follow these ste
 - Navigate to the location of the _ro-crate-metadata.json_ file for your repository, then choose __Select__. This will open the repository in Crate-O, from where you can populate the metadata for your collection.
 - Under __Mode__, ensure that you have _Language Data Commons top level Collection (corpus)_ selected.
 - The message "This dataset does not have all the types required in the profile" at the top of a loaded directory indicates that there is important metadata missing. Click the blue Add missing metadata button, which will take you directly to that item and populate the data.
+
+<br>
 
 ## General Navigation
 
@@ -124,14 +142,20 @@ On the left-hand panel, there are some further options related to navigating and
 - __All Entities__: Select to view all metadata associated with your collection.
 - __Unlinked Entities__: Select to view all metadata that currently is not linked to any properties.
 
+<br>
+
 ## Using Crate-O to Edit a Schema
 
 For internal LDaCA use, the Crate-O platform also allows you to edit and add descriptions, attributes and connections of entities in a schema. The steps below explain this process, using the language-data-commons-vocabs repository as an example.
+
+<br>
 
 ### Clone the Repository
 
 - Make a clone of the [language-data-commons-vocabs](https://github.com/Language-Research-Technology/language-data-commons-vocabs) repository in a space in your directory that makes sense to access.
 - See [Cloning a Repository](https://docs.github.com/en/repositories/creating-and-managing-repositories/cloning-a-repository) for further details.
+
+<br>
 
 ### View the Schema in Crate-O
 
@@ -148,6 +172,8 @@ Example if using GitHub Desktop:
 - You can now navigate to the sections you want to view and/or update.
 
 > NOTE: DefinedTerms are LDaCA-specific metadata items that link to an existing open-source schema, but don't necessarily have to have the same standard name and description if those don't apply to the LDaCA use case.
+
+<br>
 
 ### Update an Entity Description
 
