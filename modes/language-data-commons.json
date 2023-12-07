@@ -4,7 +4,8 @@
     "description": "Crate-O Mode that implements the language data commons RO-Crate Metadata Profile described here: https://purl.archive.org/language-data-commons/profile",
     "version": 0.3,
     "author": "University of Queensland",
-    "license": "GPL-3.0"
+    "license": "GPL-3.0",
+    "help": "https://github.com/Language-Research-Technology/ro-crate-editor-profiles/blob/help_docs/help/modes/language-data-commons.md"
   },
   "rootDataEntity": [
     {
