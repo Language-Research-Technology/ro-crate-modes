@@ -430,7 +430,22 @@
     },
     "RepositoryObject": {
       "subClassOf": [],
-      "inputs": []
+      "inputs": [
+        {
+          "id": "http://purl.org/dc/terms/conformsTo",
+          "name": "conformsTo",
+          "help": "A link to the Text Commons RO-Crate Mode for objects.",
+          "type": [
+            "Select"
+          ],
+          "values": [
+            {
+              "@id": "https://purl.archive.org/language-data-commons/profile#Object"
+            }
+          ],
+          "multiple": false
+        }
+      ]
     },
     "CreativeWork": {
       "subClassOf": [],
