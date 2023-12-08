@@ -17,19 +17,22 @@ New RO-Crates can be created in several ways, including:
 
 An RO-Crate metadata spreadsheet template can be downloaded from [TODO: add this] and populated with your collection metadata for upload to Crate-O.
 
-The spreadsheet has three standard tabs by default, but depending on your collection, you may need to add additional tabs.
+The spreadsheet has four standard tabs by default, but depending on your collection, you may need to add additional tabs.
 
 Tab | Description
 --- | ---
 People | Contains metadata about the people within the collection.
 Files | Contains metadata about the files in your collection. If the collection has multiple file formats, duplicate this tab and add the formats to the tab names, e.g. WAV_Files, EAF_Files, TXT_Files etc.
 Objects | Contains metadata about the entities within the collection that could encompass one or more files.
+Licenses | Contains metadata about the licenses within the collection; both for the objects/files and for the collection's metadata.
 
 > NOTE: ELAN (.eaf) files can have relative or absolute paths to the data they relate to. The preferences file is generally not needed for the collection and relates to the particular ELAN user only.
 
 Each of these tabs have columns that require data to be input, as well as columns that are pre-populated with formulas that reference the sections you complete.
 
 At a minimum, it’s best practice to include __@id__ and __@type__ columns in each of your spreadsheet tabs, as these appear in Crate-O for each of the entities. Items in the __@id__ columns should always be prefixed with #, for example, an __@id__ under People could be '#Anna'. __@type__ is an umbrella term that encompasses Classes, Properties, DefinedTerms and DefinedTermSets. For more detailed lists of these, see [Metadata for Language Data](https://ldaca.gitbook.io/metadata-for-language-data/).
+
+For licensing, it is possible to leave these sections blank, however this will add a default 'no license' in those spaces which will need to be ammended later in Crate-O.
 
 To load your collection metadata into Crate-O for viewing and further editing:
 - Navigate to [Crate-O](https://language-research-technology.github.io/crate-o/#/) in either [Google Chrome](https://google.com/chrome) or [Microsoft Edge](https://microsoft.com/edge).
