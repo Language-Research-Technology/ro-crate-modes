@@ -1121,9 +1121,9 @@ This profile ...
 
 
 The Root Data Entity:
--  MUST have at least the following types: ["Dataset","SoftwareSourceCode","SoftwareApplication"]
--  MUST have a conformsTo property with least the following values [{"@id":"https://purl.archive.org/language-data-commons/profile#Software"}]
+-  MUST have at least the following types: ["Dataset","SoftwareSourceCode","SoftwareApplication"] with a conformsTo property with least the following values [{"@id":"https://w3id.org/ro/software/source-code"}]
 
+## Root Data Entity Dataset, SoftwareSourceCode, SoftwareApplication
 <table>
 <tr><td><strong>Property</strong></td><td><strong>Required?</strong></td><td>Expected value range</strong></td><td><strong>Descriptions</strong></td></tr>
 <tr><td>name</td><td>MUST</td><td>Text</td><td>The name of the Software</td></tr>
@@ -1155,6 +1155,7 @@ This property can be used alongside the license property which indicates license
         </td></tr>
 <tr><td>about</td><td>MAY</td><td><a href="#type-Dataset">Dataset</a>, <a href="#type-SoftwareApplication">SoftwareApplication</a>, <a href="#type-SoftwareSourceCode">SoftwareSourceCode</a></td><td>The subject matter of the content.</td></tr>
 </table>
+
 
 
 

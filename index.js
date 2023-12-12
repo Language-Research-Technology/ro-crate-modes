@@ -1,2 +1,2 @@
-const {Profile} = require('./lib/profile')
-module.exports = { Profile };
+const {Mode} = require('./lib/mode')
+module.exports = { Mode };

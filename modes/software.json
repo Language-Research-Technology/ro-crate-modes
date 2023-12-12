@@ -7,16 +7,7 @@
     "license": "GPL-3.0",
     "help": "https://github.com/Language-Research-Technology/crate-o/blob/help_docs/help/index.md"
   },
-  "conformsToUri": [
-    "https://purl.archive.org/language-data-commons/profile#Software"
-  ],
-  "rootDataset": {
-    "type": [
-      "Dataset",
-      "SoftwareSourceCode",
-      "SoftwareApplication"
-    ]
-  },
+  
   "rootDataEntity": [
     {
       "type": [
