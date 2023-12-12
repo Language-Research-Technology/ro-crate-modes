@@ -4,19 +4,17 @@
 title: The three main components for RO-Crate editing with Crate-O
 
 
-rectangle "Schema.org Style Schema for Domain" <<standards>> as soss
+rectangle "1. Schema.org Style Schema for Domain" <<standards>> as soss
 
 
-rectangle "Schema.org Schema + RO-Crate terms" <<standards>> as so
 
-soss -down-> so : Extends
 note top of soss: Eg Language Data Commons terms\nsuch as communicationMode, SpokenLanguage
 
-rectangle "Domain-specific Mode" <<workspace>> as md
+rectangle "2. Domain-specific Mode" <<workspace>> as md
 note top of md: Eg Language Data Commons\nmode file
 note bottom of md: - Specify behaviour of editor, eg Crate-O\n- Validate RO-Crate structure
 
-rectangle "RO-Crate Profile Document" <<standards>> as pf 
+rectangle "3. RO-Crate Profile Document" <<standards>> as pf 
 
 pf -left-> md : Show rules\nfrom
 soss <-right- md : Based on
