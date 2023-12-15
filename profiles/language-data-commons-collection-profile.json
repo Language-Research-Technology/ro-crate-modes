@@ -186,15 +186,7 @@
           ],
           "multiple": true
         },
-        {
-          "id": "http://schema.org/spatialCoverage",
-          "name": "spatialCoverage",
-          "help": "The place(s) that are the focus of the content. It is a sub-property of contentLocation intended primarily for more technical and detailed materials. For example with a dataset, it indicates areas that the dataset describes: a dataset Cape York languages would have spatialCoverage which was the place: the outline of the Cape.",
-          "type": [
-            "Place"
-          ],
-          "multiple": true
-        },
+        
         {
           "id": "http://schema.org/hasCollectionProtocol",
           "name": "hasCollectionProtocol",
@@ -204,15 +196,7 @@
           ],
           "multiple": false
         },
-        {
-          "id": "http://schema.org/contentLocation",
-          "name": "contentLocation",
-          "help": "The location depicted or described in the content. For example, the location in a photograph or painting.",
-          "type": [
-            "ContentLocation"
-          ],
-          "multiple": false
-        },
+        
         {
           "id": "http://pcdm.org/models#hasMember",
           "name": "hasMember",
@@ -236,6 +220,15 @@
     "RepositoryCollection": {
       "subClassOf": [],
       "inputs": [
+        {
+          "id": "http://schema.org/contentLocation",
+          "name": "contentLocation",
+          "help": "The location depicted or described in the content. For example, the location in a photograph or painting.",
+          "type": [
+            "Place"
+          ],
+          "multiple": false
+        },
         {
           "id": "http://purl.org/dc/terms/conformsTo",
           "name": "conformsTo",
