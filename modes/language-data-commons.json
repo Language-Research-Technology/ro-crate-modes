@@ -222,15 +222,6 @@
           "multiple": false
         },
         {
-          "id": "http://schema.org/contentLocation",
-          "name": "contentLocation",
-          "help": "The location depicted or described in the content. For example, the location in a photograph or painting.",
-          "type": [
-            "ContentLocation"
-          ],
-          "multiple": false
-        },
-        {
           "id": "http://pcdm.org/models#hasMember",
           "name": "hasMember",
           "help": "The sub-collections, if any, associated with this collection.",
@@ -253,6 +244,24 @@
     "RepositoryCollection": {
       "subClassOf": [],
       "inputs": [
+        {
+          "id": "http://schema.org/contentLocation",
+          "name": "contentLocation",
+          "help": "The location depicted or described in the content. For example, the location in a photograph or painting.",
+          "type": [
+            "Place"
+          ],
+          "multiple": false
+        },
+        {
+          "id": "http://schema.org/spatialCoverage",
+          "name": "spatialCoverage",
+          "help": "The location depicted or described in the content. For example, the location in a photograph or painting.",
+          "type": [
+            "Place"
+          ],
+          "multiple": false
+        },
         {
           "id": "http://purl.org/dc/terms/conformsTo",
           "name": "conformsTo",
