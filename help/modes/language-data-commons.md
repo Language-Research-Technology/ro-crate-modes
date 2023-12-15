@@ -13,15 +13,15 @@ To create a new RO-Crate for your language collection:
 - Select __Open Directory__.
 - Navigate to a (preferably empty) folder in which you want to create your RO-CRate JSON file and __Select__.
 - Under __Mode__, ensure that you have _Language Data Commons top level Collection (corpus)_ selected.
-- A warning message will appear if any required metadata is missing.
+- A warning message will appear if any required metadata is missing, which you can click to add.
 
-You can now add as little or as much information about your collection as you like, as this can be worked on further later.
+Add as little or as much information about your collection as you like, as this can be saved and worked on further later.
 
 When you are ready to save your RO-Crate:
 - Select __Save__.
-- A warning message may appear with required entities that are not yet in your collection, which can be added when you next work on your RO-Crate.
+- The RO-Crate will save, as well as showing a warning message with any required entities that are not yet in your collection. These can be added when you next work on your RO-Crate.
 - Select __Close__ to exit your RO-Crate.
-- In the folder you had selected, you will now see a JSON file which is your created RO-Crate with any details you had added.
+- In the folder you had selected, you will now see a JSON file which is your created RO-Crate containing all the data you have entered.
 
 <br>
 
