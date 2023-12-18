@@ -74,7 +74,7 @@
           "id": "http://schema.org/license",
           "name": "license",
           "label": "license",
-          "help": "Link to a document that describes the rights and obligations for users of this collection record. NOTE: This is does not necessarily cover the license terms that may apply to Objects in the collection which MAY have specific licensing. Licensing on other obkjects over-rides the license attached to a collection record.",
+          "help": "Link to a document that describes the rights and obligations for users of this collection record. NOTE: This does not necessarily cover the license terms that may apply to Objects in the collection which may have specific licensing. Licensing on other objects overrides the license attached to a collection record.",
           "required": true,
           "multiple": false,
           "type": [
@@ -98,7 +98,7 @@
           "id": "http://schema.org/isBasedOn",
           "name": "isBasedOn",
           "label": "isBasedOn",
-          "help": "Link to or description of the an original resource at an institution that holds it. ",
+          "help": "Link to or description of the an original resource at an institution that holds it.",
           "required": false,
           "multiple": true,
           "type": [
@@ -258,7 +258,7 @@
           "id": "http://schema.org/subjectLanguage",
           "name": "subjectLanguage",
           "label": "subjectLanguage",
-          "help": "The languages that the materials in the collection are about (not the language that it is in). This is particularly used on Annotations that may talk about PrimaryMaterials or Derived ",
+          "help": "The languages that the materials in the collection are about (not the language that it is in). This is particularly used on Annotations that may talk about PrimaryMaterials or Derived.",
           "type": [
             "Language"
           ],
@@ -386,7 +386,7 @@
           "id": "http://schema.org/holdingArchive",
           "name": "holdingArchive",
           "label": "HoldingArchive",
-          "help": "Organization where the original of this work or collection is housed",
+          "help": "Organization where the original of this work or collection is housed.",
           "multiple": false,
           "type": [
             "Organization",
@@ -397,7 +397,7 @@
           "id": "http://schema.org/isBasedOn",
           "name": "isBasedOn",
           "label": "isBasedOn",
-          "help": "Link to a version of this data in an online archival repository",
+          "help": "Link to a version of this data in an online archival repository.",
           "multiple": false,
           "type": [
             "URL"
