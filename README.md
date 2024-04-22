@@ -1,19 +1,19 @@
 # Crate-O RO-Crate Editor Mode FIle
 
-This repository is for the developement of cross-application editor configurations, known as "Modes" that implement RO-Crate Profiles.
+This repository is for the development of cross-application editor configurations, known as "Modes" that implement RO-Crate Profiles.
 
-[RO-Crate] (Research-Object Crate) is linked-data based specification, based on JSON-LD syntax with an extensible Schema.org based vocabulary schema and @context, for packaging data with metadata. RO-Crates are useful in av ariety of contexts, including for describing research datasets for re-use and archiving and for describing contextual information such as the relationships between people, organizations and events.
+[RO-Crate] (Research-Object Crate) is linked-data based specification, based on JSON-LD syntax with an extensible Schema.org based vocabulary schema and @context, for packaging data with metadata. RO-Crates are useful in a variety of contexts, including for describing research datasets for re-use and archiving and for describing contextual information such as the relationships between people, organizations and events.
 
 [RO-Crate Profiles] specify how to specialise the RO-Crate approach for a particular purpose or domain. They consist of (at least) a human-readable document, and optionally validation services. An RO-Crate Editor Mode File supplements an RO-Crate Profile with specific machine readable instructions. 
 
-The configuration files contained in this repository, which we are calling "RO-Crate Editor Modes" are intended to form the basis of a new standard for describing RO-Crate editor behaviour.
+The configuration files contained in this repository, which we are calling "RO-Crate Modes" are intended to form the basis of a an approach for describing RO-Crate editor behaviour and as a basis for validation.
 
-Initial versions of this work were based on the [Describo Profiles] (which vary between versions of Describo) used to configure the [Describo] family of RO-Crate editing tools - maintained by Marco La Rosa.
+Initial versions of this work were based on the [Describo Profiles] (which vary between versions of Describo) used to configure the [Describo] family of RO-Crate editing tools - currently maintained by Marco La Rosa.
 
 
 # About Schema.org Style Schemas
 
-Schema.org uses a very simple approach to defining its own schema, which is explained in this page about [Schema.org style Schemas and RO-Crate Editor Profiles](./docs/soss-pofiles.md)
+Schema.org uses a very simple approach to defining its own schema, which is explained in this page about [Schema.org style Schemas and RO-Crate Editor Profiles](./docs/soss-profiles.md)
 
 
 # Future Roadmap
@@ -23,7 +23,7 @@ We will be discussing:
 - How to improve the editing experience such as schema:CreateAction which link to multiple other entities, making them more complicated than simply linking to a schema:creator
 - Generating schemas SHACL shapes or other schema languages such as OWL, in addition to the existing tooling for generating profiles from [example documents and Schema.org style ontologies](./docs/soss-pofiles.md). 
 - Linking to RO-Crate Profile validation
-- Let us know by raising an issue.
+- Other: Let us know about your suggestions by raising an issue.
 
 
 # Governance 
