@@ -37,3 +37,9 @@ This repository is maintained by the Language Data Commons of Australia ([LDaCA]
 [RO-Crate Profiles]: https://github.com/ResearchObject/ro-crate/blob/master/docs/1.2-DRAFT/profiles.md
 [Describo]: https://describo.github.io/
 [Describo Profiles]: https://github.com/describo/profiles/tree/master
+
+# Setup
+
+In order to edit the .puml files, download the VSCode PlantUML extension.
+Alternately, you can link your git hooks to the .githooks folder, paste the following code into your terminal: `git config core.hooksPath .githooks`
+You will also need to download plantuml `https://plantuml.com/starting`
