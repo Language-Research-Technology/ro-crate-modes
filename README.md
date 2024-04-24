@@ -40,6 +40,6 @@ This repository is maintained by the Language Data Commons of Australia ([LDaCA]
 
 # Setup
 
-In order to edit the .puml files, download the VSCode PlantUML extension.
-Alternately, you can link your git hooks to the .githooks folder, paste the following code into your terminal: `git config core.hooksPath .githooks`
+In order to edit the .puml files, download the VSCode PlantUML extension, following the setup instructions. This extension can be used in VSCode to both preview and export diagrams, just set the root and export directories. 
+Alternately, you can ensure that the pre-commit file in in the .githooks folder, then paste the following code into your terminal: `git config core.hooksPath .githooks`
 You will also need to download plantuml `https://plantuml.com/starting`
