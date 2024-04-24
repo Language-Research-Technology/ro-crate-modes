@@ -7,7 +7,7 @@ rectangle "RO-Crate Schema additions" as roc
 rectangle "Tool: rocsoss script" as rocsoss
 }
 
-rectangle "RO-Crate Base Mode Profile" as rop
+rectangle "RO-Crate Base Mode File" as rop
 
 sos -down-> rocsoss : input 
 roc -down-> rocsoss : input
