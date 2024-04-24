@@ -11,7 +11,7 @@ rectangle "Tool: rocsoss script" as rocsoss
 }
 
 rectangle "Domain-Specific Mode File" as mod
-rectangle "Domain Specic SoSS" as dssoss
+rectangle "Domain Specific SOSS" as dssoss
 sos -down-> rocsoss : input 
 roc -down-> rocsoss : input
 

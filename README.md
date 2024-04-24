@@ -1,4 +1,4 @@
-# Crate-O RO-Crate Editor Mode FIle
+# Crate-O RO-Crate Editor Mode File
 
 This repository is for the development of cross-application editor configurations, known as "Modes" that implement RO-Crate Profiles.
 
@@ -28,7 +28,7 @@ We will be discussing:
 
 # Governance 
 
-This repository is maintained by the Language Data Commons of Australia ([LDaCA] project). If there is interest we will set up a series of ad hoc standardisation consultation meetings to help steer the development of RO-Crate Editor profiles, along the lines of the RO-Crate community process which takes place outside of any formal orgnizational framework.
+This repository is maintained by the Language Data Commons of Australia (LDaCA). If there is interest we will set up a series of ad hoc standardisation consultation meetings to help steer the development of RO-Crate Editor profiles, along the lines of the RO-Crate community process which takes place outside of any formal orgnizational framework.
 
 
 [RO-Crate]: https://www.researchobject.org/ro-crate/
