@@ -40,6 +40,8 @@ This repository is maintained by the Language Data Commons of Australia ([LDaCA]
 
 # Setup
 ## PlantUML
+Prerequisites: 
+1. Ensure that python is downloaded and added to your device's path
 For anyone that wishes to edit PlantUML diagrams, such as in .md files, follow these steps:
 1. Download plantuml `https://plantuml.com/starting`
 2. Copy the pre-commit file from the .githooks folder
