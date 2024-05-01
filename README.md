@@ -41,8 +41,8 @@ This repository is maintained by the Language Data Commons of Australia ([LDaCA]
 # Setup
 ## PlantUML
 Prerequisites: 
-- Ensure that python is downloaded and added to your device's path
-For anyone that wishes to edit PlantUML diagrams, such as in .md files, follow these steps:
+* Ensure that python is downloaded and added to your device's path <br>
+For anyone that wishes to edit PlantUML diagrams, such as in .md files, follow these steps: <br>
 1. Install plantuml `https://plantuml.com/starting`
 2. Copy the pre-commit file from the .githooks folder
 3. Paste it into .git/hooks (if this folder isn't visible in the project root, show hidden files [mac](https://au.pcmag.com/macos/83540/how-to-access-your-macs-hidden-files) or [windows](https://support.microsoft.com/en-au/windows/view-hidden-files-and-folders-in-windows-97fbc472-c603-9d90-91d0-1166d1d9f4b5#:~:text=Show%20%3E%20Hidden%20items.-,Open%20File%20Explorer%20from%20the%20taskbar.,folders%2C%20and%20drives%20and%20OK.)), (linux users use `cp .githooks/pre-commit .git/hooks`)
