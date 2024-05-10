@@ -1,7 +1,7 @@
 {
   "metadata": {
-    "name": "Language Data Commons top level Collection (corpus)",
-    "description": "Crate-O Mode that implements the language data commons RO-Crate Metadata Profile for top level collection described here: https://purl.archive.org/language-data-commons/profile#Collection",
+    "name": "Language Data Commons top-level Collection (corpus)",
+    "description": "Crate-O Mode that implements the language data commons RO-Crate Metadata Profile for top-level collection described here: https://purl.archive.org/language-data-commons/profile#Collection",
     "version": 0.3,
     "author": "University of Queensland",
     "license": "GPL-3.0"
@@ -85,7 +85,7 @@
           "id": "http://purl.org/dc/terms/rightsHolder",
           "name": "rightsHolder",
           "label": "rightsHolder",
-          "help": "A person or organization owning or managing rights over the resource.",
+          "help": "A person or organisation owning or managing rights over the resource.",
           "required": true,
           "multiple": false,
           "type": [
@@ -98,7 +98,7 @@
           "id": "http://schema.org/isBasedOn",
           "name": "isBasedOn",
           "label": "isBasedOn",
-          "help": "Link to or description of the an original resource at an institution that holds it.",
+          "help": "Link to or description of an original resource at an institution that holds it.",
           "required": false,
           "multiple": true,
           "type": [
@@ -186,7 +186,15 @@
           ],
           "multiple": true
         },
-        
+        {
+          "id": "http://schema.org/spatialCoverage",
+          "name": "spatialCoverage",
+          "help": "The place(s) that are the focus of the content. It is a sub-property of contentLocation intended primarily for more technical and detailed materials. For example, with a dataset, it indicates areas that the dataset describes: a dataset Cape York languages would have spatialCoverage which was the place: the outline of the Cape.",
+          "type": [
+            "Place"
+          ],
+          "multiple": true
+        },
         {
           "id": "http://schema.org/hasCollectionProtocol",
           "name": "hasCollectionProtocol",
@@ -247,7 +255,7 @@
           "id": "http://schema.org/inLanguage",
           "name": "inLanguage",
           "label": "inLanguage",
-          "help": "The language(s) of the materials (including PromaryMaterials, DerivedMaterials and Annotations) in this collection.",
+          "help": "The language(s) of the materials (including PrimaryMaterials, DerivedMaterials and Annotations) in this collection.",
           "type": [
             "Language"
           ],
@@ -258,7 +266,7 @@
           "id": "http://schema.org/subjectLanguage",
           "name": "subjectLanguage",
           "label": "subjectLanguage",
-          "help": "The languages that the materials in the collection are about (not the language that it is in). This is particularly used on Annotations that may talk about PrimaryMaterials or Derived.",
+          "help": "The languages that the materials in the collection are about (not the language that it is in). This is particularly used on Annotations that may talk about PrimaryMaterials or DerivedMaterials.",
           "type": [
             "Language"
           ],
@@ -319,7 +327,7 @@
           "id": "http://schema.org/isBasedOn",
           "name": "isBasedOn",
           "label": "isBasedOn",
-          "help": "Link to or description of the an original resource at an institution that holds it.",
+          "help": "Link to or description of an original resource at an institution that holds it.",
           "required": false,
           "multiple": true,
           "type": [
@@ -376,7 +384,7 @@
         {
           "id": "http://purl.archive.org/language-data-commons/terms#dateFreeText",
           "name": "dateFreeText",
-          "help": "Date information which cannot be put in one of that standard date formats, eg 'mid 1970s' or it is not clear for example if it is a creation or publication date.",
+          "help": "Date information which cannot be put in one of that standard date formats, e.g. 'mid-1970s', or it is not clear, for example if it is a creation or publication date.",
           "type": [
             "Text"
           ],
@@ -386,7 +394,7 @@
           "id": "http://schema.org/holdingArchive",
           "name": "holdingArchive",
           "label": "HoldingArchive",
-          "help": "Organization where the original of this work or collection is housed.",
+          "help": "Organisation where the original of this work or collection is housed.",
           "multiple": false,
           "type": [
             "Organization",
