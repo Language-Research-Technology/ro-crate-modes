@@ -58,3 +58,7 @@ We (the tech-team members Language Data Commons of Australia, (LDaCA)) used this
 It is also possible to build a profile from a set of example RO-Crate documents
 
 ![Image showing how the script `rocsoss` from RO-Crate Schema Tools is used to compile a domain specific profile ](images/example-to-profile.svg)
+
+
+
+[RO-Crate]: https://www.researchobject.org/ro-crate/ "RO-Crate is a community effort to establish a lightweight approach to packaging research data with their metadata. It is based on schema.org annotations in JSON-LD, and aims to make best-practice in formal metadata description accessible and practical for use in a wider variety of situations, from an individual researcher working with a folder of data, to large data-intensive computational research environments."
