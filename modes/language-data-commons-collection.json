@@ -7,7 +7,7 @@
     "license": "GPL-3.0"
   },
  "conformsToUri": [
-   "https://purl.archive.org/language-data-commons/profile#Collection"
+   "https://w3id.org/ldac/profile#Collection"
  ],
   "rootDataset": {
     "type": ["Dataset", "RepositoryCollection"]
@@ -169,7 +169,7 @@
         {
           "id": "http://schema.org/description",
           "name": "description",
-          "help": "An abstract of the collection. Include as much detail as possible about the motivation and use of the dataset, including things that we do not yet have properties for. Max limit 200 words.",
+          "help": "An abstract of the collection. Include as much detail as possible about the motivation and use of the dataset, including things that we do not yet have properties for.",
           "required": true,
           "type": [
             "TextArea"

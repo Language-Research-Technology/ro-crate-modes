@@ -1,7 +1,7 @@
 {
   "metadata": {
     "name": "Schema profile ",
-    "description": "Crate-O Mode for creating Schema.org style vocabularies",
+    "description": "Crate-O Mode for creating Schema.org Style Schema (SOSS) vocabularies.",
     "version": 0.1,
     "author": "University of Queensland",
     "license": "GPL-3.0"
@@ -94,8 +94,8 @@
           "type": [
             "rdfs:Class",
             "rdf:Property",
-            "definedTerm",
-            "definedTermSet"
+            "DefinedTerm",
+            "DefinedTermSet"
           ],
           "multiple": true
         },
@@ -339,8 +339,8 @@
           "multiple": true
         },
         {
-          "id": "http://schema.org/definedTermSet",
-          "name": "definedTermSet",
+          "id": "http://schema.org/DefinedTermSet",
+          "name": "DefinedTermSet",
           "help": "A set of defined terms that can be used for the range of values of this property",
           "type": [
             "DefinedTermSet"
