@@ -43,7 +43,7 @@
         {
           "id": "http://schema.org/identifier",
           "name": "identifier",
-          "help": "The identifier property represents any kind of identifier for any kind of [[Thing]], such as ISBNs, GTIN codes, UUIDs, etc. Schema.org provides dedicated properties for representing many of these, either as textual strings or as URL (URI) links. See [background notes](/docs/datamodel.html#identifierBg) for more details.",
+          "help": "The identifier property represents any kind of identifier for any kind of [[Thing]], such as ISBNs, GTIN codes, UUIDs, etc. Schema.org provides dedicated properties for representing many of these, either as textual strings or as URL (URI) links.",
           "multiple": true,
           "type": [
             "Text"
@@ -220,7 +220,7 @@
         {
           "id": "http://schema.org/identifier",
           "name": "identifier",
-          "help": "The identifier property represents any kind of identifier for any kind of [[Thing]], such as ISBNs, GTIN codes, UUIDs, etc. Schema.org provides dedicated properties for representing many of these, either as textual strings or as URL (URI) links. See [background notes](/docs/datamodel.html#identifierBg) for more details.",
+          "help": "The identifier property represents any kind of identifier for any kind of [[Thing]], such as ISBNs, GTIN codes, UUIDs, etc. Schema.org provides dedicated properties for representing many of these, either as textual strings or as URL (URI) links.",
           "multiple": true,
           "type": [
             "Text"
@@ -407,7 +407,7 @@
         {
           "id": "http://schema.org/identifier",
           "name": "identifier",
-          "help": "The identifier property represents any kind of identifier for any kind of [[Thing]], such as ISBNs, GTIN codes, UUIDs, etc. Schema.org provides dedicated properties for representing many of these, either as textual strings or as URL (URI) links. See [background notes](/docs/datamodel.html#identifierBg) for more details.",
+          "help": "The identifier property represents any kind of identifier for any kind of [[Thing]], such as ISBNs, GTIN codes, UUIDs, etc. Schema.org provides dedicated properties for representing many of these, either as textual strings or as URL (URI) links.",
           "multiple": true,
           "type": [
             "Text"
@@ -475,7 +475,7 @@
         {
           "id": "http://schema.org/identifier",
           "name": "identifier",
-          "help": "The identifier property represents any kind of identifier for any kind of [[Thing]], such as ISBNs, GTIN codes, UUIDs, etc. Schema.org provides dedicated properties for representing many of these, either as textual strings or as URL (URI) links. See [background notes](/docs/datamodel.html#identifierBg) for more details.",
+          "help": "The identifier property represents any kind of identifier for any kind of [[Thing]], such as ISBNs, GTIN codes, UUIDs, etc. Schema.org provides dedicated properties for representing many of these, either as textual strings or as URL (URI) links.",
           "multiple": true,
           "type": [
             "Text"
@@ -534,7 +534,7 @@
         {
           "id": "http://schema.org/familyName",
           "name": "familyName",
-          "help": "Family name. In the U.S., the last name of a Person.",
+          "help": "The surname of a person.",
           "multiple": true,
           "type": [
             "Text"
@@ -543,7 +543,7 @@
         {
           "id": "http://schema.org/givenName",
           "name": "givenName",
-          "help": "Given name. In the U.S., the first name of a Person.",
+          "help": "The given or first name of a person.",
           "multiple": true,
           "type": [
             "Text"
@@ -552,7 +552,7 @@
         {
           "id": "http://schema.org/identifier",
           "name": "identifier",
-          "help": "The identifier property represents any kind of identifier for any kind of [[Thing]], such as ISBNs, GTIN codes, UUIDs, etc. Schema.org provides dedicated properties for representing many of these, either as textual strings or as URL (URI) links. See [background notes](/docs/datamodel.html#identifierBg) for more details.",
+          "help": "The identifier property represents any kind of identifier for any kind of [[Thing]], such as ISBNs, GTIN codes, UUIDs, etc. Schema.org provides dedicated properties for representing many of these, either as textual strings or as URL (URI) links.",
           "multiple": true,
           "type": [
             "Text"
@@ -620,7 +620,7 @@
         {
           "id": "http://schema.org/identifier",
           "name": "identifier",
-          "help": "The identifier property represents any kind of identifier for any kind of [[Thing]], such as ISBNs, GTIN codes, UUIDs, etc. Schema.org provides dedicated properties for representing many of these, either as textual strings or as URL (URI) links. See [background notes](/docs/datamodel.html#identifierBg) for more details.",
+          "help": "The identifier property represents any kind of identifier for any kind of [[Thing]], such as ISBNs, GTIN codes, UUIDs, etc. Schema.org provides dedicated properties for representing many of these, either as textual strings or as URL (URI) links.",
           "multiple": true,
           "type": [
             "Text"
@@ -706,7 +706,7 @@
         {
           "id": "http://schema.org/identifier",
           "name": "identifier",
-          "help": "The identifier property represents any kind of identifier for any kind of [[Thing]], such as ISBNs, GTIN codes, UUIDs, etc. Schema.org provides dedicated properties for representing many of these, either as textual strings or as URL (URI) links. See [background notes](/docs/datamodel.html#identifierBg) for more details.",
+          "help": "The identifier property represents any kind of identifier for any kind of [[Thing]], such as ISBNs, GTIN codes, UUIDs, etc. Schema.org provides dedicated properties for representing many of these, either as textual strings or as URL (URI) links.",
           "multiple": true,
           "type": [
             "Text"
@@ -785,7 +785,7 @@
         {
           "id": "http://schema.org/identifier",
           "name": "identifier",
-          "help": "The identifier property represents any kind of identifier for any kind of [[Thing]], such as ISBNs, GTIN codes, UUIDs, etc. Schema.org provides dedicated properties for representing many of these, either as textual strings or as URL (URI) links. See [background notes](/docs/datamodel.html#identifierBg) for more details.",
+          "help": "The identifier property represents any kind of identifier for any kind of [[Thing]], such as ISBNs, GTIN codes, UUIDs, etc. Schema.org provides dedicated properties for representing many of these, either as textual strings or as URL (URI) links.",
           "multiple": true,
           "type": [
             "Text"
@@ -951,7 +951,7 @@
         {
           "id": "http://schema.org/identifier",
           "name": "identifier",
-          "help": "The identifier property represents any kind of identifier for any kind of [[Thing]], such as ISBNs, GTIN codes, UUIDs, etc. Schema.org provides dedicated properties for representing many of these, either as textual strings or as URL (URI) links. See [background notes](/docs/datamodel.html#identifierBg) for more details.",
+          "help": "The identifier property represents any kind of identifier for any kind of [[Thing]], such as ISBNs, GTIN codes, UUIDs, etc. Schema.org provides dedicated properties for representing many of these, either as textual strings or as URL (URI) links.",
           "multiple": true,
           "type": [
             "Text"
@@ -1028,7 +1028,7 @@
         {
           "id": "http://schema.org/identifier",
           "name": "identifier",
-          "help": "The identifier property represents any kind of identifier for any kind of [[Thing]], such as ISBNs, GTIN codes, UUIDs, etc. Schema.org provides dedicated properties for representing many of these, either as textual strings or as URL (URI) links. See [background notes](/docs/datamodel.html#identifierBg) for more details.",
+          "help": "The identifier property represents any kind of identifier for any kind of [[Thing]], such as ISBNs, GTIN codes, UUIDs, etc. Schema.org provides dedicated properties for representing many of these, either as textual strings or as URL (URI) links.",
           "multiple": true,
           "type": [
             "Text"
@@ -1089,7 +1089,7 @@
         {
           "id": "http://schema.org/identifier",
           "name": "identifier",
-          "help": "The identifier property represents any kind of identifier for any kind of [[Thing]], such as ISBNs, GTIN codes, UUIDs, etc. Schema.org provides dedicated properties for representing many of these, either as textual strings or as URL (URI) links. See [background notes](/docs/datamodel.html#identifierBg) for more details.",
+          "help": "The identifier property represents any kind of identifier for any kind of [[Thing]], such as ISBNs, GTIN codes, UUIDs, etc. Schema.org provides dedicated properties for representing many of these, either as textual strings or as URL (URI) links.",
           "multiple": true,
           "type": [
             "Text"
