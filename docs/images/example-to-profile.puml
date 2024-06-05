@@ -10,17 +10,17 @@ rectangle "RO-Crate Schema additions" as roc
 rectangle "Tool: rocsoss script" as rocsoss
 }
 
-rectangle "Domain-Specific Profile" as rop
-rectangle "Domain Specic SoSS" as dssoss
+rectangle "Domain-Specific Mode File" as mod
+rectangle "Domain Specific SOSS" as dssoss
 sos -down-> rocsoss : input 
 roc -down-> rocsoss : input
 
 docs --down--> rocsoss
 
-rocsoss -down-> rop : Generate
+rocsoss -down-> mod : Generate
 
 rocsoss .down.> dssoss : Optional: Generate 
 
-note bottom of rop : Contains Classes and Properties representing\nthe intersection of the example(s) and\nschema.org/RO-Crate entities
+note bottom of mod : Contains Classes and Properties representing\nthe intersection of the example(s) and\nschema.org/RO-Crate entities
 note bottom of dssoss : Domain specific\nSchema.org Style Schema
 @enduml
