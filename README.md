@@ -39,9 +39,11 @@ This repository is maintained by the Language Data Commons of Australia (LDaCA).
 # Setup
 ## PlantUML
 Prerequisites: 
-* Ensure that python is downloaded and added to your device's path 
+* Ensure that [python](https://www.python.org/downloads/) is downloaded and added to your device's path 
 
 For anyone that wishes to edit PlantUML diagrams, such as in .md files, follow these steps: <br>
-1. Install plantuml `https://plantuml.com/starting`
-2. Copy the pre-commit file from the .githooks folder into .git/hooks, (linux/mac) `cp .githooks/pre-commit .git/hooks`, (windows) `copy .githooks/pre-commit .git/hooks`
+1. Install [plantuml](https://plantuml.com/starting)
+2. Copy the pre-commit file from the githooks folder into .git/hooks
+    - navigate to the root of this repository `cd (your directory path)/ro-crate-editor-profiles/`
+    - (linux/mac) `cp githooks/pre-commit .git/hooks`, (windows) `copy githooks/pre-commit .git/hooks`
 3. Depending on your IDE, there may be a PlantUML extension available/plugin that allows for real time previewing of PlantUML diagrams, this is helpful whilst editing .puml files
