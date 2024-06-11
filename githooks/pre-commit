@@ -1,0 +1,63 @@
+#!/usr/bin/env python
+
+import os
+import sys
+import subprocess
+
+# Get the list of modified files
+modified_files = subprocess.run(
+    ['git', 'diff', '--cached', '--name-only'],
+    stdout=subprocess.PIPE,
+    encoding='utf-8'
+).stdout.strip().split('\n')
+
+# Iterate through the modified files
+directories_touched = set()
+for file in modified_files:
+    # Check if the file is a plantuml file
+    if file.endswith('.puml'):
+        status = subprocess.run(
+            ['git', 'diff', '--quiet', 'HEAD', '--', file],
+            stdout=subprocess.PIPE,
+            encoding='utf-8'
+        ).returncode
+        if status == 1:    
+            # Generate the HTML filename by replacing the .md extension with .html
+            svg_file = file.replace(".puml", ".svg")
+            dir_path = os.path.dirname(file)
+            directories_touched.add(dir_path)
+            # Generate the HTML file
+            print("Generating " + svg_file)
+            subprocess.run(
+                ['plantuml', '-tsvg', file],
+                stdout=subprocess.PIPE,
+                encoding='utf-8'
+            )
+
+            # Add the SVG file to the staging area
+            subprocess.run(
+                ['git', 'add', svg_file],
+                stdout=subprocess.PIPE,
+                encoding='utf-8'
+            )
+#make markdown files for each directory
+for dirname in directories_touched:
+    md_file = os.path.join(dirname, '_preview_.md')
+    with open(md_file, 'w') as f:
+        f.write(f'# Image summary for {dirname}\n\n')
+        allFiles = subprocess.run(
+            ['git', 'ls-files', dirname + "/*.svg"],
+            stdout=subprocess.PIPE,
+            encoding='utf-8'
+        ).stdout.strip().split('\n')
+        for file in allFiles:
+            filename = os.path.basename(file)
+            f.write(f'## [{file}](./{filename})\n\n')
+            f.write (f'\n\n<img src="{filename}">\n\n')
+    subprocess.run(
+                ['git', 'add', md_file],
+                stdout=subprocess.PIPE,
+                encoding='utf-8'
+            )
+
+ 
