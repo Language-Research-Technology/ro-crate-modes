@@ -12,6 +12,46 @@
   "rootDataset": {
     "type": ["Dataset", "RepositoryCollection"]
   },
+  "inputGroups" : 
+  [
+    {
+      "name": "Related People, Orgs & Works",
+      "help": "The context for the creation of this RO-Crate; who made it, funded it etc.",
+      "inputs": [
+        "https://w3id.org/ldac/terms#annotator",
+        "https://w3id.org/ldac/terms#author",
+        "https://w3id.org/ldac/terms#compiler",
+        "https://w3id.org/ldac/terms#consultant",
+        "https://w3id.org/ldac/terms#dataInputter",
+        "https://w3id.org/ldac/terms#depositor",
+        "https://w3id.org/ldac/terms#developer",
+        "https://w3id.org/ldac/terms#editor",
+        "https://w3id.org/ldac/terms#illustrator",
+        "https://w3id.org/ldac/terms#interviewee",
+        "https://w3id.org/ldac/terms#interviewer",
+        "https://w3id.org/ldac/terms#participant",
+        "https://w3id.org/ldac/terms#performer",
+        "https://w3id.org/ldac/terms#photographer",
+        "https://w3id.org/ldac/terms#recorder",
+        "https://w3id.org/ldac/terms#researcher",
+        "https://w3id.org/ldac/terms#researchParticipant",
+        "https://w3id.org/ldac/terms#responder",
+        "https://w3id.org/ldac/terms#signer",
+        "https://w3id.org/ldac/terms#singer",
+        "https://w3id.org/ldac/terms#speaker",
+        "https://w3id.org/ldac/terms#sponsor",
+        "https://w3id.org/ldac/terms#transcriber",
+        "https://w3id.org/ldac/terms#translator"
+      ]
+    },
+    {
+      "name": "Structure",
+      "help": "For groups of elements, such as DefinedTerms",
+      "inputs": [
+        "https://w3id.org/ldac/terms#annotationOf"
+      ]
+    }
+  ],
   "lookup": {
     "Language": {
       "module": "datapack",
