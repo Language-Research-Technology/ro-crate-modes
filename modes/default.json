@@ -95,6 +95,15 @@
             ]
           },
           {
+            "id": "http://pcdm.org/models#hasMember",
+            "name": "hasMember",
+            "help": "The sub-collections, if any, associated with this collection.",
+            "type": [
+              "RepositoryCollection"
+            ],
+            "multiple": true
+          },
+          {
             "id": "http://schema.org/hasPart",
             "name": "hasPart",
             "help": "Indicates an item or CreativeWork that is part of this item, or CreativeWork (in some sense).",
@@ -102,6 +111,25 @@
             "type": [
               "Dataset",
               "File"
+            ]
+          },
+          {
+            "id": "http://schema.org/isPartOf",
+            "name": "isPartOf",
+            "help": "Indicates an item or CreativeWork that this item, or CreativeWork (in some sense), is part of.",
+            "multiple": true,
+            "type": [
+              "URL",
+              "CreativeWork"
+            ]
+          },
+          {
+            "id": "http://pcdm.org/models#memberOf",
+            "name": "memberOf",
+            "help": "Links from a Repository Object or Collection to a containing Repository Object or Collection.",
+            "multiple": true,
+            "type": [
+              "RepositoryObject"
             ]
           },
           {
@@ -379,6 +407,16 @@
             "multiple": true,
             "type": [
               "Organization"
+            ]
+          },
+          {
+            "id": "http://schema.org/license",
+            "name": "license",
+            "help": "A license document that applies to this content, typically indicated by URL.",
+            "required": true,
+            "multiple": true,
+            "type": [
+              "DataReuseLicense"
             ]
           }
         ]
