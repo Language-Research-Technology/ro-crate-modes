@@ -82,8 +82,6 @@
         "http://pcdm.org/models#hasMember",
         "http://schema.org/isPartOf",
         "http://schema.org/hasPart",
-        "http://pcdm.org/models#fileOf",
-        "http://pcdm.org/models#hasFile",
         "http://schema.org/inDefinedTermSet",
         "http://schema.org/hasDefinedTerm",
         "https://w3id.org/ldac/terms#annotationOf"
@@ -206,7 +204,7 @@
           "required": true,
           "multiple": false,
           "type": [
-            "CreativeWork"
+            "DataReuseLicense"
           ]
         },
         {
@@ -342,7 +340,6 @@
           ],
           "multiple": false
         },
-        
         {
           "id": "http://pcdm.org/models#hasMember",
           "name": "hasMember",
@@ -360,6 +357,25 @@
             "File"
           ],
           "multiple": true
+        },
+        {
+          "id": "http://schema.org/isPartOf",
+          "name": "isPartOf",
+          "help": "Indicates an item or CreativeWork that this item, or CreativeWork (in some sense), is part of.",
+          "multiple": true,
+          "type": [
+            "URL",
+            "CreativeWork"
+          ]
+        },
+        {
+          "id": "http://pcdm.org/models#memberOf",
+          "name": "memberOf",
+          "help": "Links from a Repository Object or Collection to a containing Repository Object or Collection.",
+          "multiple": true,
+          "type": [
+            "RepositoryObject"
+          ]
         },
         {
           "id": "https://w3id.org/ldac/terms#annotator",
