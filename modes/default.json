@@ -431,7 +431,7 @@
             "required": true,
             "multiple": true,
             "type": [
-              "DataReuseLicense"
+              "CreativeWork"
             ]
           }
         ]
