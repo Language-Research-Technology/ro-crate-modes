@@ -819,6 +819,7 @@
           "type": [
             "Date"
           ],
+          "required": true,
           "multiple": false
         },
         {
@@ -921,6 +922,7 @@
           "type": [
             "Date"
           ],
+          "required": true,
           "multiple": false
         }
       ]
