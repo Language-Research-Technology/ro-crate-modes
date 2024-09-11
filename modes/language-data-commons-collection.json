@@ -76,7 +76,7 @@
     },
     {
       "name": "Structure",
-      "help": "For groups of elements, such as DefinedTerms",
+      "help": "For groups of elements, such as DefinedTerms.",
       "inputs": [
         "http://pcdm.org/models#memberOf",
         "http://pcdm.org/models#hasMember",

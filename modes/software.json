@@ -1,7 +1,7 @@
 {
   "metadata": {
     "name": "DEMO ONLY: Research Software Description Profile",
-    "description": "A draft Crate-O Mode for describing research software soure code / notebooks / workflows",
+    "description": "A draft Crate-O Mode for describing research software source code / notebooks / workflows",
     "version": 0,
     "author": "University of Queensland",
     "license": "GPL-3.0"
@@ -23,7 +23,7 @@
         {
           "id": "http://schema.org/name",
           "name": "name",
-          "help": "The name of the Software",
+          "help": "The name of the Software.",
           "multiple": true,
           "required": true,
           "type": [
@@ -53,7 +53,7 @@
         {
           "id": "http://schema.org/license",
           "name": "license",
-          "help": "A license document that applies to this content this should be included in the RO-Crate as a CreativeWork",
+          "help": "A license document that applies to this content. This should be included in the RO-Crate as a CreativeWork.",
           "multiple": true,
           "required": true,
           "type": [
@@ -63,7 +63,7 @@
         {
           "id": "http://schema.org/mainEntity",
           "name": "mainEntity",
-          "help": "Indicates the primary entry",
+          "help": "Indicates the primary entry.",
           "multiple": true,
           "required": true,
           "type": [
@@ -164,7 +164,7 @@
         {
           "id": "http://schema.org/codeRepository",
           "name": "codeRepository",
-          "help": "Link to the repository where the un-compiled, human readable code and related code is located (SVN, GitHub, CodePlex).",
+          "help": "Link to the repository where the un-compiled, human-readable code and related code is located (SVN, GitHub, CodePlex).",
           "multiple": true,
           "type": [
             "Text"
@@ -509,7 +509,7 @@
         {
           "id": "http://schema.org/codeRepository",
           "name": "codeRepository",
-          "help": "Link to the repository where the un-compiled, human readable code and related code is located (SVN, GitHub, CodePlex).",
+          "help": "Link to the repository where the un-compiled, human-readable code and related code is located (SVN, GitHub, CodePlex).",
           "multiple": true,
           "type": [
             "Text"
@@ -733,7 +733,7 @@
         {
           "id": "http://schema.org/codeRepository",
           "name": "codeRepository",
-          "help": "Link to the repository where the un-compiled, human readable code and related code is located (SVN, GitHub, CodePlex).",
+          "help": "Link to the repository where the un-compiled, human-readable code and related code is located (SVN, GitHub, CodePlex).",
           "multiple": true,
           "type": [
             "Text"
