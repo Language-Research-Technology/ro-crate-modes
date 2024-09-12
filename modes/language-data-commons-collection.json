@@ -34,6 +34,7 @@
         "http://schema.org/mainEntity",
         "http://schema.org/sameAs",
         "http://schema.org/language",
+        "http://schema.org/inLanguage",
         "https://w3id.org/ldac/terms#subjectLanguage"
       ]
     },
