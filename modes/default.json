@@ -416,22 +416,8 @@
             "required": true,
             "multiple": true,
             "type": [
-              "DataReuseLicense"
-            ]
-          }
-        ]
-      },
-      "RepositoryCollection": {
-        "hasSubclass": [],
-        "inputs": [
-          {
-            "id": "http://schema.org/license",
-            "name": "license",
-            "help": "A license document that applies to this content, typically indicated by URL.",
-            "required": true,
-            "multiple": true,
-            "type": [
-              "DataReuseLicense"
+              "CreativeWork",
+              "URL"
             ]
           }
         ]
