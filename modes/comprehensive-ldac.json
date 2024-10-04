@@ -1346,6 +1346,35 @@
           "multiple": true,
           "type": [
             "Text"
+          ],
+          "values": [
+            {
+              "@id": "txc:PrimaryMaterial",
+              "@type": "DefinedTerm",
+              "description": "The object of study, such as a literary work, film, or recording of natural discourse.",
+              "inDefinedTermSet": {
+                "@id": "txc:materialTypes"
+              },
+              "name": "PrimaryMaterial"
+            },
+            {
+              "@id": "txc:Annotation",
+              "@type": "DefinedTerm",
+              "description": "The resource includes material that adds information to some other linguistic record.",
+              "inDefinedTermSet": {
+                "@id": "txc:materialTypes"
+              },
+              "name": "Annotation"
+            },
+            {
+              "@id": "txc:DerivedMaterial",
+              "@type": "DefinedTerm",
+              "description": "This is derived from another source, such as a Primary Material, via some process, e.g. a downsampled video or a sample or an abstract of a resource that is not an annotation (an analysis or description).",
+              "inDefinedTermSet": {
+                "@id": "txc:materialTypes"
+              },
+              "name": "DerivedMaterial"
+            }
           ]
         }
       ]
