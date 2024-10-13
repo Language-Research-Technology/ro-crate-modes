@@ -1,7 +1,7 @@
 {
   "metadata": {
-    "name": "Language Data Commons top-level Collection (corpus)",
-    "description": "Implements the language data commons RO-Crate Metadata Profile for top-level collection.",
+    "name": "Language Data Commons Comprehensive Collection",
+    "description": "Implements the language data commons RO-Crate Metadata Profile for the top-level, objects and files.",
     "version": 0.3,
     "author": "University of Queensland",
     "license": "GPL-3.0"
@@ -20,7 +20,7 @@
       "inputs": [
         "@id",
         "@type",
-        "http://purl.org/dc/terms/conformsTo",
+        "https://purl.org/dc/terms/conformsTo",
         "http://schema.org/name",
         "http://schema.org/familyName",
         "http://schema.org/givenName",
@@ -146,10 +146,8 @@
         "@id",
         "name",
         "alternateName",
-        "iso639-3",
         "austlangCode",
-        "glottologCode",
-        "languageCode"
+        "glottologCode"
       ]
     },
     "Organization": {
@@ -362,7 +360,7 @@
         {
           "id": "http://schema.org/isPartOf",
           "name": "isPartOf",
-          "help": "Indicates an item or CreativeWork that this item, or CreativeWork (in some sense), is part of.",
+          "help": "An item or CreativeWork that this item, or CreativeWork (in some sense), is part of.",
           "multiple": true,
           "type": [
             "URL",
@@ -471,7 +469,7 @@
         {
           "id": "https://w3id.org/ldac/terms#participant",
           "name": "participant",
-          "help": "This role is intended for minor participants such as audience members or other peripherally-involved participants in the event. These interlocutors need not have been physically present.",
+          "help": "This role is intended for minor participants such as audience members or other peripherally involved participants in the event. These interlocutors need not have been physically present.",
           "type": [
             "Person"
           ],
@@ -746,7 +744,7 @@
         {
           "id": "https://w3id.org/ldac/terms#dateFreeText",
           "name": "dateFreeText",
-          "help": "Date information which cannot be put in one of that standard date formats, e.g. 'mid-1970s', or it is not clear, for example if it is a creation or publication date.",
+          "help": "Date information which cannot be put in one of the standard date formats, e.g. 'mid-1970s', or it is not clear, for example, if it is a creation or publication date.",
           "type": [
             "Text"
           ],
@@ -777,7 +775,162 @@
     },
     "RepositoryObject": {
       "subClassOf": [],
-      "inputs": []
+      "inputs": [
+        {
+          "id": "http://schema.org/hasPart",
+          "name": "hasPart",
+          "help": "An item or CreativeWork that is part of this item, or CreativeWork (in some sense).",
+          "multiple": true,
+          "type": [
+            "File",
+            "PrimaryMaterial"
+          ]
+        },
+        {
+          "id": "http://purl.org/dc/terms/conformsTo",
+          "name": "conformsTo",
+          "help": "A link to the Text Commons RO-Crate profile for collections.",
+          "multiple": true,
+          "type": [
+            "Text"
+          ]
+        },
+        {
+          "id": "http://schema.org/publisher",
+          "name": "publisher",
+          "help": "The publisher of the creative work.",
+          "multiple": true,
+          "type": [
+            "Organization"
+          ]
+        },
+        {
+          "id": "http://schema.org/creator",
+          "name": "creator",
+          "help": "The creator/author of this CreativeWork. This is the same as the Author property for CreativeWork.",
+          "multiple": true,
+          "type": [
+            "Person"
+          ]
+        },
+        {
+          "id": "https://w3id.org/ldac/terms#compiler",
+          "name": "compiler",
+          "help": "The contributor responsible for collecting the sub-parts of the resource together.",
+          "multiple": true,
+          "type": [
+            "Person"
+          ]
+        },
+        {
+          "id": "http://schema.org/description",
+          "name": "description",
+          "help": "A description of the item.",
+          "multiple": true,
+          "type": [
+            "Text"
+          ]
+        },
+        {
+          "id": "http://schema.org/datePublished",
+          "name": "datePublished",
+          "help": "Date of first broadcast/publication.",
+          "multiple": true,
+          "type": [
+            "Text"
+          ]
+        },
+        {
+          "id": "http://schema.org/temporalCoverage",
+          "name": "temporalCoverage",
+          "help": "The temporalCoverage of a CreativeWork indicates the period that the content applies to, i.e. that it describes, either as a DateTime or as a textual string indicating a time period in [ISO 8601 time interval format](https://en.wikipedia.org/wiki/ISO_8601#Time_intervals). In\n      the case of a Dataset it will typically indicate the relevant time period in a precise notation (e.g. for a 2011 census dataset, the year 2011 would be written \"2011/2012\"). Other forms of content, e.g. ScholarlyArticle, Book, TVSeries or TVEpisode, may indicate their temporalCoverage in broader terms - textually or via well-known URL.\n      Written works such as books may sometimes have precise temporal coverage too, e.g. a work set in 1939 - 1945 can be indicated in ISO 8601 interval format format via \"1939/1945\".\n\nOpen-ended date ranges can be written with \"..\" in place of the end date. For example, \"2015-11/..\" indicates a range beginning in November 2015 and with no specified final date. This is tentative and might be updated in future when ISO 8601 is officially updated.",
+          "multiple": true,
+          "type": [
+            "Text"
+          ]
+        },
+        {
+          "id": "http://schema.org/language",
+          "name": "language",
+          "help": "A sub property of instrument. The language used on this action.",
+          "multiple": true,
+          "type": [
+            "Language"
+          ]
+        },
+        {
+          "id": "http://schema.org/memberOf",
+          "name": "memberOf",
+          "help": "An Organization (or ProgramMembership) to which this Person or Organization belongs.",
+          "multiple": true,
+          "type": [
+            "Text"
+          ]
+        },
+        {
+          "id": "http://schema.org/inLanguage",
+          "name": "inLanguage",
+          "help": "The language of the content or performance or used in an action. Please use one of the language codes from the [IETF BCP 47 standard](http://tools.ietf.org/html/bcp47). See also [[availableLanguage]].",
+          "multiple": true,
+          "type": [
+            "Language"
+          ]
+        },
+        {
+          "id": "http://schema.org/dateCreated",
+          "name": "dateCreated",
+          "help": "The date on which the CreativeWork was created or the item was added to a DataFeed.",
+          "multiple": true,
+          "type": [
+            "Text"
+          ]
+        },
+        {
+          "id": "http://schema.org/name",
+          "name": "name",
+          "help": "The name of the item.",
+          "multiple": true,
+          "type": [
+            "Text"
+          ]
+        },
+        {
+          "id": "http://schema.org/license",
+          "name": "license",
+          "help": "A license document that applies to this content, typically indicated by URL.",
+          "multiple": true,
+          "type": [
+            "OrganizationReuseLicense"
+          ]
+        },
+        {
+          "id": "https://w3id.org/ldac/terms#hasAnnotation",
+          "name": "hasAnnotation",
+          "help": "This resource is referenced by another resource that adds information to it such as a translation, transcription or other analysis.",
+          "multiple": true,
+          "type": [
+            "Text"
+          ]
+        },
+        {
+          "id": "https://w3id.org/ldac/terms#speaker",
+          "name": "speaker",
+          "help": "The contributor was a principal speaker in a resource that consists of a recording, a film, or a transcription of a recorded resource. Speakers are those whose voices predominate in a recorded or filmed resource.",
+          "multiple": true,
+          "type": [
+            "Speaker"
+          ]
+        },
+        {
+          "id": "http://schema.org/identifier",
+          "name": "identifier",
+          "help": "The identifier property represents any kind of identifier for any kind of [[Thing]], such as ISBNs, GTIN codes, UUIDs etc. Schema.org provides dedicated properties for representing many of these, either as textual strings or as URL (URI) links. See [background notes](/docs/datamodel.html#identifierBg) for more details.\n        ",
+          "multiple": true,
+          "type": [
+            "PropertyValue"
+          ]
+        }
+      ]
     },
     "CreativeWork": {
       "subClassOf": [],
@@ -805,6 +958,17 @@
         {
           "id": "https://w3id.org/ldac/terms#author",
           "name": "author",
+          "help": "The person or organisation responsible for creating this work. Authors should be identified using URIs such as ORCiD or ROR.",
+          "type": [
+            "Text",
+            "Person",
+            "Organization"
+          ],
+          "multiple": true
+        },
+        {
+          "id": "http://schema.org/recipient",
+          "name": "recipient",
           "help": "The person or organisation responsible for creating this work. Authors should be identified using URIs such as ORCiD or ROR.",
           "type": [
             "Text",
@@ -888,9 +1052,9 @@
           "multiple": false
         },
         {
-          "id": "http://purl.archive.org/language-data-commons/terms#CollectionProtocolType",
+          "id": "https://w3id.org/ldac/terms#collectionProtocolType",
           "name": "collectionProtocolType",
-          "help": "The kind of collection protocol this is.",
+          "help": "A description of the process used to collect or collate data, such as prompts given to participants, or how texts are selected for inclusion in a collection.",
           "type": [
             "SelectObject"
           ],
@@ -963,7 +1127,7 @@
         {
           "id": "http://schema.org/geo",
           "name": "geo",
-          "help": "The geo-coordinates of the place.",
+          "help": "The geographic coordinates of the place.",
           "required": false,
           "multiple": true,
           "type": [
@@ -972,7 +1136,6 @@
         }
       ]
     },
-   
     "Geometry": {
       "id": "http://www.opengis.net/ont/geosparql#Geometry",
       "subClassOf": [],
@@ -1080,9 +1243,274 @@
           ]
         },
         {
-          "id": "https://purl.archive.org/language-data-commons/terms#communicationMode",
+          "id": "https://w3id.org/ldac/terms#communicationMode",
           "name": "communicationMode",
           "help": "The mode(s) (spoken, written, signed, etc.) used in the interaction represented by this resource.",
+          "type": [
+            "Text"
+          ]
+        },
+        {
+          "id": "http://schema.org/name",
+          "name": "name",
+          "help": "The name of the item.",
+          "multiple": true,
+          "type": [
+            "Text"
+          ]
+        },
+        {
+          "id": "http://schema.org/license",
+          "name": "license",
+          "help": "A license document that applies to this content, typically indicated by URL.",
+          "multiple": true,
+          "type": [
+            "OrganizationReuseLicense"
+          ]
+        },
+        {
+          "id": "https://w3id.org/ldac/terms#linguisticGenre",
+          "name": "linguisticGenre",
+          "help": "A linguistic classification of the genre of this resource.",
+          "multiple": true,
+          "type": [
+            "DefinedTerm"
+          ]
+        },
+        {
+          "id": "http://schema.org/contentSize",
+          "name": "contentSize",
+          "help": "File size in (mega/kilo)bytes.",
+          "multiple": true,
+          "type": [
+            "Text"
+          ]
+        },
+        {
+          "id": "http://schema.org/hasPart",
+          "name": "hasPart",
+          "help": "An item or CreativeWork that is part of this item, or CreativeWork (in some sense).",
+          "multiple": true,
+          "type": [
+            "File",
+            "PrimaryMaterial"
+          ]
+        },
+        {
+          "id": "http://schema.org/publisher",
+          "name": "publisher",
+          "help": "The publisher of the creative work.",
+          "multiple": true,
+          "type": [
+            "Organization"
+          ]
+        },
+        {
+          "id": "http://schema.org/creator",
+          "name": "creator",
+          "help": "The creator/author of this CreativeWork. This is the same as the Author property for CreativeWork.",
+          "multiple": true,
+          "type": [
+            "Person"
+          ]
+        },
+        {
+          "id": "http://schema.org/datePublished",
+          "name": "datePublished",
+          "help": "Date of first broadcast/publication.",
+          "multiple": true,
+          "type": [
+            "Text"
+          ]
+        },
+        {
+          "id": "http://schema.org/temporalCoverage",
+          "name": "temporalCoverage",
+          "help": "The temporalCoverage of a CreativeWork indicates the period that the content applies to, i.e. that it describes, either as a DateTime or as a textual string indicating a time period in [ISO 8601 time interval format](https://en.wikipedia.org/wiki/ISO_8601#Time_intervals). In\n      the case of a Dataset it will typically indicate the relevant time period in a precise notation (e.g. for a 2011 census dataset, the year 2011 would be written \"2011/2012\"). Other forms of content, e.g. ScholarlyArticle, Book, TVSeries or TVEpisode, may indicate their temporalCoverage in broader terms - textually or via well-known URL.\n      Written works such as books may sometimes have precise temporal coverage too, e.g. a work set in 1939 - 1945 can be indicated in ISO 8601 interval format format via \"1939/1945\".\n\nOpen-ended date ranges can be written with \"..\" in place of the end date. For example, \"2015-11/..\" indicates a range beginning in November 2015 and with no specified final date. This is tentative and might be updated in future when ISO 8601 is officially updated.",
+          "multiple": true,
+          "type": [
+            "Text"
+          ]
+        },
+        {
+          "id": "http://schema.org/inLanguage",
+          "name": "inLanguage",
+          "help": "The language of the content or performance or used in an action. Please use one of the language codes from the [IETF BCP 47 standard](http://tools.ietf.org/html/bcp47). See also [[availableLanguage]].",
+          "multiple": true,
+          "type": [
+            "Language"
+          ]
+        },
+        {
+          "id": "http://schema.org/dateCreated",
+          "name": "dateCreated",
+          "help": "The date on which the CreativeWork was created or the item was added to a DataFeed.",
+          "multiple": true,
+          "type": [
+            "Text"
+          ]
+        },
+        {
+          "id": "https://w3id.org/ldac/terms#materialType",
+          "name": "materialType",
+          "help": "Indicates whether the material in a file is the original (primary) source or is derived from it or describes it via annotation.",
+          "multiple": true,
+          "type": [
+            "Text"
+          ],
+          "values": [
+            {
+              "@id": "txc:PrimaryMaterial",
+              "@type": "DefinedTerm",
+              "description": "The object of study, such as a literary work, film, or recording of natural discourse.",
+              "inDefinedTermSet": {
+                "@id": "txc:materialTypes"
+              },
+              "name": "PrimaryMaterial"
+            },
+            {
+              "@id": "txc:Annotation",
+              "@type": "DefinedTerm",
+              "description": "The resource includes material that adds information to some other linguistic record.",
+              "inDefinedTermSet": {
+                "@id": "txc:materialTypes"
+              },
+              "name": "Annotation"
+            },
+            {
+              "@id": "txc:DerivedMaterial",
+              "@type": "DefinedTerm",
+              "description": "This is derived from another source, such as a Primary Material, via some process, e.g. a downsampled video or a sample or an abstract of a resource that is not an annotation (an analysis or description).",
+              "inDefinedTermSet": {
+                "@id": "txc:materialTypes"
+              },
+              "name": "DerivedMaterial"
+            }
+          ]
+        }
+      ]
+    },
+    "PrimaryMaterial": {
+      "hasSubclass": [],
+      "inputs": [
+        {
+          "id": "http://schema.org/name",
+          "name": "name",
+          "help": "The name of the item.",
+          "multiple": true,
+          "type": [
+            "Text"
+          ]
+        },
+        {
+          "id": "http://schema.org/license",
+          "name": "license",
+          "help": "A license document that applies to this content, typically indicated by URL.",
+          "multiple": true,
+          "type": [
+            "OrganizationReuseLicense"
+          ]
+        },
+        {
+          "id": "https://w3id.org/ldac/terms#communicationMode",
+          "name": "communicationMode",
+          "help": "The mode (spoken, written, signed etc.) of this resource. There may be more than one value for this property.",
+          "multiple": true,
+          "type": [
+            "DefinedTerm"
+          ]
+        },
+        {
+          "id": "https://w3id.org/ldac/terms#linguisticGenre",
+          "name": "linguisticGenre",
+          "help": "A linguistic classification of the genre of this resource.",
+          "multiple": true,
+          "type": [
+            "DefinedTerm"
+          ]
+        },
+        {
+          "id": "http://schema.org/encodingFormat",
+          "name": "encodingFormat",
+          "help": "The media type typically expressed using a MIME format.",
+          "multiple": true,
+          "type": [
+            "Text"
+          ]
+        },
+        {
+          "id": "http://schema.org/size",
+          "name": "size",
+          "help": "The size in bytes.",
+          "multiple": true,
+          "type": [
+            "Text"
+          ]
+        }
+      ]
+    },
+    "Annotation": {
+      "hasSubclass": [],
+      "inputs": [
+        {
+          "id": "http://schema.org/name",
+          "name": "name",
+          "help": "The name of the item.",
+          "multiple": true,
+          "type": [
+            "Text"
+          ]
+        },
+        {
+          "id": "http://schema.org/license",
+          "name": "license",
+          "help": "A license document that applies to this content, typically indicated by URL.",
+          "multiple": true,
+          "type": [
+            "OrganizationReuseLicense"
+          ]
+        },
+        {
+          "id": "http://schema.org/encodingFormat",
+          "name": "encodingFormat",
+          "help": "The media type typically expressed using a MIME format.",
+          "multiple": true,
+          "type": [
+            "Text"
+          ]
+        },
+        {
+          "id": "https://w3id.org/ldac/terms#communicationMode",
+          "name": "communicationMode",
+          "help": "The mode (spoken, written, signed etc.) of this resource. There may be more than one value for this property.",
+          "multiple": true,
+          "type": [
+            "DefinedTerm"
+          ]
+        },
+        {
+          "id": "https://w3id.org/ldac/terms#linguisticGenre",
+          "name": "linguisticGenre",
+          "help": "A linguistic classification of the genre of this resource.",
+          "multiple": true,
+          "type": [
+            "DefinedTerm"
+          ]
+        },
+        {
+          "id": "https://w3id.org/ldac/terms#annotationType",
+          "name": "annotationType",
+          "help": "Specifies the type of an Annotation resource.",
+          "multiple": true,
+          "type": [
+            "DefinedTerm"
+          ]
+        },
+        {
+          "id": "http://schema.org/size",
+          "name": "size",
+          "help": "The size in bytes.",
+          "multiple": true,
           "type": [
             "Text"
           ]
@@ -1091,8 +1519,44 @@
     },
     "Language": {
       "id": "http://schema.org/inLanguage",
-      "inputs": []
-
+      "inputs": [
+        {
+          "id": "http://schema.org/name",
+          "name": "name",
+          "help": "The name of the item.",
+          "multiple": true,
+          "type": [
+            "Text"
+          ]
+        },
+        {
+          "id": "http://schema.org/geo",
+          "name": "geo",
+          "help": "The geographic coordinates of the place.",
+          "multiple": true,
+          "type": [
+            "GeoCoordinates"
+          ]
+        },
+        {
+          "id": "http://schema.org/sameAs",
+          "name": "sameAs",
+          "help": "URL of a reference Web page that unambiguously indicates the item's identity. E.g. the URL of the item's Wikipedia page, Wikidata entry, or official website.",
+          "multiple": true,
+          "type": [
+            "Text"
+          ]
+        },
+        {
+          "id": "http://schema.org/alternateName",
+          "name": "alternateName",
+          "help": "An alias for the item.",
+          "multiple": true,
+          "type": [
+            "Text"
+          ]
+        }
+      ]
     }
   }
 }

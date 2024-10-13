@@ -53,7 +53,7 @@
     },
     {
       "name": "Structure",
-      "help": "For groups of elements, such as DefinedTerms",
+      "help": "For groups of elements, such as DefinedTerms.",
       "inputs": [
         "http://schema.org/inDefinedTermSet",
         "http://schema.org/hasDefinedTerm",
@@ -90,7 +90,7 @@
         {
           "id": "http://schema.org/mentions",
           "name": "mentions",
-          "help": "The Classes, Properties etc",
+          "help": "The Classes, Properties etc.",
           "type": [
             "rdfs:Class",
             "rdf:Property",
@@ -103,7 +103,7 @@
           "id": "http://schema.org/name",
           "name": "name",
           "label": "Name",
-          "help": "The name of this Schema",
+          "help": "The name of this Schema.",
           "required": true,
           "multiple": false,
           "type": [
@@ -114,7 +114,7 @@
         {
           "id": "http://schema.org/author",
           "name": "author",
-          "help": "The person or organization responsible for creating this collection of data",
+          "help": "The person or organization responsible for creating this collection of data.",
           "type": [
             "Person",
             "Organization"
@@ -124,7 +124,7 @@
         {
           "id": "http://schema.org/publisher",
           "name": "publisher",
-          "help": "The organization responsible for releasing this collection of data",
+          "help": "The organization responsible for releasing this collection of data.",
           "type": [
             "Organization"
           ],
@@ -133,11 +133,22 @@
         {
           "id": "http://schema.org/description",
           "name": "description",
-          "help": "An abstract of the collection. Include as much detail as possible about the motivation and use of the collection, including things that we do not yet have properties for",
+          "help": "An abstract of the collection. Include as much detail as possible about the motivation and use of the collection, including things that we do not yet have properties for.",
           "type": [
             "TextArea"
           ],
           "multiple": false
+        },
+        {
+          "id": "http://schema.org/license",
+          "name": "license",
+          "help": "A license document that applies to this content, typically indicated by URL.",
+          "required": true,
+          "multiple": true,
+          "type": [
+            "CreativeWork",
+            "URL"
+          ]
         }
       ]
     },
@@ -149,7 +160,7 @@
           "id": "http://schema.org/name",
           "name": "name",
           "label": "Name",
-          "help": "The name of this Class",
+          "help": "The name of this Class.",
           "required": true,
           "multiple": false,
           "type": [
@@ -160,7 +171,7 @@
           "id": "http://www.w3.org/2000/01/rdf-schema#label",
           "name": "rdfs:label",
           "label": "Label",
-          "help": "The label for this class",
+          "help": "The label for this class.",
           "required": true,
           "multiple": false,
           "type": [
@@ -171,7 +182,7 @@
           "id": "http://www.w3.org/2000/01/rdf-schema#comment",
           "name": "rdfs:comment",
           "label": "Comment",
-          "help": "A description of the Class",
+          "help": "A description of the Class.",
           "type": [
             "TextArea"
           ],
@@ -180,7 +191,7 @@
         {
           "id": "http://www.w3.org/2000/01/rdf-schema#subClassOf",
           "name": "rdfs:subClassOf",
-          "help": "Parent Class (if any)",
+          "help": "Parent Class (if any).",
           "type": [
             "Class"
           ],
@@ -189,7 +200,7 @@
         {
           "id": "http://schema.org/sameAs",
           "name": "sameAs",
-          "help": "URL of an equivalent term",
+          "help": "URL of an equivalent term.",
           "type": [
             "URL"
           ],
@@ -205,7 +216,7 @@
           "id": "http://schema.org/name",
           "name": "name",
           "label": "Name",
-          "help": "The name of this DefinedTerm",
+          "help": "The name of this DefinedTerm.",
           "required": true,
           "multiple": false,
           "type": [
@@ -215,7 +226,7 @@
         {
           "id": "http://schema.org/description",
           "name": "description",
-          "help": "A description of the defined Term",
+          "help": "A description of the defined Term.",
           "type": [
             "TextArea"
           ],
@@ -224,7 +235,7 @@
         {
           "id": "http://schema.org/inDefinedTermSet",
           "name": "inDefinedTermSet",
-          "help": "A set of defined terms that can be used for the range of values of a property",
+          "help": "A set of defined terms that can be used for the range of values of a property.",
           "type": [
             "DefinedTermSet"
           ],
@@ -233,7 +244,7 @@
         {
           "id": "http://schema.org/sameAs",
           "name": "sameAs",
-          "help": "URL of an equivalent term",
+          "help": "URL of an equivalent term.",
           "type": [
             "URL"
           ],
@@ -249,7 +260,7 @@
           "id": "http://schema.org/name",
           "name": "name",
           "label": "Name",
-          "help": "The name of this DefinedTermSet",
+          "help": "The name of this DefinedTermSet.",
           "required": true,
           "multiple": false,
           "type": [
@@ -259,7 +270,7 @@
         {
           "id": "http://schema.org/description",
           "name": "description",
-          "help": "A description of the defined set of defined terms",
+          "help": "A description of the defined set of defined terms.",
           "type": [
             "TextArea"
           ],
@@ -268,7 +279,7 @@
         {
           "id": "http://schema.org/hasDefinedTerm",
           "name": "hasDefinedTerm",
-          "help": "A set of defined terms that can be used for the range of values of a property",
+          "help": "A set of defined terms that can be used for the range of values of a property.",
           "type": [
             "DefinedTerm"
           ],
@@ -277,7 +288,7 @@
         {
           "id": "http://schema.org/sameAs",
           "name": "sameAs",
-          "help": "URL of an equivalent term",
+          "help": "URL of an equivalent term.",
           "type": [
             "URL"
           ],
@@ -293,7 +304,7 @@
           "id": "http://schema.org/name",
           "name": "name",
           "label": "Name",
-          "help": "The name of this Class",
+          "help": "The name of this Class.",
           "required": true,
           "multiple": false,
           "type": [
@@ -304,7 +315,7 @@
           "id": "http://www.w3.org/2000/01/rdf-schema#label",
           "name": "label",
           "label": "Label",
-          "help": "The label for this property",
+          "help": "The label for this property.",
           "required": true,
           "multiple": false,
           "type": [
@@ -314,7 +325,7 @@
         {
           "id": "http://www.w3.org/2000/01/rdf-schema#comment",
           "name": "Comment",
-          "help": "A description of the Class",
+          "help": "A description of the Class.",
           "type": [
             "TextArea"
           ],
@@ -323,7 +334,7 @@
         {
           "id": "http://www.w3.org/2000/01/rdf-schema#subPropertyOf",
           "name": "subPropertyOf",
-          "help": "Is this a sub-type of a more general property",
+          "help": "Is this a sub-type of a more general property.",
           "type": [
             "Class"
           ],
@@ -332,7 +343,7 @@
         {
           "id": "http://schema.org/domainIncludes",
           "name": "domainIncludes",
-          "help": "What clasess use this property (ie what domain does this property occur in)",
+          "help": "What clasess use this property (ie what domain does this property occur in).",
           "type": [
             "Class"
           ],
@@ -341,7 +352,7 @@
         {
           "id": "http://schema.org/DefinedTermSet",
           "name": "DefinedTermSet",
-          "help": "A set of defined terms that can be used for the range of values of this property",
+          "help": "A set of defined terms that can be used for the range of values of this property.",
           "type": [
             "DefinedTermSet"
           ],
@@ -350,7 +361,7 @@
         {
           "id": "http://schema.org/rangeIncludes",
           "name": "rangeIncludes",
-          "help": "What clasess are expected values for this range",
+          "help": "What clasess are expected values for this range.",
           "type": [
             "Class",
             "DefinedTerm"
@@ -360,7 +371,7 @@
         {
           "id": "http://schema.org/sameAs",
           "name": "sameAs",
-          "help": "URL of an equivalent term",
+          "help": "URL of an equivalent term.",
           "type": [
             "URL"
           ],
@@ -376,7 +387,7 @@
           "id": "http://schema.org/name",
           "name": "name",
           "label": "name",
-          "help": "The name the person",
+          "help": "The name the person.",
           "required": true,
           "multiple": false,
           "type": [
@@ -396,7 +407,7 @@
           "id": "http://schema.org/affiliation",
           "name": "affiliation",
           "label": "affiliation",
-          "help": "The name the person",
+          "help": "The name the person.",
           "required": false,
           "multiple": true,
           "type": [
@@ -413,7 +424,7 @@
           "id": "http://schema.org/name",
           "name": "name",
           "label": "name",
-          "help": "The name of the organization",
+          "help": "The name of the organization.",
           "required": true,
           "multiple": false,
           "type": [
@@ -423,7 +434,7 @@
         {
           "id": "http://schema.org/description",
           "name": "description",
-          "help": "An abstract of the collection. Include as much detail as possible about the motivation and use of the collection, including things that we do not yet have properties for",
+          "help": "An abstract of the collection. Include as much detail as possible about the motivation and use of the collection, including things that we do not yet have properties for.",
           "type": [
             "TextArea"
           ],
@@ -432,7 +443,7 @@
         {
           "id": "http://schema.org/location",
           "name": "location",
-          "help": "A location for the organization (eg a city for a publisher)",
+          "help": "A location for the organization (e.g. a city for a publisher).",
           "type": [
             "Text"
           ],
