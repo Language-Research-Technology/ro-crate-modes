@@ -782,8 +782,7 @@
           "help": "An item or CreativeWork that is part of this item, or CreativeWork (in some sense).",
           "multiple": true,
           "type": [
-            "File",
-            "PrimaryMaterial"
+            "File"
           ]
         },
         {
@@ -1292,8 +1291,7 @@
           "help": "An item or CreativeWork that is part of this item, or CreativeWork (in some sense).",
           "multiple": true,
           "type": [
-            "File",
-            "PrimaryMaterial"
+            "File"
           ]
         },
         {
@@ -1386,65 +1384,6 @@
               },
               "name": "DerivedMaterial"
             }
-          ]
-        }
-      ]
-    },
-    "PrimaryMaterial": {
-      "hasSubclass": [],
-      "inputs": [
-        {
-          "id": "http://schema.org/name",
-          "name": "name",
-          "help": "The name of the item.",
-          "multiple": true,
-          "type": [
-            "Text"
-          ]
-        },
-        {
-          "id": "http://schema.org/license",
-          "name": "license",
-          "help": "A license document that applies to this content, typically indicated by URL.",
-          "multiple": true,
-          "type": [
-            "OrganizationReuseLicense"
-          ]
-        },
-        {
-          "id": "https://w3id.org/ldac/terms#communicationMode",
-          "name": "communicationMode",
-          "help": "The mode (spoken, written, signed etc.) of this resource. There may be more than one value for this property.",
-          "multiple": true,
-          "type": [
-            "DefinedTerm"
-          ]
-        },
-        {
-          "id": "https://w3id.org/ldac/terms#linguisticGenre",
-          "name": "linguisticGenre",
-          "help": "A linguistic classification of the genre of this resource.",
-          "multiple": true,
-          "type": [
-            "DefinedTerm"
-          ]
-        },
-        {
-          "id": "http://schema.org/encodingFormat",
-          "name": "encodingFormat",
-          "help": "The media type typically expressed using a MIME format.",
-          "multiple": true,
-          "type": [
-            "Text"
-          ]
-        },
-        {
-          "id": "http://schema.org/size",
-          "name": "size",
-          "help": "The size in bytes.",
-          "multiple": true,
-          "type": [
-            "Text"
           ]
         }
       ]
