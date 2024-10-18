@@ -912,13 +912,211 @@
           ]
         },
         {
+          "id": "https://w3id.org/ldac/terms#annotator",
+          "name": "annotator",
+          "help": "The participant produced an annotation of this or a related resource.",
+          "type": [
+            "Person"
+          ],
+          "multiple": true
+        },
+        {
+          "id": "https://w3id.org/ldac/terms#compiler",
+          "name": "compiler",
+          "help": "This refers to someone who creates a single resource with multiple parts, such as a book of short stories, or a person who produces a corpus of resources, which may be archived separately.",
+          "type": [
+            "Person"
+          ],
+          "multiple": true
+        },
+        {
+          "id": "https://w3id.org/ldac/terms#consultant",
+          "name": "consultant",
+          "help": "This term is commonly used by field linguists for the native speakers who work with them in describing and analysing a language. They contribute their expertise in their native language to the resource, although their speech, sign, or writing may not appear directly in the resource. In some parts of the world, the preferred term for this role is 'informant'.",
+          "type": [
+            "Person"
+          ],
+          "multiple": true
+        },
+        {
+          "id": "https://w3id.org/ldac/terms#dataInputter",
+          "name": "dataInputter",
+          "help": "The participant was responsible for entering, re-typing, and/or structuring the data contained in the resource.",
+          "type": [
+            "Person"
+          ],
+          "multiple": true
+        },
+        {
+          "id": "https://w3id.org/ldac/terms#depositor",
+          "name": "depositor",
+          "help": "The participant was responsible for depositing the resource in an archive.",
+          "type": [
+            "Person"
+          ],
+          "multiple": true
+        },
+        {
+          "id": "https://w3id.org/ldac/terms#developer",
+          "name": "developer",
+          "help": "A software programmer, designer, or analyst; a designer of a questionnaire or research task.",
+          "type": [
+            "Person"
+          ],
+          "multiple": true
+        },
+        {
+          "id": "https://w3id.org/ldac/terms#editor",
+          "name": "editor",
+          "help": "This role includes anyone whose role was editorial in nature, such as proofreaders, debuggers, testers, etc. It may overlap the Compiler role in some cases.",
+          "type": [
+            "Person"
+          ],
+          "multiple": true
+        },
+        {
+          "id": "https://w3id.org/ldac/terms#illustrator",
+          "name": "illustrator",
+          "help": "The participant contributed drawings or other illustrations to the resource.",
+          "type": [
+            "Person"
+          ],
+          "multiple": true
+        },
+        {
+          "id": "https://w3id.org/ldac/terms#interviewee",
+          "name": "interviewee",
+          "help": "The participant was a respondent in an interview.",
+          "type": [
+            "Person"
+          ],
+          "multiple": true
+        },
+        {
+          "id": "https://w3id.org/ldac/terms#interviewer",
+          "name": "interviewer",
+          "help": "The participant conducted an interview that forms part of the resource.",
+          "type": [
+            "Person"
+          ],
+          "multiple": true
+        },
+        {
+          "id": "https://w3id.org/ldac/terms#participant",
+          "name": "participant",
+          "help": "This role is intended for minor participants such as audience members or other peripherally involved participants in the event. These interlocutors need not have been physically present.",
+          "type": [
+            "Person"
+          ],
+          "multiple": true
+        },
+        {
+          "id": "https://w3id.org/ldac/terms#performer",
+          "name": "performer",
+          "help": "It is recommended that this term be used only for creative participants whose role is not better indicated by a more specific term, such as 'speaker', 'signer', or 'singer'.",
+          "type": [
+            "Person"
+          ],
+          "multiple": true
+        },
+        {
+          "id": "https://w3id.org/ldac/terms#photographer",
+          "name": "photographer",
+          "help": "The participant took the photograph, or shot the film, that appears in or constitutes the resource.",
+          "type": [
+            "Person"
+          ],
+          "multiple": true
+        },
+        {
+          "id": "https://w3id.org/ldac/terms#recorder",
+          "name": "recorder",
+          "help": "The participant operated the recording machinery used to create the resource.",
+          "type": [
+            "Person"
+          ],
+          "multiple": true
+        },
+        {
+          "id": "https://w3id.org/ldac/terms#researcher",
+          "name": "researcher",
+          "help": "The resource was created as part of the participant's research, or the research presents interim or final results from the participant's research.",
+          "type": [
+            "Person"
+          ],
+          "multiple": true
+        },
+        {
+          "id": "https://w3id.org/ldac/terms#researchParticipant",
+          "name": "researchParticipant",
+          "help": "The participant acted as a research subject or responded to a questionnaire, the results of which study form the basis of the resource.",
+          "type": [
+            "Person"
+          ],
+          "multiple": true
+        },
+        {
+          "id": "https://w3id.org/ldac/terms#responder",
+          "name": "responder",
+          "help": "This person's voice can be heard (or their words can be read) in the resource, typically saying the language-appropriate equivalent of \"uh-huh\", \"amen\", \"you don't say\", etc. This role is sometimes referred to as a \"yes-sayer\", \"backchanneler\", or \"co-conversant\".",
+          "type": [
+            "Person"
+          ],
+          "multiple": true
+        },
+        {
+          "id": "https://w3id.org/ldac/terms#signer",
+          "name": "signer",
+          "help": "Those whose gestures predominate in a recorded or filmed resource. (This resource may be a transcription of that recording).",
+          "type": [
+            "Person"
+          ],
+          "multiple": true
+        },
+        {
+          "id": "https://w3id.org/ldac/terms#singer",
+          "name": "singer",
+          "help": "The participant sang, either individually or as part of a group, in a resource that consists of a recording, a film, or a transcription of a recorded resource.",
+          "type": [
+            "Person"
+          ],
+          "multiple": true
+        },
+        {
           "id": "https://w3id.org/ldac/terms#speaker",
           "name": "speaker",
-          "help": "The contributor was a principal speaker in a resource that consists of a recording, a film, or a transcription of a recorded resource. Speakers are those whose voices predominate in a recorded or filmed resource.",
-          "multiple": true,
+          "help": "Those whose voices predominate in a recorded or filmed resource. (This resource may be a transcription of that recording).",
           "type": [
-            "Speaker"
-          ]
+            "Person"
+          ],
+          "multiple": true
+        },
+        {
+          "id": "https://w3id.org/ldac/terms#sponsor",
+          "name": "sponsor",
+          "help": "The participant contributed financial support to the creation of the resource.",
+          "type": [
+            "Person"
+          ],
+          "multiple": true
+        },
+        {
+          "id": "https://w3id.org/ldac/terms#transcriber",
+          "name": "transcriber",
+          "help": "The participant produced a transcription of this or a related resource.",
+          "type": [
+            "Person"
+          ],
+          "multiple": true
+        },
+        {
+          "id": "https://w3id.org/ldac/terms#translator",
+          "name": "translator",
+          "help": "The participant produced a translation of this or a related resource.",
+          "type": [
+            "Person"
+          ],
+          "multiple": true
         },
         {
           "id": "http://schema.org/identifier",
