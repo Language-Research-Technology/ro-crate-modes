@@ -20,22 +20,18 @@
       "inputs": [
         "@id",
         "@type",
-        "https://purl.org/dc/terms/conformsTo",
+        "http://purl.org/dc/terms/conformsTo",
         "http://schema.org/name",
         "http://schema.org/familyName",
         "http://schema.org/givenName",
         "http://schema.org/description",
-        "http://schema.org/conformsTo",
         "http://schema.org/datePublished",
         "http://schema.org/license",
         "http://schema.org/usageInfo",
         "http://schema.org/about",
         "http://schema.org/mentions",
         "http://schema.org/mainEntity",
-        "http://schema.org/sameAs",
-        "http://schema.org/language",
-        "http://schema.org/inLanguage",
-        "https://w3id.org/ldac/terms#subjectLanguage"
+        "http://schema.org/sameAs"
       ]
     },
     {
@@ -50,7 +46,7 @@
         "http://schema.org/citation",
         "http://purl.org/dc/terms/rightsHolder",
         "https://w3id.org/ldac/terms#annotator",
-        "https://w3id.org/ldac/terms#author",
+        "http://schema.org/author",
         "https://w3id.org/ldac/terms#compiler",
         "https://w3id.org/ldac/terms#consultant",
         "https://w3id.org/ldac/terms#dataInputter",
@@ -101,6 +97,16 @@
       ]
     },
     {
+      "name": "Language",
+      "help": "Metadata related to the languages used, modes of communication and other linguistic classifications.",
+      "inputs": [
+        "http://schema.org/inLanguage",
+        "https://w3id.org/ldac/terms#subjectLanguage",
+        "https://w3id.org/ldac/terms#communicationMode",
+        "https://w3id.org/ldac/terms#linguisticGenre"
+      ]
+    },
+    {
       "name": "Space & Time",
       "help": "Where and when the data was collected; the times and places it mentions or describes.",
       "inputs": [
@@ -146,8 +152,10 @@
         "@id",
         "name",
         "alternateName",
+        "iso639-3",
         "austlangCode",
-        "glottologCode"
+        "glottologCode",
+        "languageCode"
       ]
     },
     "Organization": {
@@ -252,7 +260,7 @@
           ]
         },
         {
-          "id": "https://w3id.org/ldac/terms#author",
+          "id": "http://schema.org/author",
           "name": "author",
           "help": "The person or organisation responsible for creating this collection of data. Authors should be identified using URIs such as ORCiD or ROR.",
           "required": true,
@@ -373,7 +381,17 @@
           "help": "Links from a Repository Object or Collection to a containing Repository Object or Collection.",
           "multiple": true,
           "type": [
+            "RepositoryCollection",
             "RepositoryObject"
+          ]
+        },
+        {
+          "id": "http://schema.org/datePublished",
+          "name": "datePublished",
+          "help": "The (earliest) date this work was created.",
+          "multiple": true,
+          "type": [
+            "Text"
           ]
         },
         {
@@ -615,7 +633,7 @@
           "id": "http://schema.org/inLanguage",
           "name": "inLanguage",
           "label": "inLanguage",
-          "help": "The language(s) of the materials (including PrimaryMaterials, DerivedMaterials and Annotations) in this collection.",
+          "help": "The language in which the resource is written.",
           "type": [
             "Language"
           ],
@@ -626,7 +644,7 @@
           "id": "https://w3id.org/ldac/terms#subjectLanguage",
           "name": "subjectLanguage",
           "label": "subjectLanguage",
-          "help": "The languages that the materials in the collection are about (not the language that it is in). This is particularly used on Annotations that may talk about PrimaryMaterials or DerivedMaterials.",
+          "help": "The languages that the materials in the collection are about (not the language that it is in).",
           "type": [
             "Language"
           ],
@@ -645,7 +663,7 @@
           ]
         },
         {
-          "id": "https://w3id.org/ldac/terms#author",
+          "id": "http://schema.org/author",
           "name": "author",
           "help": "The person or organisation responsible for creating this collection of data. Authors should be identified using URIs such as ORCiD or ROR.",
           "type": [
@@ -833,7 +851,7 @@
         {
           "id": "http://schema.org/datePublished",
           "name": "datePublished",
-          "help": "Date of first broadcast/publication.",
+          "help": "The (earliest) date this work was created.",
           "multiple": true,
           "type": [
             "Text"
@@ -849,31 +867,33 @@
           ]
         },
         {
-          "id": "http://schema.org/language",
-          "name": "language",
-          "help": "A sub property of instrument. The language used on this action.",
-          "multiple": true,
-          "type": [
-            "Language"
-          ]
-        },
-        {
-          "id": "http://schema.org/memberOf",
+          "id": "http://pcdm.org/models#memberOf",
           "name": "memberOf",
-          "help": "An Organization (or ProgramMembership) to which this Person or Organization belongs.",
+          "help": "Links from a Repository Object or Collection to a containing Repository Object or Collection.",
           "multiple": true,
           "type": [
-            "Text"
+            "RepositoryCollection",
+            "RepositoryObject"
           ]
         },
         {
           "id": "http://schema.org/inLanguage",
           "name": "inLanguage",
-          "help": "The language of the content or performance or used in an action. Please use one of the language codes from the [IETF BCP 47 standard](http://tools.ietf.org/html/bcp47). See also [[availableLanguage]].",
+          "help": "The language in which the resource is written.",
           "multiple": true,
           "type": [
             "Language"
           ]
+        },
+        {
+          "id": "https://w3id.org/ldac/terms#subjectLanguage",
+          "name": "subjectLanguage",
+          "label": "subjectLanguage",
+          "help": "The languages that the materials in the collection are about (not the language that it is in).",
+          "type": [
+            "Language"
+          ],
+          "multiple": true
         },
         {
           "id": "http://schema.org/dateCreated",
@@ -1153,7 +1173,7 @@
           "multiple": false
         },
         {
-          "id": "https://w3id.org/ldac/terms#author",
+          "id": "http://schema.org/author",
           "name": "author",
           "help": "The person or organisation responsible for creating this work. Authors should be identified using URIs such as ORCiD or ROR.",
           "type": [
@@ -1179,7 +1199,7 @@
           "name": "datePublished",
           "help": "The (earliest) date this work was created.",
           "type": [
-            "Date"
+            "Text"
           ],
           "required": true,
           "multiple": false
@@ -1229,7 +1249,7 @@
           ]
         },
         {
-          "id": "https://w3id.org/ldac/terms#author",
+          "id": "http://schema.org/author",
           "name": "author",
           "help": "The person or organisation responsible for creating this collection of data. Authors should be identified using URIs such as ORCiD or ROR.",
           "required": true,
@@ -1513,7 +1533,7 @@
         {
           "id": "http://schema.org/datePublished",
           "name": "datePublished",
-          "help": "Date of first broadcast/publication.",
+          "help": "The (earliest) date this work was created..",
           "multiple": true,
           "type": [
             "Text"
@@ -1531,7 +1551,7 @@
         {
           "id": "http://schema.org/inLanguage",
           "name": "inLanguage",
-          "help": "The language of the content or performance or used in an action. Please use one of the language codes from the [IETF BCP 47 standard](http://tools.ietf.org/html/bcp47). See also [[availableLanguage]].",
+          "help": "The language in which the resource is written.",
           "multiple": true,
           "type": [
             "Language"

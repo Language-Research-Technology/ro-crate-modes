@@ -25,7 +25,6 @@
         "http://schema.org/familyName",
         "http://schema.org/givenName",
         "http://schema.org/description",
-        "http://schema.org/conformsTo",
         "http://schema.org/datePublished",
         "http://schema.org/license",
         "http://schema.org/usageInfo",
@@ -33,7 +32,6 @@
         "http://schema.org/mentions",
         "http://schema.org/mainEntity",
         "http://schema.org/sameAs",
-        "http://schema.org/language",
         "http://schema.org/inLanguage",
         "https://w3id.org/ldac/terms#subjectLanguage"
       ]
@@ -50,7 +48,7 @@
         "http://schema.org/citation",
         "http://purl.org/dc/terms/rightsHolder",
         "https://w3id.org/ldac/terms#annotator",
-        "https://w3id.org/ldac/terms#author",
+        "http://schema.org/author",
         "https://w3id.org/ldac/terms#compiler",
         "https://w3id.org/ldac/terms#consultant",
         "https://w3id.org/ldac/terms#dataInputter",
@@ -254,7 +252,7 @@
           ]
         },
         {
-          "id": "https://w3id.org/ldac/terms#author",
+          "id": "http://schema.org/author",
           "name": "author",
           "help": "The person or organisation responsible for creating this collection of data. Authors should be identified using URIs such as ORCiD or ROR.",
           "required": true,
@@ -375,6 +373,7 @@
           "help": "Links from a Repository Object or Collection to a containing Repository Object or Collection.",
           "multiple": true,
           "type": [
+            "RepositoryCollection",
             "RepositoryObject"
           ]
         },
@@ -617,7 +616,7 @@
           "id": "http://schema.org/inLanguage",
           "name": "inLanguage",
           "label": "inLanguage",
-          "help": "The language(s) of the materials (including PrimaryMaterials, DerivedMaterials and Annotations) in this collection.",
+          "help": "The language in which the resource is written.",
           "type": [
             "Language"
           ],
@@ -628,7 +627,7 @@
           "id": "https://w3id.org/ldac/terms#subjectLanguage",
           "name": "subjectLanguage",
           "label": "subjectLanguage",
-          "help": "The languages that the materials in the collection are about (not the language that it is in). This is particularly used on Annotations that may talk about PrimaryMaterials or DerivedMaterials.",
+          "help": "The languages that the materials in the collection are about (not the language that it is in).",
           "type": [
             "Language"
           ],
@@ -647,7 +646,7 @@
           ]
         },
         {
-          "id": "https://w3id.org/ldac/terms#author",
+          "id": "http://schema.org/author",
           "name": "author",
           "help": "The person or organisation responsible for creating this collection of data. Authors should be identified using URIs such as ORCiD or ROR.",
           "type": [
@@ -803,7 +802,7 @@
           "multiple": false
         },
         {
-          "id": "https://w3id.org/ldac/terms#author",
+          "id": "http://schema.org/author",
           "name": "author",
           "help": "The person or organisation responsible for creating this work. Authors should be identified using URIs such as ORCiD or ROR.",
           "type": [
@@ -868,7 +867,7 @@
           ]
         },
         {
-          "id": "https://w3id.org/ldac/terms#author",
+          "id": "http://schema.org/author",
           "name": "author",
           "help": "The person or organisation responsible for creating this collection of data. Authors should be identified using URIs such as ORCiD or ROR.",
           "required": true,
