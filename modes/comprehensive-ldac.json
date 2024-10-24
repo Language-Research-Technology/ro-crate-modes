@@ -941,6 +941,16 @@
           "multiple": true
         },
         {
+          "id": "http://schema.org/author",
+          "name": "author",
+          "help": "The person or organisation responsible for creating this work. Authors should be identified using URIs such as ORCiD or ROR.",
+          "type": [
+            "Person",
+            "Organization"
+          ],
+          "multiple": true
+        },
+        {
           "id": "https://w3id.org/ldac/terms#compiler",
           "name": "compiler",
           "help": "This refers to someone who creates a single resource with multiple parts, such as a book of short stories, or a person who produces a corpus of resources, which may be archived separately.",
