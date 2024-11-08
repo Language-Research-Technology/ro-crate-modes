@@ -33,6 +33,7 @@
         "http://schema.org/mainEntity",
         "http://schema.org/sameAs",
         "http://schema.org/inLanguage",
+        "https://w3id.org/ldac/terms#doi",
         "https://w3id.org/ldac/terms#subjectLanguage"
       ]
     },
@@ -308,6 +309,16 @@
           "required": true,
           "type": [
             "TextArea"
+          ],
+          "multiple": false
+        },
+        {
+          "id": "https://w3id.org/ldac/terms#doi",
+          "name": "doi",
+          "label": "DOI",
+          "help": "A Digital Object Identifier.",
+          "type": [
+            "Text"
           ],
           "multiple": false
         },
