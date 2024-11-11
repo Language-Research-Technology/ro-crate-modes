@@ -316,7 +316,7 @@
           "id": "https://w3id.org/ldac/terms#doi",
           "name": "doi",
           "label": "DOI",
-          "help": "A Digital Object Identifier.",
+          "help": "A Digital Object Identifier, e.g. https://doi.org/10.1000/182.",
           "type": [
             "Text"
           ],
