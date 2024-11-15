@@ -17,11 +17,22 @@
     "ajv": "^8.12.0",
     "lodash": "^4.17.21",
     "mocha": "^10.2.0",
-    "ro-crate": "^3.3.4",
-    "yargs-parser": "^21.1.1"
+    "ro-crate": "^3.3.4"
   },
   "keywords": [
     "RO-Crate",
     "Crate-O"
-  ]
+  ],
+  "bin": {
+    "ro-crate-modes": "./bin/run.js"
+  },
+  "oclif": {
+    "bin": "ro-crate-modes",
+    "commands": "./lib/commands",
+    "dirname": "ro-crate-modes",
+    "topicSeparator": " "
+  },
+  "dependencies": {
+    "@oclif/core": "^4.0.32"
+  }
 }
