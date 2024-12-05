@@ -27,14 +27,12 @@
         "http://schema.org/description",
         "http://schema.org/datePublished",
         "http://schema.org/license",
+        "http://schema.org/creditText",
         "http://schema.org/usageInfo",
         "http://schema.org/about",
         "http://schema.org/mentions",
         "http://schema.org/mainEntity",
-        "http://schema.org/sameAs",
-        "http://schema.org/inLanguage",
-        "https://w3id.org/ldac/terms#doi",
-        "https://w3id.org/ldac/terms#subjectLanguage"
+        "https://w3id.org/ldac/terms#doi"
       ]
     },
     {
@@ -97,6 +95,14 @@
         "http://schema.org/result",
         "http://schema.org/participant",
         "http://schema.org/target"
+      ]
+    },
+    {
+      "name": "Language",
+      "help": "Metadata related to the languages used, modes of communication and other linguistic classifications.",
+      "inputs": [
+        "http://schema.org/inLanguage",
+        "https://w3id.org/ldac/terms#subjectLanguage"
       ]
     },
     {
@@ -243,10 +249,19 @@
           ]
         },
         {
+          "id": "http://schema.org/creditText",
+          "name": "creditText",
+          "help": "A free text bibliographic citation for this material, e.g. 'Cite as: Musgrave (2023). Title of work. DOI'.",
+          "multiple": true,
+          "type": [
+            "Text"
+          ]
+        },
+        {
           "id": "http://schema.org/usageInfo",
           "name": "usageInfo",
           "label": "usageInfo",
-          "help": "This field should contain either a free text bibliographic citation for this material, e.g. 'Cite as: Musgrave (2023). Title of work. DOI' or provide additional information on licensing options for using the data, e.g. 'Contact the Data Steward to discuss license terms'. If both are needed, use two fields.",
+          "help": "Additional information on licensing options for using the data, e.g. 'Contact the Data Steward to discuss license terms'.",
           "multiple": true,
           "type": [
             "Text"
@@ -1098,11 +1113,6 @@
           ]
         }
       ]
-    },
-    "Language": {
-      "id": "http://schema.org/inLanguage",
-      "inputs": []
-
     }
   }
 }

@@ -27,11 +27,11 @@
         "http://schema.org/description",
         "http://schema.org/datePublished",
         "http://schema.org/license",
+        "http://schema.org/creditText",
         "http://schema.org/usageInfo",
         "http://schema.org/about",
         "http://schema.org/mentions",
         "http://schema.org/mainEntity",
-        "http://schema.org/sameAs",
         "https://w3id.org/ldac/terms#doi"
       ]
     },
@@ -251,10 +251,19 @@
           ]
         },
         {
+          "id": "http://schema.org/creditText",
+          "name": "creditText",
+          "help": "A free text bibliographic citation for this material, e.g. 'Cite as: Musgrave (2023). Title of work. DOI'.",
+          "multiple": true,
+          "type": [
+            "Text"
+          ]
+        },
+        {
           "id": "http://schema.org/usageInfo",
           "name": "usageInfo",
           "label": "usageInfo",
-          "help": "This field should contain either a free text bibliographic citation for this material, e.g. 'Cite as: Musgrave (2023). Title of work. DOI' or provide additional information on licensing options for using the data, e.g. 'Contact the Data Steward to discuss license terms'. If both are needed, use two fields.",
+          "help": "Additional information on licensing options for using the data, e.g. 'Contact the Data Steward to discuss license terms'.",
           "multiple": true,
           "type": [
             "Text"
@@ -1298,20 +1307,20 @@
           ],
           "values": [
             {
-              "@id": "txc:ElicitationTask",
+              "@id": "ldac:ElicitationTask",
               "@type": "DefinedTerm",
               "description": "The collection protocol includes a task-based prompt to participants.",
               "inDefinedTermSet": {
-                "@id": "txc:CollectionProtocolTypeTerms"
+                "@id": "ldac:CollectionProtocolTypeTerms"
               },
               "name": "ElicitationTask"
             },
             {
-              "@id": "txc:TextSelectionCriteria",
+              "@id": "ldac:TextSelectionCriteria",
               "@type": "DefinedTerm",
               "description": "A description of the criteria used to select texts in a collection.",
               "inDefinedTermSet": {
-                "@id": "txc:CollectionProtocolTypeTerms"
+                "@id": "ldac:CollectionProtocolTypeTerms"
               },
               "name": "TextSelectionCriteria"
             }
@@ -1485,7 +1494,63 @@
           "name": "communicationMode",
           "help": "The mode(s) (spoken, written, signed, etc.) used in the interaction represented by this resource.",
           "type": [
-            "Text"
+            "SelectObject"
+          ],
+          "values": [
+            {
+              "@id": "ldac:Gesture",
+              "@type": "DefinedTerm",
+              "description": "The resource contains non-linguistic gestural communication (i.e. not sign language).",
+              "inDefinedTermSet": {
+                "@id": "ldac:CommunicationModeTerms"
+              },
+              "name": "Gesture"
+            },
+            {
+              "@id": "ldac:SignedLanguage",
+              "@type": "DefinedTerm",
+              "description": "The resource contains data for which the medium of interaction was signing.",
+              "inDefinedTermSet": {
+                "@id": "ldac:CommunicationModeTerms"
+              },
+              "name": "SignedLanguage"
+            },
+            {
+              "@id": "ldac:Song",
+              "@type": "DefinedTerm",
+              "description": "The resource contains data for which the medium of interaction was song.",
+              "inDefinedTermSet": {
+                "@id": "ldac:CommunicationModeTerms"
+              },
+              "name": "Song"
+            },
+            {
+              "@id": "ldac:SpokenLanguage",
+              "@type": "DefinedTerm",
+              "description": "The resource contains data for which the medium of interaction was speech.",
+              "inDefinedTermSet": {
+                "@id": "ldac:CommunicationModeTerms"
+              },
+              "name": "SpokenLanguage"
+            },
+            {
+              "@id": "ldac:WhistledLanguage",
+              "@type": "DefinedTerm",
+              "description": "The resource contains data for which the medium of interaction was whistling.",
+              "inDefinedTermSet": {
+                "@id": "ldac:CommunicationModeTerms"
+              },
+              "name": "WhistledLanguage"
+            },
+            {
+              "@id": "ldac:WrittenLanguage",
+              "@type": "DefinedTerm",
+              "description": "The resource contains data for which the medium of interaction was writing.",
+              "inDefinedTermSet": {
+                "@id": "ldac:CommunicationModeTerms"
+              },
+              "name": "WrittenLanguage"
+            }
           ]
         },
         {
@@ -1512,7 +1577,117 @@
           "help": "A linguistic classification of the genre of this resource.",
           "multiple": true,
           "type": [
-            "DefinedTerm"
+            "SelectObject"
+          ],
+          "values": [
+            {
+              "@id": "ldac:Dialogue",
+              "@type": "DefinedTerm",
+              "description": "An interactive discourse with two or more participants. Examples of dialogues include conversations, interviews, correspondence, consultations, greetings and leave-takings.",
+              "inDefinedTermSet": {
+                "@id": "ldac:LinguisticGenreTerms"
+              },
+              "name": "Dialogue"
+            },
+            {
+              "@id": "ldac:Drama",
+              "@type": "DefinedTerm",
+              "description": "A planned, creative rendition of discourse with two or more participants intended for presentation to an audience.",
+              "inDefinedTermSet": {
+                "@id": "ldac:LinguisticGenreTerms"
+              },
+              "name": "Drama"
+            },
+            {
+              "@id": "ldac:Formulaic",
+              "@type": "DefinedTerm",
+              "description": "The resource is a ritually or conventionally structured discourse.",
+              "inDefinedTermSet": {
+                "@id": "ldac:LinguisticGenreTerms"
+              },
+              "name": "Formulaic"
+            },
+            {
+              "@id": "ldac:Informational",
+              "@type": "DefinedTerm",
+              "description": "Discourse whose primary purpose is to inform the audience about the natural or social world.",
+              "inDefinedTermSet": {
+                "@id": "ldac:LinguisticGenreTerms"
+              },
+              "name": "Informational"
+            },
+            {
+              "@id": "ldac:Interview",
+              "@type": "DefinedTerm",
+              "description": "The resource is a conversation where one or more speakers are directing the conversation.",
+              "inDefinedTermSet": {
+                "@id": "ldac:LinguisticGenreTerms"
+              },
+              "name": "Interview"
+            },
+            {
+              "@id": "ldac:Lexicon",
+              "@type": "DefinedTerm",
+              "description": "The resource includes a systematic listing of lexical items.",
+              "inDefinedTermSet": {
+                "@id": "ldac:LinguisticGenreTerms"
+              },
+              "name": "Lexicon"
+            },
+            {
+              "@id": "ldac:Ludic",
+              "@type": "DefinedTerm",
+              "description": "Language whose primary function is to be part of play, or a style of speech that involves a creative manipulation of the structures of the language. Examples of ludic discourse are play languages, jokes, secret languages, and speech disguises.",
+              "inDefinedTermSet": {
+                "@id": "ldac:LinguisticGenreTerms"
+              },
+              "name": "Ludic"
+            },
+            {
+              "@id": "ldac:Narrative",
+              "@type": "DefinedTerm",
+              "description": "A discourse, monologic or co-constructed, which represents temporally organised events. Types of narratives include historical, traditional, and personal narratives, myths, folktales, fables, and humorous stories.",
+              "inDefinedTermSet": {
+                "@id": "ldac:LinguisticGenreTerms"
+              },
+              "name": "Narrative"
+            },
+            {
+              "@id": "ldac:Oratory",
+              "@type": "DefinedTerm",
+              "description": "The art of public speaking, or of speaking eloquently according to rules or conventions. Examples of oratory include sermons, lectures, political speeches, and invocations.",
+              "inDefinedTermSet": {
+                "@id": "ldac:LinguisticGenreTerms"
+              },
+              "name": "Oratory"
+            },
+            {
+              "@id": "ldac:Procedural",
+              "@type": "DefinedTerm",
+              "description": "An explanation or description of a method, process, or situation having ordered steps.",
+              "inDefinedTermSet": {
+                "@id": "ldac:LinguisticGenreTerms"
+              },
+              "name": "Procedural"
+            },
+            {
+              "@id": "ldac:Report",
+              "@type": "DefinedTerm",
+              "description": "A factual account of some event or circumstance.",
+              "inDefinedTermSet": {
+                "@id": "ldac:LinguisticGenreTerms"
+              },
+              "name": "Report"
+            },
+            {
+              "@id": "ldac:Thesaurus",
+              "@type": "DefinedTerm",
+              "description": "The resource contains a list or data structure consisting of words or concepts arranged according to sense.",
+              "inDefinedTermSet": {
+                "@id": "ldac:LinguisticGenreTerms"
+              },
+              "name": "Thesaurus"
+            }
           ]
         },
         {
@@ -1579,6 +1754,16 @@
           ]
         },
         {
+          "id": "https://w3id.org/ldac/terms#subjectLanguage",
+          "name": "subjectLanguage",
+          "label": "subjectLanguage",
+          "help": "The languages that the materials in the collection are about (not the language that it is in).",
+          "type": [
+            "Language"
+          ],
+          "multiple": true
+        },
+        {
           "id": "http://schema.org/dateCreated",
           "name": "dateCreated",
           "help": "The date on which the CreativeWork was created or the item was added to a DataFeed.",
@@ -1597,29 +1782,29 @@
           ],
           "values": [
             {
-              "@id": "txc:PrimaryMaterial",
+              "@id": "ldac:PrimaryMaterial",
               "@type": "DefinedTerm",
               "description": "The object of study, such as a literary work, film, or recording of natural discourse.",
               "inDefinedTermSet": {
-                "@id": "txc:materialTypes"
+                "@id": "ldac:materialTypes"
               },
               "name": "PrimaryMaterial"
             },
             {
-              "@id": "txc:Annotation",
+              "@id": "ldac:Annotation",
               "@type": "DefinedTerm",
               "description": "The resource includes material that adds information to some other linguistic record.",
               "inDefinedTermSet": {
-                "@id": "txc:materialTypes"
+                "@id": "ldac:materialTypes"
               },
               "name": "Annotation"
             },
             {
-              "@id": "txc:DerivedMaterial",
+              "@id": "ldac:DerivedMaterial",
               "@type": "DefinedTerm",
               "description": "This is derived from another source, such as a Primary Material, via some process, e.g. a downsampled video or a sample or an abstract of a resource that is not an annotation (an analysis or description).",
               "inDefinedTermSet": {
-                "@id": "txc:materialTypes"
+                "@id": "ldac:materialTypes"
               },
               "name": "DerivedMaterial"
             }
@@ -1663,7 +1848,63 @@
           "help": "The mode (spoken, written, signed etc.) of this resource. There may be more than one value for this property.",
           "multiple": true,
           "type": [
-            "DefinedTerm"
+            "SelectObject"
+          ],
+          "values": [
+            {
+              "@id": "ldac:Gesture",
+              "@type": "DefinedTerm",
+              "description": "The resource contains non-linguistic gestural communication (i.e. not sign language).",
+              "inDefinedTermSet": {
+                "@id": "ldac:CommunicationModeTerms"
+              },
+              "name": "Gesture"
+            },
+            {
+              "@id": "ldac:SignedLanguage",
+              "@type": "DefinedTerm",
+              "description": "The resource contains data for which the medium of interaction was signing.",
+              "inDefinedTermSet": {
+                "@id": "ldac:CommunicationModeTerms"
+              },
+              "name": "SignedLanguage"
+            },
+            {
+              "@id": "ldac:Song",
+              "@type": "DefinedTerm",
+              "description": "The resource contains data for which the medium of interaction was song.",
+              "inDefinedTermSet": {
+                "@id": "ldac:CommunicationModeTerms"
+              },
+              "name": "Song"
+            },
+            {
+              "@id": "ldac:SpokenLanguage",
+              "@type": "DefinedTerm",
+              "description": "The resource contains data for which the medium of interaction was speech.",
+              "inDefinedTermSet": {
+                "@id": "ldac:CommunicationModeTerms"
+              },
+              "name": "SpokenLanguage"
+            },
+            {
+              "@id": "ldac:WhistledLanguage",
+              "@type": "DefinedTerm",
+              "description": "The resource contains data for which the medium of interaction was whistling.",
+              "inDefinedTermSet": {
+                "@id": "ldac:CommunicationModeTerms"
+              },
+              "name": "WhistledLanguage"
+            },
+            {
+              "@id": "ldac:WrittenLanguage",
+              "@type": "DefinedTerm",
+              "description": "The resource contains data for which the medium of interaction was writing.",
+              "inDefinedTermSet": {
+                "@id": "ldac:CommunicationModeTerms"
+              },
+              "name": "WrittenLanguage"
+            }
           ]
         },
         {
@@ -1672,7 +1913,117 @@
           "help": "A linguistic classification of the genre of this resource.",
           "multiple": true,
           "type": [
-            "DefinedTerm"
+            "SelectObject"
+          ],
+          "values": [
+            {
+              "@id": "ldac:Dialogue",
+              "@type": "DefinedTerm",
+              "description": "An interactive discourse with two or more participants. Examples of dialogues include conversations, interviews, correspondence, consultations, greetings and leave-takings.",
+              "inDefinedTermSet": {
+                "@id": "ldac:LinguisticGenreTerms"
+              },
+              "name": "Dialogue"
+            },
+            {
+              "@id": "ldac:Drama",
+              "@type": "DefinedTerm",
+              "description": "A planned, creative rendition of discourse with two or more participants intended for presentation to an audience.",
+              "inDefinedTermSet": {
+                "@id": "ldac:LinguisticGenreTerms"
+              },
+              "name": "Drama"
+            },
+            {
+              "@id": "ldac:Formulaic",
+              "@type": "DefinedTerm",
+              "description": "The resource is a ritually or conventionally structured discourse.",
+              "inDefinedTermSet": {
+                "@id": "ldac:LinguisticGenreTerms"
+              },
+              "name": "Formulaic"
+            },
+            {
+              "@id": "ldac:Informational",
+              "@type": "DefinedTerm",
+              "description": "Discourse whose primary purpose is to inform the audience about the natural or social world.",
+              "inDefinedTermSet": {
+                "@id": "ldac:LinguisticGenreTerms"
+              },
+              "name": "Informational"
+            },
+            {
+              "@id": "ldac:Interview",
+              "@type": "DefinedTerm",
+              "description": "The resource is a conversation where one or more speakers are directing the conversation.",
+              "inDefinedTermSet": {
+                "@id": "ldac:LinguisticGenreTerms"
+              },
+              "name": "Interview"
+            },
+            {
+              "@id": "ldac:Lexicon",
+              "@type": "DefinedTerm",
+              "description": "The resource includes a systematic listing of lexical items.",
+              "inDefinedTermSet": {
+                "@id": "ldac:LinguisticGenreTerms"
+              },
+              "name": "Lexicon"
+            },
+            {
+              "@id": "ldac:Ludic",
+              "@type": "DefinedTerm",
+              "description": "Language whose primary function is to be part of play, or a style of speech that involves a creative manipulation of the structures of the language. Examples of ludic discourse are play languages, jokes, secret languages, and speech disguises.",
+              "inDefinedTermSet": {
+                "@id": "ldac:LinguisticGenreTerms"
+              },
+              "name": "Ludic"
+            },
+            {
+              "@id": "ldac:Narrative",
+              "@type": "DefinedTerm",
+              "description": "A discourse, monologic or co-constructed, which represents temporally organised events. Types of narratives include historical, traditional, and personal narratives, myths, folktales, fables, and humorous stories.",
+              "inDefinedTermSet": {
+                "@id": "ldac:LinguisticGenreTerms"
+              },
+              "name": "Narrative"
+            },
+            {
+              "@id": "ldac:Oratory",
+              "@type": "DefinedTerm",
+              "description": "The art of public speaking, or of speaking eloquently according to rules or conventions. Examples of oratory include sermons, lectures, political speeches, and invocations.",
+              "inDefinedTermSet": {
+                "@id": "ldac:LinguisticGenreTerms"
+              },
+              "name": "Oratory"
+            },
+            {
+              "@id": "ldac:Procedural",
+              "@type": "DefinedTerm",
+              "description": "An explanation or description of a method, process, or situation having ordered steps.",
+              "inDefinedTermSet": {
+                "@id": "ldac:LinguisticGenreTerms"
+              },
+              "name": "Procedural"
+            },
+            {
+              "@id": "ldac:Report",
+              "@type": "DefinedTerm",
+              "description": "A factual account of some event or circumstance.",
+              "inDefinedTermSet": {
+                "@id": "ldac:LinguisticGenreTerms"
+              },
+              "name": "Report"
+            },
+            {
+              "@id": "ldac:Thesaurus",
+              "@type": "DefinedTerm",
+              "description": "The resource contains a list or data structure consisting of words or concepts arranged according to sense.",
+              "inDefinedTermSet": {
+                "@id": "ldac:LinguisticGenreTerms"
+              },
+              "name": "Thesaurus"
+            }
           ]
         },
         {
@@ -1688,47 +2039,6 @@
           "id": "http://schema.org/size",
           "name": "size",
           "help": "The size in bytes.",
-          "multiple": true,
-          "type": [
-            "Text"
-          ]
-        }
-      ]
-    },
-    "Language": {
-      "id": "http://schema.org/inLanguage",
-      "inputs": [
-        {
-          "id": "http://schema.org/name",
-          "name": "name",
-          "help": "The name of the item.",
-          "multiple": true,
-          "type": [
-            "Text"
-          ]
-        },
-        {
-          "id": "http://schema.org/geo",
-          "name": "geo",
-          "help": "The geographic coordinates of the place.",
-          "multiple": true,
-          "type": [
-            "GeoCoordinates"
-          ]
-        },
-        {
-          "id": "http://schema.org/sameAs",
-          "name": "sameAs",
-          "help": "URL of a reference Web page that unambiguously indicates the item's identity. E.g. the URL of the item's Wikipedia page, Wikidata entry, or official website.",
-          "multiple": true,
-          "type": [
-            "Text"
-          ]
-        },
-        {
-          "id": "http://schema.org/alternateName",
-          "name": "alternateName",
-          "help": "An alias for the item.",
           "multiple": true,
           "type": [
             "Text"
