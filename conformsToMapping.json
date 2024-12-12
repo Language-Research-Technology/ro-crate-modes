@@ -1,0 +1,5 @@
+{
+"https://w3id.org/ldac/profile#Collection": "https://language-research-technology.github.io/ro-crate-modes/modes/comprehensive-ldac.json",
+"https://w3id.org/ro/profiles/schema/1.0": "https://language-research-technology.github.io/ro-crate-modes/modes/schema.json",
+"https://purl.archive.org/language-data-commons/profile#Software": "https://language-research-technology.github.io/ro-crate-modes/modes/software.json"
+}
