@@ -28,9 +28,9 @@ describe("generateSpec", function () {
         fs.writeFileSync("test-ldac-profile.md", result)
 
         assert(result.match(`-  MUST have at least the following types: ."Dataset","RepositoryCollection".`))
-        assert(result.match(`-  MUST have a conformsTo property with least the following values .*{"@id":"https://purl.archive.org/language-data-commons/profile#Collection"}.`))
+        assert(result.match(`-  MUST have a conformsTo property with least the following values .*{"@id":"https://w3id.org/ldac/profile#Collection"}.`))
        
-        assert(result.match(/\<a name='object-txc_ElicitationTask'\/\>/))
+        assert(result.match(/\<a name='object-ldac_ElicitationTask'\/\>/))
         assert(result.match(/.*###  Value ElicitationTask/))
         assert(result.match(/The collection protocol includes a task-based prompt to participants.*/))
 
