@@ -195,7 +195,7 @@
         {
           "id": "http://schema.org/name",
           "name": "name",
-          "label": "Name",
+          "label": "name",
           "help": "The name of this dataset.",
           "required": true,
           "multiple": false,
@@ -229,7 +229,7 @@
           "id": "http://purl.org/dc/terms/rightsHolder",
           "name": "rightsHolder",
           "label": "rightsHolder",
-          "help": "A person or organisation owning or managing rights over the resource.",
+          "help": "The person or organisation owning or managing rights over the resource.",
           "required": true,
           "multiple": false,
           "type": [
@@ -433,7 +433,7 @@
           "id": "https://w3id.org/ldac/terms#compiler",
           "name": "ldac:compiler",
           "label": "compiler",
-          "help": "This refers to someone who creates a single resource with multiple parts, such as a book of short stories, or a person who produces a corpus of resources, which may be archived separately.",
+          "help": "The person who creates a single resource with multiple parts, such as a book of short stories, or who produces a corpus of resources, which may be archived separately.",
           "type": [
             "Person"
           ],
@@ -443,7 +443,7 @@
           "id": "https://w3id.org/ldac/terms#consultant",
           "name": "ldac:consultant",
           "label": "consultant",
-          "help": "This term is commonly used by field linguists for the native speakers who work with them in describing and analysing a language. They contribute their expertise in their native language to the resource, although their speech, sign, or writing may not appear directly in the resource. In some parts of the world, the preferred term for this role is 'informant'.",
+          "help": "Commonly used by field linguists for the native speakers who work with them in describing and analysing a language. They contribute their expertise in their native language to the resource, although their speech, sign, or writing may not appear directly in the resource. In some parts of the world, the preferred term for this role is 'informant'.",
           "type": [
             "Person"
           ],
@@ -453,7 +453,7 @@
           "id": "https://w3id.org/ldac/terms#dataInputter",
           "name": "ldac:dataInputter",
           "label": "dataInputter",
-          "help": "The participant was responsible for entering, re-typing, and/or structuring the data contained in the resource.",
+          "help": "The participant responsible for entering, re-typing, and/or structuring the data contained in the resource.",
           "type": [
             "Person"
           ],
@@ -463,7 +463,7 @@
           "id": "https://w3id.org/ldac/terms#depositor",
           "name": "ldac:depositor",
           "label": "depositor",
-          "help": "The participant was responsible for depositing the resource in an archive.",
+          "help": "The participant responsible for depositing the resource in an archive.",
           "type": [
             "Person"
           ],
@@ -483,7 +483,7 @@
           "id": "https://w3id.org/ldac/terms#editor",
           "name": "ldac:editor",
           "label": "editor",
-          "help": "This role includes anyone whose role was editorial in nature, such as proofreaders, debuggers, testers, etc. It may overlap the Compiler role in some cases.",
+          "help": "Anyone whose role was editorial in nature, such as proofreaders, debuggers, testers, etc. It may overlap the Compiler role in some cases.",
           "type": [
             "Person"
           ],
@@ -523,7 +523,7 @@
           "id": "https://w3id.org/ldac/terms#participant",
           "name": "ldac:participant",
           "label": "participant",
-          "help": "This role is intended for minor participants such as audience members or other peripherally-involved participants in the event. These interlocutors need not have been physically present.",
+          "help": "Minor participants such as audience members or other peripherally-involved participants in the event. These interlocutors need not have been physically present.",
           "type": [
             "Person"
           ],
@@ -668,7 +668,7 @@
           "id": "http://purl.org/dc/terms/conformsTo",
           "name": "conformsTo",
           "label": "conformsTo",
-          "help": "A link to the Text Commons RO-Crate profile for collections.",
+          "help": "A link to the language data commons RO-Crate profile for collections.",
           "type": [
             "Select"
           ],
@@ -704,7 +704,7 @@
         {
           "id": "http://schema.org/name",
           "name": "name",
-          "label": "Name",
+          "label": "name",
           "help": "The name of this collection.",
           "required": true,
           "multiple": false,
@@ -831,7 +831,7 @@
         {
           "id": "http://schema.org/holdingArchive",
           "name": "holdingArchive",
-          "label": "HoldingArchive",
+          "label": "holdingArchive",
           "help": "Organisation where the original of this work or collection is housed.",
           "multiple": false,
           "type": [
@@ -861,7 +861,7 @@
         {
           "id": "http://schema.org/name",
           "name": "name",
-          "label": "Name",
+          "label": "name",
           "help": "The name of this work.",
           "required": true,
           "multiple": false,
@@ -941,7 +941,7 @@
         {
           "id": "http://schema.org/name",
           "name": "name",
-          "label": "Name",
+          "label": "name",
           "help": "The name of this protocol.",
           "required": true,
           "multiple": false,
