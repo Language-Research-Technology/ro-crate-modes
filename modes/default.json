@@ -96,7 +96,7 @@
           },
           {
             "id": "http://pcdm.org/models#hasMember",
-            "name": "hasMember",
+            "name": "pcdm:hasMember",
             "help": "The sub-collections, if any, associated with this collection.",
             "type": [
               "RepositoryCollection"
@@ -125,7 +125,7 @@
           },
           {
             "id": "http://pcdm.org/models#memberOf",
-            "name": "memberOf",
+            "name": "pcdm:memberOf",
             "help": "Links from a Repository Object or Collection to a containing Repository Object or Collection.",
             "multiple": true,
             "type": [
@@ -956,7 +956,7 @@
         "inputs": [
           {
             "id": "http://www.opengis.net/ont/geosparql#asWKT",
-            "name": "asWKT",
+            "name": "geosparql:asWKT",
             "help": "The WKT serialisation of the geometry.",
             "required": true,
             "multiple": true,

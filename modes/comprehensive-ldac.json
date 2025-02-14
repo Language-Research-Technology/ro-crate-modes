@@ -229,7 +229,7 @@
         },
         {
           "id": "http://purl.org/dc/terms/rightsHolder",
-          "name": "rightsHolder",
+          "name": "dct:rightsHolder",
           "label": "rightsHolder",
           "help": "The person or organisation owning or managing rights over the resource.",
           "required": true,
@@ -381,7 +381,7 @@
         },
         {
           "id": "http://pcdm.org/models#hasMember",
-          "name": "hasMember",
+          "name": "pcdm:hasMember",
           "label": "hasMember",
           "help": "The sub-collections, if any, associated with this collection.",
           "type": [
@@ -412,7 +412,7 @@
         },
         {
           "id": "http://pcdm.org/models#memberOf",
-          "name": "memberOf",
+          "name": "pcdm:memberOf",
           "label": "memberOf",
           "help": "Links from a Repository Object or Collection to a containing Repository Object or Collection.",
           "multiple": true,
@@ -812,7 +812,7 @@
         },
         {
           "id": "http://pcdm.org/models#hasMember",
-          "name": "hasMember",
+          "name": "pcdm:hasMember",
           "label": "hasMember",
           "help": "The sub-collection.",
           "type": [
@@ -948,7 +948,7 @@
         },
         {
           "id": "http://pcdm.org/models#memberOf",
-          "name": "memberOf",
+          "name": "pcdm:memberOf",
           "label": "memberOf",
           "help": "Links from a Repository Object or Collection to a containing Repository Object or Collection.",
           "multiple": true,
@@ -1495,7 +1495,7 @@
       "inputs": [
         {
           "id": "http://www.opengis.net/ont/geosparql#asWKT",
-          "name": "asWKT",
+          "name": "geosparql:asWKT",
           "label": "asWKT",
           "help": "The WKT serialisation of the geometry.",
           "required": true,
@@ -1588,15 +1588,6 @@
           "name": "encodingFormat",
           "label": "encodingFormat",
           "help": "The media type typically expressed using a MIME format.",
-          "type": [
-            "Text"
-          ]
-        },
-        {
-          "id": "https://purl.archive.org/language-data-commons/terms#size",
-          "name": "size",
-          "label": "size",
-          "help": "The size in bytes.",
           "type": [
             "Text"
           ]
