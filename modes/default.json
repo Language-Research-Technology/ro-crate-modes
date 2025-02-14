@@ -370,7 +370,7 @@
             "help": "The subject matter of the content.",
             "multiple": true,
             "type": [
-              "Dataset"
+              "Text"
             ]
           },
           {
@@ -836,7 +836,7 @@
             "help": "The subject matter of the content.",
             "multiple": true,
             "type": [
-              "Dataset"
+              "Text"
             ]
           },
           {
@@ -1158,7 +1158,7 @@
             "help": "The subject matter of the content.",
             "multiple": true,
             "type": [
-              "Dataset"
+              "Text"
             ]
           },
           {
