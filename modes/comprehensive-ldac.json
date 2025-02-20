@@ -6,6 +6,10 @@
     "author": "University of Queensland",
     "license": "GPL-3.0"
   },
+  "contextPrefixes": {
+    "ldac": "https://w3id.org/ldac/terms#"
+  },
+  "context": [],
  "conformsToUri": [
    "https://w3id.org/ldac/profile#Collection"
  ],
