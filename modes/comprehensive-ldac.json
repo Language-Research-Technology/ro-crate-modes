@@ -177,6 +177,7 @@
     "Book",
     "ScholarlyArticle",
     "RepositoryCollection",
+    "RepositoryObject",
     "CreativeWork",
     "CollectionProtocol",
     "File",
@@ -190,7 +191,6 @@
         {
           "id": "http://schema.org/isAccessibleForFree",
           "name": "isAccessibleForFree",
-          "label": "isAccessibleForFree",
           "help": "This is available under an Open Access license.",
           "required": false,
           "multiple": false,
@@ -201,7 +201,6 @@
         {
           "id": "http://schema.org/name",
           "name": "name",
-          "label": "name",
           "help": "The name of this dataset.",
           "required": true,
           "multiple": false,
@@ -212,7 +211,6 @@
         {
           "id": "http://schema.org/license",
           "name": "license",
-          "label": "license",
           "help": "Link to a document that describes the rights and obligations for users of this collection record. NOTE: This does not necessarily cover the license terms that may apply to Objects in the collection which may have specific licensing. Licensing on other objects overrides the license attached to a collection record.",
           "required": true,
           "multiple": false,
@@ -223,7 +221,6 @@
         {
           "id": "https://w3id.org/ldac/terms#annotationOf",
           "name": "ldac:annotationOf",
-          "label": "annotationOf",
           "help": "This resource contains some kind of description that adds information to the resource it references.",
           "required": false,
           "multiple": true,
@@ -234,7 +231,6 @@
         {
           "id": "http://purl.org/dc/terms/rightsHolder",
           "name": "dct:rightsHolder",
-          "label": "rightsHolder",
           "help": "The person or organisation owning or managing rights over the resource.",
           "required": true,
           "multiple": false,
@@ -247,7 +243,6 @@
         {
           "id": "http://schema.org/isBasedOn",
           "name": "isBasedOn",
-          "label": "isBasedOn",
           "help": "Link to or description of an original resource at an institution that holds it.",
           "required": false,
           "multiple": true,
@@ -259,7 +254,6 @@
         {
           "id": "http://schema.org/creditText",
           "name": "creditText",
-          "label": "creditText",
           "help": "A free text bibliographic citation for this material, e.g. 'Cite as: Musgrave (2023). Title of work. DOI'.",
           "multiple": true,
           "type": [
@@ -269,7 +263,6 @@
         {
           "id": "http://schema.org/usageInfo",
           "name": "usageInfo",
-          "label": "usageInfo",
           "help": "Additional information on licensing options for using the data, e.g. 'Contact the Data Steward to discuss license terms'.",
           "multiple": true,
           "type": [
@@ -279,7 +272,6 @@
         {
           "id": "http://schema.org/author",
           "name": "author",
-          "label": "author",
           "help": "The person or organisation responsible for creating this collection of data. Authors should be identified using URIs such as ORCiD or ROR.",
           "required": true,
           "type": [
@@ -291,7 +283,6 @@
         {
           "id": "http://schema.org/accountablePerson",
           "name": "accountablePerson",
-          "label": "accountablePerson",
           "help": "The person or organisation who is the data steward for this resource.",
           "required": true,
           "type": [
@@ -303,7 +294,6 @@
         {
           "id": "http://schema.org/publisher",
           "name": "publisher",
-          "label": "publisher",
           "help": "The organisation responsible for releasing this dataset.",
           "required": true,
           "type": [
@@ -314,7 +304,6 @@
         {
           "id": "http://schema.org/funder",
           "name": "funder",
-          "label": "funder",
           "help": "The organisation(s) responsible for funding the creation or collection of this dataset.",
           "type": [
             "Organization"
@@ -324,7 +313,6 @@
         {
           "id": "http://schema.org/citation",
           "name": "citation",
-          "label": "citation",
           "help": "Associated publications.",
           "type": [
             "CreativeWork"
@@ -334,7 +322,6 @@
         {
           "id": "http://schema.org/description",
           "name": "description",
-          "label": "description",
           "help": "An abstract of the collection. Include as much detail as possible about the motivation and use of the dataset, including things that we do not yet have properties for.",
           "required": true,
           "type": [
@@ -355,7 +342,6 @@
         {
           "id": "http://schema.org/temporalCoverage",
           "name": "temporalCoverage",
-          "label": "temporalCoverage",
           "help": "The range of years of creation for items in this dataset using a slash, e.g. 1900/1945. If there are sub-collections with different coverages put this on the sub-collections not the top-level.",
           "type": [
             "DateTime",
@@ -366,7 +352,6 @@
         {
           "id": "http://schema.org/spatialCoverage",
           "name": "spatialCoverage",
-          "label": "spatialCoverage",
           "help": "The place(s) that are the focus of the content. It is a sub-property of contentLocation intended primarily for more technical and detailed materials. For example, with a dataset, it indicates areas that the dataset describes: a dataset Cape York languages would have spatialCoverage which was the place: the outline of the Cape.",
           "type": [
             "Place"
@@ -374,9 +359,8 @@
           "multiple": true
         },
         {
-          "id": "http://schema.org/hasCollectionProtocol",
-          "name": "hasCollectionProtocol",
-          "label": "hasCollectionProtocol",
+          "id": "https://w3id.org/ldac/terms#hasCollectionProtocol",
+          "name": "ldac:hasCollectionProtocol",
           "help": "A link to a CollectionProtocol object with (at least) a summary of how resources were selected or elicited for this collection/sub-collection.",
           "type": [
             "CollectionProtocol"
@@ -386,17 +370,16 @@
         {
           "id": "http://pcdm.org/models#hasMember",
           "name": "pcdm:hasMember",
-          "label": "hasMember",
           "help": "The sub-collections, if any, associated with this collection.",
           "type": [
-            "RepositoryCollection"
+            "RepositoryCollection",
+            "RepositoryObject"
           ],
           "multiple": true
         },
         {
           "id": "http://schema.org/hasPart",
           "name": "hasPart",
-          "label": "hasPart",
           "help": "An item or CreativeWork that is part of this item, or CreativeWork (in some sense).",
           "type": [
             "File"
@@ -406,7 +389,6 @@
         {
           "id": "http://schema.org/isPartOf",
           "name": "isPartOf",
-          "label": "isPartOf",
           "help": "An item or CreativeWork that this item, or CreativeWork (in some sense), is part of.",
           "multiple": true,
           "type": [
@@ -417,18 +399,15 @@
         {
           "id": "http://pcdm.org/models#memberOf",
           "name": "pcdm:memberOf",
-          "label": "memberOf",
           "help": "Links from a Repository Object or Collection to a containing Repository Object or Collection.",
           "multiple": true,
           "type": [
-            "RepositoryCollection",
-            "RepositoryObject"
+            "RepositoryCollection"
           ]
         },
         {
           "id": "http://schema.org/datePublished",
           "name": "datePublished",
-          "label": "datePublished",
           "help": "The (earliest) date this work was created.",
           "multiple": true,
           "type": [
@@ -438,7 +417,6 @@
         {
           "id": "https://w3id.org/ldac/terms#annotator",
           "name": "ldac:annotator",
-          "label": "annotator",
           "help": "The participant produced an annotation of this or a related resource.",
           "type": [
             "Person"
@@ -448,7 +426,6 @@
         {
           "id": "https://w3id.org/ldac/terms#compiler",
           "name": "ldac:compiler",
-          "label": "compiler",
           "help": "The person who creates a single resource with multiple parts, such as a book of short stories, or who produces a corpus of resources, which may be archived separately.",
           "type": [
             "Person"
@@ -458,7 +435,6 @@
         {
           "id": "https://w3id.org/ldac/terms#consultant",
           "name": "ldac:consultant",
-          "label": "consultant",
           "help": "Commonly used by field linguists for the native speakers who work with them in describing and analysing a language. They contribute their expertise in their native language to the resource, although their speech, sign, or writing may not appear directly in the resource. In some parts of the world, the preferred term for this role is 'informant'.",
           "type": [
             "Person"
@@ -468,7 +444,6 @@
         {
           "id": "https://w3id.org/ldac/terms#dataInputter",
           "name": "ldac:dataInputter",
-          "label": "dataInputter",
           "help": "The participant responsible for entering, re-typing, and/or structuring the data contained in the resource.",
           "type": [
             "Person"
@@ -478,7 +453,6 @@
         {
           "id": "https://w3id.org/ldac/terms#depositor",
           "name": "ldac:depositor",
-          "label": "depositor",
           "help": "The participant responsible for depositing the resource in an archive.",
           "type": [
             "Person"
@@ -488,7 +462,6 @@
         {
           "id": "https://w3id.org/ldac/terms#developer",
           "name": "ldac:developer",
-          "label": "developer",
           "help": "A software programmer, designer, or analyst; a designer of a questionnaire or research task.",
           "type": [
             "Person"
@@ -498,7 +471,6 @@
         {
           "id": "https://w3id.org/ldac/terms#editor",
           "name": "ldac:editor",
-          "label": "editor",
           "help": "Anyone whose role was editorial in nature, such as proofreaders, debuggers, testers, etc. It may overlap the Compiler role in some cases.",
           "type": [
             "Person"
@@ -508,7 +480,6 @@
         {
           "id": "https://w3id.org/ldac/terms#illustrator",
           "name": "ldac:illustrator",
-          "label": "illustrator",
           "help": "The participant contributed drawings or other illustrations to the resource.",
           "type": [
             "Person"
@@ -518,7 +489,6 @@
         {
           "id": "https://w3id.org/ldac/terms#interviewee",
           "name": "ldac:interviewee",
-          "label": "interviewee",
           "help": "The participant was a respondent in an interview.",
           "type": [
             "Person"
@@ -528,7 +498,6 @@
         {
           "id": "https://w3id.org/ldac/terms#interviewer",
           "name": "ldac:interviewer",
-          "label": "interviewer",
           "help": "The participant conducted an interview that forms part of the resource.",
           "type": [
             "Person"
@@ -538,7 +507,6 @@
         {
           "id": "https://w3id.org/ldac/terms#participant",
           "name": "ldac:participant",
-          "label": "participant",
           "help": "Minor participants such as audience members or other peripherally involved participants in the event. These interlocutors need not have been physically present.",
           "type": [
             "Person"
@@ -548,7 +516,6 @@
         {
           "id": "https://w3id.org/ldac/terms#performer",
           "name": "ldac:performer",
-          "label": "performer",
           "help": "It is recommended that this term be used only for creative participants whose role is not better indicated by a more specific term, such as 'speaker', 'signer', or 'singer'.",
           "type": [
             "Person"
@@ -558,7 +525,6 @@
         {
           "id": "https://w3id.org/ldac/terms#photographer",
           "name": "ldac:photographer",
-          "label": "photographer",
           "help": "The participant took the photograph, or shot the film, that appears in or constitutes the resource.",
           "type": [
             "Person"
@@ -568,7 +534,6 @@
         {
           "id": "https://w3id.org/ldac/terms#recorder",
           "name": "ldac:recorder",
-          "label": "recorder",
           "help": "The participant operated the recording machinery used to create the resource.",
           "type": [
             "Person"
@@ -578,7 +543,6 @@
         {
           "id": "https://w3id.org/ldac/terms#researcher",
           "name": "ldac:researcher",
-          "label": "researcher",
           "help": "The resource was created as part of the participant's research, or the research presents interim or final results from the participant's research.",
           "type": [
             "Person"
@@ -588,7 +552,6 @@
         {
           "id": "https://w3id.org/ldac/terms#researchParticipant",
           "name": "ldac:researchParticipant",
-          "label": "researchParticipant",
           "help": "The participant acted as a research subject or responded to a questionnaire, the results of which study form the basis of the resource.",
           "type": [
             "Person"
@@ -598,7 +561,6 @@
         {
           "id": "https://w3id.org/ldac/terms#responder",
           "name": "ldac:responder",
-          "label": "responder",
           "help": "This person's voice can be heard (or their words can be read) in the resource, typically saying the language-appropriate equivalent of \"uh-huh\", \"amen\", \"you don't say\", etc. This role is sometimes referred to as a \"yes-sayer\", \"backchanneler\", or \"co-conversant\".",
           "type": [
             "Person"
@@ -608,7 +570,6 @@
         {
           "id": "https://w3id.org/ldac/terms#signer",
           "name": "ldac:signer",
-          "label": "signer",
           "help": "Those whose gestures predominate in a recorded or filmed resource. (This resource may be a transcription of that recording).",
           "type": [
             "Person"
@@ -618,7 +579,6 @@
         {
           "id": "https://w3id.org/ldac/terms#singer",
           "name": "ldac:singer",
-          "label": "singer",
           "help": "The participant sang, either individually or as part of a group, in a resource that consists of a recording, a film, or a transcription of a recorded resource.",
           "type": [
             "Person"
@@ -628,7 +588,6 @@
         {
           "id": "https://w3id.org/ldac/terms#speaker",
           "name": "ldac:speaker",
-          "label": "speaker",
           "help": "Those whose voices predominate in a recorded or filmed resource. (This resource may be a transcription of that recording).",
           "type": [
             "Person"
@@ -638,7 +597,6 @@
         {
           "id": "https://w3id.org/ldac/terms#sponsor",
           "name": "ldac:sponsor",
-          "label": "sponsor",
           "help": "The participant contributed financial support to the creation of the resource.",
           "type": [
             "Person"
@@ -648,7 +606,6 @@
         {
           "id": "https://w3id.org/ldac/terms#transcriber",
           "name": "ldac:transcriber",
-          "label": "transcriber",
           "help": "The participant produced a transcription of this or a related resource.",
           "type": [
             "Person"
@@ -658,7 +615,6 @@
         {
           "id": "https://w3id.org/ldac/terms#translator",
           "name": "ldac:translator",
-          "label": "translator",
           "help": "The participant produced a translation of this or a related resource.",
           "type": [
             "Person"
@@ -668,12 +624,12 @@
       ]
     },
     "RepositoryCollection": {
+      "id": "http://schema.org/TODO",
       "subClassOf": [],
       "inputs": [
         {
           "id": "http://schema.org/contentLocation",
           "name": "contentLocation",
-          "label": "contentLocation",
           "help": "The location depicted or described in the content. For example, the location in a photograph or painting.",
           "type": [
             "Place"
@@ -683,7 +639,6 @@
         {
           "id": "http://purl.org/dc/terms/conformsTo",
           "name": "conformsTo",
-          "label": "conformsTo",
           "help": "A link to the language data commons RO-Crate profile for collections.",
           "type": [
             "Select"
@@ -698,7 +653,6 @@
         {
           "id": "http://schema.org/inLanguage",
           "name": "inLanguage",
-          "label": "inLanguage",
           "help": "The language in which the resource is written.",
           "type": [
             "Language"
@@ -709,7 +663,6 @@
         {
           "id": "https://w3id.org/ldac/terms#subjectLanguage",
           "name": "ldac:subjectLanguage",
-          "label": "subjectLanguage",
           "help": "The languages that the materials in the collection are about (not the language that it is in).",
           "type": [
             "Language"
@@ -720,7 +673,6 @@
         {
           "id": "http://schema.org/name",
           "name": "name",
-          "label": "name",
           "help": "The name of this collection.",
           "required": true,
           "multiple": false,
@@ -731,7 +683,6 @@
         {
           "id": "http://schema.org/author",
           "name": "author",
-          "label": "author",
           "help": "The person or organisation responsible for creating this collection of data. Authors should be identified using URIs such as ORCiD or ROR.",
           "type": [
             "Person",
@@ -742,7 +693,6 @@
         {
           "id": "http://schema.org/accountablePerson",
           "name": "accountablePerson",
-          "label": "accountablePerson",
           "help": "The person or organisation who is the data steward for this resource.",
           "required": true,
           "type": [
@@ -754,7 +704,6 @@
         {
           "id": "http://schema.org/funder",
           "name": "funder",
-          "label": "funder",
           "help": "The organisation(s) responsible for funding the creation or collection of this data.",
           "type": [
             "Organization"
@@ -764,7 +713,6 @@
         {
           "id": "http://schema.org/citation",
           "name": "citation",
-          "label": "citation",
           "help": "Associated publications.",
           "type": [
             "CreativeWork"
@@ -774,7 +722,6 @@
         {
           "id": "http://schema.org/isBasedOn",
           "name": "isBasedOn",
-          "label": "isBasedOn",
           "help": "Link to or description of an original resource at an institution that holds it.",
           "required": false,
           "multiple": true,
@@ -786,7 +733,6 @@
         {
           "id": "http://schema.org/description",
           "name": "description",
-          "label": "description",
           "help": "A description of the collection.",
           "type": [
             "TextArea"
@@ -796,7 +742,6 @@
         {
           "id": "http://schema.org/temporalCoverage",
           "name": "temporalCoverage",
-          "label": "temporalCoverage",
           "help": "The range of years of creation for items in this collection using a slash, e.g. 1900/1945. If there are sub-collections with different coverages put this on the sub-collections not the top-level.",
           "type": [
             "DateTime",
@@ -805,9 +750,8 @@
           "multiple": true
         },
         {
-          "id": "http://schema.org/hasCollectionProtocol",
-          "name": "hasCollectionProtocol",
-          "label": "hasCollectionProtocol",
+          "id": "https://w3id.org/ldac/terms#hasCollectionProtocol",
+          "name": "ldac:hasCollectionProtocol",
           "help": "A link to a CollectionProtocol object with (at least) a summary of how resources were selected or elicited for this collection/sub-collection.",
           "type": [
             "CollectionProtocol"
@@ -817,17 +761,16 @@
         {
           "id": "http://pcdm.org/models#hasMember",
           "name": "pcdm:hasMember",
-          "label": "hasMember",
           "help": "The sub-collection.",
           "type": [
-            "RepositoryCollection"
+            "RepositoryCollection",
+            "RepositoryObject"
           ],
           "multiple": true
         },
         {
           "id": "http://schema.org/dateCreated",
           "name": "dateCreated",
-          "label": "dateCreated",
           "help": "The (earliest) date the data in this dataset were created.",
           "type": [
             "Date"
@@ -837,7 +780,6 @@
         {
           "id": "https://w3id.org/ldac/terms#dateFreeText",
           "name": "ldac:dateFreeText",
-          "label": "dateFreeText",
           "help": "Date information which cannot be put in one of the standard date formats, e.g. 'mid-1970s', or it is not clear, for example, if it is a creation or publication date.",
           "type": [
             "Text"
@@ -847,7 +789,6 @@
         {
           "id": "http://schema.org/holdingArchive",
           "name": "holdingArchive",
-          "label": "holdingArchive",
           "help": "Organisation where the original of this work or collection is housed.",
           "multiple": false,
           "type": [
@@ -858,22 +799,31 @@
         {
           "id": "http://schema.org/isBasedOn",
           "name": "isBasedOn",
-          "label": "isBasedOn",
           "help": "Link to a version of this data in an online archival repository.",
           "multiple": false,
           "type": [
             "URL"
           ]
+        },
+        {
+          "id": "https://w3id.org/ldac/terms#doi",
+          "name": "ldac:doi",
+          "label": "DOI",
+          "help": "A Digital Object Identifier, e.g. https://doi.org/10.1000/182.",
+          "type": [
+            "Text"
+          ],
+          "multiple": false
         }
       ]
     },
     "RepositoryObject": {
+      "id": "http://schema.org/TODO",
       "subClassOf": [],
       "inputs": [
         {
           "id": "http://schema.org/hasPart",
           "name": "hasPart",
-          "label": "hasPart",
           "help": "An item or CreativeWork that is part of this item, or CreativeWork (in some sense).",
           "multiple": true,
           "type": [
@@ -883,7 +833,6 @@
         {
           "id": "http://purl.org/dc/terms/conformsTo",
           "name": "conformsTo",
-          "label": "conformsTo",
           "help": "A link to the language data commons RO-Crate profile for collections.",
           "multiple": true,
           "type": [
@@ -893,7 +842,6 @@
         {
           "id": "http://schema.org/publisher",
           "name": "publisher",
-          "label": "publisher",
           "help": "The publisher of the creative work.",
           "multiple": true,
           "type": [
@@ -903,7 +851,6 @@
         {
           "id": "http://schema.org/creator",
           "name": "creator",
-          "label": "creator",
           "help": "The creator/author of this CreativeWork. This is the same as the Author property for CreativeWork.",
           "multiple": true,
           "type": [
@@ -913,7 +860,6 @@
         {
           "id": "https://w3id.org/ldac/terms#compiler",
           "name": "ldac:compiler",
-          "label": "compiler",
           "help": "The contributor responsible for collecting the sub-parts of the resource together.",
           "multiple": true,
           "type": [
@@ -923,7 +869,6 @@
         {
           "id": "http://schema.org/description",
           "name": "description",
-          "label": "description",
           "help": "A description of the item.",
           "multiple": true,
           "type": [
@@ -933,7 +878,6 @@
         {
           "id": "http://schema.org/datePublished",
           "name": "datePublished",
-          "label": "datePublished",
           "help": "The (earliest) date this work was created.",
           "multiple": true,
           "type": [
@@ -943,7 +887,6 @@
         {
           "id": "http://schema.org/temporalCoverage",
           "name": "temporalCoverage",
-          "label": "temporalCoverage",
           "help": "The temporalCoverage of a CreativeWork indicates the period that the content applies to, i.e. that it describes, either as a DateTime or as a textual string indicating a time period in [ISO 8601 time interval format](https://en.wikipedia.org/wiki/ISO_8601#Time_intervals). In\n      the case of a Dataset it will typically indicate the relevant time period in a precise notation (e.g. for a 2011 census dataset, the year 2011 would be written \"2011/2012\"). Other forms of content, e.g. ScholarlyArticle, Book, TVSeries or TVEpisode, may indicate their temporalCoverage in broader terms - textually or via well-known URL.\n      Written works such as books may sometimes have precise temporal coverage too, e.g. a work set in 1939 - 1945 can be indicated in ISO 8601 interval format format via \"1939/1945\".\n\nOpen-ended date ranges can be written with \"..\" in place of the end date. For example, \"2015-11/..\" indicates a range beginning in November 2015 and with no specified final date. This is tentative and might be updated in future when ISO 8601 is officially updated.",
           "multiple": true,
           "type": [
@@ -953,18 +896,15 @@
         {
           "id": "http://pcdm.org/models#memberOf",
           "name": "pcdm:memberOf",
-          "label": "memberOf",
           "help": "Links from a Repository Object or Collection to a containing Repository Object or Collection.",
           "multiple": true,
           "type": [
-            "RepositoryCollection",
-            "RepositoryObject"
+            "RepositoryCollection"
           ]
         },
         {
           "id": "http://schema.org/inLanguage",
           "name": "inLanguage",
-          "label": "inLanguage",
           "help": "The language in which the resource is written.",
           "multiple": true,
           "type": [
@@ -974,7 +914,6 @@
         {
           "id": "https://w3id.org/ldac/terms#subjectLanguage",
           "name": "ldac:subjectLanguage",
-          "label": "subjectLanguage",
           "help": "The languages that the materials in the collection are about (not the language that it is in).",
           "type": [
             "Language"
@@ -984,7 +923,6 @@
         {
           "id": "http://schema.org/dateCreated",
           "name": "dateCreated",
-          "label": "dateCreated",
           "help": "The date on which the CreativeWork was created or the item was added to a DataFeed.",
           "multiple": true,
           "type": [
@@ -994,7 +932,6 @@
         {
           "id": "http://schema.org/name",
           "name": "name",
-          "label": "name",
           "help": "The name of the item.",
           "multiple": true,
           "type": [
@@ -1004,7 +941,6 @@
         {
           "id": "http://schema.org/license",
           "name": "license",
-          "label": "license",
           "help": "A license document that applies to this content, typically indicated by URL.",
           "multiple": true,
           "type": [
@@ -1014,7 +950,6 @@
         {
           "id": "https://w3id.org/ldac/terms#hasAnnotation",
           "name": "ldac:hasAnnotation",
-          "label": "hasAnnotation",
           "help": "This resource is referenced by another resource that adds information to it such as a translation, transcription or other analysis.",
           "multiple": true,
           "type": [
@@ -1024,7 +959,6 @@
         {
           "id": "https://w3id.org/ldac/terms#annotator",
           "name": "ldac:annotator",
-          "label": "annotator",
           "help": "The participant produced an annotation of this or a related resource.",
           "type": [
             "Person"
@@ -1034,7 +968,6 @@
         {
           "id": "http://schema.org/author",
           "name": "author",
-          "label": "author",
           "help": "The person or organisation responsible for creating this work. Authors should be identified using URIs such as ORCiD or ROR.",
           "type": [
             "Person",
@@ -1045,7 +978,6 @@
         {
           "id": "https://w3id.org/ldac/terms#compiler",
           "name": "ldac:compiler",
-          "label": "compiler",
           "help": "The person who creates a single resource with multiple parts, such as a book of short stories, or who produces a corpus of resources, which may be archived separately.",
           "type": [
             "Person"
@@ -1055,7 +987,6 @@
         {
           "id": "https://w3id.org/ldac/terms#consultant",
           "name": "ldac:consultant",
-          "label": "consultant",
           "help": "Commonly used by field linguists for the native speakers who work with them in describing and analysing a language. They contribute their expertise in their native language to the resource, although their speech, sign, or writing may not appear directly in the resource. In some parts of the world, the preferred term for this role is 'informant'.",
           "type": [
             "Person"
@@ -1065,7 +996,6 @@
         {
           "id": "https://w3id.org/ldac/terms#dataInputter",
           "name": "ldac:dataInputter",
-          "label": "dataInputter",
           "help": "The participant responsible for entering, re-typing, and/or structuring the data contained in the resource.",
           "type": [
             "Person"
@@ -1075,7 +1005,6 @@
         {
           "id": "https://w3id.org/ldac/terms#depositor",
           "name": "ldac:depositor",
-          "label": "depositor",
           "help": "The participant responsible for depositing the resource in an archive.",
           "type": [
             "Person"
@@ -1085,7 +1014,6 @@
         {
           "id": "https://w3id.org/ldac/terms#developer",
           "name": "ldac:developer",
-          "label": "developer",
           "help": "A software programmer, designer, or analyst; a designer of a questionnaire or research task.",
           "type": [
             "Person"
@@ -1095,7 +1023,6 @@
         {
           "id": "https://w3id.org/ldac/terms#editor",
           "name": "ldac:editor",
-          "label": "editor",
           "help": "Anyone whose role was editorial in nature, such as proofreaders, debuggers, testers, etc. It may overlap the Compiler role in some cases.",
           "type": [
             "Person"
@@ -1105,7 +1032,6 @@
         {
           "id": "https://w3id.org/ldac/terms#illustrator",
           "name": "ldac:illustrator",
-          "label": "illustrator",
           "help": "The participant contributed drawings or other illustrations to the resource.",
           "type": [
             "Person"
@@ -1115,7 +1041,6 @@
         {
           "id": "https://w3id.org/ldac/terms#interviewee",
           "name": "ldac:interviewee",
-          "label": "interviewee",
           "help": "The participant was a respondent in an interview.",
           "type": [
             "Person"
@@ -1125,7 +1050,6 @@
         {
           "id": "https://w3id.org/ldac/terms#interviewer",
           "name": "ldac:interviewer",
-          "label": "interviewer",
           "help": "The participant conducted an interview that forms part of the resource.",
           "type": [
             "Person"
@@ -1135,7 +1059,6 @@
         {
           "id": "https://w3id.org/ldac/terms#participant",
           "name": "ldac:participant",
-          "label": "participant",
           "help": "Minor participants such as audience members or other peripherally involved participants in the event. These interlocutors need not have been physically present.",
           "type": [
             "Person"
@@ -1145,7 +1068,6 @@
         {
           "id": "https://w3id.org/ldac/terms#performer",
           "name": "ldac:performer",
-          "label": "performer",
           "help": "It is recommended that this term be used only for creative participants whose role is not better indicated by a more specific term, such as 'speaker', 'signer', or 'singer'.",
           "type": [
             "Person"
@@ -1155,7 +1077,6 @@
         {
           "id": "https://w3id.org/ldac/terms#photographer",
           "name": "ldac:photographer",
-          "label": "photographer",
           "help": "The participant took the photograph, or shot the film, that appears in or constitutes the resource.",
           "type": [
             "Person"
@@ -1165,7 +1086,6 @@
         {
           "id": "https://w3id.org/ldac/terms#recorder",
           "name": "ldac:recorder",
-          "label": "recorder",
           "help": "The participant operated the recording machinery used to create the resource.",
           "type": [
             "Person"
@@ -1175,7 +1095,6 @@
         {
           "id": "https://w3id.org/ldac/terms#researcher",
           "name": "ldac:researcher",
-          "label": "researcher",
           "help": "The resource was created as part of the participant's research, or the research presents interim or final results from the participant's research.",
           "type": [
             "Person"
@@ -1185,7 +1104,6 @@
         {
           "id": "https://w3id.org/ldac/terms#researchParticipant",
           "name": "ldac:researchParticipant",
-          "label": "researchParticipant",
           "help": "The participant acted as a research subject or responded to a questionnaire, the results of which study form the basis of the resource.",
           "type": [
             "Person"
@@ -1195,7 +1113,6 @@
         {
           "id": "https://w3id.org/ldac/terms#responder",
           "name": "ldac:responder",
-          "label": "responder",
           "help": "This person's voice can be heard (or their words can be read) in the resource, typically saying the language-appropriate equivalent of \"uh-huh\", \"amen\", \"you don't say\", etc. This role is sometimes referred to as a \"yes-sayer\", \"backchanneler\", or \"co-conversant\".",
           "type": [
             "Person"
@@ -1205,7 +1122,6 @@
         {
           "id": "https://w3id.org/ldac/terms#signer",
           "name": "ldac:signer",
-          "label": "signer",
           "help": "Those whose gestures predominate in a recorded or filmed resource. (This resource may be a transcription of that recording).",
           "type": [
             "Person"
@@ -1215,7 +1131,6 @@
         {
           "id": "https://w3id.org/ldac/terms#singer",
           "name": "ldac:singer",
-          "label": "singer",
           "help": "The participant sang, either individually or as part of a group, in a resource that consists of a recording, a film, or a transcription of a recorded resource.",
           "type": [
             "Person"
@@ -1225,7 +1140,6 @@
         {
           "id": "https://w3id.org/ldac/terms#speaker",
           "name": "ldac:speaker",
-          "label": "speaker",
           "help": "Those whose voices predominate in a recorded or filmed resource. (This resource may be a transcription of that recording).",
           "type": [
             "Person"
@@ -1235,7 +1149,6 @@
         {
           "id": "https://w3id.org/ldac/terms#sponsor",
           "name": "ldac:sponsor",
-          "label": "sponsor",
           "help": "The participant contributed financial support to the creation of the resource.",
           "type": [
             "Person"
@@ -1245,7 +1158,6 @@
         {
           "id": "https://w3id.org/ldac/terms#transcriber",
           "name": "ldac:transcriber",
-          "label": "transcriber",
           "help": "The participant produced a transcription of this or a related resource.",
           "type": [
             "Person"
@@ -1255,7 +1167,6 @@
         {
           "id": "https://w3id.org/ldac/terms#translator",
           "name": "ldac:translator",
-          "label": "translator",
           "help": "The participant produced a translation of this or a related resource.",
           "type": [
             "Person"
@@ -1265,7 +1176,6 @@
         {
           "id": "http://schema.org/identifier",
           "name": "identifier",
-          "label": "identifier",
           "help": "The identifier property represents any kind of identifier for any kind of [[Thing]], such as ISBNs, GTIN codes, UUIDs etc. Schema.org provides dedicated properties for representing many of these, either as textual strings or as URL (URI) links. See [background notes](/docs/datamodel.html#identifierBg) for more details.\n        ",
           "multiple": true,
           "type": [
@@ -1275,12 +1185,12 @@
       ]
     },
     "CreativeWork": {
+      "id": "http://schema.org/CreativeWork",
       "subClassOf": [],
       "inputs": [
         {
           "id": "http://schema.org/name",
           "name": "name",
-          "label": "name",
           "help": "The name of this work.",
           "required": true,
           "multiple": false,
@@ -1291,7 +1201,6 @@
         {
           "id": "http://schema.org/description",
           "name": "description",
-          "label": "description",
           "help": "An abstract of the work.",
           "type": [
             "TextArea"
@@ -1301,7 +1210,6 @@
         {
           "id": "http://schema.org/author",
           "name": "author",
-          "label": "author",
           "help": "The person or organisation responsible for creating this work. Authors should be identified using URIs such as ORCiD or ROR.",
           "type": [
             "Text",
@@ -1313,7 +1221,6 @@
         {
           "id": "http://schema.org/recipient",
           "name": "recipient",
-          "label": "recipient",
           "help": "The person or organisation responsible for creating this work. Authors should be identified using URIs such as ORCiD or ROR.",
           "type": [
             "Text",
@@ -1325,7 +1232,6 @@
         {
           "id": "http://schema.org/datePublished",
           "name": "datePublished",
-          "label": "datePublished",
           "help": "The (earliest) date this work was created.",
           "type": [
             "Text"
@@ -1336,7 +1242,6 @@
         {
           "id": "http://schema.org/publisher",
           "name": "publisher",
-          "label": "publisher",
           "help": "The organisation that published this work.",
           "type": [
             "Text",
@@ -1367,12 +1272,12 @@
       ]
     },
     "CollectionProtocol": {
+      "id": "https://w3id.org/ldac/terms#CollectionProtocol",
       "subClassOf": [],
       "inputs": [
         {
           "id": "http://schema.org/name",
           "name": "name",
-          "label": "name",
           "help": "The name of this protocol.",
           "required": true,
           "multiple": false,
@@ -1383,7 +1288,6 @@
         {
           "id": "http://schema.org/author",
           "name": "author",
-          "label": "author",
           "help": "The person or organisation responsible for creating this collection of data. Authors should be identified using URIs such as ORCiD or ROR.",
           "required": true,
           "type": [
@@ -1395,7 +1299,6 @@
         {
           "id": "http://schema.org/description",
           "name": "description",
-          "label": "description",
           "help": "A summary of the collection protocol used for this collection or sub-collection, e.g. how texts were selected, or what prompts were given to participants.",
           "type": [
             "TextArea"
@@ -1405,7 +1308,6 @@
         {
           "id": "https://w3id.org/ldac/terms#collectionProtocolType",
           "name": "ldac:collectionProtocolType",
-          "label": "collectionProtocolType",
           "help": "A description of the process used to collect or collate data, such as prompts given to participants, or how texts are selected for inclusion in a collection.",
           "type": [
             "SelectObject"
@@ -1435,7 +1337,6 @@
         {
           "id": "http://schema.org/datePublished",
           "name": "datePublished",
-          "label": "datePublished",
           "help": "The (earliest) date the collection protocol was published.",
           "type": [
             "Date"
@@ -1446,12 +1347,12 @@
       ]
     },
     "Place": {
+      "id": "http://schema.org/Place",
       "subClassOf": [],
       "inputs": [
         {
           "id": "http://schema.org/name",
           "name": "name",
-          "label": "name",
           "help": "The name of the place.",
           "required": true,
           "multiple": false,
@@ -1462,7 +1363,6 @@
         {
           "id": "http://schema.org/description",
           "name": "description",
-          "label": "description",
           "help": "A description of the place.",
           "multiple": false,
           "type": [
@@ -1472,7 +1372,6 @@
         {
           "id": "http://schema.org/address",
           "name": "address",
-          "label": "address",
           "help": "The physical address of the place.",
           "required": false,
           "multiple": true,
@@ -1483,7 +1382,6 @@
         {
           "id": "http://schema.org/geo",
           "name": "geo",
-          "label": "geo",
           "help": "The geographic coordinates of the place.",
           "required": false,
           "multiple": true,
@@ -1502,7 +1400,6 @@
           "name": "geosparql:asWKT",
           "label": "asWKT",
           "help": "The WKT serialisation of the geometry.",
-          "required": true,
           "multiple": true,
           "type": [
             "Text"
@@ -1511,13 +1408,13 @@
       ]
     },
     "Person": {
+      "id": "http://schema.org/Person",
       "subClassOf": [],
       "inputs": [
        
         {
           "id": "http://schema.org/name",
           "name": "name",
-          "label": "name",
           "help": "The name of the person.",
           "required": true,
           "multiple": false,
@@ -1528,7 +1425,6 @@
         {
           "id": "http://schema.org/description",
           "name": "description",
-          "label": "description",
           "help": "Add any additional information not covered by other properties here.",
           "type": [
             "TextArea"
@@ -1538,7 +1434,6 @@
         {
           "id": "http://schema.org/affiliation",
           "name": "affiliation",
-          "label": "affiliation",
           "help": "The organisation that this person is affiliated with. For example, a university or school.",
           "required": false,
           "multiple": true,
@@ -1549,12 +1444,12 @@
       ]
     },
     "Organization": {
+      "id": "http://schema.org/Organization",
       "subClassOf": [],
       "inputs": [
         {
           "id": "http://schema.org/name",
           "name": "name",
-          "label": "name",
           "help": "The name of the organisation.",
           "required": true,
           "multiple": false,
@@ -1565,7 +1460,6 @@
         {
           "id": "http://schema.org/description",
           "name": "description",
-          "label": "description",
           "help": "A description of the organisation.",
           "type": [
             "TextArea"
@@ -1575,7 +1469,6 @@
         {
           "id": "http://schema.org/location",
           "name": "location",
-          "label": "location",
           "help": "A location for the organisation, e.g. a city for a publisher.",
           "type": [
             "Text"
@@ -1585,12 +1478,12 @@
       ]
     },
     "File": {
+      "id": "http://schema.org/TODO",
       "subClassOf": [],
       "inputs": [
         {
           "id": "http://schema.org/encodingFormat",
           "name": "encodingFormat",
-          "label": "encodingFormat",
           "help": "The media type typically expressed using a MIME format.",
           "type": [
             "Text"
@@ -1599,7 +1492,6 @@
         {
           "id": "https://w3id.org/ldac/terms#communicationMode",
           "name": "ldac:communicationMode",
-          "label": "communicationMode",
           "help": "The mode(s) (spoken, written, signed, etc.) used in the interaction represented by this resource.",
           "type": [
             "SelectObject"
@@ -1664,7 +1556,6 @@
         {
           "id": "http://schema.org/name",
           "name": "name",
-          "label": "name",
           "help": "The name of the item.",
           "multiple": true,
           "type": [
@@ -1674,7 +1565,6 @@
         {
           "id": "http://schema.org/license",
           "name": "license",
-          "label": "license",
           "help": "A license document that applies to this content, typically indicated by URL.",
           "multiple": true,
           "type": [
@@ -1684,7 +1574,6 @@
         {
           "id": "https://w3id.org/ldac/terms#linguisticGenre",
           "name": "ldac:linguisticGenre",
-          "label": "linguisticGenre",
           "help": "A linguistic classification of the genre of this resource.",
           "multiple": true,
           "type": [
@@ -1804,7 +1693,6 @@
         {
           "id": "http://schema.org/contentSize",
           "name": "contentSize",
-          "label": "contentSize",
           "help": "File size in (mega/kilo)bytes.",
           "multiple": true,
           "type": [
@@ -1814,7 +1702,6 @@
         {
           "id": "http://schema.org/hasPart",
           "name": "hasPart",
-          "label": "hasPart",
           "help": "An item or CreativeWork that is part of this item, or CreativeWork (in some sense).",
           "multiple": true,
           "type": [
@@ -1824,7 +1711,6 @@
         {
           "id": "http://schema.org/publisher",
           "name": "publisher",
-          "label": "publisher",
           "help": "The publisher of the creative work.",
           "multiple": true,
           "type": [
@@ -1834,7 +1720,6 @@
         {
           "id": "http://schema.org/creator",
           "name": "creator",
-          "label": "creator",
           "help": "The creator/author of this CreativeWork. This is the same as the Author property for CreativeWork.",
           "multiple": true,
           "type": [
@@ -1844,7 +1729,6 @@
         {
           "id": "http://schema.org/datePublished",
           "name": "datePublished",
-          "label": "datePublished",
           "help": "The (earliest) date this work was created..",
           "multiple": true,
           "type": [
@@ -1854,7 +1738,6 @@
         {
           "id": "http://schema.org/temporalCoverage",
           "name": "temporalCoverage",
-          "label": "temporalCoverage",
           "help": "The temporalCoverage of a CreativeWork indicates the period that the content applies to, i.e. that it describes, either as a DateTime or as a textual string indicating a time period in [ISO 8601 time interval format](https://en.wikipedia.org/wiki/ISO_8601#Time_intervals). In\n      the case of a Dataset it will typically indicate the relevant time period in a precise notation (e.g. for a 2011 census dataset, the year 2011 would be written \"2011/2012\"). Other forms of content, e.g. ScholarlyArticle, Book, TVSeries or TVEpisode, may indicate their temporalCoverage in broader terms - textually or via well-known URL.\n      Written works such as books may sometimes have precise temporal coverage too, e.g. a work set in 1939 - 1945 can be indicated in ISO 8601 interval format format via \"1939/1945\".\n\nOpen-ended date ranges can be written with \"..\" in place of the end date. For example, \"2015-11/..\" indicates a range beginning in November 2015 and with no specified final date. This is tentative and might be updated in future when ISO 8601 is officially updated.",
           "multiple": true,
           "type": [
@@ -1864,7 +1747,6 @@
         {
           "id": "http://schema.org/inLanguage",
           "name": "inLanguage",
-          "label": "inLanguage",
           "help": "The language in which the resource is written.",
           "multiple": true,
           "type": [
@@ -1874,7 +1756,6 @@
         {
           "id": "https://w3id.org/ldac/terms#subjectLanguage",
           "name": "ldac:subjectLanguage",
-          "label": "subjectLanguage",
           "help": "The languages that the materials in the collection are about (not the language that it is in).",
           "type": [
             "Language"
@@ -1884,7 +1765,6 @@
         {
           "id": "http://schema.org/dateCreated",
           "name": "dateCreated",
-          "label": "dateCreated",
           "help": "The date on which the CreativeWork was created or the item was added to a DataFeed.",
           "multiple": true,
           "type": [
@@ -1894,7 +1774,6 @@
         {
           "id": "https://w3id.org/ldac/terms#materialType",
           "name": "ldac:materialType",
-          "label": "materialType",
           "help": "Indicates whether the material in a file is the original (primary) source or is derived from it or describes it via annotation.",
           "multiple": true,
           "type": [
@@ -1933,12 +1812,12 @@
       ]
     },
     "Annotation": {
+      "id": "http://schema.org/TODO",
       "hasSubclass": [],
       "inputs": [
         {
           "id": "http://schema.org/name",
           "name": "name",
-          "label": "name",
           "help": "The name of the item.",
           "multiple": true,
           "type": [
@@ -1948,7 +1827,6 @@
         {
           "id": "http://schema.org/license",
           "name": "license",
-          "label": "license",
           "help": "A license document that applies to this content, typically indicated by URL.",
           "multiple": true,
           "type": [
@@ -1958,7 +1836,6 @@
         {
           "id": "http://schema.org/encodingFormat",
           "name": "encodingFormat",
-          "label": "encodingFormat",
           "help": "The media type typically expressed using a MIME format.",
           "multiple": true,
           "type": [
@@ -1968,7 +1845,6 @@
         {
           "id": "https://w3id.org/ldac/terms#communicationMode",
           "name": "ldac:communicationMode",
-          "label": "communicationMode",
           "help": "The mode (spoken, written, signed etc.) of this resource. There may be more than one value for this property.",
           "multiple": true,
           "type": [
@@ -2034,7 +1910,6 @@
         {
           "id": "https://w3id.org/ldac/terms#linguisticGenre",
           "name": "ldac:linguisticGenre",
-          "label": "linguisticGenre",
           "help": "A linguistic classification of the genre of this resource.",
           "multiple": true,
           "type": [
@@ -2154,7 +2029,6 @@
         {
           "id": "https://w3id.org/ldac/terms#annotationType",
           "name": "ldac:annotationType",
-          "label": "annotationType",
           "help": "Specifies the type of an Annotation resource.",
           "multiple": true,
           "type": [
@@ -2164,7 +2038,6 @@
         {
           "id": "http://schema.org/size",
           "name": "size",
-          "label": "size",
           "help": "The size in bytes.",
           "multiple": true,
           "type": [
