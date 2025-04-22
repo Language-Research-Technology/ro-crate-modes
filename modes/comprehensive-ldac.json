@@ -411,6 +411,7 @@
           "name": "hasPart",
           "help": "An item or CreativeWork that is part of this item, or CreativeWork (in some sense).",
           "type": [
+            "CreativeWork",
             "File"
           ],
           "multiple": true
@@ -438,9 +439,11 @@
           "id": "http://schema.org/datePublished",
           "name": "datePublished",
           "help": "The (earliest) date this work was created.",
+          "required": true,
           "multiple": true,
           "type": [
-            "Text"
+            "DateTime",
+            "Date"
           ]
         },
         {
@@ -731,7 +734,7 @@
           "type": [
             "Language"
           ],
-          "required": true,
+          "required": false,
           "multiple": true
         },
         {
@@ -900,6 +903,7 @@
           "help": "An item or CreativeWork that is part of this item, or CreativeWork (in some sense).",
           "multiple": true,
           "type": [
+            "CreativeWork",
             "File"
           ]
         },
@@ -955,7 +959,8 @@
           "help": "The (earliest) date this work was created.",
           "multiple": true,
           "type": [
-            "Text"
+            "DateTime",
+            "Date"
           ]
         },
         {
@@ -992,6 +997,7 @@
           "type": [
             "Language"
           ],
+          "required":false,
           "multiple": true
         },
         {
@@ -1286,7 +1292,9 @@
           "help": "The identifier property represents any kind of identifier for any kind of [[Thing]], such as ISBNs, GTIN codes, UUIDs etc. Schema.org provides dedicated properties for representing many of these, either as textual strings or as URL (URI) links. See [background notes](/docs/datamodel.html#identifierBg) for more details.\n        ",
           "multiple": true,
           "type": [
-            "PropertyValue"
+            "PropertyValue",
+            "Text",
+            "URL"
           ]
         }
       ]
@@ -1341,7 +1349,7 @@
         {
           "id": "https://w3id.org/ldac/terms#annotationType",
           "name": "ldac:annotationType",
-          "help": "Specifies the type of an Annotation resource.",
+          "help": "The type of an Annotation resource.",
           "multiple": true,
           "type": [
             "SelectObject"
@@ -1355,6 +1363,24 @@
                 "@id": "ldac:AnnotationTypeTerms"
               },
               "name": "Gestural"
+            },
+            {
+              "@id": "ldac:Orthographic",
+              "@type": "DefinedTerm",
+              "description": "The resource contains annotations using orthography (a writing system) as opposed to a coded representation such as a phonetic transcription.",
+              "inDefinedTermSet": {
+                "@id": "ldac:AnnotationTypeTerms"
+              },
+              "name": "Orthographic"
+            },
+            {
+              "@id": "ldac:PartOfSpeech",
+              "@type": "DefinedTerm",
+              "description": "An annotation that assigns lexical elements of language to classes on the basis of their distributional properties (for sign languages, the term 'sign class' is appropriate).",
+              "inDefinedTermSet": {
+                "@id": "ldac:AnnotationTypeTerms"
+              },
+              "name": "PartOfSpeech"
             },
             {
               "@id": "ldac:Phonemic",
@@ -1567,9 +1593,9 @@
           "name": "datePublished",
           "help": "The (earliest) date this work was created.",
           "type": [
-            "Text"
+            "DateTime",
+            "Date"
           ],
-          "required": true,
           "multiple": false
         },
         {
@@ -1921,7 +1947,7 @@
         {
           "id": "https://w3id.org/ldac/terms#register",
           "name": "ldac:register",
-          "help": "Specifies the type of register (any of the varieties of a language that a speaker uses in a particular social context [Merriam-Webster]) of the contents of a language resource.",
+          "help": "The type of register (any of the varieties of a language that a speaker uses in a particular social context [Merriam-Webster]) of the contents of a language resource.",
           "type": [
             "Text"
           ],
@@ -2016,6 +2042,44 @@
             "Organization"
           ],
           "multiple": true
+        },
+        {
+          "id": "https://w3id.org/ldac/terms#writtenLanguageFormat",
+          "name": "ldac:writtenLanguageFormat",
+          "help": "The format of the resource resulting from the way the text was produced (handwritten, typeset, typewritten).",
+          "multiple": true,
+          "type": [
+            "SelectObject"
+          ],
+          "values": [
+            {
+              "@id": "ldac:Handwritten",
+              "@type": "DefinedTerm",
+              "description": "The resource was written using a writing implement such as a pen, pencil, brush or computer stylus (except where the digital handwriting is converted to standard text).",
+              "inDefinedTermSet": {
+                "@id": "ldac:WrittenLanguageTypeTerms"
+              },
+              "name": "Handwritten"
+            },
+            {
+              "@id": "ldac:Typeset",
+              "@type": "DefinedTerm",
+              "description": "The resource has been formatted for printing or display.",
+              "inDefinedTermSet": {
+                "@id": "ldac:WrittenLanguageTypeTerms"
+              },
+              "name": "Typeset"
+            },
+            {
+              "@id": "ldac:Typewritten",
+              "@type": "DefinedTerm",
+              "description": "The resource contains text produced on a typewriter.",
+              "inDefinedTermSet": {
+                "@id": "ldac:WrittenLanguageTypeTerms"
+              },
+              "name": "Typewritten"
+            }
+          ]
         }
       ]
     },
@@ -2089,6 +2153,7 @@
           "name": "datePublished",
           "help": "The (earliest) date the collection protocol was published.",
           "type": [
+            "DateTime",
             "Date"
           ],
           "required": true,
@@ -2469,6 +2534,7 @@
           "help": "An item or CreativeWork that is part of this item, or CreativeWork (in some sense).",
           "multiple": true,
           "type": [
+            "CreativeWork",
             "File"
           ]
         },
@@ -2493,10 +2559,11 @@
         {
           "id": "http://schema.org/datePublished",
           "name": "datePublished",
-          "help": "The (earliest) date this work was created..",
+          "help": "The (earliest) date this work was created.",
           "multiple": true,
           "type": [
-            "Text"
+            "DateTime",
+            "Date"
           ]
         },
         {
@@ -2524,6 +2591,7 @@
           "type": [
             "Language"
           ],
+          "required":false,
           "multiple": true
         },
         {
@@ -2604,7 +2672,7 @@
         {
           "id": "https://w3id.org/ldac/terms#collectionEventType",
           "name": "ldac:collectionEventType",
-          "help": "An event with a start and end time during which data are gathered from participants, or from other materials.",
+          "help": "A kind of CollectionEvent characterised by some specific procedures, e.g. a psycholinguistic experiment.",
           "type": [
             "SelectObject"
           ],
