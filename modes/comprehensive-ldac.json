@@ -10,14 +10,16 @@
     "ldac": "https://w3id.org/ldac/terms#"
   },
   "context": [],
- "conformsToUri": [
-   "https://w3id.org/ldac/profile#Collection"
- ],
+  "conformsToUri": [
+    "https://w3id.org/ldac/profile#Collection"
+  ],
   "rootDataset": {
-    "type": ["Dataset", "RepositoryCollection"]
+    "type": [
+      "Dataset",
+      "RepositoryCollection"
+    ]
   },
-  "inputGroups" : 
-  [
+  "inputGroups": [
     {
       "name": "About",
       "help": "The core metadata for this RO-Crate and its subject matter.",
@@ -122,7 +124,8 @@
         "https://w3id.org/ldac/terms#collectionProtocolType",
         "https://w3id.org/ldac/terms#hasCollectionProtocol",
         "https://w3id.org/ldac/terms#isDeIdentified",
-        "https://w3id.org/ldac/terms#material"
+        "https://w3id.org/ldac/terms#material",
+        "https://w3id.org/ldac/terms#writtenLanguageFormat"
       ]
     },
     {
@@ -155,7 +158,7 @@
     {
       "name": "Software & Hardware",
       "help": "For computer programs and execution environments that could be used to create data, have created data, or are being packaged and described.",
-        "inputs": [
+      "inputs": [
         "http://schema.org/availableOnDevice",
         "http://schema.org/downloadUrl",
         "http://schema.org/installUrl",
@@ -843,7 +846,7 @@
             "Date"
           ],
           "multiple": false
-        }, 
+        },
         {
           "id": "https://w3id.org/ldac/terms#dateFreeText",
           "name": "ldac:dateFreeText",
@@ -852,7 +855,7 @@
             "Text"
           ],
           "multiple": false
-        }, 
+        },
         {
           "id": "http://schema.org/holdingArchive",
           "name": "holdingArchive",
@@ -997,7 +1000,7 @@
           "type": [
             "Language"
           ],
-          "required":false,
+          "required": false,
           "multiple": true
         },
         {
@@ -1587,7 +1590,7 @@
             "Text"
           ],
           "multiple": false
-        }, 
+        },
         {
           "id": "http://schema.org/datePublished",
           "name": "datePublished",
@@ -2223,7 +2226,6 @@
     "Person": {
       "id": "http://schema.org/Person",
       "inputs": [
-       
         {
           "id": "http://schema.org/name",
           "name": "name",
@@ -2591,7 +2593,7 @@
           "type": [
             "Language"
           ],
-          "required":false,
+          "required": false,
           "multiple": true
         },
         {
