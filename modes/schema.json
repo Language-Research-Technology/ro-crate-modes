@@ -101,7 +101,6 @@
         {
           "id": "http://schema.org/name",
           "name": "name",
-          "label": "Name",
           "help": "The name of this Schema.",
           "required": true,
           "multiple": false,
@@ -158,7 +157,6 @@
         {
           "id": "http://schema.org/name",
           "name": "name",
-          "label": "Name",
           "help": "The name of this Class.",
           "required": true,
           "multiple": false,
@@ -169,7 +167,6 @@
         {
           "id": "http://www.w3.org/2000/01/rdf-schema#label",
           "name": "rdfs:label",
-          "label": "Label",
           "help": "The label for this class.",
           "required": true,
           "multiple": false,
@@ -180,7 +177,6 @@
         {
           "id": "http://www.w3.org/2000/01/rdf-schema#comment",
           "name": "rdfs:comment",
-          "label": "Comment",
           "help": "A description of the Class.",
           "type": [
             "TextArea"
@@ -214,7 +210,6 @@
         {
           "id": "http://schema.org/name",
           "name": "name",
-          "label": "Name",
           "help": "The name of this DefinedTerm.",
           "required": true,
           "multiple": false,
@@ -258,7 +253,6 @@
         {
           "id": "http://schema.org/name",
           "name": "name",
-          "label": "Name",
           "help": "The name of this DefinedTermSet.",
           "required": true,
           "multiple": false,
@@ -302,7 +296,6 @@
         {
           "id": "http://schema.org/name",
           "name": "name",
-          "label": "Name",
           "help": "The name of this Class.",
           "required": true,
           "multiple": false,
@@ -313,7 +306,6 @@
         {
           "id": "http://www.w3.org/2000/01/rdf-schema#label",
           "name": "label",
-          "label": "Label",
           "help": "The label for this property.",
           "required": true,
           "multiple": false,
@@ -385,7 +377,6 @@
         {
           "id": "http://schema.org/name",
           "name": "name",
-          "label": "name",
           "help": "The name the person.",
           "required": true,
           "multiple": false,
@@ -405,7 +396,6 @@
         {
           "id": "http://schema.org/affiliation",
           "name": "affiliation",
-          "label": "affiliation",
           "help": "The name the person.",
           "required": false,
           "multiple": true,
@@ -422,7 +412,6 @@
         {
           "id": "http://schema.org/name",
           "name": "name",
-          "label": "name",
           "help": "The name of the organization.",
           "required": true,
           "multiple": false,
