@@ -1,6 +1,6 @@
 {
   "name": "ro-crate-modes",
-  "version": "1.1.0",
+  "version": "1.2.0",
   "description": "Repository for RO-Crate modes, for Crate-O and potentially other RO-Crate editors. The initial profiles are simple JSON files which are typically compiled from a Schema.org style schema definition, from example RO-Crate or by hand. Future profiles may include different formats that have features such as built-in validation of crates",
   "main": "index.js",
   "directories": {
