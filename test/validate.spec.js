@@ -25,9 +25,9 @@ const schema = require("../src/ro-crate-editor-profile-schema.json");
 describe("Simple tests", function () {
   it("Can check all the profiles", function () {
     var ok = true;
-    for (let f of fs.readdirSync("./profiles").filter((f) => f.toLowerCase().endsWith(".json"))) {
+    for (let f of fs.readdirSync("./modes").filter((f) => f.toLowerCase().endsWith(".json"))) {
       console.log("Checking", f)
-      check = require(`../profiles/${f}`)
+      check = require(`../modes/${f}`)
       const validate = ajv.compile(schema)
       const valid = validate(check)
       if (!valid) {

@@ -33,6 +33,6 @@
     "topicSeparator": " "
   },
   "dependencies": {
-    "@oclif/core": "^4.0.32"
+    "@oclif/core": "^4.2.10"
   }
 }

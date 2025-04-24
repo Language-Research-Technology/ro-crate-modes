@@ -210,7 +210,7 @@
     "RepositoryObject",
     "CreativeWork",
     "CollectionEvent",
-    "CollectionProtocol",
+    "ldac:CollectionProtocol",
     "DataDepositLicense",
     "DataLicense",
     "DataReuseLicense",
@@ -275,12 +275,15 @@
         {
           "id": "http://schema.org/isBasedOn",
           "name": "isBasedOn",
-          "help": "Link to or description of an original resource at an institution that holds it.",
+          "help": "Link to or description of an original resource.",
           "required": false,
           "multiple": true,
           "type": [
             "Text",
-            "URL"
+            "URL",
+            "CreativeWork",
+            "Dataset",
+            "File"
           ]
         },
         {
@@ -395,7 +398,7 @@
           "name": "ldac:hasCollectionProtocol",
           "help": "A link to a CollectionProtocol object with (at least) a summary of how resources were selected or elicited for this collection/sub-collection.",
           "type": [
-            "CollectionProtocol"
+            "ldac:CollectionProtocol"
           ],
           "multiple": false
         },
@@ -415,7 +418,8 @@
           "help": "An item or CreativeWork that is part of this item, or CreativeWork (in some sense).",
           "type": [
             "CreativeWork",
-            "File"
+            "File",
+            "Dataset"
           ],
           "multiple": true
         },
@@ -797,7 +801,10 @@
           "multiple": true,
           "type": [
             "Text",
-            "URL"
+            "URL",
+            "CreativeWork",
+            "Dataset",
+            "File"
           ]
         },
         {
@@ -824,7 +831,7 @@
           "name": "ldac:hasCollectionProtocol",
           "help": "A link to a CollectionProtocol object with (at least) a summary of how resources were selected or elicited for this collection/sub-collection.",
           "type": [
-            "CollectionProtocol"
+            "ldac:CollectionProtocol"
           ],
           "multiple": false
         },
@@ -867,15 +874,6 @@
           ]
         },
         {
-          "id": "http://schema.org/isBasedOn",
-          "name": "isBasedOn",
-          "help": "Link to a version of this data in an online archival repository.",
-          "multiple": false,
-          "type": [
-            "URL"
-          ]
-        },
-        {
           "id": "https://w3id.org/ldac/terms#itemLocation",
           "name": "ldac:itemLocation",
           "help": "Current location of the item, e.g. where a set of audio tapes are stored.",
@@ -907,7 +905,8 @@
           "multiple": true,
           "type": [
             "CreativeWork",
-            "File"
+            "File",
+            "Dataset"
           ]
         },
         {
@@ -1306,7 +1305,7 @@
       "id": "http://schema.org/CreativeWork",
       "hasSubclass": [
         "RepositoryCollection",
-        "CollectionProtocol"
+        "ldac:CollectionProtocol"
       ],
       "inputs": [
         {
@@ -1655,7 +1654,7 @@
           "name": "ldac:hasCollectionProtocol",
           "help": "A link to a CollectionProtocol object with (at least) a summary of how resources were selected or elicited for this collection/sub-collection.",
           "type": [
-            "CollectionProtocol"
+            "ldac:CollectionProtocol"
           ],
           "multiple": false
         },
@@ -2086,7 +2085,7 @@
         }
       ]
     },
-    "CollectionProtocol": {
+    "ldac:CollectionProtocol": {
       "id": "https://w3id.org/ldac/terms#CollectionProtocol",
       "subClassOf": [
         "CreativeWork"
@@ -2316,8 +2315,11 @@
           "id": "http://schema.org/encodingFormat",
           "name": "encodingFormat",
           "help": "The media type typically expressed using a MIME format.",
+          "multiple": true,
           "type": [
-            "Text"
+            "Text",
+            "WebPage",
+            "Standard"
           ]
         },
         {
