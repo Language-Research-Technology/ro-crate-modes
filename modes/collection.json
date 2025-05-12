@@ -80,13 +80,6 @@
       ]
     },
     {
-      "name": "Language",
-      "help": "Metadata related to the languages used, modes of communication and other linguistic classifications.",
-      "inputs": [
-        "http://schema.org/inLanguage"
-      ]
-    },
-    {
       "name": "Space & Time",
       "help": "Where and when the data was collected; the times and places it mentions or describes.",
       "inputs": [
@@ -394,7 +387,7 @@
           "name": "inLanguage",
           "help": "The language in which the resource is written.",
           "type": [
-            "Language"
+            "Text"
           ],
           "required": true,
           "multiple": true
@@ -596,7 +589,7 @@
           "help": "The language in which the resource is written.",
           "multiple": true,
           "type": [
-            "Language"
+            "Text"
           ]
         },
         {
@@ -958,7 +951,7 @@
           "help": "The language in which the resource is written.",
           "multiple": true,
           "type": [
-            "Language"
+            "Text"
           ]
         },
         {
