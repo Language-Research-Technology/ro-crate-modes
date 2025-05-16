@@ -1,7 +1,7 @@
 {
   "metadata": {
-    "name": "Language Data Commons Comprehensive Collection",
-    "description": "Implements the language data commons RO-Crate Metadata Profile for the top-level, objects and files.",
+    "name": "Language Data Commons Object Collection",
+    "description": "Implements the language data commons RO-Crate Metadata Profile for objects and files.",
     "version": 0.3,
     "author": "University of Queensland",
     "license": "GPL-3.0"
@@ -16,7 +16,7 @@
   "rootDataset": {
     "type": [
       "Dataset",
-      "RepositoryCollection"
+      "RepositoryObject"
     ]
   },
   "inputGroups": [
@@ -206,7 +206,6 @@
     "Organization",
     "Book",
     "ScholarlyArticle",
-    "RepositoryCollection",
     "RepositoryObject",
     "CreativeWork",
     "CollectionEvent",
@@ -407,7 +406,6 @@
           "name": "pcdm:hasMember",
           "help": "The sub-collections, if any, associated with this collection.",
           "type": [
-            "RepositoryCollection",
             "RepositoryObject"
           ],
           "multiple": true
