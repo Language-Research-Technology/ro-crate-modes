@@ -1,1276 +1,1275 @@
 {
-    "metadata": {
-      "name": "Simple RO-Crate Dataset",
-      "description": "Implements the basic RO-Crate elements found in the specification and common examples. Start here for exploring the tool.",
-      "version": 0,
-      "license": "GPLv3.0",
-      "author": "University of Queensland"
+  "metadata": {
+    "name": "Simple RO-Crate Dataset",
+    "description": "Implements the basic RO-Crate elements found in the specification and common examples. Start here for exploring the tool.",
+    "version": 0,
+    "license": "GPLv3.0",
+    "author": "University of Queensland"
+  },
+  "rootDataEntity": [
+    {
+      "type": [
+        "Dataset"
+      ],
+      "conformsToUri": [],
+      "description": ""
+    }
+  ],
+  "lookup": {
+    "Language": {
+      "module": "datapack",
+      "fields": [
+        "@id",
+        "name",
+        "alternateName",
+        "iso639-3",
+        "austlangCode",
+        "glottologCode",
+        "languageCode"
+      ]
     },
-    "rootDataEntity": [
-      {
-        "type": [
-          "Dataset"
-        ],
-        "conformsToUri": [],
-        "description": ""
-      }
-    ],
-    "lookup": {
-      "Language": {
-        "module": "datapack",
-        "fields": [
-          "@id",
-          "name",
-          "alternateName",
-          "iso639-3",
-          "austlangCode",
-          "glottologCode",
-          "languageCode"
-        ]
-      },
-      "Organization": {
-        "module": "ror"
-      }
+    "Organization": {
+      "module": "ror"
+    }
+  },
+  "classes": {
+    "CreativeWork": {
+      "hasSubclass": [
+        "Dataset",
+        "File",
+        "SoftwareApplication"
+      ],
+      "inputs": [
+        {
+          "id": "http://schema.org/identifier",
+          "name": "identifier",
+          "help": "The identifier property represents any kind of identifier for any kind of [[Thing]], such as ISBNs, GTIN codes, UUIDs, etc. Schema.org provides dedicated properties for representing many of these, either as textual strings or as URL (URI) links.",
+          "multiple": true,
+          "type": [
+            "Text"
+          ]
+        },
+        {
+          "id": "http://schema.org/about",
+          "name": "about",
+          "help": "The subject matter of the content.",
+          "multiple": true,
+          "type": [
+            "Text"
+          ]
+        },
+        {
+          "id": "http://schema.org/citation",
+          "name": "citation",
+          "help": "A citation or reference to another creative work, such as another publication, web page, scholarly article, etc.",
+          "multiple": true,
+          "type": [
+            "ScholarlyArticle"
+          ]
+        },
+        {
+          "id": "http://schema.org/contentLocation",
+          "name": "contentLocation",
+          "help": "The location depicted or described in the content. For example, the location in a photograph or painting.",
+          "multiple": true,
+          "type": [
+            "Place"
+          ]
+        },
+        {
+          "id": "http://schema.org/author",
+          "name": "author",
+          "help": "The author of this content.",
+          "multiple": true,
+          "type": [
+            "Person"
+          ]
+        },
+        {
+          "id": "http://schema.org/datePublished",
+          "name": "datePublished",
+          "help": "Date of first broadcast or publication.",
+          "multiple": true,
+          "type": [
+            "Text"
+          ]
+        },
+        {
+          "id": "http://pcdm.org/models#hasMember",
+          "name": "pcdm:hasMember",
+          "help": "The sub-collections, if any, associated with this collection.",
+          "type": [
+            "RepositoryCollection"
+          ],
+          "multiple": true
+        },
+        {
+          "id": "http://schema.org/hasPart",
+          "name": "hasPart",
+          "help": "Indicates an item or CreativeWork that is part of this item, or CreativeWork (in some sense).",
+          "multiple": true,
+          "type": [
+            "Dataset",
+            "File"
+          ]
+        },
+        {
+          "id": "http://schema.org/isPartOf",
+          "name": "isPartOf",
+          "help": "Indicates an item or CreativeWork that this item, or CreativeWork (in some sense), is part of.",
+          "multiple": true,
+          "type": [
+            "URL",
+            "CreativeWork"
+          ]
+        },
+        {
+          "id": "http://pcdm.org/models#memberOf",
+          "name": "pcdm:memberOf",
+          "help": "Links from a Repository Object or Collection to a containing Repository Object or Collection.",
+          "multiple": true,
+          "type": [
+            "RepositoryObject"
+          ]
+        },
+        {
+          "id": "http://schema.org/keywords",
+          "name": "keywords",
+          "help": "Keywords or tags used to describe some item. Multiple textual entries in a keywords list are typically delimited by commas, or by repeating the property.",
+          "multiple": true,
+          "type": [
+            "Text"
+          ]
+        },
+        {
+          "id": "http://schema.org/publisher",
+          "name": "publisher",
+          "help": "The publisher of the creative work.",
+          "multiple": true,
+          "type": [
+            "Organization"
+          ]
+        },
+        {
+          "id": "http://schema.org/temporalCoverage",
+          "name": "temporalCoverage",
+          "help": "The temporalCoverage of a CreativeWork indicates the period that the content applies to, i.e. that it describes, either as a DateTime or as a textual string indicating a time period in [ISO 8601 time interval format](https://en.wikipedia.org/wiki/ISO_8601#Time_intervals). In the case of a Dataset it will typically indicate the relevant time period in a precise notation (e.g. for a 2011 census dataset, the year 2011 would be written \"2011/2012\"). Other forms of content, e.g. ScholarlyArticle, Book, TVSeries or TVEpisode, may indicate their temporalCoverage in broader terms - textually or via well-known URL. Written works such as books may sometimes have precise temporal coverage too, e.g. a work set in 1939 - 1945 can be indicated in ISO 8601 interval format format via \"1939/1945\". Open-ended date ranges can be written with \"..\" in place of the end date. For example, \"2015-11/..\" indicates a range beginning in November 2015 and with no specified final date. This is tentative and might be updated in future when ISO 8601 is officially updated.",
+          "multiple": true,
+          "type": [
+            "DateTime"
+          ]
+        },
+        {
+          "id": "http://schema.org/encodingFormat",
+          "name": "encodingFormat",
+          "help": "Media type typically expressed using a MIME format (see [IANA site](http://www.iana.org/assignments/media-types/media-types.xhtml) and [MDN reference](https://developer.mozilla.org/en-US/docs/Web/HTTP/Basics_of_HTTP/MIME_types)), e.g. application/zip for a SoftwareApplication binary, audio/mpeg for .mp3 In cases where a [[CreativeWork]] has several media type representations, [[encoding]] can be used to indicate each [[MediaObject]] alongside particular [[encodingFormat]] information. Unregistered or niche encoding and file formats can be indicated instead via the most appropriate URL, e.g. defining Web page or a Wikipedia/Wikidata entry.",
+          "multiple": true,
+          "type": [
+            "Text"
+          ]
+        },
+        {
+          "id": "http://schema.org/fileFormat",
+          "name": "fileFormat",
+          "help": "Media type, typically MIME format (see [IANA site](http://www.iana.org/assignments/media-types/media-types.xhtml)) of the content, e.g. application/zip of a SoftwareApplication binary. In cases where a CreativeWork has several media type representations, 'encoding' can be used to indicate each MediaObject alongside particular fileFormat information. Unregistered or niche file formats can be indicated instead via the most appropriate URL, e.g. defining Web page or a Wikipedia entry.",
+          "multiple": true,
+          "type": [
+            "Text"
+          ]
+        },
+        {
+          "id": "http://schema.org/version",
+          "name": "version",
+          "help": "The version of the CreativeWork embodied by a specified resource.",
+          "multiple": true,
+          "type": [
+            "Text"
+          ]
+        },
+        {
+          "id": "http://schema.org/funder",
+          "name": "funder",
+          "help": "A person or organization that supports (sponsors) something through some kind of financial contribution.",
+          "multiple": true,
+          "type": [
+            "Organization"
+          ]
+        },
+        {
+          "id": "http://schema.org/description",
+          "name": "description",
+          "help": "A description of the item.",
+          "multiple": true,
+          "type": [
+            "Text"
+          ]
+        },
+        {
+          "id": "http://schema.org/name",
+          "name": "name",
+          "help": "The name of the item.",
+          "multiple": true,
+          "type": [
+            "Text"
+          ]
+        }
+      ]
     },
-    "classes": {
-      "CreativeWork": {
-        "hasSubclass": [
-          "Dataset",
-          "File",
-          "SoftwareApplication"
-        ],
-        "inputs": [
-          {
-            "id": "http://schema.org/identifier",
-            "name": "identifier",
-            "help": "The identifier property represents any kind of identifier for any kind of [[Thing]], such as ISBNs, GTIN codes, UUIDs, etc. Schema.org provides dedicated properties for representing many of these, either as textual strings or as URL (URI) links.",
-            "multiple": true,
-            "type": [
-              "Text"
-            ]
-          },
-          {
-            "id": "http://schema.org/about",
-            "name": "about",
-            "help": "The subject matter of the content.",
-            "multiple": true,
-            "type": [
-              "Text"
-            ]
-          },
-          {
-            "id": "http://schema.org/citation",
-            "name": "citation",
-            "help": "A citation or reference to another creative work, such as another publication, web page, scholarly article, etc.",
-            "multiple": true,
-            "type": [
-              "ScholarlyArticle"
-            ]
-          },
-          {
-            "id": "http://schema.org/contentLocation",
-            "name": "contentLocation",
-            "help": "The location depicted or described in the content. For example, the location in a photograph or painting.",
-            "multiple": true,
-            "type": [
-              "Place"
-            ]
-          },
-          {
-            "id": "http://schema.org/author",
-            "name": "author",
-            "help": "The author of this content.",
-            "multiple": true,
-            "type": [
-              "Person"
-            ]
-          },
-          {
-            "id": "http://schema.org/datePublished",
-            "name": "datePublished",
-            "help": "Date of first broadcast or publication.",
-            "multiple": true,
-            "type": [
-              "Text"
-            ]
-          },
-          {
-            "id": "http://pcdm.org/models#hasMember",
-            "name": "pcdm:hasMember",
-            "help": "The sub-collections, if any, associated with this collection.",
-            "type": [
-              "RepositoryCollection"
-            ],
-            "multiple": true
-          },
-          {
-            "id": "http://schema.org/hasPart",
-            "name": "hasPart",
-            "help": "Indicates an item or CreativeWork that is part of this item, or CreativeWork (in some sense).",
-            "multiple": true,
-            "type": [
-              "Dataset",
-              "File"
-            ]
-          },
-          {
-            "id": "http://schema.org/isPartOf",
-            "name": "isPartOf",
-            "help": "Indicates an item or CreativeWork that this item, or CreativeWork (in some sense), is part of.",
-            "multiple": true,
-            "type": [
-              "URL",
-              "CreativeWork"
-            ]
-          },
-          {
-            "id": "http://pcdm.org/models#memberOf",
-            "name": "pcdm:memberOf",
-            "help": "Links from a Repository Object or Collection to a containing Repository Object or Collection.",
-            "multiple": true,
-            "type": [
-              "RepositoryObject"
-            ]
-          },
-          {
-            "id": "http://schema.org/keywords",
-            "name": "keywords",
-            "help": "Keywords or tags used to describe some item. Multiple textual entries in a keywords list are typically delimited by commas, or by repeating the property.",
-            "multiple": true,
-            "type": [
-              "Text"
-            ]
-          },
-          {
-            "id": "http://schema.org/publisher",
-            "name": "publisher",
-            "help": "The publisher of the creative work.",
-            "multiple": true,
-            "type": [
-              "Organization"
-            ]
-          },
-          {
-            "id": "http://schema.org/temporalCoverage",
-            "name": "temporalCoverage",
-            "help": "The temporalCoverage of a CreativeWork indicates the period that the content applies to, i.e. that it describes, either as a DateTime or as a textual string indicating a time period in [ISO 8601 time interval format](https://en.wikipedia.org/wiki/ISO_8601#Time_intervals). In the case of a Dataset it will typically indicate the relevant time period in a precise notation (e.g. for a 2011 census dataset, the year 2011 would be written \"2011/2012\"). Other forms of content, e.g. ScholarlyArticle, Book, TVSeries or TVEpisode, may indicate their temporalCoverage in broader terms - textually or via well-known URL. Written works such as books may sometimes have precise temporal coverage too, e.g. a work set in 1939 - 1945 can be indicated in ISO 8601 interval format format via \"1939/1945\". Open-ended date ranges can be written with \"..\" in place of the end date. For example, \"2015-11/..\" indicates a range beginning in November 2015 and with no specified final date. This is tentative and might be updated in future when ISO 8601 is officially updated.",
-            "multiple": true,
-            "type": [
-              "DateTime"
-            ]
-          },
-          {
-            "id": "http://schema.org/encodingFormat",
-            "name": "encodingFormat",
-            "help": "Media type typically expressed using a MIME format (see [IANA site](http://www.iana.org/assignments/media-types/media-types.xhtml) and [MDN reference](https://developer.mozilla.org/en-US/docs/Web/HTTP/Basics_of_HTTP/MIME_types)), e.g. application/zip for a SoftwareApplication binary, audio/mpeg for .mp3 In cases where a [[CreativeWork]] has several media type representations, [[encoding]] can be used to indicate each [[MediaObject]] alongside particular [[encodingFormat]] information. Unregistered or niche encoding and file formats can be indicated instead via the most appropriate URL, e.g. defining Web page or a Wikipedia/Wikidata entry.",
-            "multiple": true,
-            "type": [
-              "Text"
-            ]
-          },
-          {
-            "id": "http://schema.org/fileFormat",
-            "name": "fileFormat",
-            "help": "Media type, typically MIME format (see [IANA site](http://www.iana.org/assignments/media-types/media-types.xhtml)) of the content, e.g. application/zip of a SoftwareApplication binary. In cases where a CreativeWork has several media type representations, 'encoding' can be used to indicate each MediaObject alongside particular fileFormat information. Unregistered or niche file formats can be indicated instead via the most appropriate URL, e.g. defining Web page or a Wikipedia entry.",
-            "multiple": true,
-            "type": [
-              "Text"
-            ]
-          },
-          {
-            "id": "http://schema.org/version",
-            "name": "version",
-            "help": "The version of the CreativeWork embodied by a specified resource.",
-            "multiple": true,
-            "type": [
-              "Text"
-            ]
-          },
-          {
-            "id": "http://schema.org/funder",
-            "name": "funder",
-            "help": "A person or organization that supports (sponsors) something through some kind of financial contribution.",
-            "multiple": true,
-            "type": [
-              "Organization"
-            ]
-          },
-          {
-            "id": "http://schema.org/description",
-            "name": "description",
-            "help": "A description of the item.",
-            "multiple": true,
-            "type": [
-              "Text"
-            ]
-          },
-          {
-            "id": "http://schema.org/name",
-            "name": "name",
-            "help": "The name of the item.",
-            "multiple": true,
-            "type": [
-              "Text"
-            ]
-          }
-        ]
-      },
-      "PropertyValue": {
-        "hasSubclass": [],
-        "inputs": [
-          {
-            "id": "http://schema.org/name",
-            "name": "name",
-            "help": "The name of the item.",
-            "multiple": true,
-            "type": [
-              "Text"
-            ]
-          },
-          {
-            "id": "http://schema.org/value",
-            "name": "value",
-            "help": "The value of the quantitative value or property value node. For [[QuantitativeValue]] and [[MonetaryAmount]], the recommended type for values is 'Number'. For [[PropertyValue]], it can be 'Text', 'Number', 'Boolean', or 'StructuredValue'. Use values from 0123456789 (Unicode 'DIGIT ZERO' (U+0030) to 'DIGIT NINE' (U+0039)) rather than superficially similar Unicode symbols. Use '.' (Unicode 'FULL STOP' (U+002E)) rather than ',' to indicate a decimal point. Avoid using these symbols as a readability separator.",
-            "multiple": true,
-            "type": [
-              "Text"
-            ]
-          }
-        ]
-      },
-      "URL": {
-        "hasSubclass": [],
-        "inputs": []
-      },
-      "Dataset": {
-        "hasSubclass": [],
-        "inputs": [
-          {
-            "id": "http://schema.org/identifier",
-            "name": "identifier",
-            "help": "The identifier property represents any kind of identifier for any kind of [[Thing]], such as ISBNs, GTIN codes, UUIDs, etc. Schema.org provides dedicated properties for representing many of these, either as textual strings or as URL (URI) links.",
-            "multiple": true,
-            "type": [
-              "Text"
-            ]
-          },
-          {
-            "id": "http://schema.org/citation",
-            "name": "citation",
-            "help": "A citation or reference to another creative work, such as another publication, web page, scholarly article, etc.",
-            "multiple": true,
-            "type": [
-              "ScholarlyArticle"
-            ]
-          },
-          {
-            "id": "http://schema.org/contactPoint",
-            "name": "contactPoint",
-            "help": "A contact point for a person or organization.",
-            "multiple": true,
-            "type": [
-              "ContactPoint"
-            ]
-          },
-          {
-            "id": "http://schema.org/contentLocation",
-            "name": "contentLocation",
-            "help": "The location depicted or described in the content. For example, the location in a photograph or painting.",
-            "multiple": true,
-            "type": [
-              "Place"
-            ]
-          },
-          {
-            "id": "http://schema.org/contentUrl",
-            "name": "contentUrl",
-            "help": "Actual bytes of the media object, for example the image file or video file.",
-            "multiple": true,
-            "type": [
-              "Text"
-            ]
-          },
-          {
-            "id": "http://schema.org/author",
-            "name": "author",
-            "help": "The author of this content.",
-            "multiple": true,
-            "type": [
-              "Person", "Organization"
-            ]
-          },
-          {
-            "id": "http://schema.org/datePublished",
-            "name": "datePublished",
-            "help": "Date of first broadcast or publication.",
-            "multiple": true,
-            "type": [
-              "Date"
-            ]
-          },
-          {
-            "id": "http://schema.org/description",
-            "name": "description",
-            "help": "A description of the item.",
-            "multiple": true,
-            "type": [
-              "Text"
-            ]
-          },
-          {
-            "id": "http://schema.org/hasPart",
-            "name": "hasPart",
-            "help": "Indicates an item or CreativeWork that is part of this item, or CreativeWork (in some sense).",
-            "multiple": true,
-            "type": [
-              "Dataset",
-              "File"
-            ]
-          },
-          {
-            "id": "http://schema.org/keywords",
-            "name": "keywords",
-            "help": "Keywords or tags used to describe some item. Multiple textual entries in a keywords list are typically delimited by commas, or by repeating the property.",
-            "multiple": true,
-            "type": [
-              "Text"
-            ]
-          },
-          {
-            "id": "http://schema.org/name",
-            "name": "name",
-            "help": "The name of the item.",
-            "multiple": true,
-            "type": [
-              "Text"
-            ]
-          },
-          {
-            "id": "http://schema.org/publisher",
-            "name": "publisher",
-            "help": "The publisher of the creative work.",
-            "multiple": true,
-            "type": [
-              "Organization"
-            ]
-          },
-          {
-            "id": "http://schema.org/temporalCoverage",
-            "name": "temporalCoverage",
-            "help": "The temporalCoverage of a CreativeWork indicates the period that the content applies to, i.e. that it describes, either as a DateTime or as a textual string indicating a time period in [ISO 8601 time interval format](https://en.wikipedia.org/wiki/ISO_8601#Time_intervals). In the case of a Dataset it will typically indicate the relevant time period in a precise notation (e.g. for a 2011 census dataset, the year 2011 would be written \"2011/2012\"). Other forms of content, e.g. ScholarlyArticle, Book, TVSeries or TVEpisode, may indicate their temporalCoverage in broader terms - textually or via well-known URL. Written works such as books may sometimes have precise temporal coverage too, e.g. a work set in 1939 - 1945 can be indicated in ISO 8601 interval format format via \"1939/1945\". Open-ended date ranges can be written with \"..\" in place of the end date. For example, \"2015-11/..\" indicates a range beginning in November 2015 and with no specified final date. This is tentative and might be updated in future when ISO 8601 is officially updated.",
-            "multiple": true,
-            "type": [
-              "Text",
-              "DateTime"
-            ]
-          },
-          {
-            "id": "http://schema.org/about",
-            "name": "about",
-            "help": "The subject matter of the content.",
-            "multiple": true,
-            "type": [
-              "Text"
-            ]
-          },
-          {
-            "id": "http://schema.org/encodingFormat",
-            "name": "encodingFormat",
-            "help": "Media type typically expressed using a MIME format (see [IANA site](http://www.iana.org/assignments/media-types/media-types.xhtml) and [MDN reference](https://developer.mozilla.org/en-US/docs/Web/HTTP/Basics_of_HTTP/MIME_types)), e.g. application/zip for a SoftwareApplication binary, audio/mpeg for .mp3. In cases where a [[CreativeWork]] has several media type representations, [[encoding]] can be used to indicate each [[MediaObject]] alongside particular [[encodingFormat]] information. Unregistered or niche encoding and file formats can be indicated instead via the most appropriate URL, e.g. defining Web page or a Wikipedia/Wikidata entry.",
-            "multiple": true,
-            "type": [
-              "Text"
-            ]
-          },
-          {
-            "id": "http://schema.org/fileFormat",
-            "name": "fileFormat",
-            "help": "Media type, typically MIME format (see [IANA site](http://www.iana.org/assignments/media-types/media-types.xhtml)) of the content, e.g. application/zip of a SoftwareApplication binary. In cases where a CreativeWork has several media type representations, 'encoding' can be used to indicate each MediaObject alongside particular fileFormat information. Unregistered or niche file formats can be indicated instead via the most appropriate URL, e.g. defining Web page or a Wikipedia entry.",
-            "multiple": true,
-            "type": [
-              "Text"
-            ]
-          },
-          {
-            "id": "http://schema.org/version",
-            "name": "version",
-            "help": "The version of the CreativeWork embodied by a specified resource.",
-            "multiple": true,
-            "type": [
-              "Text"
-            ]
-          },
-          {
-            "id": "http://schema.org/funder",
-            "name": "funder",
-            "help": "A person or organization that supports (sponsors) something through some kind of financial contribution.",
-            "multiple": true,
-            "type": [
-              "Organization"
-            ]
-          },
-          {
-            "id": "http://schema.org/license",
-            "name": "license",
-            "help": "A license document that applies to this content, typically indicated by URL.",
-            "required": true,
-            "multiple": true,
-            "type": [
-              "CreativeWork",
-              "URL"
-            ]
-          }
-        ]
-      },
-      "ScholarlyArticle": {
-        "hasSubclass": [],
-        "inputs": [
-          {
-            "id": "http://schema.org/author",
-            "name": "author",
-            "help": "The author of this content.",
-            "multiple": true,
-            "type": [
-              "Person"
-            ]
-          },
-          {
-            "id": "http://schema.org/datePublished",
-            "name": "datePublished",
-            "help": "Date of first broadcast or publication.",
-            "multiple": true,
-            "type": [
-              "Text"
-            ]
-          },
-          {
-            "id": "http://schema.org/identifier",
-            "name": "identifier",
-            "help": "The identifier property represents any kind of identifier for any kind of [[Thing]], such as ISBNs, GTIN codes, UUIDs, etc. Schema.org provides dedicated properties for representing many of these, either as textual strings or as URL (URI) links.",
-            "multiple": true,
-            "type": [
-              "Text"
-            ]
-          },
-          {
-            "id": "http://schema.org/name",
-            "name": "name",
-            "help": "The name of the item.",
-            "multiple": true,
-            "type": [
-              "Text"
-            ]
-          }
-        ]
-      },
-      "Organization": {
-        "hasSubclass": [],
-        "inputs": [
-          {
-            "id": "http://schema.org/contactPoint",
-            "name": "contactPoint",
-            "help": "A contact point for a person or organization.",
-            "multiple": true,
-            "type": [
-              "ContactPoint"
-            ]
-          },
-          {
-            "id": "http://schema.org/keywords",
-            "name": "keywords",
-            "help": "Keywords or tags used to describe some item. Multiple textual entries in a keywords list are typically delimited by commas, or by repeating the property.",
-            "multiple": true,
-            "type": [
-              "Text"
-            ]
-          },
-          {
-            "id": "http://schema.org/email",
-            "name": "email",
-            "help": "Email address.",
-            "multiple": true,
-            "type": [
-              "Text"
-            ]
-          },
-          {
-            "id": "http://schema.org/address",
-            "name": "address",
-            "help": "Physical address of the item.",
-            "multiple": true,
-            "type": [
-              "Text"
-            ]
-          },
-          {
-            "id": "http://schema.org/description",
-            "name": "description",
-            "help": "A description of the item.",
-            "multiple": true,
-            "type": [
-              "Text"
-            ]
-          },
-          {
-            "id": "http://schema.org/identifier",
-            "name": "identifier",
-            "help": "The identifier property represents any kind of identifier for any kind of [[Thing]], such as ISBNs, GTIN codes, UUIDs, etc. Schema.org provides dedicated properties for representing many of these, either as textual strings or as URL (URI) links.",
-            "multiple": true,
-            "type": [
-              "Text"
-            ]
-          },
-          {
-            "id": "http://schema.org/name",
-            "name": "name",
-            "help": "The name of the item.",
-            "multiple": true,
-            "type": [
-              "Text"
-            ]
-          },
-          {
-            "id": "http://schema.org/funder",
-            "name": "funder",
-            "help": "A person or organization that supports (sponsors) something through some kind of financial contribution.",
-            "multiple": true,
-            "type": [
-              "Organization"
-            ]
-          }
-        ]
-      },
-      "Person": {
-        "hasSubclass": [],
-        "inputs": [
-          {
-            "id": "http://schema.org/contactPoint",
-            "name": "contactPoint",
-            "help": "A contact point for a person or organization.",
-            "multiple": true,
-            "type": [
-              "ContactPoint"
-            ]
-          },
-          {
-            "id": "http://schema.org/affiliation",
-            "name": "affiliation",
-            "help": "An organization that this person is affiliated with. For example, a school/university, a club, or a team.",
-            "multiple": true,
-            "type": [
-              "Organization"
-            ]
-          },
-          {
-            "id": "http://schema.org/email",
-            "name": "email",
-            "help": "Email address.",
-            "multiple": true,
-            "type": [
-              "Text"
-            ]
-          },
-          {
-            "id": "http://schema.org/familyName",
-            "name": "familyName",
-            "help": "The surname of a person.",
-            "multiple": true,
-            "type": [
-              "Text"
-            ]
-          },
-          {
-            "id": "http://schema.org/givenName",
-            "name": "givenName",
-            "help": "The given or first name of a person.",
-            "multiple": true,
-            "type": [
-              "Text"
-            ]
-          },
-          {
-            "id": "http://schema.org/identifier",
-            "name": "identifier",
-            "help": "The identifier property represents any kind of identifier for any kind of [[Thing]], such as ISBNs, GTIN codes, UUIDs, etc. Schema.org provides dedicated properties for representing many of these, either as textual strings or as URL (URI) links.",
-            "multiple": true,
-            "type": [
-              "Text"
-            ]
-          },
-          {
-            "id": "http://schema.org/name",
-            "name": "name",
-            "help": "The name of the item.",
-            "multiple": true,
-            "type": [
-              "Text"
-            ]
-          },
-          {
-            "id": "http://schema.org/address",
-            "name": "address",
-            "help": "Physical address of the item.",
-            "multiple": true,
-            "type": [
-              "Text"
-            ]
-          },
-          {
-            "id": "http://schema.org/funder",
-            "name": "funder",
-            "help": "A person or organization that supports (sponsors) something through some kind of financial contribution.",
-            "multiple": true,
-            "type": [
-              "Organization"
-            ]
-          }
-        ]
-      },
-      "ContactPoint": {
-        "hasSubclass": [],
-        "inputs": [
-          {
-            "id": "http://schema.org/email",
-            "name": "email",
-            "help": "Email address.",
-            "multiple": true,
-            "type": [
-              "Text"
-            ]
-          },
-          {
-            "id": "http://schema.org/URL",
-            "name": "URL",
-            "help": "Data type: URL.",
-            "multiple": true,
-            "type": [
-              "Text"
-            ]
-          },
-          {
-            "id": "http://schema.org/contactType",
-            "name": "contactType",
-            "help": "A person or organization can have different contact points, for different purposes. For example, a sales contact point, a PR contact point and so on. This property is used to specify the kind of contact point.",
-            "multiple": true,
-            "type": [
-              "Text"
-            ]
-          },
-          {
-            "id": "http://schema.org/identifier",
-            "name": "identifier",
-            "help": "The identifier property represents any kind of identifier for any kind of [[Thing]], such as ISBNs, GTIN codes, UUIDs, etc. Schema.org provides dedicated properties for representing many of these, either as textual strings or as URL (URI) links.",
-            "multiple": true,
-            "type": [
-              "Text"
-            ]
-          },
-          {
-            "id": "http://schema.org/name",
-            "name": "name",
-            "help": "The name of the item.",
-            "multiple": true,
-            "type": [
-              "Text"
-            ]
-          }
-        ]
-      },
-      "Place": {
-        "hasSubclass": [],
-        "inputs": [
-          {
-            "id": "http://schema.org/keywords",
-            "name": "keywords",
-            "help": "Keywords or tags used to describe some item. Multiple textual entries in a keywords list are typically delimited by commas, or by repeating the property.",
-            "multiple": true,
-            "type": [
-              "Text"
-            ]
-          },
-          {
-            "id": "http://schema.org/latitude",
-            "name": "latitude",
-            "help": "The latitude of a location. For example ```37.42242``` ([WGS 84](https://en.wikipedia.org/wiki/World_Geodetic_System)).",
-            "multiple": true,
-            "type": [
-              "Text"
-            ]
-          },
-          {
-            "id": "http://schema.org/longitude",
-            "name": "longitude",
-            "help": "The longitude of a location. For example ```-122.08585``` ([WGS 84](https://en.wikipedia.org/wiki/World_Geodetic_System)).",
-            "multiple": true,
-            "type": [
-              "Text"
-            ]
-          },
-          {
-            "id": "http://schema.org/URL",
-            "name": "URL",
-            "help": "Data type: URL.",
-            "multiple": true,
-            "type": [
-              "Text"
-            ]
-          },
-          {
-            "id": "http://schema.org/address",
-            "name": "address",
-            "help": "Physical address of the item.",
-            "multiple": true,
-            "type": [
-              "Text"
-            ]
-          },
-          {
-            "id": "http://schema.org/description",
-            "name": "description",
-            "help": "A description of the item.",
-            "multiple": true,
-            "type": [
-              "Text"
-            ]
-          },
-          {
-            "id": "http://schema.org/geo",
-            "name": "geo",
-            "help": "The geo coordinates of the place.",
-            "multiple": true,
-            "type": [
-              "Geometry"
-            ]
-          },
-          {
-            "id": "http://schema.org/identifier",
-            "name": "identifier",
-            "help": "The identifier property represents any kind of identifier for any kind of [[Thing]], such as ISBNs, GTIN codes, UUIDs, etc. Schema.org provides dedicated properties for representing many of these, either as textual strings or as URL (URI) links.",
-            "multiple": true,
-            "type": [
-              "Text"
-            ]
-          },
-          {
-            "id": "http://schema.org/name",
-            "name": "name",
-            "help": "The name of the item.",
-            "multiple": true,
-            "type": [
-              "Text"
-            ]
-          }
-        ]
-      },
-      "File": {
-        "hasSubclass": [
-          
-        ],
-        "inputs": [
-          {
-            "id": "http://schema.org/contentUrl",
-            "name": "contentUrl",
-            "help": "Actual bytes of the media object, for example the image file or video file.",
-            "multiple": true,
-            "type": [
-              "Text"
-            ]
-          },
-          {
-            "id": "http://schema.org/endTime",
-            "name": "endTime",
-            "help": "The endTime of something. For a reserved event or service (e.g. FoodEstablishmentReservation), the time that it is expected to end. For actions that span a period of time, when the action was performed. E.g. John wrote a book from January to *December*. For media, including audio and video, it's the time offset of the end of a clip within a larger file. Note that Event uses startDate/endDate instead of startTime/endTime, even when describing dates with times. This situation may be clarified in future revisions.",
-            "multiple": true,
-            "type": [
-              "Text"
-            ]
-          },
-          {
-            "id": "http://schema.org/contentSize",
-            "name": "contentSize",
-            "help": "File size in (mega/kilo)bytes.",
-            "multiple": true,
-            "type": [
-              "Text"
-            ]
-          },
-          {
-            "id": "http://schema.org/encodingFormat",
-            "name": "encodingFormat",
-            "help": "Media type typically expressed using a MIME format (see [IANA site](http://www.iana.org/assignments/media-types/media-types.xhtml) and [MDN reference](https://developer.mozilla.org/en-US/docs/Web/HTTP/Basics_of_HTTP/MIME_types)), e.g. application/zip for a SoftwareApplication binary, audio/mpeg for .mp3. In cases where a [[CreativeWork]] has several media type representations, [[encoding]] can be used to indicate each [[MediaObject]] alongside particular [[encodingFormat]] information. Unregistered or niche encoding and file formats can be indicated instead via the most appropriate URL, e.g. defining Web page or a Wikipedia/Wikidata entry.",
-            "multiple": true,
-            "type": [
-              "Text"
-            ]
-          },
-          {
-            "id": "http://schema.org/fileFormat",
-            "name": "fileFormat",
-            "help": "Media type, typically MIME format (see [IANA site](http://www.iana.org/assignments/media-types/media-types.xhtml)) of the content, e.g. application/zip of a SoftwareApplication binary. In cases where a CreativeWork has several media type representations, 'encoding' can be used to indicate each MediaObject alongside particular fileFormat information. Unregistered or niche file formats can be indicated instead via the most appropriate URL, e.g. defining Web page or a Wikipedia entry.",
-            "multiple": true,
-            "type": [
-              "Text"
-            ]
-          },
-          {
-            "id": "http://schema.org/name",
-            "name": "name",
-            "help": "The name of the item.",
-            "multiple": true,
-            "type": [
-              "Text"
-            ]
-          },
-          {
-            "id": "http://schema.org/identifier",
-            "name": "identifier",
-            "help": "The identifier property represents any kind of identifier for any kind of [[Thing]], such as ISBNs, GTIN codes, UUIDs, etc. Schema.org provides dedicated properties for representing many of these, either as textual strings or as URL (URI) links.",
-            "multiple": true,
-            "type": [
-              "Text"
-            ]
-          },
-          {
-            "id": "http://schema.org/about",
-            "name": "about",
-            "help": "The subject matter of the content.",
-            "multiple": true,
-            "type": [
-              "Text"
-            ]
-          },
-          {
-            "id": "http://schema.org/citation",
-            "name": "citation",
-            "help": "A citation or reference to another creative work, such as another publication, web page, scholarly article, etc.",
-            "multiple": true,
-            "type": [
-              "ScholarlyArticle"
-            ]
-          },
-          {
-            "id": "http://schema.org/contentLocation",
-            "name": "contentLocation",
-            "help": "The location depicted or described in the content. For example, the location in a photograph or painting.",
-            "multiple": true,
-            "type": [
-              "Place"
-            ]
-          },
-          {
-            "id": "http://schema.org/author",
-            "name": "author",
-            "help": "The author of this content.",
-            "multiple": true,
-            "type": [
-              "Person"
-            ]
-          },
-          {
-            "id": "http://schema.org/datePublished",
-            "name": "datePublished",
-            "help": "Date of first broadcast or publication.",
-            "multiple": true,
-            "type": [
-              "Text"
-            ]
-          },
-          {
-            "id": "http://schema.org/hasPart",
-            "name": "hasPart",
-            "help": "Indicates an item or CreativeWork that is part of this item, or CreativeWork.",
-            "multiple": true,
-            "type": [
-              "Dataset",
-              "File"
-            ]
-          },
-          {
-            "id": "http://schema.org/keywords",
-            "name": "keywords",
-            "help": "Keywords or tags used to describe some item. Multiple textual entries in a keywords list are typically delimited by commas, or by repeating the property.",
-            "multiple": true,
-            "type": [
-              "Text"
-            ]
-          },
-          {
-            "id": "http://schema.org/publisher",
-            "name": "publisher",
-            "help": "The publisher of the creative work.",
-            "multiple": true,
-            "type": [
-              "Organization"
-            ]
-          },
-          {
-            "id": "http://schema.org/temporalCoverage",
-            "name": "temporalCoverage",
-            "help": "The temporalCoverage of a CreativeWork indicates the period that the content applies to, i.e. that it describes, either as a DateTime or as a textual string indicating a time period in [ISO 8601 time interval format](https://en.wikipedia.org/wiki/ISO_8601#Time_intervals). In the case of a Dataset it will typically indicate the relevant time period in a precise notation (e.g. for a 2011 census dataset, the year 2011 would be written \"2011/2012\"). Other forms of content, e.g. ScholarlyArticle, Book, TVSeries or TVEpisode, may indicate their temporalCoverage in broader terms - textually or via well-known URL. Written works such as books may sometimes have precise temporal coverage too, e.g. a work set in 1939 - 1945 can be indicated in ISO 8601 interval format format via \"1939/1945\". Open-ended date ranges can be written with \"..\" in place of the end date. For example, \"2015-11/..\" indicates a range beginning in November 2015 and with no specified final date. This is tentative and might be updated in future when ISO 8601 is officially updated.",
-            "multiple": true,
-            "type": [
-              "Text"
-            ]
-          },
-          {
-            "id": "http://schema.org/version",
-            "name": "version",
-            "help": "The version of the CreativeWork embodied by a specified resource.",
-            "multiple": true,
-            "type": [
-              "Text"
-            ]
-          },
-          {
-            "id": "http://schema.org/funder",
-            "name": "funder",
-            "help": "A person or organization that supports (sponsors) something through some kind of financial contribution.",
-            "multiple": true,
-            "type": [
-              "Organization"
-            ]
-          },
-          {
-            "id": "http://schema.org/description",
-            "name": "description",
-            "help": "A description of the item.",
-            "multiple": true,
-            "type": [
-              "Text"
-            ]
-          }, 
-          {
-            "id": "http://schema.org/exifData",
-            "name": "exifData",
-            "help": "exif data for this object.",
-            "multiple": true,
-            "type": [
-              "PropertyValue"
-            ]
-          }
-        ]
-      },
-      "Geometry": {
-        "id": "http://www.opengis.net/ont/geosparql#Geometry",
-        "subClassOf": [],
-        "inputs": [
-          {
-            "id": "http://www.opengis.net/ont/geosparql#asWKT",
-            "name": "geosparql:asWKT",
-            "help": "The WKT serialisation of the geometry.",
-            "required": true,
-            "multiple": true,
-            "type": [
-              "Text"
-            ]
-          }
-        ]
-      },
-      "IndividualProduct": {
-        "hasSubclass": [],
-        "inputs": [
-          {
-            "id": "http://schema.org/URL",
-            "name": "URL",
-            "help": "Data type: URL.",
-            "multiple": true,
-            "type": [
-              "Text"
-            ]
-          },
-          {
-            "id": "http://schema.org/description",
-            "name": "description",
-            "help": "A description of the item.",
-            "multiple": true,
-            "type": [
-              "Text"
-            ]
-          },
-          {
-            "id": "http://schema.org/identifier",
-            "name": "identifier",
-            "help": "The identifier property represents any kind of identifier for any kind of [[Thing]], such as ISBNs, GTIN codes, UUIDs, etc. Schema.org provides dedicated properties for representing many of these, either as textual strings or as URL (URI) links.",
-            "multiple": true,
-            "type": [
-              "Text"
-            ]
-          },
-          {
-            "id": "http://schema.org/manufacturer",
-            "name": "manufacturer",
-            "help": "The manufacturer of the product.",
-            "multiple": true,
-            "type": [
-              "Text"
-            ]
-          },
-          {
-            "id": "http://schema.org/model",
-            "name": "model",
-            "help": "The model of the product. Use with the URL of a ProductModel or a textual representation of the model identifier. The URL of the ProductModel can be from an external source. It is recommended to additionally provide strong product identifiers via the gtin8/gtin13/gtin14 and mpn properties.",
-            "multiple": true,
-            "type": [
-              "Text"
-            ]
-          },
-          {
-            "id": "http://schema.org/name",
-            "name": "name",
-            "help": "The name of the item.",
-            "multiple": true,
-            "type": [
-              "Text"
-            ]
-          },
-          {
-            "id": "http://schema.org/serialNumber",
-            "name": "serialNumber",
-            "help": "The serial number or any alphanumeric identifier of a particular product. When attached to an offer, it is a shortcut for the serial number of the product included in the offer.",
-            "multiple": true,
-            "type": [
-              "Text"
-            ]
-          }
-        ]
-      },
-      "CreateAction": {
-        "hasSubclass": [],
-        "inputs": [
-          {
-            "id": "http://schema.org/agent",
-            "name": "agent",
-            "help": "The direct performer or driver of the action (animate or inanimate). E.g. *John* wrote a book.",
-            "multiple": true,
-            "type": [
-              "Person"
-            ]
-          },
-          {
-            "id": "http://schema.org/description",
-            "name": "description",
-            "help": "A description of the item.",
-            "multiple": true,
-            "type": [
-              "Text"
-            ]
-          },
-          {
-            "id": "http://schema.org/endTime",
-            "name": "endTime",
-            "help": "The endTime of something. For a reserved event or service (e.g. FoodEstablishmentReservation), the time that it is expected to end. For actions that span a period of time, when the action was performed. E.g. John wrote a book from January to *December*. For media, including audio and video, it's the time offset of the end of a clip within a larger file. Note that Event uses startDate/endDate instead of startTime/endTime, even when describing dates with times. This situation may be clarified in future revisions.",
-            "multiple": true,
-            "type": [
-              "Text"
-            ]
-          },
-          {
-            "id": "http://schema.org/identifier",
-            "name": "identifier",
-            "help": "The identifier property represents any kind of identifier for any kind of [[Thing]], such as ISBNs, GTIN codes, UUIDs, etc. Schema.org provides dedicated properties for representing many of these, either as textual strings or as URL (URI) links.",
-            "multiple": true,
-            "type": [
-              "Text"
-            ]
-          },
-          {
-            "id": "http://schema.org/instrument",
-            "name": "instrument",
-            "help": "The object that helped the agent perform the action. E.g. John wrote a book with *a pen*.",
-            "multiple": true,
-            "type": [
-              "IndividualProduct",
-              "SoftwareApplication"
-            ]
-          },
-          {
-            "id": "http://schema.org/name",
-            "name": "name",
-            "help": "The name of the item.",
-            "multiple": true,
-            "type": [
-              "Text"
-            ]
-          },
-          {
-            "id": "http://schema.org/object",
-            "name": "object",
-            "help": "The object upon which the action is carried out, whose state is kept intact or changed. Also known as the semantic roles patient, affected or undergoer (which change their state) or theme (which doesn't). E.g. John read *a book*.",
-            "multiple": true,
-            "type": [
-              "Place",
-              "File"
-            ]
-          },
-          {
-            "id": "http://schema.org/result",
-            "name": "result",
-            "help": "The result produced in the action. E.g. John wrote *a book*.",
-            "multiple": true,
-            "type": [
-              "File"
-            ]
-          }
-        ]
-      },
-      "SoftwareApplication": {
-        "hasSubclass": [],
-        "inputs": [
-          {
-            "id": "http://schema.org/URL",
-            "name": "URL",
-            "help": "Data type: URL.",
-            "multiple": true,
-            "type": [
-              "Text"
-            ]
-          },
-          {
-            "id": "http://schema.org/identifier",
-            "name": "identifier",
-            "help": "The identifier property represents any kind of identifier for any kind of [[Thing]], such as ISBNs, GTIN codes, UUIDs, etc. Schema.org provides dedicated properties for representing many of these, either as textual strings or as URL (URI) links.",
-            "multiple": true,
-            "type": [
-              "Text"
-            ]
-          },
-          {
-            "id": "http://schema.org/name",
-            "name": "name",
-            "help": "The name of the item.",
-            "multiple": true,
-            "type": [
-              "Text"
-            ]
-          },
-          {
-            "id": "http://schema.org/version",
-            "name": "version",
-            "help": "The version of the CreativeWork embodied by a specified resource.",
-            "multiple": true,
-            "type": [
-              "Text"
-            ]
-          },
-          {
-            "id": "http://schema.org/about",
-            "name": "about",
-            "help": "The subject matter of the content.",
-            "multiple": true,
-            "type": [
-              "Text"
-            ]
-          },
-          {
-            "id": "http://schema.org/citation",
-            "name": "citation",
-            "help": "A citation or reference to another creative work, such as another publication, web page, scholarly article, etc.",
-            "multiple": true,
-            "type": [
-              "ScholarlyArticle"
-            ]
-          },
-          {
-            "id": "http://schema.org/contentLocation",
-            "name": "contentLocation",
-            "help": "The location depicted or described in the content. For example, the location in a photograph or painting.",
-            "multiple": true,
-            "type": [
-              "Place"
-            ]
-          },
-          {
-            "id": "http://schema.org/author",
-            "name": "author",
-            "help": "The author of this content.",
-            "multiple": true,
-            "type": [
-              "Person"
-            ]
-          },
-          {
-            "id": "http://schema.org/datePublished",
-            "name": "datePublished",
-            "help": "Date of first broadcast or publication.",
-            "multiple": true,
-            "type": [
-              "Text"
-            ]
-          },
-          {
-            "id": "http://schema.org/hasPart",
-            "name": "hasPart",
-            "help": "Indicates an item or CreativeWork that is part of this item, or CreativeWork (in some sense).",
-            "multiple": true,
-            "type": [
-              "Dataset",
-              "File"
-            ]
-          },
-          {
-            "id": "http://schema.org/keywords",
-            "name": "keywords",
-            "help": "Keywords or tags used to describe some item. Multiple textual entries in a keywords list are typically delimited by commas, or by repeating the property.",
-            "multiple": true,
-            "type": [
-              "Text"
-            ]
-          },
-          {
-            "id": "http://schema.org/publisher",
-            "name": "publisher",
-            "help": "The publisher of the creative work.",
-            "multiple": true,
-            "type": [
-              "Organization"
-            ]
-          },
-          {
-            "id": "http://schema.org/temporalCoverage",
-            "name": "temporalCoverage",
-            "help": "The temporalCoverage of a CreativeWork indicates the period that the content applies to, i.e. that it describes, either as a DateTime or as a textual string indicating a time period in [ISO 8601 time interval format](https://en.wikipedia.org/wiki/ISO_8601#Time_intervals). In the case of a Dataset it will typically indicate the relevant time period in a precise notation (e.g. for a 2011 census dataset, the year 2011 would be written \"2011/2012\"). Other forms of content, e.g. ScholarlyArticle, Book, TVSeries or TVEpisode, may indicate their temporalCoverage in broader terms - textually or via well-known URL. Written works such as books may sometimes have precise temporal coverage too, e.g. a work set in 1939 - 1945 can be indicated in ISO 8601 interval format format via \"1939/1945\". Open-ended date ranges can be written with \"..\" in place of the end date. For example, \"2015-11/..\" indicates a range beginning in November 2015 and with no specified final date. This is tentative and might be updated in future when ISO 8601 is officially updated.",
-            "multiple": true,
-            "type": [
-              "Text"
-            ]
-          },
-          {
-            "id": "http://schema.org/encodingFormat",
-            "name": "encodingFormat",
-            "help": "Media type typically expressed using a MIME format (see [IANA site](http://www.iana.org/assignments/media-types/media-types.xhtml) and [MDN reference](https://developer.mozilla.org/en-US/docs/Web/HTTP/Basics_of_HTTP/MIME_types)), e.g. application/zip for a SoftwareApplication binary, audio/mpeg for .mp3 In cases where a [[CreativeWork]] has several media type representations, [[encoding]] can be used to indicate each [[MediaObject]] alongside particular [[encodingFormat]] information. Unregistered or niche encoding and file formats can be indicated instead via the most appropriate URL, e.g. defining Web page or a Wikipedia/Wikidata entry.",
-            "multiple": true,
-            "type": [
-              "Text"
-            ]
-          },
-          {
-            "id": "http://schema.org/fileFormat",
-            "name": "fileFormat",
-            "help": "Media type, typically MIME format (see [IANA site](http://www.iana.org/assignments/media-types/media-types.xhtml)) of the content, e.g. application/zip of a SoftwareApplication binary. In cases where a CreativeWork has several media type representations, 'encoding' can be used to indicate each MediaObject alongside particular fileFormat information. Unregistered or niche file formats can be indicated instead via the most appropriate URL, e.g. defining Web page or a Wikipedia entry.",
-            "multiple": true,
-            "type": [
-              "Text"
-            ]
-          },
-          {
-            "id": "http://schema.org/funder",
-            "name": "funder",
-            "help": "A person or organization that supports (sponsors) something through some kind of financial contribution.",
-            "multiple": true,
-            "type": [
-              "Organization"
-            ]
-          },
-          {
-            "id": "http://schema.org/description",
-            "name": "description",
-            "help": "A description of the item.",
-            "multiple": true,
-            "type": [
-              "Text"
-            ]
-          }
-        ]
-      }
+    "PropertyValue": {
+      "hasSubclass": [],
+      "inputs": [
+        {
+          "id": "http://schema.org/name",
+          "name": "name",
+          "help": "The name of the item.",
+          "multiple": true,
+          "type": [
+            "Text"
+          ]
+        },
+        {
+          "id": "http://schema.org/value",
+          "name": "value",
+          "help": "The value of the quantitative value or property value node. For [[QuantitativeValue]] and [[MonetaryAmount]], the recommended type for values is 'Number'. For [[PropertyValue]], it can be 'Text', 'Number', 'Boolean', or 'StructuredValue'. Use values from 0123456789 (Unicode 'DIGIT ZERO' (U+0030) to 'DIGIT NINE' (U+0039)) rather than superficially similar Unicode symbols. Use '.' (Unicode 'FULL STOP' (U+002E)) rather than ',' to indicate a decimal point. Avoid using these symbols as a readability separator.",
+          "multiple": true,
+          "type": [
+            "Text"
+          ]
+        }
+      ]
+    },
+    "URL": {
+      "hasSubclass": [],
+      "inputs": []
+    },
+    "Dataset": {
+      "hasSubclass": [],
+      "inputs": [
+        {
+          "id": "http://schema.org/identifier",
+          "name": "identifier",
+          "help": "The identifier property represents any kind of identifier for any kind of [[Thing]], such as ISBNs, GTIN codes, UUIDs, etc. Schema.org provides dedicated properties for representing many of these, either as textual strings or as URL (URI) links.",
+          "multiple": true,
+          "type": [
+            "Text"
+          ]
+        },
+        {
+          "id": "http://schema.org/citation",
+          "name": "citation",
+          "help": "A citation or reference to another creative work, such as another publication, web page, scholarly article, etc.",
+          "multiple": true,
+          "type": [
+            "ScholarlyArticle"
+          ]
+        },
+        {
+          "id": "http://schema.org/contactPoint",
+          "name": "contactPoint",
+          "help": "A contact point for a person or organization.",
+          "multiple": true,
+          "type": [
+            "ContactPoint"
+          ]
+        },
+        {
+          "id": "http://schema.org/contentLocation",
+          "name": "contentLocation",
+          "help": "The location depicted or described in the content. For example, the location in a photograph or painting.",
+          "multiple": true,
+          "type": [
+            "Place"
+          ]
+        },
+        {
+          "id": "http://schema.org/contentUrl",
+          "name": "contentUrl",
+          "help": "Actual bytes of the media object, for example the image file or video file.",
+          "multiple": true,
+          "type": [
+            "Text"
+          ]
+        },
+        {
+          "id": "http://schema.org/author",
+          "name": "author",
+          "help": "The author of this content.",
+          "multiple": true,
+          "type": [
+            "Person",
+            "Organization"
+          ]
+        },
+        {
+          "id": "http://schema.org/datePublished",
+          "name": "datePublished",
+          "help": "Date of first broadcast or publication.",
+          "multiple": true,
+          "type": [
+            "Date"
+          ]
+        },
+        {
+          "id": "http://schema.org/description",
+          "name": "description",
+          "help": "A description of the item.",
+          "multiple": true,
+          "type": [
+            "Text"
+          ]
+        },
+        {
+          "id": "http://schema.org/hasPart",
+          "name": "hasPart",
+          "help": "Indicates an item or CreativeWork that is part of this item, or CreativeWork (in some sense).",
+          "multiple": true,
+          "type": [
+            "Dataset",
+            "File"
+          ]
+        },
+        {
+          "id": "http://schema.org/keywords",
+          "name": "keywords",
+          "help": "Keywords or tags used to describe some item. Multiple textual entries in a keywords list are typically delimited by commas, or by repeating the property.",
+          "multiple": true,
+          "type": [
+            "Text"
+          ]
+        },
+        {
+          "id": "http://schema.org/name",
+          "name": "name",
+          "help": "The name of the item.",
+          "multiple": true,
+          "type": [
+            "Text"
+          ]
+        },
+        {
+          "id": "http://schema.org/publisher",
+          "name": "publisher",
+          "help": "The publisher of the creative work.",
+          "multiple": true,
+          "type": [
+            "Organization"
+          ]
+        },
+        {
+          "id": "http://schema.org/temporalCoverage",
+          "name": "temporalCoverage",
+          "help": "The temporalCoverage of a CreativeWork indicates the period that the content applies to, i.e. that it describes, either as a DateTime or as a textual string indicating a time period in [ISO 8601 time interval format](https://en.wikipedia.org/wiki/ISO_8601#Time_intervals). In the case of a Dataset it will typically indicate the relevant time period in a precise notation (e.g. for a 2011 census dataset, the year 2011 would be written \"2011/2012\"). Other forms of content, e.g. ScholarlyArticle, Book, TVSeries or TVEpisode, may indicate their temporalCoverage in broader terms - textually or via well-known URL. Written works such as books may sometimes have precise temporal coverage too, e.g. a work set in 1939 - 1945 can be indicated in ISO 8601 interval format format via \"1939/1945\". Open-ended date ranges can be written with \"..\" in place of the end date. For example, \"2015-11/..\" indicates a range beginning in November 2015 and with no specified final date. This is tentative and might be updated in future when ISO 8601 is officially updated.",
+          "multiple": true,
+          "type": [
+            "Text",
+            "DateTime"
+          ]
+        },
+        {
+          "id": "http://schema.org/about",
+          "name": "about",
+          "help": "The subject matter of the content.",
+          "multiple": true,
+          "type": [
+            "Text"
+          ]
+        },
+        {
+          "id": "http://schema.org/encodingFormat",
+          "name": "encodingFormat",
+          "help": "Media type typically expressed using a MIME format (see [IANA site](http://www.iana.org/assignments/media-types/media-types.xhtml) and [MDN reference](https://developer.mozilla.org/en-US/docs/Web/HTTP/Basics_of_HTTP/MIME_types)), e.g. application/zip for a SoftwareApplication binary, audio/mpeg for .mp3. In cases where a [[CreativeWork]] has several media type representations, [[encoding]] can be used to indicate each [[MediaObject]] alongside particular [[encodingFormat]] information. Unregistered or niche encoding and file formats can be indicated instead via the most appropriate URL, e.g. defining Web page or a Wikipedia/Wikidata entry.",
+          "multiple": true,
+          "type": [
+            "Text"
+          ]
+        },
+        {
+          "id": "http://schema.org/fileFormat",
+          "name": "fileFormat",
+          "help": "Media type, typically MIME format (see [IANA site](http://www.iana.org/assignments/media-types/media-types.xhtml)) of the content, e.g. application/zip of a SoftwareApplication binary. In cases where a CreativeWork has several media type representations, 'encoding' can be used to indicate each MediaObject alongside particular fileFormat information. Unregistered or niche file formats can be indicated instead via the most appropriate URL, e.g. defining Web page or a Wikipedia entry.",
+          "multiple": true,
+          "type": [
+            "Text"
+          ]
+        },
+        {
+          "id": "http://schema.org/version",
+          "name": "version",
+          "help": "The version of the CreativeWork embodied by a specified resource.",
+          "multiple": true,
+          "type": [
+            "Text"
+          ]
+        },
+        {
+          "id": "http://schema.org/funder",
+          "name": "funder",
+          "help": "A person or organization that supports (sponsors) something through some kind of financial contribution.",
+          "multiple": true,
+          "type": [
+            "Organization"
+          ]
+        },
+        {
+          "id": "http://schema.org/license",
+          "name": "license",
+          "help": "A license document that applies to this content, typically indicated by URL.",
+          "required": true,
+          "multiple": true,
+          "type": [
+            "CreativeWork",
+            "URL"
+          ]
+        }
+      ]
+    },
+    "ScholarlyArticle": {
+      "hasSubclass": [],
+      "inputs": [
+        {
+          "id": "http://schema.org/author",
+          "name": "author",
+          "help": "The author of this content.",
+          "multiple": true,
+          "type": [
+            "Person"
+          ]
+        },
+        {
+          "id": "http://schema.org/datePublished",
+          "name": "datePublished",
+          "help": "Date of first broadcast or publication.",
+          "multiple": true,
+          "type": [
+            "Text"
+          ]
+        },
+        {
+          "id": "http://schema.org/identifier",
+          "name": "identifier",
+          "help": "The identifier property represents any kind of identifier for any kind of [[Thing]], such as ISBNs, GTIN codes, UUIDs, etc. Schema.org provides dedicated properties for representing many of these, either as textual strings or as URL (URI) links.",
+          "multiple": true,
+          "type": [
+            "Text"
+          ]
+        },
+        {
+          "id": "http://schema.org/name",
+          "name": "name",
+          "help": "The name of the item.",
+          "multiple": true,
+          "type": [
+            "Text"
+          ]
+        }
+      ]
+    },
+    "Organization": {
+      "hasSubclass": [],
+      "inputs": [
+        {
+          "id": "http://schema.org/contactPoint",
+          "name": "contactPoint",
+          "help": "A contact point for a person or organization.",
+          "multiple": true,
+          "type": [
+            "ContactPoint"
+          ]
+        },
+        {
+          "id": "http://schema.org/keywords",
+          "name": "keywords",
+          "help": "Keywords or tags used to describe some item. Multiple textual entries in a keywords list are typically delimited by commas, or by repeating the property.",
+          "multiple": true,
+          "type": [
+            "Text"
+          ]
+        },
+        {
+          "id": "http://schema.org/email",
+          "name": "email",
+          "help": "Email address.",
+          "multiple": true,
+          "type": [
+            "Text"
+          ]
+        },
+        {
+          "id": "http://schema.org/address",
+          "name": "address",
+          "help": "Physical address of the item.",
+          "multiple": true,
+          "type": [
+            "Text"
+          ]
+        },
+        {
+          "id": "http://schema.org/description",
+          "name": "description",
+          "help": "A description of the item.",
+          "multiple": true,
+          "type": [
+            "Text"
+          ]
+        },
+        {
+          "id": "http://schema.org/identifier",
+          "name": "identifier",
+          "help": "The identifier property represents any kind of identifier for any kind of [[Thing]], such as ISBNs, GTIN codes, UUIDs, etc. Schema.org provides dedicated properties for representing many of these, either as textual strings or as URL (URI) links.",
+          "multiple": true,
+          "type": [
+            "Text"
+          ]
+        },
+        {
+          "id": "http://schema.org/name",
+          "name": "name",
+          "help": "The name of the item.",
+          "multiple": true,
+          "type": [
+            "Text"
+          ]
+        },
+        {
+          "id": "http://schema.org/funder",
+          "name": "funder",
+          "help": "A person or organization that supports (sponsors) something through some kind of financial contribution.",
+          "multiple": true,
+          "type": [
+            "Organization"
+          ]
+        }
+      ]
+    },
+    "Person": {
+      "hasSubclass": [],
+      "inputs": [
+        {
+          "id": "http://schema.org/contactPoint",
+          "name": "contactPoint",
+          "help": "A contact point for a person or organization.",
+          "multiple": true,
+          "type": [
+            "ContactPoint"
+          ]
+        },
+        {
+          "id": "http://schema.org/affiliation",
+          "name": "affiliation",
+          "help": "An organization that this person is affiliated with. For example, a school/university, a club, or a team.",
+          "multiple": true,
+          "type": [
+            "Organization"
+          ]
+        },
+        {
+          "id": "http://schema.org/email",
+          "name": "email",
+          "help": "Email address.",
+          "multiple": true,
+          "type": [
+            "Text"
+          ]
+        },
+        {
+          "id": "http://schema.org/familyName",
+          "name": "familyName",
+          "help": "The surname of a person.",
+          "multiple": true,
+          "type": [
+            "Text"
+          ]
+        },
+        {
+          "id": "http://schema.org/givenName",
+          "name": "givenName",
+          "help": "The given or first name of a person.",
+          "multiple": true,
+          "type": [
+            "Text"
+          ]
+        },
+        {
+          "id": "http://schema.org/identifier",
+          "name": "identifier",
+          "help": "The identifier property represents any kind of identifier for any kind of [[Thing]], such as ISBNs, GTIN codes, UUIDs, etc. Schema.org provides dedicated properties for representing many of these, either as textual strings or as URL (URI) links.",
+          "multiple": true,
+          "type": [
+            "Text"
+          ]
+        },
+        {
+          "id": "http://schema.org/name",
+          "name": "name",
+          "help": "The name of the item.",
+          "multiple": true,
+          "type": [
+            "Text"
+          ]
+        },
+        {
+          "id": "http://schema.org/address",
+          "name": "address",
+          "help": "Physical address of the item.",
+          "multiple": true,
+          "type": [
+            "Text"
+          ]
+        },
+        {
+          "id": "http://schema.org/funder",
+          "name": "funder",
+          "help": "A person or organization that supports (sponsors) something through some kind of financial contribution.",
+          "multiple": true,
+          "type": [
+            "Organization"
+          ]
+        }
+      ]
+    },
+    "ContactPoint": {
+      "hasSubclass": [],
+      "inputs": [
+        {
+          "id": "http://schema.org/email",
+          "name": "email",
+          "help": "Email address.",
+          "multiple": true,
+          "type": [
+            "Text"
+          ]
+        },
+        {
+          "id": "http://schema.org/URL",
+          "name": "URL",
+          "help": "Data type: URL.",
+          "multiple": true,
+          "type": [
+            "Text"
+          ]
+        },
+        {
+          "id": "http://schema.org/contactType",
+          "name": "contactType",
+          "help": "A person or organization can have different contact points, for different purposes. For example, a sales contact point, a PR contact point and so on. This property is used to specify the kind of contact point.",
+          "multiple": true,
+          "type": [
+            "Text"
+          ]
+        },
+        {
+          "id": "http://schema.org/identifier",
+          "name": "identifier",
+          "help": "The identifier property represents any kind of identifier for any kind of [[Thing]], such as ISBNs, GTIN codes, UUIDs, etc. Schema.org provides dedicated properties for representing many of these, either as textual strings or as URL (URI) links.",
+          "multiple": true,
+          "type": [
+            "Text"
+          ]
+        },
+        {
+          "id": "http://schema.org/name",
+          "name": "name",
+          "help": "The name of the item.",
+          "multiple": true,
+          "type": [
+            "Text"
+          ]
+        }
+      ]
+    },
+    "Place": {
+      "hasSubclass": [],
+      "inputs": [
+        {
+          "id": "http://schema.org/keywords",
+          "name": "keywords",
+          "help": "Keywords or tags used to describe some item. Multiple textual entries in a keywords list are typically delimited by commas, or by repeating the property.",
+          "multiple": true,
+          "type": [
+            "Text"
+          ]
+        },
+        {
+          "id": "http://schema.org/latitude",
+          "name": "latitude",
+          "help": "The latitude of a location. For example ```37.42242``` ([WGS 84](https://en.wikipedia.org/wiki/World_Geodetic_System)).",
+          "multiple": true,
+          "type": [
+            "Text"
+          ]
+        },
+        {
+          "id": "http://schema.org/longitude",
+          "name": "longitude",
+          "help": "The longitude of a location. For example ```-122.08585``` ([WGS 84](https://en.wikipedia.org/wiki/World_Geodetic_System)).",
+          "multiple": true,
+          "type": [
+            "Text"
+          ]
+        },
+        {
+          "id": "http://schema.org/URL",
+          "name": "URL",
+          "help": "Data type: URL.",
+          "multiple": true,
+          "type": [
+            "Text"
+          ]
+        },
+        {
+          "id": "http://schema.org/address",
+          "name": "address",
+          "help": "Physical address of the item.",
+          "multiple": true,
+          "type": [
+            "Text"
+          ]
+        },
+        {
+          "id": "http://schema.org/description",
+          "name": "description",
+          "help": "A description of the item.",
+          "multiple": true,
+          "type": [
+            "Text"
+          ]
+        },
+        {
+          "id": "http://schema.org/geo",
+          "name": "geo",
+          "help": "The geo coordinates of the place.",
+          "multiple": true,
+          "type": [
+            "Geometry"
+          ]
+        },
+        {
+          "id": "http://schema.org/identifier",
+          "name": "identifier",
+          "help": "The identifier property represents any kind of identifier for any kind of [[Thing]], such as ISBNs, GTIN codes, UUIDs, etc. Schema.org provides dedicated properties for representing many of these, either as textual strings or as URL (URI) links.",
+          "multiple": true,
+          "type": [
+            "Text"
+          ]
+        },
+        {
+          "id": "http://schema.org/name",
+          "name": "name",
+          "help": "The name of the item.",
+          "multiple": true,
+          "type": [
+            "Text"
+          ]
+        }
+      ]
+    },
+    "File": {
+      "hasSubclass": [],
+      "inputs": [
+        {
+          "id": "http://schema.org/contentUrl",
+          "name": "contentUrl",
+          "help": "Actual bytes of the media object, for example the image file or video file.",
+          "multiple": true,
+          "type": [
+            "Text"
+          ]
+        },
+        {
+          "id": "http://schema.org/endTime",
+          "name": "endTime",
+          "help": "The endTime of something. For a reserved event or service (e.g. FoodEstablishmentReservation), the time that it is expected to end. For actions that span a period of time, when the action was performed. E.g. John wrote a book from January to *December*. For media, including audio and video, it's the time offset of the end of a clip within a larger file. Note that Event uses startDate/endDate instead of startTime/endTime, even when describing dates with times. This situation may be clarified in future revisions.",
+          "multiple": true,
+          "type": [
+            "Text"
+          ]
+        },
+        {
+          "id": "http://schema.org/contentSize",
+          "name": "contentSize",
+          "help": "File size in (mega/kilo)bytes.",
+          "multiple": true,
+          "type": [
+            "Text"
+          ]
+        },
+        {
+          "id": "http://schema.org/encodingFormat",
+          "name": "encodingFormat",
+          "help": "Media type typically expressed using a MIME format (see [IANA site](http://www.iana.org/assignments/media-types/media-types.xhtml) and [MDN reference](https://developer.mozilla.org/en-US/docs/Web/HTTP/Basics_of_HTTP/MIME_types)), e.g. application/zip for a SoftwareApplication binary, audio/mpeg for .mp3. In cases where a [[CreativeWork]] has several media type representations, [[encoding]] can be used to indicate each [[MediaObject]] alongside particular [[encodingFormat]] information. Unregistered or niche encoding and file formats can be indicated instead via the most appropriate URL, e.g. defining Web page or a Wikipedia/Wikidata entry.",
+          "multiple": true,
+          "type": [
+            "Text"
+          ]
+        },
+        {
+          "id": "http://schema.org/fileFormat",
+          "name": "fileFormat",
+          "help": "Media type, typically MIME format (see [IANA site](http://www.iana.org/assignments/media-types/media-types.xhtml)) of the content, e.g. application/zip of a SoftwareApplication binary. In cases where a CreativeWork has several media type representations, 'encoding' can be used to indicate each MediaObject alongside particular fileFormat information. Unregistered or niche file formats can be indicated instead via the most appropriate URL, e.g. defining Web page or a Wikipedia entry.",
+          "multiple": true,
+          "type": [
+            "Text"
+          ]
+        },
+        {
+          "id": "http://schema.org/name",
+          "name": "name",
+          "help": "The name of the item.",
+          "multiple": true,
+          "type": [
+            "Text"
+          ]
+        },
+        {
+          "id": "http://schema.org/identifier",
+          "name": "identifier",
+          "help": "The identifier property represents any kind of identifier for any kind of [[Thing]], such as ISBNs, GTIN codes, UUIDs, etc. Schema.org provides dedicated properties for representing many of these, either as textual strings or as URL (URI) links.",
+          "multiple": true,
+          "type": [
+            "Text"
+          ]
+        },
+        {
+          "id": "http://schema.org/about",
+          "name": "about",
+          "help": "The subject matter of the content.",
+          "multiple": true,
+          "type": [
+            "Text"
+          ]
+        },
+        {
+          "id": "http://schema.org/citation",
+          "name": "citation",
+          "help": "A citation or reference to another creative work, such as another publication, web page, scholarly article, etc.",
+          "multiple": true,
+          "type": [
+            "ScholarlyArticle"
+          ]
+        },
+        {
+          "id": "http://schema.org/contentLocation",
+          "name": "contentLocation",
+          "help": "The location depicted or described in the content. For example, the location in a photograph or painting.",
+          "multiple": true,
+          "type": [
+            "Place"
+          ]
+        },
+        {
+          "id": "http://schema.org/author",
+          "name": "author",
+          "help": "The author of this content.",
+          "multiple": true,
+          "type": [
+            "Person"
+          ]
+        },
+        {
+          "id": "http://schema.org/datePublished",
+          "name": "datePublished",
+          "help": "Date of first broadcast or publication.",
+          "multiple": true,
+          "type": [
+            "Text"
+          ]
+        },
+        {
+          "id": "http://schema.org/hasPart",
+          "name": "hasPart",
+          "help": "Indicates an item or CreativeWork that is part of this item, or CreativeWork.",
+          "multiple": true,
+          "type": [
+            "Dataset",
+            "File"
+          ]
+        },
+        {
+          "id": "http://schema.org/keywords",
+          "name": "keywords",
+          "help": "Keywords or tags used to describe some item. Multiple textual entries in a keywords list are typically delimited by commas, or by repeating the property.",
+          "multiple": true,
+          "type": [
+            "Text"
+          ]
+        },
+        {
+          "id": "http://schema.org/publisher",
+          "name": "publisher",
+          "help": "The publisher of the creative work.",
+          "multiple": true,
+          "type": [
+            "Organization"
+          ]
+        },
+        {
+          "id": "http://schema.org/temporalCoverage",
+          "name": "temporalCoverage",
+          "help": "The temporalCoverage of a CreativeWork indicates the period that the content applies to, i.e. that it describes, either as a DateTime or as a textual string indicating a time period in [ISO 8601 time interval format](https://en.wikipedia.org/wiki/ISO_8601#Time_intervals). In the case of a Dataset it will typically indicate the relevant time period in a precise notation (e.g. for a 2011 census dataset, the year 2011 would be written \"2011/2012\"). Other forms of content, e.g. ScholarlyArticle, Book, TVSeries or TVEpisode, may indicate their temporalCoverage in broader terms - textually or via well-known URL. Written works such as books may sometimes have precise temporal coverage too, e.g. a work set in 1939 - 1945 can be indicated in ISO 8601 interval format format via \"1939/1945\". Open-ended date ranges can be written with \"..\" in place of the end date. For example, \"2015-11/..\" indicates a range beginning in November 2015 and with no specified final date. This is tentative and might be updated in future when ISO 8601 is officially updated.",
+          "multiple": true,
+          "type": [
+            "Text"
+          ]
+        },
+        {
+          "id": "http://schema.org/version",
+          "name": "version",
+          "help": "The version of the CreativeWork embodied by a specified resource.",
+          "multiple": true,
+          "type": [
+            "Text"
+          ]
+        },
+        {
+          "id": "http://schema.org/funder",
+          "name": "funder",
+          "help": "A person or organization that supports (sponsors) something through some kind of financial contribution.",
+          "multiple": true,
+          "type": [
+            "Organization"
+          ]
+        },
+        {
+          "id": "http://schema.org/description",
+          "name": "description",
+          "help": "A description of the item.",
+          "multiple": true,
+          "type": [
+            "Text"
+          ]
+        },
+        {
+          "id": "http://schema.org/exifData",
+          "name": "exifData",
+          "help": "exif data for this object.",
+          "multiple": true,
+          "type": [
+            "PropertyValue"
+          ]
+        }
+      ]
+    },
+    "Geometry": {
+      "id": "http://www.opengis.net/ont/geosparql#Geometry",
+      "subClassOf": [],
+      "inputs": [
+        {
+          "id": "http://www.opengis.net/ont/geosparql#asWKT",
+          "name": "asWKT",
+          "help": "The WKT serialisation of the geometry.",
+          "required": true,
+          "multiple": true,
+          "type": [
+            "Text"
+          ]
+        }
+      ]
+    },
+    "IndividualProduct": {
+      "hasSubclass": [],
+      "inputs": [
+        {
+          "id": "http://schema.org/URL",
+          "name": "URL",
+          "help": "Data type: URL.",
+          "multiple": true,
+          "type": [
+            "Text"
+          ]
+        },
+        {
+          "id": "http://schema.org/description",
+          "name": "description",
+          "help": "A description of the item.",
+          "multiple": true,
+          "type": [
+            "Text"
+          ]
+        },
+        {
+          "id": "http://schema.org/identifier",
+          "name": "identifier",
+          "help": "The identifier property represents any kind of identifier for any kind of [[Thing]], such as ISBNs, GTIN codes, UUIDs, etc. Schema.org provides dedicated properties for representing many of these, either as textual strings or as URL (URI) links.",
+          "multiple": true,
+          "type": [
+            "Text"
+          ]
+        },
+        {
+          "id": "http://schema.org/manufacturer",
+          "name": "manufacturer",
+          "help": "The manufacturer of the product.",
+          "multiple": true,
+          "type": [
+            "Text"
+          ]
+        },
+        {
+          "id": "http://schema.org/model",
+          "name": "model",
+          "help": "The model of the product. Use with the URL of a ProductModel or a textual representation of the model identifier. The URL of the ProductModel can be from an external source. It is recommended to additionally provide strong product identifiers via the gtin8/gtin13/gtin14 and mpn properties.",
+          "multiple": true,
+          "type": [
+            "Text"
+          ]
+        },
+        {
+          "id": "http://schema.org/name",
+          "name": "name",
+          "help": "The name of the item.",
+          "multiple": true,
+          "type": [
+            "Text"
+          ]
+        },
+        {
+          "id": "http://schema.org/serialNumber",
+          "name": "serialNumber",
+          "help": "The serial number or any alphanumeric identifier of a particular product. When attached to an offer, it is a shortcut for the serial number of the product included in the offer.",
+          "multiple": true,
+          "type": [
+            "Text"
+          ]
+        }
+      ]
+    },
+    "CreateAction": {
+      "hasSubclass": [],
+      "inputs": [
+        {
+          "id": "http://schema.org/agent",
+          "name": "agent",
+          "help": "The direct performer or driver of the action (animate or inanimate). E.g. *John* wrote a book.",
+          "multiple": true,
+          "type": [
+            "Person"
+          ]
+        },
+        {
+          "id": "http://schema.org/description",
+          "name": "description",
+          "help": "A description of the item.",
+          "multiple": true,
+          "type": [
+            "Text"
+          ]
+        },
+        {
+          "id": "http://schema.org/endTime",
+          "name": "endTime",
+          "help": "The endTime of something. For a reserved event or service (e.g. FoodEstablishmentReservation), the time that it is expected to end. For actions that span a period of time, when the action was performed. E.g. John wrote a book from January to *December*. For media, including audio and video, it's the time offset of the end of a clip within a larger file. Note that Event uses startDate/endDate instead of startTime/endTime, even when describing dates with times. This situation may be clarified in future revisions.",
+          "multiple": true,
+          "type": [
+            "Text"
+          ]
+        },
+        {
+          "id": "http://schema.org/identifier",
+          "name": "identifier",
+          "help": "The identifier property represents any kind of identifier for any kind of [[Thing]], such as ISBNs, GTIN codes, UUIDs, etc. Schema.org provides dedicated properties for representing many of these, either as textual strings or as URL (URI) links.",
+          "multiple": true,
+          "type": [
+            "Text"
+          ]
+        },
+        {
+          "id": "http://schema.org/instrument",
+          "name": "instrument",
+          "help": "The object that helped the agent perform the action. E.g. John wrote a book with *a pen*.",
+          "multiple": true,
+          "type": [
+            "IndividualProduct",
+            "SoftwareApplication"
+          ]
+        },
+        {
+          "id": "http://schema.org/name",
+          "name": "name",
+          "help": "The name of the item.",
+          "multiple": true,
+          "type": [
+            "Text"
+          ]
+        },
+        {
+          "id": "http://schema.org/object",
+          "name": "object",
+          "help": "The object upon which the action is carried out, whose state is kept intact or changed. Also known as the semantic roles patient, affected or undergoer (which change their state) or theme (which doesn't). E.g. John read *a book*.",
+          "multiple": true,
+          "type": [
+            "Place",
+            "File"
+          ]
+        },
+        {
+          "id": "http://schema.org/result",
+          "name": "result",
+          "help": "The result produced in the action. E.g. John wrote *a book*.",
+          "multiple": true,
+          "type": [
+            "File"
+          ]
+        }
+      ]
+    },
+    "SoftwareApplication": {
+      "hasSubclass": [],
+      "inputs": [
+        {
+          "id": "http://schema.org/URL",
+          "name": "URL",
+          "help": "Data type: URL.",
+          "multiple": true,
+          "type": [
+            "Text"
+          ]
+        },
+        {
+          "id": "http://schema.org/identifier",
+          "name": "identifier",
+          "help": "The identifier property represents any kind of identifier for any kind of [[Thing]], such as ISBNs, GTIN codes, UUIDs, etc. Schema.org provides dedicated properties for representing many of these, either as textual strings or as URL (URI) links.",
+          "multiple": true,
+          "type": [
+            "Text"
+          ]
+        },
+        {
+          "id": "http://schema.org/name",
+          "name": "name",
+          "help": "The name of the item.",
+          "multiple": true,
+          "type": [
+            "Text"
+          ]
+        },
+        {
+          "id": "http://schema.org/version",
+          "name": "version",
+          "help": "The version of the CreativeWork embodied by a specified resource.",
+          "multiple": true,
+          "type": [
+            "Text"
+          ]
+        },
+        {
+          "id": "http://schema.org/about",
+          "name": "about",
+          "help": "The subject matter of the content.",
+          "multiple": true,
+          "type": [
+            "Text"
+          ]
+        },
+        {
+          "id": "http://schema.org/citation",
+          "name": "citation",
+          "help": "A citation or reference to another creative work, such as another publication, web page, scholarly article, etc.",
+          "multiple": true,
+          "type": [
+            "ScholarlyArticle"
+          ]
+        },
+        {
+          "id": "http://schema.org/contentLocation",
+          "name": "contentLocation",
+          "help": "The location depicted or described in the content. For example, the location in a photograph or painting.",
+          "multiple": true,
+          "type": [
+            "Place"
+          ]
+        },
+        {
+          "id": "http://schema.org/author",
+          "name": "author",
+          "help": "The author of this content.",
+          "multiple": true,
+          "type": [
+            "Person"
+          ]
+        },
+        {
+          "id": "http://schema.org/datePublished",
+          "name": "datePublished",
+          "help": "Date of first broadcast or publication.",
+          "multiple": true,
+          "type": [
+            "Text"
+          ]
+        },
+        {
+          "id": "http://schema.org/hasPart",
+          "name": "hasPart",
+          "help": "Indicates an item or CreativeWork that is part of this item, or CreativeWork (in some sense).",
+          "multiple": true,
+          "type": [
+            "Dataset",
+            "File"
+          ]
+        },
+        {
+          "id": "http://schema.org/keywords",
+          "name": "keywords",
+          "help": "Keywords or tags used to describe some item. Multiple textual entries in a keywords list are typically delimited by commas, or by repeating the property.",
+          "multiple": true,
+          "type": [
+            "Text"
+          ]
+        },
+        {
+          "id": "http://schema.org/publisher",
+          "name": "publisher",
+          "help": "The publisher of the creative work.",
+          "multiple": true,
+          "type": [
+            "Organization"
+          ]
+        },
+        {
+          "id": "http://schema.org/temporalCoverage",
+          "name": "temporalCoverage",
+          "help": "The temporalCoverage of a CreativeWork indicates the period that the content applies to, i.e. that it describes, either as a DateTime or as a textual string indicating a time period in [ISO 8601 time interval format](https://en.wikipedia.org/wiki/ISO_8601#Time_intervals). In the case of a Dataset it will typically indicate the relevant time period in a precise notation (e.g. for a 2011 census dataset, the year 2011 would be written \"2011/2012\"). Other forms of content, e.g. ScholarlyArticle, Book, TVSeries or TVEpisode, may indicate their temporalCoverage in broader terms - textually or via well-known URL. Written works such as books may sometimes have precise temporal coverage too, e.g. a work set in 1939 - 1945 can be indicated in ISO 8601 interval format format via \"1939/1945\". Open-ended date ranges can be written with \"..\" in place of the end date. For example, \"2015-11/..\" indicates a range beginning in November 2015 and with no specified final date. This is tentative and might be updated in future when ISO 8601 is officially updated.",
+          "multiple": true,
+          "type": [
+            "Text"
+          ]
+        },
+        {
+          "id": "http://schema.org/encodingFormat",
+          "name": "encodingFormat",
+          "help": "Media type typically expressed using a MIME format (see [IANA site](http://www.iana.org/assignments/media-types/media-types.xhtml) and [MDN reference](https://developer.mozilla.org/en-US/docs/Web/HTTP/Basics_of_HTTP/MIME_types)), e.g. application/zip for a SoftwareApplication binary, audio/mpeg for .mp3 In cases where a [[CreativeWork]] has several media type representations, [[encoding]] can be used to indicate each [[MediaObject]] alongside particular [[encodingFormat]] information. Unregistered or niche encoding and file formats can be indicated instead via the most appropriate URL, e.g. defining Web page or a Wikipedia/Wikidata entry.",
+          "multiple": true,
+          "type": [
+            "Text"
+          ]
+        },
+        {
+          "id": "http://schema.org/fileFormat",
+          "name": "fileFormat",
+          "help": "Media type, typically MIME format (see [IANA site](http://www.iana.org/assignments/media-types/media-types.xhtml)) of the content, e.g. application/zip of a SoftwareApplication binary. In cases where a CreativeWork has several media type representations, 'encoding' can be used to indicate each MediaObject alongside particular fileFormat information. Unregistered or niche file formats can be indicated instead via the most appropriate URL, e.g. defining Web page or a Wikipedia entry.",
+          "multiple": true,
+          "type": [
+            "Text"
+          ]
+        },
+        {
+          "id": "http://schema.org/funder",
+          "name": "funder",
+          "help": "A person or organization that supports (sponsors) something through some kind of financial contribution.",
+          "multiple": true,
+          "type": [
+            "Organization"
+          ]
+        },
+        {
+          "id": "http://schema.org/description",
+          "name": "description",
+          "help": "A description of the item.",
+          "multiple": true,
+          "type": [
+            "Text"
+          ]
+        }
+      ]
     }
   }
+}

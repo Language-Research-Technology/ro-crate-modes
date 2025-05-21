@@ -10,14 +10,16 @@
     "ldac": "https://w3id.org/ldac/terms#"
   },
   "context": [],
- "conformsToUri": [
-   "https://w3id.org/ldac/profile#Collection"
- ],
+  "conformsToUri": [
+    "https://w3id.org/ldac/profile#Collection"
+  ],
   "rootDataset": {
-    "type": ["Dataset", "RepositoryCollection"]
+    "type": [
+      "Dataset",
+      "RepositoryCollection"
+    ]
   },
-  "inputGroups" : 
-  [
+  "inputGroups": [
     {
       "name": "About",
       "help": "The core metadata for this RO-Crate and its subject matter.",
@@ -127,7 +129,7 @@
     {
       "name": "Software & Hardware",
       "help": "For computer programs and execution environments that could be used to create data, have created data, or are being packaged and described.",
-        "inputs": [
+      "inputs": [
         "http://schema.org/availableOnDevice",
         "http://schema.org/downloadUrl",
         "http://schema.org/installUrl",
@@ -169,6 +171,7 @@
     "Dataset",
     "Person",
     "Place",
+    "Geometry",
     "GeoCoordinates",
     "GeoShape",
     "Organization",
@@ -176,7 +179,11 @@
     "ScholarlyArticle",
     "RepositoryCollection",
     "CreativeWork",
-    "CollectionProtocol",
+    "ldac:CollectionEvent",
+    "ldac:CollectionProtocol",
+    "ldac:DataDepositLicense",
+    "ldac:DataLicense",
+    "ldac:DataReuseLicense",
     "File",
     "Language"
   ],
@@ -212,7 +219,7 @@
           "required": true,
           "multiple": false,
           "type": [
-            "DataReuseLicense"
+            "ldac:DataReuseLicense"
           ]
         },
         {
@@ -360,7 +367,7 @@
           "name": "ldac:hasCollectionProtocol",
           "help": "A link to a CollectionProtocol object with (at least) a summary of how resources were selected or elicited for this collection/sub-collection.",
           "type": [
-            "CollectionProtocol"
+            "ldac:CollectionProtocol"
           ],
           "multiple": false
         },
@@ -741,7 +748,7 @@
           "name": "ldac:hasCollectionProtocol",
           "help": "A link to a CollectionProtocol object with (at least) a summary of how resources were selected or elicited for this collection/sub-collection.",
           "type": [
-            "CollectionProtocol"
+            "ldac:CollectionProtocol"
           ],
           "multiple": false
         },
@@ -762,7 +769,7 @@
             "Date"
           ],
           "multiple": false
-        }, 
+        },
         {
           "id": "https://w3id.org/ldac/terms#dateFreeText",
           "name": "ldac:dateFreeText",
@@ -771,7 +778,7 @@
             "Text"
           ],
           "multiple": false
-        }, 
+        },
         {
           "id": "http://schema.org/holdingArchive",
           "name": "holdingArchive",
@@ -872,7 +879,7 @@
         }
       ]
     },
-    "CollectionProtocol": {
+    "ldac:CollectionProtocol": {
       "subClassOf": [],
       "inputs": [
         {
@@ -920,7 +927,7 @@
               "inDefinedTermSet": {
                 "@id": "ldac:CollectionProtocolTypeTerms"
               },
-              "name": "ElicitationTask"
+              "name": "ldac:ElicitationTask"
             },
             {
               "@id": "ldac:TextSelectionCriteria",
@@ -929,7 +936,7 @@
               "inDefinedTermSet": {
                 "@id": "ldac:CollectionProtocolTypeTerms"
               },
-              "name": "TextSelectionCriteria"
+              "name": "ldac:TextSelectionCriteria"
             }
           ],
           "multiple": false
@@ -990,15 +997,13 @@
         }
       ]
     },
-   
     "Geometry": {
       "id": "http://www.opengis.net/ont/geosparql#Geometry",
       "subClassOf": [],
       "inputs": [
         {
           "id": "http://www.opengis.net/ont/geosparql#asWKT",
-          "name": "geosparql:asWKT",
-          "label": "asWKT",
+          "name": "asWKT",
           "help": "The WKT serialisation of the geometry.",
           "required": true,
           "multiple": true,
@@ -1011,7 +1016,6 @@
     "Person": {
       "subClassOf": [],
       "inputs": [
-       
         {
           "id": "http://schema.org/name",
           "name": "name",
