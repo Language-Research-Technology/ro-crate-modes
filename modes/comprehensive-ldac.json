@@ -42,6 +42,7 @@
         "https://w3id.org/ldac/terms#doi",
         "https://w3id.org/ldac/terms#indexableText",
         "https://w3id.org/ldac/terms#itemLocation",
+        "https://w3id.org/ldac/terms#mainText",
         "https://w3id.org/ldac/terms#materialType"
       ]
     },
@@ -1026,7 +1027,7 @@
           "help": "A license document that applies to this content, typically indicated by URL.",
           "multiple": true,
           "type": [
-            "OrganizationReuseLicense"
+            "ldac:DataReuseLicense"
           ]
         },
         {
@@ -1857,6 +1858,15 @@
           ]
         },
         {
+          "id": "https://w3id.org/ldac/terms#mainText",
+          "name": "ldac:mainText",
+          "help": "Identifies the most relevant sub-component for computational text analytics.",
+          "type": [
+            "MediaObject"
+          ],
+          "multiple": true
+        },
+        {
           "id": "https://w3id.org/ldac/terms#material",
           "name": "ldac:material",
           "help": "Description of the original media, e.g. audio cassette tapes, participant questionnaires, field notes.",
@@ -2401,7 +2411,7 @@
           "help": "A license document that applies to this content, typically indicated by URL.",
           "multiple": true,
           "type": [
-            "OrganizationReuseLicense"
+            "ldac:DataReuseLicense"
           ]
         },
         {
