@@ -42,6 +42,7 @@
         "https://w3id.org/ldac/terms#doi",
         "https://w3id.org/ldac/terms#indexableText",
         "https://w3id.org/ldac/terms#itemLocation",
+        "https://w3id.org/ldac/terms#mainText",
         "https://w3id.org/ldac/terms#materialType"
       ]
     },
