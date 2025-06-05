@@ -734,7 +734,7 @@
           "type": [
             "Language"
           ],
-          "required": true,
+          "required": false,
           "multiple": true
         },
         {
@@ -990,6 +990,7 @@
           "id": "http://schema.org/inLanguage",
           "name": "inLanguage",
           "help": "The language in which the resource is written.",
+          "required": true,
           "multiple": true,
           "type": [
             "Language"
@@ -2595,6 +2596,7 @@
           "id": "http://schema.org/inLanguage",
           "name": "inLanguage",
           "help": "The language in which the resource is written.",
+          "required": false,
           "multiple": true,
           "type": [
             "Language"
