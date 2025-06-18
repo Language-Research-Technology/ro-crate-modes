@@ -137,6 +137,7 @@
         "https://w3id.org/ldac/terms#subjectLanguage",
         "https://w3id.org/ldac/terms#communicationMode",
         "https://w3id.org/ldac/terms#linguisticGenre",
+        "https://w3id.org/ldac/terms#orthographicNotes",
         "https://w3id.org/ldac/terms#annotationType",
         "https://w3id.org/ldac/terms#register"
       ]
@@ -1492,15 +1493,6 @@
           ],
           "values": [
             {
-              "@id": "ldac:Coded",
-              "@type": "DefinedTerm",
-              "description": "The resource contains an analysis or annotations represented by a code (such as the International Phonetic Alphabet).",
-              "inDefinedTermSet": {
-                "@id": "ldac:CommunicationModeTerms"
-              },
-              "name": "ldac:Coded"
-            },
-            {
               "@id": "ldac:Gesture",
               "@type": "DefinedTerm",
               "description": "The resource contains non-linguistic gestural communication (i.e. not sign language).",
@@ -1900,6 +1892,15 @@
           ]
         },
         {
+          "id": "https://w3id.org/ldac/terms#orthographicNotes",
+          "name": "ldac:orthographicNotes",
+          "help": "A description of the specific orthographic writing system(s) used in the material (e.g. Latin, Cyrillic, Australian English, IPA), or particular conventions required to understand the material (e.g. O* = ø).",
+          "type": [
+            "Text"
+          ],
+          "multiple": false
+        },
+        {
           "id": "https://w3id.org/ldac/terms#participant",
           "name": "ldac:participant",
           "help": "The participant was present during the creation of the resource, but did not contribute substantially to its content.",
@@ -2270,7 +2271,7 @@
         {
           "id": "https://w3id.org/ldac/terms#age",
           "name": "ldac:age",
-          "help": "The age of a person. If an age is specified, a specializationOf pointing to a 'canonical' ageless version of that Person can also be included.",
+          "help": "The age or age range of a person, e.g. 25, 30-50, >50. If an age is specified, a specializationOf pointing to a 'canonical' ageless version of that Person can also be included.",
           "type": [
             "Text"
           ],
