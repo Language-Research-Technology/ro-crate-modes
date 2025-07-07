@@ -1,27 +1,25 @@
 # Differences from Describo Profiles
 
-The RO-Crate editor profiles in this repository are based on the approach taken
+The RO-Crate Modes in this repository are based on the approach taken
 in the [Describo] project, but there are some differences, mainly
 simplifications.
 
-
-## These profiles are used for *all* schemas - there is no background 
+## These profiles are used for _all_ schemas - there is no background
 
 In Describo there are two layers of vocabulary/schema; a compiled,
 built-in "schema"
 [derived from the Schema.org Schema](https://github.com/describo/type-definitions)
 (see
-[Schema.org style Schemas and RO-Crate Editor Profiles explained](./soss-pofiles.md)
+[Schema.org style Schemas and RO-Crate Editor Profiles explained](./soss-profiles.md)
 for more on this). Describo profiles are loaded on top of this background schema
 and hence have some features such as `inherit` that say whether or not
 properties from the underlying schema.
-
 
 The Crate-O approach to profiles does not continue Describo's two-layered
 approach of having a built-in compiled profile-like schema with separate user-loadable profiles. Instead, each profile is a self-contained specification of all the Classes and Properties needed for a particular RO-Crate profile.
 
 For example, the base profile for Crate-O
-is [compiled from the Schema.org profile](./docs/soss-pofiles.md), with a few extra classes and
+is [compiled from the Schema.org profile](./docs/soss-profiles.md), with a few extra classes and
 properties that RO-Crate adds and is entirely self-contained. As with Describo,
 users can switch profiles to add `foreign` classes and properties to their
 crates, depending on how the tool has been deployed.
@@ -29,11 +27,10 @@ crates, depending on how the tool has been deployed.
 The Crate-O team and associates are building tools to create these complete
 profiles from Schema.org Style Schemas, example documents, and other schema
 approaches such as those used in [Bioschemas] (see
-[Schema.org style Schemas and RO-Crate Editor Profiles explained](./soss-pofiles.md)
+[Schema.org style Schemas and RO-Crate Editor Profiles explained](./soss-profiles.md)
 for more on this).
 
-
-[Bioschemas]: 
+[Bioschemas]:
 
 ## Compound types are not "stringified" (collapsed to comma-separated strings without normalising the order)
 
@@ -41,16 +38,17 @@ Describo Profiles deal with RO-Crate entities that have multiple types by
 concatenating them into a single string.
 
 > ## Classes
+>
 > This section contains class definitions a user can use in their dataset description. The structure
 > is similar to the hide and layouts sections above where the key is the stringified `@type` and it
-defines what can and can't be described to the UI.
+> defines what can and can't be described to the UI.
 > <https://github.com/describo/profiles/blob/6e1745f24ef78290fce4db94c4ac6bf813f97f29/profile-docs/profile-structure.md?plain=1#L71>
 
 In the current Describo implementation, there is a limitation with the approach
 in that the order of Types in input data is significant so an item with
 `"@type": ["Dataset", "RepositoryCollection"]` and
 `"@type": ["RepositoryCollection", "Dataset"]` will be treated differently (the
-obvious fix is to *sort* the types before casting the
+obvious fix is to _sort_ the types before casting the
 array to a string).
 
 In Crate-O, our current thinking on multiple types is we will allow the `inputs`
@@ -70,7 +68,7 @@ section which groups properties thematically for all classes. This both reduces
 the amount of configuration needed for a profile and ensures consistency in the
 interface. This means that a given property will always show up in the same place under the same
 heading or tab (depending on how groups/layouts are implemented). There is also
-a default set of `input-groups` with the most commonly used schema.org and RO-Crate properties
+a default set of `input-groups` with the most commonly used Schema.org and RO-Crate properties
 grouped by function (are the structure related? spatiotemporal? etc). This will
 help ensure consistency across profiles and in most cases, profile designers
 will only need to specify `input-groups` for Properties that are specific to their
@@ -93,7 +91,5 @@ RO-Crate identified by their RoR ID.
 In Crate-O we have changed this slightly to add the name of a lookup service to
 use (which is configured elsewhere in the tool).
 
-
-[Bioschemas]: https://bioschemas.org/ 
-
-[RoR]:https://ror.org/
+[Bioschemas]: https://bioschemas.org/
+[RoR]: https://ror.org/

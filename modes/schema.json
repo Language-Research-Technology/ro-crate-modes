@@ -14,8 +14,7 @@
       "type": "Dataset"
     }
   },
-  "inputGroups" : 
-  [
+  "inputGroups": [
     {
       "name": "About",
       "help": "The core metadata for this RO-Crate and its subject matter.",
@@ -47,7 +46,6 @@
         "http://schema.org/funder",
         "http://schema.org/affiliation",
         "http://schema.org/citation"
-  
       ]
     },
     {
@@ -63,7 +61,6 @@
       ]
     }
   ],
-  
   "lookup": {
     "Language": {
       "module": "datapack",
@@ -83,7 +80,6 @@
   },
   "classes": {
     "Dataset": {
-
       "subClassOf": [],
       "inputs": [
         {
@@ -108,7 +104,6 @@
             "Text"
           ]
         },
-       
         {
           "id": "http://schema.org/author",
           "name": "author",
@@ -151,7 +146,6 @@
       ]
     },
     "rdfs:Class": {
-
       "subClassOf": [],
       "inputs": [
         {
@@ -204,7 +198,6 @@
       ]
     },
     "DefinedTerm": {
-
       "subClassOf": [],
       "inputs": [
         {
@@ -247,7 +240,6 @@
       ]
     },
     "DefinedTermSet": {
-
       "subClassOf": [],
       "inputs": [
         {
@@ -290,7 +282,6 @@
       ]
     },
     "rdf:Property": {
-
       "subClassOf": [],
       "inputs": [
         {
@@ -371,7 +362,6 @@
       ]
     },
     "Person": {
-
       "subClassOf": [],
       "inputs": [
         {
@@ -406,7 +396,6 @@
       ]
     },
     "Organization": {
-
       "subClassOf": [],
       "inputs": [
         {
@@ -448,6 +437,6 @@
     "ScholarlyArticle",
     "RepositoryCollection",
     "CreativeWork",
-    "CollectionProtocol"
+    "ldac:CollectionProtocol"
   ]
-}   
+}

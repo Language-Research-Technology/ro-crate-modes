@@ -11,7 +11,7 @@ rectangle "Tool: rocsoss script" as rocsoss
 }
 
 rectangle "Domain-Specific Mode File" as mod
-rectangle "Domain Specific SOSS" as dssoss
+rectangle "Domain-Specific SOSS" as dssoss
 sos -down-> rocsoss : input 
 roc -down-> rocsoss : input
 
@@ -21,6 +21,6 @@ rocsoss -down-> mod : Generate
 
 rocsoss .down.> dssoss : Optional: Generate 
 
-note bottom of mod : Contains Classes and Properties representing\nthe intersection of the example(s) and\nschema.org/RO-Crate entities
-note bottom of dssoss : Domain specific\nSchema.org Style Schema
+note bottom of mod : Contains Classes and Properties representing\nthe intersection of the example(s) and\nSchema.org/RO-Crate entities
+note bottom of dssoss : Domain-Specific\nSchema.org Style Schema
 @enduml
