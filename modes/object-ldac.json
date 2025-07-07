@@ -2267,7 +2267,7 @@
         {
           "id": "https://w3id.org/ldac/terms#age",
           "name": "ldac:age",
-          "help": "The age of a person. If an age is specified, a prov:specializationOf pointing to a 'canonical' ageless version of that Person can also be included.",
+          "help": "The age or age range of a person, e.g. 25, 30-50, >50. If an age is specified, a prov:specializationOf pointing to a 'canonical' ageless version of that Person can also be included.",
           "type": [
             "Text"
           ],
