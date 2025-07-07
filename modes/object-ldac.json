@@ -1,7 +1,7 @@
 {
   "metadata": {
-    "name": "Language Data Commons Comprehensive Collection",
-    "description": "Implements the language data commons RO-Crate Metadata Profile for the top-level, objects and files.",
+    "name": "Language Data Commons Object Collection",
+    "description": "Implements the language data commons RO-Crate Metadata Profile for objects and files.",
     "version": 0.3,
     "author": "University of Queensland",
     "license": "GPL-3.0"
@@ -11,12 +11,12 @@
   },
   "context": [],
   "conformsToUri": [
-    "https://w3id.org/ldac/profile#Collection"
+    "https://w3id.org/ldac/profile#Object"
   ],
   "rootDataset": {
     "type": [
       "Dataset",
-      "RepositoryCollection"
+      "RepositoryObject"
     ]
   },
   "inputGroups": [
@@ -203,21 +203,18 @@
     "Dataset",
     "Person",
     "Place",
-    "Geometry",
     "GeoCoordinates",
     "GeoShape",
-    "Language",
     "Organization",
     "Book",
     "ScholarlyArticle",
-    "RepositoryCollection",
     "RepositoryObject",
     "CreativeWork",
-    "ldac:CollectionEvent",
+    "CollectionEvent",
     "ldac:CollectionProtocol",
-    "ldac:DataDepositLicense",
-    "ldac:DataLicense",
-    "ldac:DataReuseLicense",
+    "DataDepositLicense",
+    "DataLicense",
+    "DataReuseLicense",
     "File"
   ],
   "classes": {
@@ -251,7 +248,7 @@
           "required": true,
           "multiple": false,
           "type": [
-            "ldac:DataReuseLicense"
+            "DataReuseLicense"
           ]
         },
         {
@@ -261,7 +258,7 @@
           "required": false,
           "multiple": true,
           "type": [
-            "ldac:PrimaryMaterial"
+            "PrimaryMaterial"
           ]
         },
         {
@@ -411,7 +408,6 @@
           "name": "pcdm:hasMember",
           "help": "The sub-collections, if any, associated with this collection.",
           "type": [
-            "RepositoryCollection",
             "RepositoryObject"
           ],
           "multiple": true
@@ -1031,7 +1027,7 @@
           "help": "A license document that applies to this content, typically indicated by URL.",
           "multiple": true,
           "type": [
-            "ldac:DataReuseLicense"
+            "OrganizationReuseLicense"
           ]
         },
         {
@@ -1040,7 +1036,7 @@
           "help": "This resource is referenced by another resource that adds information to it such as a translation, transcription or other analysis.",
           "multiple": true,
           "type": [
-            "ldac:Annotation"
+            "Annotation"
           ]
         },
         {
@@ -1310,8 +1306,7 @@
       "id": "http://schema.org/CreativeWork",
       "hasSubclass": [
         "RepositoryCollection",
-        "ldac:CollectionProtocol",
-        "ldac:DataLicense"
+        "ldac:CollectionProtocol"
       ],
       "inputs": [
         {
@@ -1351,7 +1346,7 @@
           "required": false,
           "multiple": true,
           "type": [
-            "ldac:PrimaryMaterial"
+            "PrimaryMaterial"
           ]
         },
         {
@@ -1370,7 +1365,7 @@
               "inDefinedTermSet": {
                 "@id": "ldac:AnnotationTypeTerms"
               },
-              "name": "ldac:Gestural"
+              "name": "Gestural"
             },
             {
               "@id": "ldac:Orthographic",
@@ -1379,7 +1374,7 @@
               "inDefinedTermSet": {
                 "@id": "ldac:AnnotationTypeTerms"
               },
-              "name": "ldac:Orthographic"
+              "name": "Orthographic"
             },
             {
               "@id": "ldac:PartOfSpeech",
@@ -1388,7 +1383,7 @@
               "inDefinedTermSet": {
                 "@id": "ldac:AnnotationTypeTerms"
               },
-              "name": "ldac:PartOfSpeech"
+              "name": "PartOfSpeech"
             },
             {
               "@id": "ldac:Phonemic",
@@ -1397,7 +1392,7 @@
               "inDefinedTermSet": {
                 "@id": "ldac:AnnotationTypeTerms"
               },
-              "name": "ldac:Phonemic"
+              "name": "Phonemic"
             },
             {
               "@id": "ldac:Phonetic",
@@ -1406,7 +1401,7 @@
               "inDefinedTermSet": {
                 "@id": "ldac:AnnotationTypeTerms"
               },
-              "name": "ldac:Phonetic"
+              "name": "Phonetic"
             },
             {
               "@id": "ldac:Phonological",
@@ -1415,7 +1410,7 @@
               "inDefinedTermSet": {
                 "@id": "ldac:AnnotationTypeTerms"
               },
-              "name": "ldac:Phonological"
+              "name": "Phonological"
             },
             {
               "@id": "ldac:Prosodic",
@@ -1424,7 +1419,7 @@
               "inDefinedTermSet": {
                 "@id": "ldac:AnnotationTypeTerms"
               },
-              "name": "ldac:Prosodic"
+              "name": "Prosodic"
             },
             {
               "@id": "ldac:Semantic",
@@ -1433,7 +1428,7 @@
               "inDefinedTermSet": {
                 "@id": "ldac:AnnotationTypeTerms"
               },
-              "name": "ldac:Semantic"
+              "name": "Semantic"
             },
             {
               "@id": "ldac:Syntactic",
@@ -1442,7 +1437,7 @@
               "inDefinedTermSet": {
                 "@id": "ldac:AnnotationTypeTerms"
               },
-              "name": "ldac:Syntactic"
+              "name": "Syntactic"
             },
             {
               "@id": "ldac:Transcription",
@@ -1451,7 +1446,7 @@
               "inDefinedTermSet": {
                 "@id": "ldac:AnnotationTypeTerms"
               },
-              "name": "ldac:Transcription"
+              "name": "Transcription"
             },
             {
               "@id": "ldac:Translation",
@@ -1460,7 +1455,7 @@
               "inDefinedTermSet": {
                 "@id": "ldac:AnnotationTypeTerms"
               },
-              "name": "ldac:Translation"
+              "name": "Translation"
             }
           ]
         },
@@ -1499,7 +1494,7 @@
               "inDefinedTermSet": {
                 "@id": "ldac:CommunicationModeTerms"
               },
-              "name": "ldac:Gesture"
+              "name": "Gesture"
             },
             {
               "@id": "ldac:SignedLanguage",
@@ -1508,7 +1503,7 @@
               "inDefinedTermSet": {
                 "@id": "ldac:CommunicationModeTerms"
               },
-              "name": "ldac:SignedLanguage"
+              "name": "SignedLanguage"
             },
             {
               "@id": "ldac:Song",
@@ -1517,7 +1512,7 @@
               "inDefinedTermSet": {
                 "@id": "ldac:CommunicationModeTerms"
               },
-              "name": "ldac:Song"
+              "name": "Song"
             },
             {
               "@id": "ldac:SpokenLanguage",
@@ -1526,7 +1521,7 @@
               "inDefinedTermSet": {
                 "@id": "ldac:CommunicationModeTerms"
               },
-              "name": "ldac:SpokenLanguage"
+              "name": "SpokenLanguage"
             },
             {
               "@id": "ldac:WhistledLanguage",
@@ -1535,7 +1530,7 @@
               "inDefinedTermSet": {
                 "@id": "ldac:CommunicationModeTerms"
               },
-              "name": "ldac:WhistledLanguage"
+              "name": "WhistledLanguage"
             },
             {
               "@id": "ldac:WrittenLanguage",
@@ -1544,7 +1539,7 @@
               "inDefinedTermSet": {
                 "@id": "ldac:CommunicationModeTerms"
               },
-              "name": "ldac:WrittenLanguage"
+              "name": "WrittenLanguage"
             }
           ]
         },
@@ -1643,7 +1638,7 @@
           "help": "This resource is referenced by another resource that adds information to it such as a translation, transcription or other analysis.",
           "multiple": true,
           "type": [
-            "ldac:Annotation"
+            "Annotation"
           ]
         },
         {
@@ -1750,7 +1745,7 @@
               "inDefinedTermSet": {
                 "@id": "ldac:LinguisticGenreTerms"
               },
-              "name": "ldac:Dialogue"
+              "name": "Dialogue"
             },
             {
               "@id": "ldac:Drama",
@@ -1759,7 +1754,7 @@
               "inDefinedTermSet": {
                 "@id": "ldac:LinguisticGenreTerms"
               },
-              "name": "ldac:Drama"
+              "name": "Drama"
             },
             {
               "@id": "ldac:Formulaic",
@@ -1768,7 +1763,7 @@
               "inDefinedTermSet": {
                 "@id": "ldac:LinguisticGenreTerms"
               },
-              "name": "ldac:Formulaic"
+              "name": "Formulaic"
             },
             {
               "@id": "ldac:Informational",
@@ -1777,7 +1772,7 @@
               "inDefinedTermSet": {
                 "@id": "ldac:LinguisticGenreTerms"
               },
-              "name": "ldac:Informational"
+              "name": "Informational"
             },
             {
               "@id": "ldac:Interview",
@@ -1786,7 +1781,7 @@
               "inDefinedTermSet": {
                 "@id": "ldac:LinguisticGenreTerms"
               },
-              "name": "ldac:Interview"
+              "name": "Interview"
             },
             {
               "@id": "ldac:Lexicon",
@@ -1795,7 +1790,7 @@
               "inDefinedTermSet": {
                 "@id": "ldac:LinguisticGenreTerms"
               },
-              "name": "ldac:Lexicon"
+              "name": "Lexicon"
             },
             {
               "@id": "ldac:Ludic",
@@ -1804,7 +1799,7 @@
               "inDefinedTermSet": {
                 "@id": "ldac:LinguisticGenreTerms"
               },
-              "name": "ldac:Ludic"
+              "name": "Ludic"
             },
             {
               "@id": "ldac:Narrative",
@@ -1813,7 +1808,7 @@
               "inDefinedTermSet": {
                 "@id": "ldac:LinguisticGenreTerms"
               },
-              "name": "ldac:Narrative"
+              "name": "Narrative"
             },
             {
               "@id": "ldac:Oratory",
@@ -1822,7 +1817,7 @@
               "inDefinedTermSet": {
                 "@id": "ldac:LinguisticGenreTerms"
               },
-              "name": "ldac:Oratory"
+              "name": "Oratory"
             },
             {
               "@id": "ldac:Procedural",
@@ -1831,7 +1826,7 @@
               "inDefinedTermSet": {
                 "@id": "ldac:LinguisticGenreTerms"
               },
-              "name": "ldac:Procedural"
+              "name": "Procedural"
             },
             {
               "@id": "ldac:Report",
@@ -1840,7 +1835,7 @@
               "inDefinedTermSet": {
                 "@id": "ldac:LinguisticGenreTerms"
               },
-              "name": "ldac:Report"
+              "name": "Report"
             },
             {
               "@id": "ldac:Thesaurus",
@@ -1849,7 +1844,7 @@
               "inDefinedTermSet": {
                 "@id": "ldac:LinguisticGenreTerms"
               },
-              "name": "ldac:Thesaurus"
+              "name": "Thesaurus"
             }
           ]
         },
@@ -1887,7 +1882,7 @@
               "inDefinedTermSet": {
                 "@id": "ldac:IndexTypes"
               },
-              "name": "ldac:FullText"
+              "name": "FullText"
             }
           ]
         },
@@ -2076,7 +2071,7 @@
               "inDefinedTermSet": {
                 "@id": "ldac:WrittenLanguageTypeTerms"
               },
-              "name": "ldac:Handwritten"
+              "name": "Handwritten"
             },
             {
               "@id": "ldac:Typeset",
@@ -2085,7 +2080,7 @@
               "inDefinedTermSet": {
                 "@id": "ldac:WrittenLanguageTypeTerms"
               },
-              "name": "ldac:Typeset"
+              "name": "Typeset"
             },
             {
               "@id": "ldac:Typewritten",
@@ -2094,7 +2089,7 @@
               "inDefinedTermSet": {
                 "@id": "ldac:WrittenLanguageTypeTerms"
               },
-              "name": "ldac:Typewritten"
+              "name": "Typewritten"
             }
           ]
         }
@@ -2151,7 +2146,7 @@
               "inDefinedTermSet": {
                 "@id": "ldac:CollectionProtocolTypeTerms"
               },
-              "name": "ldac:ElicitationTask"
+              "name": "ElicitationTask"
             },
             {
               "@id": "ldac:MaterialSelectionCriteria",
@@ -2160,7 +2155,7 @@
               "inDefinedTermSet": {
                 "@id": "ldac:CollectionProtocolTypeTerms"
               },
-              "name": "ldac:MaterialSelectionCriteria"
+              "name": "MaterialSelectionCriteria"
             }
           ],
           "multiple": false
@@ -2227,7 +2222,8 @@
       "inputs": [
         {
           "id": "http://www.opengis.net/ont/geosparql#asWKT",
-          "name": "asWKT",
+          "name": "geosparql:asWKT",
+          "label": "asWKT",
           "help": "The WKT serialisation of the geometry.",
           "multiple": true,
           "type": [
@@ -2351,7 +2347,7 @@
               "inDefinedTermSet": {
                 "@id": "ldac:CommunicationModeTerms"
               },
-              "name": "ldac:Gesture"
+              "name": "Gesture"
             },
             {
               "@id": "ldac:SignedLanguage",
@@ -2360,7 +2356,7 @@
               "inDefinedTermSet": {
                 "@id": "ldac:CommunicationModeTerms"
               },
-              "name": "ldac:SignedLanguage"
+              "name": "SignedLanguage"
             },
             {
               "@id": "ldac:Song",
@@ -2369,7 +2365,7 @@
               "inDefinedTermSet": {
                 "@id": "ldac:CommunicationModeTerms"
               },
-              "name": "ldac:Song"
+              "name": "Song"
             },
             {
               "@id": "ldac:SpokenLanguage",
@@ -2378,7 +2374,7 @@
               "inDefinedTermSet": {
                 "@id": "ldac:CommunicationModeTerms"
               },
-              "name": "ldac:SpokenLanguage"
+              "name": "SpokenLanguage"
             },
             {
               "@id": "ldac:WhistledLanguage",
@@ -2387,7 +2383,7 @@
               "inDefinedTermSet": {
                 "@id": "ldac:CommunicationModeTerms"
               },
-              "name": "ldac:WhistledLanguage"
+              "name": "WhistledLanguage"
             },
             {
               "@id": "ldac:WrittenLanguage",
@@ -2396,7 +2392,7 @@
               "inDefinedTermSet": {
                 "@id": "ldac:CommunicationModeTerms"
               },
-              "name": "ldac:WrittenLanguage"
+              "name": "WrittenLanguage"
             }
           ]
         },
@@ -2415,7 +2411,7 @@
           "help": "A license document that applies to this content, typically indicated by URL.",
           "multiple": true,
           "type": [
-            "ldac:DataReuseLicense"
+            "OrganizationReuseLicense"
           ]
         },
         {
@@ -2434,7 +2430,7 @@
               "inDefinedTermSet": {
                 "@id": "ldac:LinguisticGenreTerms"
               },
-              "name": "ldac:Dialogue"
+              "name": "Dialogue"
             },
             {
               "@id": "ldac:Drama",
@@ -2443,7 +2439,7 @@
               "inDefinedTermSet": {
                 "@id": "ldac:LinguisticGenreTerms"
               },
-              "name": "ldac:Drama"
+              "name": "Drama"
             },
             {
               "@id": "ldac:Formulaic",
@@ -2452,7 +2448,7 @@
               "inDefinedTermSet": {
                 "@id": "ldac:LinguisticGenreTerms"
               },
-              "name": "ldac:Formulaic"
+              "name": "Formulaic"
             },
             {
               "@id": "ldac:Informational",
@@ -2461,7 +2457,7 @@
               "inDefinedTermSet": {
                 "@id": "ldac:LinguisticGenreTerms"
               },
-              "name": "ldac:Informational"
+              "name": "Informational"
             },
             {
               "@id": "ldac:Interview",
@@ -2470,7 +2466,7 @@
               "inDefinedTermSet": {
                 "@id": "ldac:LinguisticGenreTerms"
               },
-              "name": "ldac:Interview"
+              "name": "Interview"
             },
             {
               "@id": "ldac:Lexicon",
@@ -2479,7 +2475,7 @@
               "inDefinedTermSet": {
                 "@id": "ldac:LinguisticGenreTerms"
               },
-              "name": "ldac:Lexicon"
+              "name": "Lexicon"
             },
             {
               "@id": "ldac:Ludic",
@@ -2488,7 +2484,7 @@
               "inDefinedTermSet": {
                 "@id": "ldac:LinguisticGenreTerms"
               },
-              "name": "ldac:Ludic"
+              "name": "Ludic"
             },
             {
               "@id": "ldac:Narrative",
@@ -2497,7 +2493,7 @@
               "inDefinedTermSet": {
                 "@id": "ldac:LinguisticGenreTerms"
               },
-              "name": "ldac:Narrative"
+              "name": "Narrative"
             },
             {
               "@id": "ldac:Oratory",
@@ -2506,7 +2502,7 @@
               "inDefinedTermSet": {
                 "@id": "ldac:LinguisticGenreTerms"
               },
-              "name": "ldac:Oratory"
+              "name": "Oratory"
             },
             {
               "@id": "ldac:Procedural",
@@ -2515,7 +2511,7 @@
               "inDefinedTermSet": {
                 "@id": "ldac:LinguisticGenreTerms"
               },
-              "name": "ldac:Procedural"
+              "name": "Procedural"
             },
             {
               "@id": "ldac:Report",
@@ -2524,7 +2520,7 @@
               "inDefinedTermSet": {
                 "@id": "ldac:LinguisticGenreTerms"
               },
-              "name": "ldac:Report"
+              "name": "Report"
             },
             {
               "@id": "ldac:Thesaurus",
@@ -2533,7 +2529,7 @@
               "inDefinedTermSet": {
                 "@id": "ldac:LinguisticGenreTerms"
               },
-              "name": "ldac:Thesaurus"
+              "name": "Thesaurus"
             }
           ]
         },
@@ -2597,7 +2593,6 @@
           "id": "http://schema.org/inLanguage",
           "name": "inLanguage",
           "help": "The language in which the resource is written.",
-          "required": false,
           "multiple": true,
           "type": [
             "Language"
@@ -2638,7 +2633,7 @@
               "inDefinedTermSet": {
                 "@id": "ldac:MaterialTypes"
               },
-              "name": "ldac:PrimaryMaterial"
+              "name": "PrimaryMaterial"
             },
             {
               "@id": "ldac:Annotation",
@@ -2647,7 +2642,7 @@
               "inDefinedTermSet": {
                 "@id": "ldac:MaterialTypes"
               },
-              "name": "ldac:Annotation"
+              "name": "Annotation"
             },
             {
               "@id": "ldac:DerivedMaterial",
@@ -2656,7 +2651,7 @@
               "inDefinedTermSet": {
                 "@id": "ldac:MaterialTypes"
               },
-              "name": "ldac:DerivedMaterial"
+              "name": "DerivedMaterial"
             }
           ]
         },
@@ -2665,8 +2660,8 @@
           "name": "ldac:derivationOf",
           "help": "This property references another resource from which the current resource is derived, e.g. downsampling audio or video files, or extracting text from a PDF.",
           "type": [
-            "ldac:Annotation",
-            "ldac:PrimaryMaterial"
+            "Annotation",
+            "PrimaryMaterial"
           ],
           "multiple": true
         },
@@ -2675,13 +2670,13 @@
           "name": "ldac:hasDerivation",
           "help": "This property references another resource that is derived from it, such as a downsampled audio or video file, or text extracted from a PDF.",
           "type": [
-            "ldac:DerivedMaterial"
+            "DerivedMaterial"
           ],
           "multiple": true
         }
       ]
     },
-    "ldac:CollectionEvent": {
+    "CollectionEvent": {
       "id": "https://w3id.org/ldac/terms#CollectionEvent",
       "subClassOf": [
         "Event",
@@ -2703,20 +2698,20 @@
               "inDefinedTermSet": {
                 "@id": "ldac:CollectionEventTypeTerms"
               },
-              "name": "ldac:Session"
+              "name": "Session"
             }
           ]
         }
       ]
     },
-    "ldac:DataLicense": {
+    "DataLicense": {
       "id": "https://w3id.org/ldac/terms#DataLicense",
       "subClassOf": [
         "CreativeWork"
       ],
       "hasSubclass": [
-        "ldac:DataDepositLicense",
-        "ldac:DataReuseLicense"
+        "DataDepositLicense",
+        "DataReuseLicense"
       ],
       "inputs": [
         {
@@ -2730,17 +2725,17 @@
         }
       ]
     },
-    "ldac:DataDepositLicense": {
+    "DataDepositLicense": {
       "id": "https://w3id.org/ldac/terms#DataDepositLicense",
       "subClassOf": [
-        "ldac:DataLicense"
+        "DataLicense"
       ],
       "inputs": []
     },
-    "ldac:DataReuseLicense": {
+    "DataReuseLicense": {
       "id": "https://w3id.org/ldac/terms#DataReuseLicense",
       "subClassOf": [
-        "ldac:DataLicense"
+        "DataLicense"
       ],
       "inputs": [
         {
@@ -2758,7 +2753,7 @@
               "inDefinedTermSet": {
                 "@id": "ldac:AccessTypes"
               },
-              "name": "ldac:AuthorizedAccess"
+              "name": "AuthorizedAccess"
             },
             {
               "@id": "ldac:OpenAccess",
@@ -2767,7 +2762,7 @@
               "inDefinedTermSet": {
                 "@id": "ldac:AccessTypes"
               },
-              "name": "ldac:OpenAccess"
+              "name": "OpenAccess"
             }
           ]
         },
@@ -2794,7 +2789,7 @@
               "inDefinedTermSet": {
                 "@id": "ldac:AuthorizationWorkflows"
               },
-              "name": "ldac:AccessControlList"
+              "name": "AccessControlList"
             },
             {
               "@id": "ldac:AgreeToTerms",
@@ -2803,7 +2798,7 @@
               "inDefinedTermSet": {
                 "@id": "ldac:AuthorizationWorkflows"
               },
-              "name": "ldac:AgreeToTerms"
+              "name": "AgreeToTerms"
             },
             {
               "@id": "ldac:AuthorizationByApplication",
@@ -2812,7 +2807,7 @@
               "inDefinedTermSet": {
                 "@id": "ldac:AuthorizationWorkflows"
               },
-              "name": "ldac:AuthorizationByApplication"
+              "name": "AuthorizationByApplication"
             },
             {
               "@id": "ldac:AuthorizationByInvitation",
@@ -2821,7 +2816,7 @@
               "inDefinedTermSet": {
                 "@id": "ldac:AuthorizationWorkflows"
               },
-              "name": "ldac:AuthorizationByInvitation"
+              "name": "AuthorizationByInvitation"
             },
             {
               "@id": "ldac:SelfAuthorization",
@@ -2830,7 +2825,7 @@
               "inDefinedTermSet": {
                 "@id": "ldac:AuthorizationWorkflows"
               },
-              "name": "ldac:SelfAuthorization"
+              "name": "SelfAuthorization"
             }
           ]
         }
