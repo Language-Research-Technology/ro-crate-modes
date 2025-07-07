@@ -11,7 +11,7 @@
   },
   "context": [],
   "conformsToUri": [
-    "https://w3id.org/ldac/profile#Collection"
+    "https://w3id.org/ldac/profile#Object"
   ],
   "rootDataset": {
     "type": [
@@ -42,6 +42,7 @@
         "https://w3id.org/ldac/terms#doi",
         "https://w3id.org/ldac/terms#indexableText",
         "https://w3id.org/ldac/terms#itemLocation",
+        "https://w3id.org/ldac/terms#mainText",
         "https://w3id.org/ldac/terms#materialType"
       ]
     },
@@ -730,7 +731,7 @@
           "type": [
             "Language"
           ],
-          "required": true,
+          "required": false,
           "multiple": true
         },
         {
@@ -986,6 +987,7 @@
           "id": "http://schema.org/inLanguage",
           "name": "inLanguage",
           "help": "The language in which the resource is written.",
+          "required": true,
           "multiple": true,
           "type": [
             "Language"
@@ -1845,6 +1847,15 @@
               "name": "Thesaurus"
             }
           ]
+        },
+        {
+          "id": "https://w3id.org/ldac/terms#mainText",
+          "name": "ldac:mainText",
+          "help": "Identifies the most relevant sub-component for computational text analytics.",
+          "type": [
+            "MediaObject"
+          ],
+          "multiple": true
         },
         {
           "id": "https://w3id.org/ldac/terms#material",
