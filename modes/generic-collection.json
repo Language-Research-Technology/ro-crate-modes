@@ -1,14 +1,16 @@
 {
   "metadata": {
-    "name": "Collection Mode",
-    "description": "Implements the basic RO-Crate elements found in the specification for the top-level, objects and files.",
+    "name": "Generic Collection Mode",
+    "description": "Implements the basic RO-Crate elements found in the specification for the top-level, objects and files of a general purpose collection.",
     "version": 0.3,
     "author": "University of Queensland",
     "license": "GPL-3.0"
   },
   "contextPrefixes": {},
   "context": [],
-  "conformsToUri": [],
+  "conformsToUri": [
+    "https://w3id.org/ldac/collections-profile#Collection"
+  ],
   "rootDataset": {
     "type": [
       "Dataset",
@@ -146,7 +148,13 @@
     "RepositoryCollection",
     "RepositoryObject",
     "CreativeWork",
-    "File"
+    "File",
+    "WebPage",
+    "ldac:CollectionEvent",
+    "ldac:CollectionProtocol",
+    "ldac:DataDepositLicense",
+    "ldac:DataLicense",
+    "ldac:DataReuseLicense"
   ],
   "classes": {
     "Dataset": {
@@ -179,7 +187,7 @@
           "required": true,
           "multiple": false,
           "type": [
-            "DataReuseLicense"
+            "ldac:DataReuseLicense"
           ]
         },
         {
@@ -616,7 +624,7 @@
           "help": "A license document that applies to this content, typically indicated by URL.",
           "multiple": true,
           "type": [
-            "OrganizationReuseLicense"
+            "ldac:DataReuseLicense"
           ]
         },
         {
@@ -867,8 +875,7 @@
           "multiple": true,
           "type": [
             "Text",
-            "WebPage",
-            "Standard"
+            "WebPage"
           ]
         },
         {
@@ -886,7 +893,7 @@
           "help": "A license document that applies to this content, typically indicated by URL.",
           "multiple": true,
           "type": [
-            "OrganizationReuseLicense"
+            "ldac:DataReuseLicense"
           ]
         },
         {
@@ -962,8 +969,309 @@
           "type": [
             "Text"
           ]
+        },
+        {
+          "id": "https://w3id.org/ldac/terms#materialType",
+          "name": "ldac:materialType",
+          "help": "Indicates whether the material in a file is the original (primary) source or is derived from it or describes it via annotation.",
+          "multiple": true,
+          "type": [
+            "SelectObject"
+          ],
+          "values": [
+            {
+              "@id": "ldac:PrimaryMaterial",
+              "@type": "DefinedTerm",
+              "description": "The object of study, such as a literary work, film, or recording of natural discourse.",
+              "inDefinedTermSet": {
+                "@id": "ldac:MaterialTypes"
+              },
+              "name": "PrimaryMaterial"
+            },
+            {
+              "@id": "ldac:Annotation",
+              "@type": "DefinedTerm",
+              "description": "The resource includes material that adds information to some other linguistic record.",
+              "inDefinedTermSet": {
+                "@id": "ldac:MaterialTypes"
+              },
+              "name": "Annotation"
+            },
+            {
+              "@id": "ldac:DerivedMaterial",
+              "@type": "DefinedTerm",
+              "description": "This is derived from another source, such as a Primary Material, via some process, e.g. a downsampled video or a sample or an abstract of a resource that is not an annotation (an analysis or description).",
+              "inDefinedTermSet": {
+                "@id": "ldac:MaterialTypes"
+              },
+              "name": "DerivedMaterial"
+            }
+          ]
+        },
+        {
+          "id": "https://w3id.org/ldac/terms#derivationOf",
+          "name": "ldac:derivationOf",
+          "help": "This property references another resource from which the current resource is derived, e.g. downsampling audio or video files, or extracting text from a PDF.",
+          "type": [
+            "CreativeWork"
+          ],
+          "multiple": true
+        },
+        {
+          "id": "https://w3id.org/ldac/terms#hasDerivation",
+          "name": "ldac:hasDerivation",
+          "help": "This property references another resource that is derived from it, such as a downsampled audio or video file, or text extracted from a PDF.",
+          "type": [
+            "CreativeWork"
+          ],
+          "multiple": true
         }
       ]
+    },
+    "ldac:CollectionEvent": {
+      "id": "https://w3id.org/ldac/terms#CollectionEvent",
+      "subClassOf": [
+        "Event",
+        "CreateAction"
+      ],
+      "inputs": [
+        {
+          "id": "https://w3id.org/ldac/terms#collectionEventType",
+          "name": "ldac:collectionEventType",
+          "help": "A kind of CollectionEvent characterised by some specific procedures, e.g. a psycholinguistic experiment.",
+          "type": [
+            "SelectObject"
+          ],
+          "values": [
+            {
+              "@id": "ldac:Session",
+              "@type": "DefinedTerm",
+              "description": "A collection event that is a recording or elicitation session with participants.",
+              "inDefinedTermSet": {
+                "@id": "ldac:CollectionEventTypeTerms"
+              },
+              "name": "Session"
+            }
+          ]
+        }
+      ]
+    },
+    "ldac:CollectionProtocol": {
+      "id": "https://w3id.org/ldac/terms#CollectionProtocol",
+      "subClassOf": [
+        "CreativeWork"
+      ],
+      "inputs": [
+        {
+          "id": "http://schema.org/name",
+          "name": "name",
+          "help": "The name of this protocol.",
+          "required": true,
+          "multiple": false,
+          "type": [
+            "Text"
+          ]
+        },
+        {
+          "id": "http://schema.org/author",
+          "name": "author",
+          "help": "The person or organisation responsible for creating this collection of data. Authors should be identified using URIs such as ORCiD or ROR.",
+          "required": true,
+          "type": [
+            "Person",
+            "Organization"
+          ],
+          "multiple": true
+        },
+        {
+          "id": "http://schema.org/description",
+          "name": "description",
+          "help": "A summary of the collection protocol used for this collection or sub-collection, e.g. how texts were selected, or what prompts were given to participants.",
+          "type": [
+            "TextArea"
+          ],
+          "multiple": false
+        },
+        {
+          "id": "https://w3id.org/ldac/terms#collectionProtocolType",
+          "name": "ldac:collectionProtocolType",
+          "help": "A description of the process used to collect or collate data, such as prompts given to participants, or how texts are selected for inclusion in a collection.",
+          "type": [
+            "SelectObject"
+          ],
+          "values": [
+            {
+              "@id": "ldac:ElicitationTask",
+              "@type": "DefinedTerm",
+              "description": "The collection protocol includes a task-based prompt to participants.",
+              "inDefinedTermSet": {
+                "@id": "ldac:CollectionProtocolTypeTerms"
+              },
+              "name": "ElicitationTask"
+            },
+            {
+              "@id": "ldac:MaterialSelectionCriteria",
+              "@type": "DefinedTerm",
+              "description": "A description of the criteria used to select texts in a collection.",
+              "inDefinedTermSet": {
+                "@id": "ldac:CollectionProtocolTypeTerms"
+              },
+              "name": "MaterialSelectionCriteria"
+            }
+          ],
+          "multiple": false
+        },
+        {
+          "id": "http://schema.org/datePublished",
+          "name": "datePublished",
+          "help": "The (earliest) date the collection protocol was published.",
+          "type": [
+            "DateTime",
+            "Date"
+          ],
+          "required": true,
+          "multiple": false
+        }
+      ]
+    },
+    "ldac:DataLicense": {
+      "id": "https://w3id.org/ldac/terms#DataLicense",
+      "subClassOf": [
+        "CreativeWork"
+      ],
+      "hasSubclass": [
+        "ldac:DataDepositLicense",
+        "ldac:DataReuseLicense"
+      ],
+      "inputs": [
+        {
+          "id": "https://w3id.org/ldac/terms#reviewDate",
+          "name": "ldac:reviewDate",
+          "help": "The date that this license should be reviewed.",
+          "type": [
+            "Text"
+          ],
+          "multiple": false
+        }
+      ]
+    },
+    "ldac:DataDepositLicense": {
+      "id": "https://w3id.org/ldac/terms#DataDepositLicense",
+      "subClassOf": [
+        "DataLicense"
+      ],
+      "inputs": []
+    },
+    "ldac:DataReuseLicense": {
+      "id": "https://w3id.org/ldac/terms#DataReuseLicense",
+      "subClassOf": [
+        "DataLicense"
+      ],
+      "inputs": [
+        {
+          "id": "https://w3id.org/ldac/terms#access",
+          "name": "ldac:access",
+          "help": "Whether this is an open or restricted access license.",
+          "type": [
+            "SelectObject"
+          ],
+          "values": [
+            {
+              "@id": "ldac:AuthorizedAccess",
+              "@type": "DefinedTerm",
+              "description": "Indicates that a DataReuseLicense requires some kind of authorization step, from SelfAuthorization (click-through) to processes that require a data steward to grant permission.",
+              "inDefinedTermSet": {
+                "@id": "ldac:AccessTypes"
+              },
+              "name": "AuthorizedAccess"
+            },
+            {
+              "@id": "ldac:OpenAccess",
+              "@type": "DefinedTerm",
+              "description": "Data covered by this license may be accessed as long as the license is served alongside it, and does not require any specific authorization step.",
+              "inDefinedTermSet": {
+                "@id": "ldac:AccessTypes"
+              },
+              "name": "OpenAccess"
+            }
+          ]
+        },
+        {
+          "id": "https://w3id.org/ldac/terms#accessControlList",
+          "name": "ldac:accessControlList",
+          "help": "When a license has an authorizationWorkflow property with a value of the DefinedTerm AccessControlList this property has a URI value that points to a list of userIDs.",
+          "type": [
+            "URL"
+          ]
+        },
+        {
+          "id": "https://w3id.org/ldac/terms#authorizationWorkflow",
+          "name": "ldac:authorizationWorkflow",
+          "help": "By what process a user is granted authorization to a license.",
+          "type": [
+            "SelectObject"
+          ],
+          "values": [
+            {
+              "@id": "ldac:AccessControlList",
+              "@type": "DefinedTerm",
+              "description": "License grants access to data based on a list of approved users, specified using the property accessControlList.",
+              "inDefinedTermSet": {
+                "@id": "ldac:AuthorizationWorkflows"
+              },
+              "name": "AccessControlList"
+            },
+            {
+              "@id": "ldac:AgreeToTerms",
+              "@type": "DefinedTerm",
+              "description": "A user is expected to explicitly agree to a set of license terms, this may be combined with AccessControlList - to note that even if a user has been pre-approved for a license they must agree to license terms.",
+              "inDefinedTermSet": {
+                "@id": "ldac:AuthorizationWorkflows"
+              },
+              "name": "AgreeToTerms"
+            },
+            {
+              "@id": "ldac:AuthorizationByApplication",
+              "@type": "DefinedTerm",
+              "description": "Users may apply for a license via some workflow, such as a form, with the decision being made by a DataSteward or their delegate about whether to grant the license.",
+              "inDefinedTermSet": {
+                "@id": "ldac:AuthorizationWorkflows"
+              },
+              "name": "AuthorizationByApplication"
+            },
+            {
+              "@id": "ldac:AuthorizationByInvitation",
+              "@type": "DefinedTerm",
+              "description": "A data steward or administrator is expected to use an access control system to invite users, for example, participants, collaborators or students.",
+              "inDefinedTermSet": {
+                "@id": "ldac:AuthorizationWorkflows"
+              },
+              "name": "AuthorizationByInvitation"
+            },
+            {
+              "@id": "ldac:SelfAuthorization",
+              "@type": "DefinedTerm",
+              "description": "A user can be authorised to access data by clicking that they agree to a license, or filling out a form to check their understanding, which can be validated by a machine and does not require human intervention.",
+              "inDefinedTermSet": {
+                "@id": "ldac:AuthorizationWorkflows"
+              },
+              "name": "SelfAuthorization"
+            }
+          ]
+        }
+      ]
+    },
+    "PropertyValue": {
+      "id": "http://schema.org/PropertyValue",
+      "subClassOf": [],
+      "inputs": []
+    },
+    "WebPage": {
+      "id": "http://schema.org/WebPage",
+      "subClassOf": [
+        "CreativeWork"
+      ],
+      "inputs": []
     }
   }
 }

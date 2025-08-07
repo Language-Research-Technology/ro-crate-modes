@@ -1711,7 +1711,7 @@
         {
           "id": "https://w3id.org/ldac/terms#isDeIdentified",
           "name": "ldac:isDeIdentified",
-          "label": "Is De-identified",
+          "label": "Is De-Identified",
           "help": "The data in this item has had potentially identifying information removed, which may include replacing names with pseudonyms.",
           "type": [
             "Boolean"
