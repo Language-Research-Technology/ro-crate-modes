@@ -395,7 +395,7 @@
           "name": "inLanguage",
           "help": "The language in which the resource is written.",
           "type": [
-            "Text"
+            "Language"
           ],
           "required": true,
           "multiple": true
@@ -597,7 +597,7 @@
           "help": "The language in which the resource is written.",
           "multiple": true,
           "type": [
-            "Text"
+            "Language"
           ]
         },
         {
@@ -958,7 +958,7 @@
           "help": "The language in which the resource is written.",
           "multiple": true,
           "type": [
-            "Text"
+            "Language"
           ]
         },
         {
