@@ -619,7 +619,9 @@
       ]
     },
     "RepositoryCollection": {
-      "subClassOf": [],
+      "subClassOf": [
+        "CreativeWork"
+      ],
       "inputs": [
         {
           "id": "http://schema.org/contentLocation",
@@ -801,11 +803,18 @@
       ]
     },
     "RepositoryObject": {
-      "subClassOf": [],
+      "subClassOf": [
+        "CreativeWork"
+      ],
       "inputs": []
     },
     "CreativeWork": {
       "subClassOf": [],
+      "hasSubclass": [
+        "RepositoryCollection",
+        "RepositoryObject",
+        "ldac:CollectionProtocol"
+      ],
       "inputs": [
         {
           "id": "http://schema.org/name",
@@ -880,7 +889,9 @@
       ]
     },
     "ldac:CollectionProtocol": {
-      "subClassOf": [],
+      "subClassOf": [
+        "CreativeWork"
+      ],
       "inputs": [
         {
           "id": "http://schema.org/name",

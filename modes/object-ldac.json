@@ -897,6 +897,9 @@
     },
     "RepositoryObject": {
       "id": "http://pcdm.org/models#Object",
+      "subClassOf": [
+        "CreativeWork"
+      ],
       "inputs": [
         {
           "id": "http://schema.org/hasPart",
@@ -1306,7 +1309,9 @@
       "id": "http://schema.org/CreativeWork",
       "hasSubclass": [
         "RepositoryCollection",
-        "ldac:CollectionProtocol"
+        "RepositoryObject",
+        "ldac:CollectionProtocol",
+        "ldac:DataLicense"
       ],
       "inputs": [
         {
@@ -2676,7 +2681,7 @@
         }
       ]
     },
-    "CollectionEvent": {
+    "ldac:CollectionEvent": {
       "id": "https://w3id.org/ldac/terms#CollectionEvent",
       "subClassOf": [
         "Event",
@@ -2704,7 +2709,7 @@
         }
       ]
     },
-    "DataLicense": {
+    "ldac:DataLicense": {
       "id": "https://w3id.org/ldac/terms#DataLicense",
       "subClassOf": [
         "CreativeWork"
@@ -2725,17 +2730,17 @@
         }
       ]
     },
-    "DataDepositLicense": {
+    "ldac:DataDepositLicense": {
       "id": "https://w3id.org/ldac/terms#DataDepositLicense",
       "subClassOf": [
-        "DataLicense"
+        "ldac:DataLicense"
       ],
       "inputs": []
     },
-    "DataReuseLicense": {
+    "ldac:DataReuseLicense": {
       "id": "https://w3id.org/ldac/terms#DataReuseLicense",
       "subClassOf": [
-        "DataLicense"
+        "ldac:DataLicense"
       ],
       "inputs": [
         {
