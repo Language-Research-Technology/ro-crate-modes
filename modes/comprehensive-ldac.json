@@ -901,6 +901,9 @@
     },
     "RepositoryObject": {
       "id": "http://pcdm.org/models#Object",
+      "subClassOf": [
+        "CreativeWork"
+      ],
       "inputs": [
         {
           "id": "http://schema.org/hasPart",
@@ -1310,6 +1313,7 @@
       "id": "http://schema.org/CreativeWork",
       "hasSubclass": [
         "RepositoryCollection",
+        "RepositoryObject",
         "ldac:CollectionProtocol",
         "ldac:DataLicense"
       ],
