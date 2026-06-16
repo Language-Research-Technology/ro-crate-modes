@@ -1019,7 +1019,8 @@
           "name": "ldac:derivationOf",
           "help": "This property references another resource from which the current resource is derived, e.g. downsampling audio or video files, or extracting text from a PDF.",
           "type": [
-            "CreativeWork"
+            "ldac:Annotation",
+            "ldac:PrimaryMaterial"
           ],
           "multiple": true
         },
@@ -1028,7 +1029,7 @@
           "name": "ldac:hasDerivation",
           "help": "This property references another resource that is derived from it, such as a downsampled audio or video file, or text extracted from a PDF.",
           "type": [
-            "CreativeWork"
+            "ldac:DerivedMaterial"
           ],
           "multiple": true
         }
